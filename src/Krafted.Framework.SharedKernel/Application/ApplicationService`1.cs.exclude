@@ -1,0 +1,88 @@
+﻿using System;
+using System.Threading.Tasks;
+using Flunt.Notifications;
+using Krafted.Framework.SharedKernel.Application.Commands.Result;
+using Krafted.Framework.SharedKernel.Domain;
+
+namespace Krafted.Framework.SharedKernel.Application
+{
+    public abstract class ApplicationService<TEntity> : ApplicationService
+		where TEntity : Entity
+    {
+        private readonly IRepositoryAsync<TEntity> _repository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        protected ApplicationService(
+            IRepositoryAsync<TEntity> repository,
+            IUnitOfWork unitOfWork,
+            ICommandResultFactory commandResultFactory) : base(commandResultFactory)
+        {
+            _repository = repository;
+            _unitOfWork = unitOfWork;
+        }
+
+        protected ICommandResult Create(Action save, object successData, string successMessage = "")
+                => Save(save, successData, successMessage);
+
+        protected async Task<ICommandResult> CreateAsync(TEntity entity, object successData, object createData = null, string successMessage = "")
+        {
+            var result = CommandResultFactory.NewCommandResult(_commandResultFactory, entity, successData, successMessage);
+
+            if (!result.Success)
+                return result;
+
+            await _repository.CreateAsync(entity, createData).ConfigureAwait(false);
+            _unitOfWork.Commit();
+
+            return result;
+        }
+
+        protected ICommandResult Update(Action save, object successData, string successMessage = "")
+            => Save(save, successData, successMessage);
+
+        protected async Task<ICommandResult> UpdateAsync(TEntity entity, object successData, object updateData = null, string successMessage = "")
+        {
+            var commandResult = new ClientCommandResult(_commandResultFactory);
+
+            if (entity == null)
+                return commandResult.NewFailCommandResult("Registro não encontrado.");
+
+            var result = CommandResultFactory.NewCommandResult(_commandResultFactory, entity, successData, successMessage);
+
+            if (!result.Success)
+                return result;
+
+            await _repository.UpdateAsync(entity, updateData).ConfigureAwait(false);
+            _unitOfWork.Commit();
+
+            return result;
+        }
+
+        protected ICommandResult Delete(Action save, string successMessage = "")
+            => Save(save, null, successMessage);
+
+        protected async Task<ICommandResult> DeleteAsync(TEntity entity, string successMessage = "")
+        {
+            var result = CommandResultFactory.NewCommandResult(_commandResultFactory, entity, null, successMessage);
+
+            if (!result.Success)
+                return result;
+
+            await _repository.DeleteAsync(entity).ConfigureAwait(false);
+            _unitOfWork.Commit();
+
+            return result;
+        }
+
+        private ICommandResult Save(Action action, object successData = null, string successMessage = "")
+        {
+            var commandResult = new ClientCommandResult(_commandResultFactory);
+
+            action?.Invoke();
+
+            return (successData == null)
+                ? commandResult.NewSuccessCommandResult(successMessage)
+                : commandResult.NewSuccessCommandResult(successData, successMessage);
+        }
+    }
+}

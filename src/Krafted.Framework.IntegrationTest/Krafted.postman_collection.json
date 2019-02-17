@@ -1,0 +1,147 @@
+{
+  "info": {
+    "_postman_id": "608aef32-7445-4c93-b422-6169bdcdd568",
+    "name": "Krafted",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+	"item": [
+		{
+			"name": "http://localhost:5000/api/v1/foo/8602D63D-00B4-4A07-8A63-75C44CA295FC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/foo/33ff8a97-0cfe-4281-b56e-015c0aee8096",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"foo",
+						"33ff8a97-0cfe-4281-b56e-015c0aee8096"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/foo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/foo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"foo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/foo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"startDate\": \"2018-11-12T00:00:00Z\",\r\n\t\"endDate\": \"2018-11-16T00:00:00Z\",\r\n\t\"name\": \"abcde\",\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/foo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"foo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/foo/8602D63D-00B4-4A07-8A63-75C44CA295FC",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"startDate\": \"2018-11-22\",\r\n\t\"endDate\": \"2018-11-23\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/foo/2abba15f-da45-457a-a432-a417392bc7c0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"foo",
+						"2abba15f-da45-457a-a432-a417392bc7c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/foo/8602D63D-00B4-4A07-8A63-75C44CA295FC",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/foo/8602D63D-00B4-4A07-8A63-75C44CA295FC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"foo",
+						"8602D63D-00B4-4A07-8A63-75C44CA295FC"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

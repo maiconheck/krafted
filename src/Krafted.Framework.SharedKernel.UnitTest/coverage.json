@@ -1,0 +1,252 @@
+{
+ "D:\\Root\\Cloud\\Source\\Repos\\keepmoney\\src\\backend\\MaiconHeck.Framework.Tests\\bin\\Debug\\netcoreapp2.0\\MaiconHeck.Framework.Domain.dll": {
+  "D:\\Root\\Cloud\\Source\\Repos\\keepmoney\\src\\backend\\MaiconHeck.Framework.Domain\\ValueObjects\\Email.cs": {
+   "MaiconHeck.Framework.Domain.ValueObjects.Email": {
+    "System.Void MaiconHeck.Framework.Domain.ValueObjects.Email::.ctor()": {
+     "8": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "9": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "10": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Void MaiconHeck.Framework.Domain.ValueObjects.Email::.ctor(System.String)": {
+     "12": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "13": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "14": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "16": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "17": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "18": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     },
+     "19": {
+      "Hits": 2,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String MaiconHeck.Framework.Domain.ValueObjects.Email::get_Address()": {
+     "21": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String MaiconHeck.Framework.Domain.ValueObjects.Email::ToString()": {
+     "24": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "25": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "26": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "MaiconHeck.Framework.Domain.ValueObjects.Email MaiconHeck.Framework.Domain.ValueObjects.Email::op_Explicit(System.String)": {
+     "29": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "30": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "31": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    }
+   }
+  },
+  "D:\\Root\\Cloud\\Source\\Repos\\keepmoney\\src\\backend\\MaiconHeck.Framework.Domain\\ValueObjects\\Money.cs": {
+   "MaiconHeck.Framework.Domain.ValueObjects.Money": {
+    "System.Void MaiconHeck.Framework.Domain.ValueObjects.Money::.ctor()": {
+     "16": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "17": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "18": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Void MaiconHeck.Framework.Domain.ValueObjects.Money::.ctor(System.Decimal)": {
+     "24": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "25": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "26": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "28": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "29": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "30": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     },
+     "31": {
+      "Hits": 4,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Decimal MaiconHeck.Framework.Domain.ValueObjects.Money::get_Amount()": {
+     "39": {
+      "Hits": 15,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Int32 MaiconHeck.Framework.Domain.ValueObjects.Money::get_IntegralPart()": {
+     "47": {
+      "Hits": 5,
+      "IsBranchPoint": false
+     }
+    },
+    "MaiconHeck.Framework.Domain.ValueObjects.Money MaiconHeck.Framework.Domain.ValueObjects.Money::op_Addition(MaiconHeck.Framework.Domain.ValueObjects.Money,System.Decimal)": {
+     "57": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "58": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "60": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "61": {
+      "Hits": 1,
+      "IsBranchPoint": true
+     }
+    },
+    "MaiconHeck.Framework.Domain.ValueObjects.Money MaiconHeck.Framework.Domain.ValueObjects.Money::op_Subtraction(MaiconHeck.Framework.Domain.ValueObjects.Money,System.Decimal)": {
+     "71": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "72": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "74": {
+      "Hits": 1,
+      "IsBranchPoint": false
+     },
+     "75": {
+      "Hits": 1,
+      "IsBranchPoint": true
+     }
+    },
+    "System.Decimal MaiconHeck.Framework.Domain.ValueObjects.Money::op_Implicit(MaiconHeck.Framework.Domain.ValueObjects.Money)": {
+     "78": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "79": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "80": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.String MaiconHeck.Framework.Domain.ValueObjects.Money::ToString()": {
+     "89": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "90": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "91": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "MaiconHeck.Framework.Domain.ValueObjects.Money MaiconHeck.Framework.Domain.ValueObjects.Money::op_Explicit(System.Decimal)": {
+     "94": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "95": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "96": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    }
+   }
+  },
+  "D:\\Root\\Cloud\\Source\\Repos\\keepmoney\\src\\backend\\MaiconHeck.Framework.Domain\\Entities\\Entity.cs": {
+   "MaiconHeck.Framework.Domain.Entities.Entity": {
+    "System.Void MaiconHeck.Framework.Domain.Entities.Entity::.ctor()": {
+     "8": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "9": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "10": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     },
+     "11": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    },
+    "System.Guid MaiconHeck.Framework.Domain.Entities.Entity::get_Id()": {
+     "13": {
+      "Hits": 0,
+      "IsBranchPoint": false
+     }
+    }
+   }
+  }
+ }
+}
