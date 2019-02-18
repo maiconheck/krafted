@@ -29,15 +29,15 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="System.Globalization" Version="4.3.0" />    
+    <PackageReference Include="System.Globalization" Version="4.3.0" />   
+    <PackageReference Include="SharedKernel" Version="1.0.0" /> 
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Transactions\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+  <ItemGroup>    
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 
