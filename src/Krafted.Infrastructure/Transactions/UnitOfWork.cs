@@ -8,7 +8,7 @@ using System;
 using System.Data;
 using Krafted.Infrastructure.Connections;
 using Krafted.Infrastructure.Connections.SqlServer;
-using Krafted.Framework.SharedKernel.Transactions;
+using SharedKernel.Transactions;
 
 namespace Krafted.Infrastructure.Transactions
 {

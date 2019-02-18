@@ -1,7 +1,7 @@
 ﻿using Xunit;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 
-namespace Krafted.Framework.SharedKernel.UnitTest.Domain
+namespace SharedKernel.UnitTest.Domain
 {
     [Trait("Category", nameof(Domain))]
     public class MoneyTest

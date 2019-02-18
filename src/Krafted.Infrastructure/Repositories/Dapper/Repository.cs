@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using Krafted.Framework.SharedKernel.Transactions;
+using SharedKernel.Transactions;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {

@@ -3,8 +3,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Krafted.Test.Result;
 using Krafted.Api;
-using Krafted.Framework.SharedKernel.Application.Commands.Result.ThirdParty;
-using Krafted.Framework.SharedKernel.Application.Commands.Result.Default;
+using SharedKernel.Application.Commands.Result.ThirdParty;
+using SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Test
 {

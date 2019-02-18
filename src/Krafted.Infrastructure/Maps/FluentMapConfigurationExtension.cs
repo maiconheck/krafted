@@ -1,5 +1,5 @@
 ﻿using Dapper.FluentMap.Configuration;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Maps
 {

@@ -1,6 +1,6 @@
 ﻿
 using Krafted.Infrastructure.Transactions;
-using Krafted.Framework.SharedKernel.Transactions;
+using SharedKernel.Transactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

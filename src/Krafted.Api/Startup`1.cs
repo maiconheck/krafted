@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Krafted.Framework.SharedKernel.Application.Commands.Result;
+using SharedKernel.Application.Commands.Result;
 using Krafted.Infrastructure.Connections.SqlServer;
-using Krafted.Framework.SharedKernel.Application.Commands.Result.Default;
+using SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Api
 {

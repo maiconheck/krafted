@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.IntegrationTest.FooBar.Infrastructure;

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest
 {
-    [Trait(nameof(UnitTest), nameof(Framework))]
+    [Trait(nameof(UnitTest), nameof(Krafted))]
     public class EnumerableExtensionTest
     {
         [Fact]

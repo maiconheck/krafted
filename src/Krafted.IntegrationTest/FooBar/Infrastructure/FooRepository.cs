@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Dapper;
 using Krafted.Infrastructure.Repositories.Dapper;
 using Krafted.IntegrationTest.FooBar.Domain;
-using Krafted.Framework.SharedKernel.Domain;
-using Krafted.Framework.SharedKernel.Transactions;
+using SharedKernel.Domain;
+using SharedKernel.Transactions;
 
 namespace Krafted.IntegrationTest.FooBar.Infrastructure
 {

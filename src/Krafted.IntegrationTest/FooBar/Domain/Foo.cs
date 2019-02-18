@@ -1,7 +1,7 @@
 ﻿using System;
 using Flunt.Notifications;
 using Flunt.Validations;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 
 namespace Krafted.IntegrationTest.FooBar.Domain
 {

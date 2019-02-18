@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapper;
-using Krafted.Framework.SharedKernel.Domain;
-using Krafted.Framework.SharedKernel.Transactions;
+using SharedKernel.Domain;
+using SharedKernel.Transactions;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {

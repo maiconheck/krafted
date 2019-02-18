@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Infrastructure", "K
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.IntegrationTest", "Krafted.IntegrationTest\Krafted.IntegrationTest.csproj", "{EB51D56F-81AD-4ED4-A42F-3FAEED1E75E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.SharedKernel", "Krafted.Framework.SharedKernel\Krafted.Framework.SharedKernel.csproj", "{74176F48-4F00-4483-ACAB-BC26DEE03D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel", "SharedKernel\SharedKernel.csproj", "{74176F48-4F00-4483-ACAB-BC26DEE03D41}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.SharedKernel.UnitTest", "Krafted.Framework.SharedKernel.UnitTest\Krafted.Framework.SharedKernel.UnitTest.csproj", "{B9C567CB-6734-4B1B-B352-8D4469283796}"
 EndProject

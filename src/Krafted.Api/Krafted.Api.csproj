@@ -42,7 +42,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Krafted.Infrastructure\Krafted.Infrastructure.csproj" />
-    <ProjectReference Include="..\Krafted.Framework.SharedKernel\Krafted.Framework.SharedKernel.csproj" />
+    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

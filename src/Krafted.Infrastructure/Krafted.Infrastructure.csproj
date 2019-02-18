@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Framework.SharedKernel\Krafted.Framework.SharedKernel.csproj" />
+    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 

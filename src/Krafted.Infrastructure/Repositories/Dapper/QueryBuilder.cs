@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Serialization;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {

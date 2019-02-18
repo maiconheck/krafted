@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using Krafted.Framework.SharedKernel.Domain;
+using SharedKernel.Domain;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;

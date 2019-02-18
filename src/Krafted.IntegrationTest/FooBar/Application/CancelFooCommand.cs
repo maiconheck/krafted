@@ -1,4 +1,4 @@
-﻿using Krafted.Framework.SharedKernel.Application.Commands;
+﻿using SharedKernel.Application.Commands;
 using System;
 
 namespace Krafted.IntegrationTest.FooBar.Application
