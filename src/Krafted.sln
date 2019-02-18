@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.Api", "Krafted.Framework.Api\Krafted.Framework.Api.csproj", "{B3CCC136-05B4-454B-88B2-BA2648D6375E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Api", "Krafted.Api\Krafted.Api.csproj", "{B3CCC136-05B4-454B-88B2-BA2648D6375E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.Infrastructure", "Krafted.Framework.Infrastructure\Krafted.Framework.Infrastructure.csproj", "{7EF09CD1-702B-4258-944D-934F9CC2EA60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Infrastructure", "Krafted.Infrastructure\Krafted.Infrastructure.csproj", "{7EF09CD1-702B-4258-944D-934F9CC2EA60}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.IntegrationTest", "Krafted.Framework.IntegrationTest\Krafted.Framework.IntegrationTest.csproj", "{EB51D56F-81AD-4ED4-A42F-3FAEED1E75E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.IntegrationTest", "Krafted.IntegrationTest\Krafted.IntegrationTest.csproj", "{EB51D56F-81AD-4ED4-A42F-3FAEED1E75E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.SharedKernel", "Krafted.Framework.SharedKernel\Krafted.Framework.SharedKernel.csproj", "{74176F48-4F00-4483-ACAB-BC26DEE03D41}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.SharedKernel.UnitTest", "Krafted.Framework.SharedKernel.UnitTest\Krafted.Framework.SharedKernel.UnitTest.csproj", "{B9C567CB-6734-4B1B-B352-8D4469283796}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.Test", "Krafted.Framework.Test\Krafted.Framework.Test.csproj", "{8C5FCA0F-18B9-48DF-92DC-E5C733533FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Test", "Krafted.Test\Krafted.Test.csproj", "{8C5FCA0F-18B9-48DF-92DC-E5C733533FFC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework", "Krafted.Framework\Krafted.Framework.csproj", "{C3528230-B535-4B83-AE8E-9410322EA480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted", "Krafted\Krafted.csproj", "{C3528230-B535-4B83-AE8E-9410322EA480}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Framework.UnitTest", "Krafted.Framework.UnitTest\Krafted.Framework.UnitTest.csproj", "{D3F710AD-EA6A-4A4A-8999-1934DC894D42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.UnitTest", "Krafted.UnitTest\Krafted.UnitTest.csproj", "{D3F710AD-EA6A-4A4A-8999-1934DC894D42}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D1288C5A-919C-48FF-AB74-9B4553BF480C}"
 EndProject

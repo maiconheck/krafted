@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Krafted.Framework.IntegrationTest/Krafted.Framework.IntegrationTest.csproj"
+                "${workspaceFolder}/Krafted.IntegrationTest/Krafted.IntegrationTest.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
