@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Krafted.Framework.IntegrationTest.FooBar.Domain;
-using Krafted.Framework.SharedKernel;
 using Krafted.Framework.SharedKernel.Application;
 using Krafted.Framework.SharedKernel.Application.Commands;
 using Krafted.Framework.SharedKernel.Application.Commands.Result;
 using Krafted.Framework.SharedKernel.Domain;
+using Krafted.Framework.SharedKernel.Transactions;
 
 namespace Krafted.Framework.IntegrationTest.FooBar.Application
 {

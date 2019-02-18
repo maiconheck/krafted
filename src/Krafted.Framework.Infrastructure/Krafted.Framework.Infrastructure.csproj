@@ -6,10 +6,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
     <Version>1.0.0.0</Version>
-    <CodeAnalysisRuleSet>..\..\Analyzers\Framework.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Analyzers\Krafted.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="Dapper.FluentMap" Version="1.7.0" />
     <PackageReference Include="Dapper.FluentMap.Dommel" Version="1.6.0" />
@@ -24,11 +29,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="System.Globalization" Version="4.3.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="System.Globalization" Version="4.3.0" />    
   </ItemGroup>
 
   <ItemGroup>

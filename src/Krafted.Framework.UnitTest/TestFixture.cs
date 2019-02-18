@@ -1,7 +1,7 @@
 ﻿using System;
 using NSubstitute;
 using Krafted.Framework.SharedKernel.Application.Commands.Result;
-using Krafted.Framework.SharedKernel;
+using Krafted.Framework.SharedKernel.Transactions;
 
 namespace Krafted.Framework.UnitTest
 {

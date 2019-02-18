@@ -1,11 +1,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Krafted.Framework.SharedKernel.Domain;
-using Krafted.Framework.Infrastructure;
 using Krafted.Framework.IntegrationTest.FooBar.Application;
 using Krafted.Framework.IntegrationTest.FooBar.Domain;
 using Krafted.Framework.IntegrationTest.FooBar.Infrastructure;
-using Krafted.Framework.Infrastructure.Api;
+using Krafted.Framework.Api;
 
 namespace Krafted.Framework.IntegrationTest
 {

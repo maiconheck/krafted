@@ -19,7 +19,7 @@ namespace Krafted.Framework.SharedKernel.Application.Commands.Result
                 return commandResult.NewFailCommandResult("Registro não encontrado.");
 
             if (model.Invalid)
-                return commandResult.NewFailCommandResult(model.Notifications);
+                return commandResult.NewFailCommandResult(model.Notifications, "Falha ao criar o registro. Verifique as mensagens de erro.");
 
             return (successData == null)
                 ? commandResult.NewSuccessCommandResult(successMessage)

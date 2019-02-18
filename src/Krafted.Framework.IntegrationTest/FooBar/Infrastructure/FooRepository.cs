@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Dapper;
 using Krafted.Framework.Infrastructure.Repositories.Dapper;
 using Krafted.Framework.IntegrationTest.FooBar.Domain;
-using Krafted.Framework.SharedKernel;
 using Krafted.Framework.SharedKernel.Domain;
+using Krafted.Framework.SharedKernel.Transactions;
 
 namespace Krafted.Framework.IntegrationTest.FooBar.Infrastructure
 {
@@ -45,8 +45,6 @@ namespace Krafted.Framework.IntegrationTest.FooBar.Infrastructure
         public async Task UpdateAsync(Foo entity, object param = null)
             => await ExecuteAsync("ChangeScheduleFoo", new { entity.Id, entity.StartDate, entity.EndDate });
 
-        public async Task DeleteAsync(Guid id) => await ExecuteAsync("DeleteFoo", new { id });
-
         private async Task ExecuteAsync(string procedure, object param)
             => await Connection.ExecuteAsync(procedure, param, Transaction, null, CommandType.StoredProcedure).ConfigureAwait(false);
 
@@ -55,9 +53,6 @@ namespace Krafted.Framework.IntegrationTest.FooBar.Infrastructure
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(Foo entity)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task DeleteAsync(Foo entity) => await ExecuteAsync("DeleteFoo", new { entity.Id });
     }
 }

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Krafted.Framework.Test.Result;
 using Krafted.Framework.Api;
 using Krafted.Framework.SharedKernel.Application.Commands.Result.ThirdParty;
+using Krafted.Framework.SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Framework.Test
 {
@@ -32,7 +33,7 @@ namespace Krafted.Framework.Test
         protected async Task<ResponseCommandResult> DeserializeResponseAsync(HttpResponseMessage response)
         {
             var value = await response.Content.ReadAsStringAsync();
-            var content = JsonConvert.DeserializeObject<ThirdPartyDetailedCommandResult>(value);
+            var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
             var data = JsonConvert.DeserializeAnonymousType(value, new { data = new { id = string.Empty } });
 
             return new ResponseCommandResult(data.data.id, content.Success, content.Message);
@@ -41,7 +42,7 @@ namespace Krafted.Framework.Test
         protected async Task<ResponseCommandResult> DeserializeDeleteResponseAsync(HttpResponseMessage response)
         {
             var value = await response.Content.ReadAsStringAsync();
-            var content = JsonConvert.DeserializeObject<ThirdPartyDetailedCommandResult>(value);
+            var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
 
             return new ResponseCommandResult(content.Success, content.Message);
         }

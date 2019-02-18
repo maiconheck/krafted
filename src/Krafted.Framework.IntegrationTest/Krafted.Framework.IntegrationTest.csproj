@@ -1,12 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
+    <CodeAnalysisRuleSet>..\Analyzers\UnitTest.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="Krafted.Framework.Test" Version="1.0.0.11" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.1.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
@@ -16,6 +20,10 @@
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.1.1" />
     <PackageReference Include="Dapper.FluentMap" Version="1.7.0" />
     <PackageReference Include="Dapper.FluentMap.Dommel" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Krafted.Framework.Test\Krafted.Framework.Test.csproj" />
   </ItemGroup>  
 
   <ItemGroup>

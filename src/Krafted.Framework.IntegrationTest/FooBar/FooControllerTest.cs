@@ -5,8 +5,8 @@ using System.Net.Http.Formatting;
 using Xunit;
 using Krafted.Framework.IntegrationTest.FooBar.Application;
 using Krafted.Framework.IntegrationTest.FooBar.Domain;
-using Krafted.Framework.Infrastructure.Test;
-using Krafted.Framework.Infrastructure.Api;
+using Krafted.Framework.Test;
+using Krafted.Framework.Api;
 
 namespace Krafted.Framework.IntegrationTest.FooBar
 {
@@ -20,7 +20,7 @@ namespace Krafted.Framework.IntegrationTest.FooBar
 
         [Fact]
         public async Task GetById_ExistentId_SuccessAndCorrectContentType()
-        {            
+        {
             var createResponse = await CreateAsync();
             var result = await DeserializeResponseAsync(createResponse);
 
@@ -54,15 +54,15 @@ namespace Krafted.Framework.IntegrationTest.FooBar
             Assert.True(result.Success);
         }
 
-        [Fact(Skip = "WIP")]
+        [Fact]
         public async Task Post_FailAndCorrectContentType()
         {
             var createResponse = await CreateAsync("Foo", new DateTime(1970, 1, 1), new DateTime(1970, 1, 1));
-            var result = await DeserializeResponseAsync(createResponse);
+            var result = await DeserializeDeleteResponseAsync(createResponse);
 
             EnsureSuccessStatusCode(createResponse);
             Assert.Equal(CorrectContentType, createResponse.Content.Headers.ContentType.ToString());
-            Assert.Equal("Foo criado com sucesso.", result.Message);
+            Assert.Equal("Falha ao criar o registro. Verifique as mensagens de erro.", result.Message);            
             Assert.False(result.Success);
         }
 

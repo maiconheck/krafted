@@ -13,6 +13,7 @@ namespace Krafted.Framework.IntegrationTest.FooBar.Domain
             Name = name;
             StartDate = startDate;
             EndDate = endDate;
+            Validate();
         }
 
         protected Foo()
