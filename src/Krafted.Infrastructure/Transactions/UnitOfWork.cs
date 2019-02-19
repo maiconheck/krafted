@@ -8,22 +8,26 @@ using System;
 using System.Data;
 using Krafted.Infrastructure.Connections;
 using Krafted.Infrastructure.Connections.SqlServer;
+using Microsoft.Extensions.Logging;
 using SharedKernel.Transactions;
 
 namespace Krafted.Infrastructure.Transactions
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
+        private readonly ILogger<UnitOfWork> _logger;
         private bool _disposed;
 
         public IDbTransaction Transaction { get; private set; }
         public IDbConnection Connection { get; private set; }
 
-        public UnitOfWork(IConnectionProvider connectionProvider)
+        public UnitOfWork(IConnectionProvider connectionProvider, ILogger<UnitOfWork> logger)
         {
             Connection = connectionProvider.Create(ConnectionType.StandardConnection);
             Connection.Open();
             Transaction = Connection.BeginTransaction();
+
+            _logger = logger;
         }
 
         ~UnitOfWork()
@@ -39,8 +43,9 @@ namespace Krafted.Infrastructure.Transactions
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Ocorreu uma exceção no commit.");
                 Transaction.Rollback();
-                throw;
+                _logger.LogInformation("Rollback realizado com sucesso.");
             }
             finally
             {
