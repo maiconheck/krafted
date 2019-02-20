@@ -41,8 +41,6 @@ namespace Krafted.Api
             app.UseMvcWithDefaultRoute();
             app.UseResponseCompression();
 
-            app.UseSwaggerDefault("Krafted API", "v1");
-
             app.Run(async (context) =>
             {
                 context.Response.ContentType = "text/plain; charset=utf-8";

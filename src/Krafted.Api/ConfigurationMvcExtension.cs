@@ -8,7 +8,7 @@ namespace Krafted.Api
     {
         public static void ConfigureMvcDefault(this IServiceCollection services)
         {
-			services.AddCors();
+            services.AddCors();
             services.AddMvc()
             .AddJsonOptions(opt =>
             {
@@ -19,8 +19,7 @@ namespace Krafted.Api
             })
             .AddDataAnnotationsLocalization();
 
-			services.AddResponseCompression();
-            services.ConfigureSwaggerDefault("Krafted API", "v1");
+            services.AddResponseCompression();
         }
     }
 }
