@@ -1,0 +1,7 @@
+CREATE PROCEDURE [dbo].[DeleteFoo]
+	@Id UNIQUEIDENTIFIER
+AS
+BEGIN
+	SET NOCOUNT ON;
+    DELETE [dbo].[Foo] WHERE Id = @Id
+END

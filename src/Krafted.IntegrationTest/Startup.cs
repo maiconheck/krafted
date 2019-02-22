@@ -5,6 +5,9 @@ using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.IntegrationTest.FooBar.Infrastructure;
 using Krafted.Api;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Krafted.IntegrationTest.Migration;
 
 namespace Krafted.IntegrationTest
 {
@@ -19,13 +22,16 @@ namespace Krafted.IntegrationTest
             services.AddScoped<IRepositoryAsync<Foo>, FooRepository>();
             services.AddScoped<FooApplicationService>();
 
-            // TODO: Carregar App_Data\Teste.mdf.
-            // TODO: Flexibilizar a prop DbSettings.ConnectionStringMigration para poder construir a connection string manualmente.
-            //var pathDB = Path.Combine(Directory.GetCurrentDirectory(), @"App_Data\Teste.mdf");
-            //AppDomain.CurrentDomain.SetData("DataDirectory", pathDB);
+            // TODO: Flexibilizar a prop DbSettings.ConnectionStringMigration para poder construir a connection string manualmente.            
 
             base.ConfigureServices(services);
             services.ConfigureMvcDefault();
+        }
+
+        public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            base.Configure(app, env);
+            app.UseMigration("Server=(localdb)\\MSSQLLocalDB;Database=Krafted;Integrated Security=true;MultipleActiveResultSets=true");
         }
     }
 }
