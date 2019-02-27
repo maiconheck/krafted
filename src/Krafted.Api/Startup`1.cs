@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Localization;
 using SharedKernel.Application.Commands.Result;
 using Krafted.Infrastructure.Connections.SqlServer;
 using SharedKernel.Application.Commands.Result.Default;
@@ -21,6 +22,10 @@ namespace Krafted.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public virtual void ConfigureServices(IServiceCollection services)
         {
+            services.AddResponseCompression();
+            services.AddResponseCaching();
+            services.ConfigureMvcDefault();
+
             services.ConfigureSqlServerConnectionProvider<SqlServerConnectionProvider>(Configuration.GetSection("ConnectionStrings"));
             services.AddScoped<ICommandResultFactory, DefaultCommandResultFactory>();
         }
@@ -33,18 +38,16 @@ namespace Krafted.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRequestLocalization(new RequestLocalizationOptions { DefaultRequestCulture = new RequestCulture("pt-BR", "pt-BR") });
+            app.UseResponseCaching();
+            app.UseResponseCompression();
+
             app.UseCors(policy => policy
                 .AllowAnyOrigin()
                 .AllowAnyHeader()
                 .AllowAnyMethod());
 
             app.UseMvcWithDefaultRoute();
-            app.UseResponseCompression();
-
-            app.Run(async (context) =>
-            {
-                context.Response.ContentType = "text/plain; charset=utf-8";
-            });
         }
     }
 }

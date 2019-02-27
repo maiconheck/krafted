@@ -21,11 +21,7 @@ namespace Krafted.IntegrationTest
         {
             services.AddScoped<IRepositoryAsync<Foo>, FooRepository>();
             services.AddScoped<FooApplicationService>();
-
-            // TODO: Flexibilizar a prop DbSettings.ConnectionStringMigration para poder construir a connection string manualmente.            
-
             base.ConfigureServices(services);
-            services.ConfigureMvcDefault();
         }
 
         public override void Configure(IApplicationBuilder app, IHostingEnvironment env)

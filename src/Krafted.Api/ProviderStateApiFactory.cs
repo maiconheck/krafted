@@ -7,10 +7,7 @@ namespace Krafted.Api
     public class ProviderStateApiFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
     {
         protected override IWebHostBuilder CreateWebHostBuilder()
-        {
-            return WebHost.CreateDefaultBuilder()
-                .UseStartup<TEntryPoint>();
-        }
+            => WebHost.CreateDefaultBuilder().UseStartup<TEntryPoint>();
 
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {

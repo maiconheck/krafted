@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Krafted.Api
 {
-    public static class ConfigurationMvcExtension
+    internal static class ConfigurationMvcExtension
     {
         public static void ConfigureMvcDefault(this IServiceCollection services)
         {
@@ -18,8 +18,6 @@ namespace Krafted.Api
                 opt.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
             })
             .AddDataAnnotationsLocalization();
-
-            services.AddResponseCompression();
         }
     }
 }
