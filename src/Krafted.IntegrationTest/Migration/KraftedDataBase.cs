@@ -1,17 +1,14 @@
 using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
 using System.Reflection;
-using static System.Console;
-using Dapper;
 using DbUp;
 using DbUp.Engine;
 using Microsoft.AspNetCore.Builder;
+using static System.Console;
 
 namespace Krafted.IntegrationTest.Migration
 {
-    public static class KraftedDataBase
+
+    internal static class KraftedDataBase
     {
         public static void UseMigration(this IApplicationBuilder app, string connectionString)
         {

@@ -30,7 +30,7 @@ namespace Krafted.UnitTest
                 fixture.CommandResultFactory);
         }
 
-        [Fact(Skip = "wip")]
+        [Fact]
         public void ShouldCreateFoo_WhenCommandIsValid_Valid()
         {
             var command = new CreateFooCommand
@@ -46,7 +46,7 @@ namespace Krafted.UnitTest
             Assert.True(_fooAppService.Valid);
         }
 
-        [Fact(Skip = "wip")]
+        [Fact]
         public void ShouldChangeScheduleFoo_WhenCommandIsValid_Valid()
         {
             var command = new ChangeScheduleFooCommand

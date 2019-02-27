@@ -1,10 +1,9 @@
-﻿using System.Data.Common;
-using Krafted.Infrastructure.Connections.SqlServer;
+﻿using System.Data;
 
 namespace Krafted.Infrastructure.Connections
 {
     public interface IConnectionProvider
     {
-        DbConnection Create(ConnectionType type);
+        IDbConnection Create();
     }
 }

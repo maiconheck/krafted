@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Localization;
 using SharedKernel.Application.Commands.Result;
-using Krafted.Infrastructure.Connections.SqlServer;
 using SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Api
@@ -25,8 +24,6 @@ namespace Krafted.Api
             services.AddResponseCompression();
             services.AddResponseCaching();
             services.ConfigureMvcDefault();
-
-            services.ConfigureSqlServerConnectionProvider<SqlServerConnectionProvider>(Configuration.GetSection("ConnectionStrings"));
             services.AddScoped<ICommandResultFactory, DefaultCommandResultFactory>();
         }
 

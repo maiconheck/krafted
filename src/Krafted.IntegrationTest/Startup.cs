@@ -1,33 +1,46 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using SharedKernel.Domain;
+using Krafted.Api;
+using Krafted.Infrastructure.Connections;
+using Krafted.Infrastructure.Connections.SqlServer;
+using Krafted.Infrastructure.Transactions;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.IntegrationTest.FooBar.Infrastructure;
-using Krafted.Api;
+using Krafted.IntegrationTest.Migration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Krafted.IntegrationTest.Migration;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SharedKernel.Domain;
+using SharedKernel.Transactions;
 
 namespace Krafted.IntegrationTest
 {
+
     public class Startup : Startup<Startup>
     {
-        public Startup(IConfiguration configuration) : base(configuration)
+        public Startup(IConfiguration configuration)
+            : base(configuration)
         {
         }
 
         public override void ConfigureServices(IServiceCollection services)
         {
+            base.ConfigureServices(services);
+
+            services.AddScoped<IConnectionProvider, SqlServerConnectionProvider>(provider =>
+            {
+                return new SqlServerConnectionProvider(Configuration.GetConnectionString("StandardConnection"));
+            });
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IRepositoryAsync<Foo>, FooRepository>();
             services.AddScoped<FooApplicationService>();
-            base.ConfigureServices(services);
         }
 
         public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             base.Configure(app, env);
-            app.UseMigration("Server=(localdb)\\MSSQLLocalDB;Database=Krafted;Integrated Security=true;MultipleActiveResultSets=true");
+            app.UseMigration(Configuration.GetConnectionString("StandardConnection"));
         }
     }
 }
