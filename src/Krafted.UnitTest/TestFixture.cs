@@ -24,6 +24,10 @@ namespace Krafted.UnitTest
 
         public ICommandResultFactory CommandResultFactory { get; }
 
-        public void Dispose() => UnitOfWork.Dispose();
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
+            GC.SuppressFinalize(this);
+        }
     }
 }

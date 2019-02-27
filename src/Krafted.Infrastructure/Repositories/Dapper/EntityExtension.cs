@@ -1,8 +1,8 @@
-﻿using Dapper;
-using SharedKernel.Domain;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Dapper;
+using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {
@@ -10,7 +10,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     {
         public static IList<string> GetColumnNames(this Entity entity, string tableName)
         {
-            string pkName = $"{tableName}{typeof(Entity).GetProperty("Id").Name}";
+            var pkName = $"{tableName}{typeof(Entity).GetProperty("Id").Name}";
 
             var columns = entity
                 .GetType()
@@ -25,8 +25,8 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         public static DynamicParameters ToParams(this Entity entity, string tableName)
         {
             var pk = typeof(Entity).GetProperty("Id");
-            string pkName = $"{tableName}{pk.Name}";
-            object pkValue = pk.GetValue(entity);
+            var pkName = $"{tableName}{pk.Name}";
+            var pkValue = pk.GetValue(entity);
 
             var param = entity
                 .GetType()

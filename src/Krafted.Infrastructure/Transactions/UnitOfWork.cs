@@ -15,12 +15,8 @@ namespace Krafted.Infrastructure.Transactions
     public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly ILogger<UnitOfWork> _logger;
-        
+
         private bool _disposed;
-
-        public IDbTransaction Transaction { get; private set; }
-
-        public IDbConnection Connection { get; private set; }
 
         public UnitOfWork(IConnectionProvider connectionProvider, ILogger<UnitOfWork> logger)
         {
@@ -35,6 +31,10 @@ namespace Krafted.Infrastructure.Transactions
         {
             Dispose(false);
         }
+
+        public IDbTransaction Transaction { get; private set; }
+
+        public IDbConnection Connection { get; private set; }
 
         public void Commit()
         {

@@ -6,7 +6,8 @@ using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {
-    public class QueryBuilder<TEntity> where TEntity : Entity
+    public class QueryBuilder<TEntity>
+        where TEntity : Entity
     {
         private readonly IDbConnection _connection;
         private readonly string _tableName;

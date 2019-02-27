@@ -1,5 +1,5 @@
-﻿using SharedKernel.Application.Commands;
-using System;
+﻿using System;
+using SharedKernel.Application.Commands;
 
 namespace Krafted.IntegrationTest.FooBar.Application
 {

@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Krafted.Api
 {
-    public class ProviderStateApiFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
+    public class ProviderStateApiFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint>
+        where TEntryPoint : class
     {
         protected override IWebHostBuilder CreateWebHostBuilder()
             => WebHost.CreateDefaultBuilder().UseStartup<TEntryPoint>();

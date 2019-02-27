@@ -1,6 +1,6 @@
 ﻿using System;
-using Xunit;
 using Krafted.IntegrationTest.FooBar.Domain;
+using Xunit;
 
 namespace Krafted.UnitTest
 {
@@ -12,7 +12,7 @@ namespace Krafted.UnitTest
         [InlineData("nome longo, contendo mais do que cinquenta caracteres")]
         public void Foo_InvalidDescription_Invalid(string description)
         {
-            var foo = new Foo(description, new DateTime(), new DateTime().AddDays(1));
+            var foo = new Foo(description, DateTime.Today, DateTime.Today.AddDays(1));
             Assert.True(foo.Invalid);
             Assert.Equal(3, foo.Notifications.Count);
         }

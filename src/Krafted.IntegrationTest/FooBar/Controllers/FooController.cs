@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
+using Microsoft.AspNetCore.Mvc;
 using SharedKernel.Domain;
 
 namespace Krafted.IntegrationTest.FooBar.Controllers

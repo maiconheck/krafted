@@ -15,7 +15,6 @@ using SharedKernel.Transactions;
 
 namespace Krafted.IntegrationTest
 {
-
     public class Startup : Startup<Startup>
     {
         public Startup(IConfiguration configuration)

@@ -1,9 +1,9 @@
 ﻿using System;
-using Xunit;
-using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.IntegrationTest.FooBar.Application;
-using SharedKernel.Domain;
+using Krafted.IntegrationTest.FooBar.Domain;
 using NSubstitute;
+using SharedKernel.Domain;
+using Xunit;
 
 namespace Krafted.UnitTest
 {

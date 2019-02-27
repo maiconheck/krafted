@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Reflection;
 using DbUp;
 using DbUp.Engine;
@@ -7,7 +7,6 @@ using static System.Console;
 
 namespace Krafted.IntegrationTest.Migration
 {
-
     internal static class KraftedDataBase
     {
         public static void UseMigration(this IApplicationBuilder app, string connectionString)

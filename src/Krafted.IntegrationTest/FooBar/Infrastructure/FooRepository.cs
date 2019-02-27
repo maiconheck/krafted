@@ -45,14 +45,14 @@ namespace Krafted.IntegrationTest.FooBar.Infrastructure
         public async Task UpdateAsync(Foo entity, object param = null)
             => await ExecuteAsync("ChangeScheduleFoo", new { entity.Id, entity.StartDate, entity.EndDate });
 
-        private async Task ExecuteAsync(string procedure, object param)
-            => await Connection.ExecuteAsync(procedure, param, Transaction, null, CommandType.StoredProcedure).ConfigureAwait(false);
-
         public Task<IEnumerable<Foo>> GetAllAsync(object whereConditions)
         {
             throw new NotImplementedException();
         }
 
         public async Task DeleteAsync(Foo entity) => await ExecuteAsync("DeleteFoo", new { entity.Id });
+
+        private async Task ExecuteAsync(string procedure, object param)
+            => await Connection.ExecuteAsync(procedure, param, Transaction, null, CommandType.StoredProcedure).ConfigureAwait(false);
     }
 }

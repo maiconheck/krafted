@@ -38,11 +38,11 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         public async Task DeleteAsync(TEntity entity) =>
             await ExecuteAsync(_queryBuilder.GetDeleteCommand(), GetParam(entity)).ConfigureAwait(false);
 
-        private async Task ExecuteAsync(string query, object param)
-            => await Connection.ExecuteAsync(query, param, Transaction).ConfigureAwait(false);
-
         private static object GetParams(TEntity entity) => entity.ToParams(typeof(TEntity).Name);
 
         private static object GetParam(TEntity entity) => entity.ToParam(typeof(TEntity).Name);
+
+        private async Task ExecuteAsync(string query, object param)
+            => await Connection.ExecuteAsync(query, param, Transaction).ConfigureAwait(false);
     }
 }

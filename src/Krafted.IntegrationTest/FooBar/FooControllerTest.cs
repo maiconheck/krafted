@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Net.Http.Formatting;
-using Xunit;
+using System.Threading.Tasks;
+using Krafted.Api;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.Test;
-using Krafted.Api;
+using Xunit;
 
 namespace Krafted.IntegrationTest.FooBar
 {
@@ -57,7 +57,7 @@ namespace Krafted.IntegrationTest.FooBar
         [Fact]
         public async Task Post_FailAndCorrectContentType()
         {
-            var createResponse = await CreateAsync("Foo", new DateTime(1970, 1, 1), new DateTime(1970, 1, 1));
+            var createResponse = await CreateAsync(nameof(Foo), new DateTime(1970, 1, 1), new DateTime(1970, 1, 1));
             var result = await DeserializeDeleteResponseAsync(createResponse);
 
             EnsureSuccessStatusCode(createResponse);
