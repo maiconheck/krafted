@@ -14,7 +14,7 @@ namespace Krafted.UnitTest
         {
             var foo = new Foo(description, DateTime.Today, DateTime.Today.AddDays(1));
             Assert.True(foo.Invalid);
-            Assert.Equal(3, foo.Notifications.Count);
+            Assert.Equal(1, foo.Notifications.Count);
         }
 
         [Theory]
