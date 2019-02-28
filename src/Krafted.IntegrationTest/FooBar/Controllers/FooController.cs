@@ -24,7 +24,7 @@ namespace Krafted.IntegrationTest.FooBar.Controllers
         [ResponseCache(Duration = 60)]
         public async Task<IActionResult> GetByIdAsync(Guid id)
         {
-            var foo = await _fooRepository.GetByIdAsync(id).ConfigureAwait(false);
+            var foo = await _fooRepository.GetByIdAsync(id);
             return Ok(foo);
         }
 
@@ -32,14 +32,14 @@ namespace Krafted.IntegrationTest.FooBar.Controllers
         [ResponseCache(Duration = 60)]
         public async Task<IActionResult> GetAllAsync()
         {
-            var foo = await _fooRepository.GetAllAsync().ConfigureAwait(false);
+            var foo = await _fooRepository.GetAllAsync();
             return Ok(foo);
         }
 
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] CreateFooCommand command)
         {
-            var result = await _fooAppService.HandleAsync(command).ConfigureAwait(false);
+            var result = await _fooAppService.HandleAsync(command);
             return Ok(result);
         }
 
@@ -48,7 +48,7 @@ namespace Krafted.IntegrationTest.FooBar.Controllers
         public async Task<IActionResult> PutAsync(Guid id, [FromBody] ChangeScheduleFooCommand command)
         {
             command.Id = id;
-            var result = await _fooAppService.HandleAsync(command).ConfigureAwait(false);
+            var result = await _fooAppService.HandleAsync(command);
             return Ok(result);
         }
 
@@ -56,8 +56,7 @@ namespace Krafted.IntegrationTest.FooBar.Controllers
         [Route("{id}")]
         public async Task<IActionResult> DeleteAsync(Guid id)
         {
-            var command = new DeleteFooCommand(id);
-            var result = await _fooAppService.HandleAsync(command).ConfigureAwait(false);
+            var result = await _fooAppService.HandleAsync(new DeleteFooCommand(id));
             return Ok(result);
         }
     }

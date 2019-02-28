@@ -20,14 +20,26 @@ namespace Krafted.UnitTest
             CommandResultFactory = Substitute.For<ICommandResultFactory>();
         }
 
-        public IUnitOfWork UnitOfWork { get; }
+        public IUnitOfWork UnitOfWork { get; private set; }
 
         public ICommandResultFactory CommandResultFactory { get; }
 
         public void Dispose()
         {
-            UnitOfWork.Dispose();
+            Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (UnitOfWork != null)
+                {
+                    UnitOfWork.Dispose();
+                    UnitOfWork = null;
+                }
+            }
         }
     }
 }

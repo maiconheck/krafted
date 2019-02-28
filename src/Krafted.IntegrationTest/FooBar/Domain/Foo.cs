@@ -30,11 +30,9 @@ namespace Krafted.IntegrationTest.FooBar.Domain
 
         public void ChangeSchedule(DateTime startDate, DateTime endDate)
         {
-            if (startDate > endDate)
-                AddNotification(new Notification(nameof(EndDate), "A data de inicio não pode ser maior do que a data de encerramento."));
-
             StartDate = startDate;
             EndDate = endDate;
+            Validate();
         }
 
         public void Cancel()
@@ -51,7 +49,7 @@ namespace Krafted.IntegrationTest.FooBar.Domain
                 .HasMaxLen(Name, 50, nameof(Name), "O nome deve ter no máximo 50 caracteres.")
                 .IsGreaterThan(StartDate, new DateTime(1980, 1, 1), nameof(StartDate), "Data de inicio inválida")
                 .IsGreaterThan(EndDate, new DateTime(1980, 1, 1), nameof(EndDate), "Data de encerramento inválida")
-                .IsGreaterThan(EndDate, StartDate, nameof(EndDate), "A data de encerramento não pode ser maior do que a data de inicio."));
+                .IsGreaterThan(EndDate, StartDate, nameof(EndDate), "A data de inicio não pode ser maior do que a data de encerramento."));
         }
     }
 }

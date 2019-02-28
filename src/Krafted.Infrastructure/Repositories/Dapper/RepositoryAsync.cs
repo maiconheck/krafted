@@ -21,7 +21,9 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         public async Task<IEnumerable<TEntity>> GetAllAsync()
             => await Connection.QueryAsync<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction).ConfigureAwait(false);
 
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             throw new NotImplementedException();
         }

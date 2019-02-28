@@ -24,10 +24,7 @@ namespace Krafted.UnitTest
 
             _fooRepository.GetByIdAsync(_fooId).Returns(foo);
 
-            _fooAppService = new FooApplicationService(
-                _fooRepository,
-                fixture.UnitOfWork,
-                fixture.CommandResultFactory);
+            _fooAppService = new FooApplicationService(_fooRepository, fixture.UnitOfWork, fixture.CommandResultFactory);
         }
 
         [Fact]

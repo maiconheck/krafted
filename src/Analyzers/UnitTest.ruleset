@@ -71,6 +71,7 @@
 		<Rule Id="CA1707" Action="None" />
 		<Rule Id="CA1822" Action="None" />
 		<Rule Id="CA2007" Action="None" />
+		<Rule Id="CA2234" Action="None" />
     </Rules>
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
         <Rule Id="SA1305" Action="Warning" />

@@ -1,4 +1,4 @@
-using Krafted.Api;
+﻿using Krafted.Api;
 using Krafted.Infrastructure.Connections;
 using Krafted.Infrastructure.Connections.SqlServer;
 using Krafted.Infrastructure.Transactions;

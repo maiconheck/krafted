@@ -22,7 +22,7 @@ namespace Krafted.UnitTest
         [InlineData("a nome deve ter pelo menos cinco caracteres")]
         public void Foo_ValidDescription_Valid(string description)
         {
-            var foo = new Foo(description, new DateTime(1980, 1, 2), new DateTime(1980, 1, 2).AddDays(1));
+            var foo = new Foo(description, new DateTime(1980, 1, 2), new DateTime(1980, 1, 3));
             Assert.True(foo.Valid);
             Assert.Equal(0, foo.Notifications.Count);
         }
