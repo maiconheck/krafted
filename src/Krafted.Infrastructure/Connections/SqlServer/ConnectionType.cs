@@ -2,7 +2,7 @@
 {
     public enum ConnectionType
     {
-        StandardConnection,
-        LogConnection
+        StandardConnection = 0,
+        LogConnection = 1
     }
 }

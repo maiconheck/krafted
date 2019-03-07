@@ -18,18 +18,17 @@ namespace Krafted.Infrastructure.Repositories.Dapper
             _queryBuilder = new QueryBuilder<TEntity>(Connection);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync()
-            => await Connection.QueryAsync<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction).ConfigureAwait(false);
+        public Task<IEnumerable<TEntity>> GetAllAsync()
+            => Connection.QueryAsync<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction);
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions)
+#pragma warning disable RCS1079 // Throwing of new NotImplementedException.
+        public async Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
+#pragma warning restore RCS1079 // Throwing of new NotImplementedException.
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
-        {
-            throw new NotImplementedException();
-        }
 
-        public async Task<TEntity> GetByIdAsync(Guid id)
-            => await Connection.QueryFirstAsync<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction).ConfigureAwait(false);
+        public Task<TEntity> GetByIdAsync(Guid id)
+            => Connection.QueryFirstAsync<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
 
         public async Task CreateAsync(TEntity entity, object param = null)
             => await Connection.ExecuteAsync(_queryBuilder.GetInsertCommand(), param ?? GetParams(entity), Transaction).ConfigureAwait(false);

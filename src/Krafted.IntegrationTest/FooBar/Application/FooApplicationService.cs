@@ -28,7 +28,7 @@ namespace Krafted.IntegrationTest.FooBar.Application
         public async Task<ICommandResult> HandleAsync(CreateFooCommand command)
         {
             var foo = new Foo(command.Name, command.StartDate, command.EndDate);
-            return await CreateAsync(foo, new { foo.Id, foo.Name, foo.StartDate, foo.EndDate }, $"Foo criado com sucesso.");
+            return await CreateAsync(foo, new { foo.Id, foo.Name, foo.StartDate, foo.EndDate }, $"Foo criado com sucesso.").ConfigureAwait(false);
         }
 
         public async Task<ICommandResult> HandleAsync(ChangeScheduleFooCommand command)
@@ -39,21 +39,21 @@ namespace Krafted.IntegrationTest.FooBar.Application
             return await UpdateAsync(
                 foo,
                 new { foo?.Id, foo?.StartDate, foo?.EndDate, foo?.Name },
-                $"Foo {foo?.Name} atualizado com sucesso.");
+                $"Foo {foo?.Name} atualizado com sucesso.").ConfigureAwait(false);
         }
 
         public async Task<ICommandResult> HandleAsync(DeleteFooCommand command)
         {
-            var foo = await _fooRepository.GetByIdAsync(command.Id);
-            return await DeleteAsync(foo, $"Foo {foo?.Name} excluido com sucesso.");
+            var foo = await _fooRepository.GetByIdAsync(command.Id).ConfigureAwait(false);
+            return await DeleteAsync(foo, $"Foo {foo?.Name} excluido com sucesso.").ConfigureAwait(false);
         }
 
         public async Task<ICommandResult> HandleAsync(CancelFooCommand command)
         {
-            var foo = await _fooRepository.GetByIdAsync(command.Id);
+            var foo = await _fooRepository.GetByIdAsync(command.Id).ConfigureAwait(false);
             foo?.Cancel();
 
-            return await UpdateAsync(foo, new { foo?.Id, foo?.Canceled }, $"Foo {foo?.Name} atualizado com sucesso.");
+            return await UpdateAsync(foo, new { foo?.Id, foo?.Canceled }, $"Foo {foo?.Name} atualizado com sucesso.").ConfigureAwait(false);
         }
     }
 }

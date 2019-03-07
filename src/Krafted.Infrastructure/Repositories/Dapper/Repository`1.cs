@@ -5,8 +5,6 @@ using SharedKernel.Transactions;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {
-    // TODO: Documentar.
-    // WIP
     public abstract class Repository<TEntity> : Repository, IRepository<TEntity>
         where TEntity : Entity
     {

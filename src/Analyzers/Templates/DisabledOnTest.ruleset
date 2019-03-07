@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Custom Rulset" Description="Custom Rulset" ToolsVersion="14.0">
+	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+		<Rule Id="CC0001" Action="Warning" />   <!-- Always use var -->
+		<Rule Id="CC0030" Action="Warning" />   <!-- Make local variable const when it is Possible -->
+		<Rule Id="CA1707" Action="Warning" />   <!-- Identifiers should not contain underscores -->
+		<Rule Id="RCS1118" Action="Warning" />  <!-- Mark local variable as const -->
+	</Rules>
+</RuleSet>

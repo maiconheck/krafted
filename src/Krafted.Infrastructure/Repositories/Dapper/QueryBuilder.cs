@@ -37,23 +37,21 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         private string GetCommandBuilder(StatementType type)
         {
             using (var adapter = new SqlDataAdapter(_selectCommand, _connection.ConnectionString))
+            using (var builder = new SqlCommandBuilder(adapter))
             {
-                using (var builder = new SqlCommandBuilder(adapter))
-                {
-                    builder.QuotePrefix = "[";
-                    builder.QuoteSuffix = "]";
+                builder.QuotePrefix = "[";
+                builder.QuoteSuffix = "]";
 
-                    const string pattern = @"(?<=SET).*?\,|(AND.*?\)\))|(?<=WHERE.)\(|(Original_)";
+                const string pattern = @"(?<=SET).*?\,|(AND.*?\)\))|(?<=WHERE.)\(|(Original_)";
 
-                    if (type == StatementType.Insert)
-                        return builder.GetInsertCommand(true).CommandText;
-                    else if (type == StatementType.Update)
-                        return builder.GetUpdateCommand(true).CommandText.Remove(pattern);
-                    else if (type == StatementType.Delete)
-                        return builder.GetDeleteCommand(true).CommandText.Remove(pattern);
-                    else
-                        throw new InvalidOperationException();
-                }
+                if (type == StatementType.Insert)
+                    return builder.GetInsertCommand(true).CommandText;
+                else if (type == StatementType.Update)
+                    return builder.GetUpdateCommand(true).CommandText.Remove(pattern);
+                else if (type == StatementType.Delete)
+                    return builder.GetDeleteCommand(true).CommandText.Remove(pattern);
+                else
+                    throw new InvalidOperationException();
             }
         }
     }

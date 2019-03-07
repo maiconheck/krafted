@@ -8,7 +8,7 @@ namespace Krafted.Infrastructure.Connections.SqlServer
         private readonly string _configurationString;
 
         public SqlServerConnectionProvider(string configurationString)
-        {
+        {        
             _configurationString = configurationString;
         }
 

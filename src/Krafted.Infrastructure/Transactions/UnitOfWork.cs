@@ -27,10 +27,7 @@ namespace Krafted.Infrastructure.Transactions
             _logger = logger;
         }
 
-        ~UnitOfWork()
-        {
-            Dispose(false);
-        }
+        ~UnitOfWork() => Dispose(false);
 
         public IDbTransaction Transaction { get; private set; }
 
@@ -67,17 +64,11 @@ namespace Krafted.Infrastructure.Transactions
 
             if (disposing)
             {
-                if (Transaction != null)
-                {
-                    Transaction.Dispose();
-                    Transaction = null;
-                }
+                Transaction?.Dispose();
+                Transaction = null;
 
-                if (Connection != null)
-                {
-                    Connection.Dispose();
-                    Connection = null;
-                }
+                Connection?.Dispose();
+                Connection = null;
             }
 
             _disposed = true;

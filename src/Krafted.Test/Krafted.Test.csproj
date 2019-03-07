@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
     <Version>1.0.0.3</Version>
-    <CodeAnalysisRuleSet>..\Analyzers\Lib.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>    
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="All Ruleset" Description="All Rulesets in ..\Templates folder. For use in libraries or any project where you want to get the most analyzes, including documentation analyzes." ToolsVersion="14.0">
+	<Include Path=".\Templates\General.ruleset" Action="Default" />
+	<Include Path=".\Templates\DisabledOnTest.ruleset" Action="Default" />
+	<Include Path=".\Templates\Documentation.ruleset" Action="Default" />	
+</RuleSet>
