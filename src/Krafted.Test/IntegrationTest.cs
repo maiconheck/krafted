@@ -26,10 +26,10 @@ namespace Krafted.Test
         protected HttpClient Client { get; }
 
         /// <summary>
-        /// Throws an exception if the System.Net.Http.HttpResponseMessage.IsSuccessStatusCode
-        /// property for the HTTP response is false. (Status Code 200-299.)
+        /// Ensures the success status code throwing an exception if the System.Net.Http.HttpResponseMessage.IsSuccessStatusCode
+        /// property for the HTTP response is false (status Code 200-299.)
         /// </summary>
-        /// <param name="response">The HttpResponse</param>
+        /// <param name="response">The response.</param>
         protected static void EnsureSuccessStatusCode(HttpResponseMessage response) => response.EnsureSuccessStatusCode();
 
         protected static async Task<ResponseCommandResult> DeserializeResponseAsync(HttpResponseMessage response)

@@ -17,19 +17,9 @@ namespace Krafted.IntegrationTest.FooBar.Infrastructure
         {
         }
 
-        public async Task<IEnumerable<Foo>> GetAllAsync()
-        {
-            return await Connection
-                .QueryAsync<Foo>("GetAllFoo", null, Transaction, null, CommandType.StoredProcedure)
-                .ConfigureAwait(false);
-        }
+        public Task<IEnumerable<Foo>> GetAllAsync() => Connection.QueryAsync<Foo>("GetAllFoo", null, Transaction, null, CommandType.StoredProcedure);
 
-        public async Task<Foo> GetByIdAsync(Guid id)
-        {
-            return await Connection
-                .QueryFirstOrDefaultAsync<Foo>("GetFooById", new { id }, Transaction, null, CommandType.StoredProcedure)
-                .ConfigureAwait(false);
-        }
+        public Task<Foo> GetByIdAsync(Guid id) => Connection.QueryFirstOrDefaultAsync<Foo>("GetFooById", new { id }, Transaction, null, CommandType.StoredProcedure);
 
         public async Task CreateAsync(Foo entity, object param = null)
         {
@@ -45,10 +35,9 @@ namespace Krafted.IntegrationTest.FooBar.Infrastructure
         public async Task UpdateAsync(Foo entity, object param = null)
             => await ExecuteAsync("ChangeScheduleFoo", new { entity.Id, entity.StartDate, entity.EndDate });
 
-        public Task<IEnumerable<Foo>> GetAllAsync(object whereConditions)
-        {
-            throw new NotImplementedException();
-        }
+#pragma warning disable RCS1079 // Throwing of new NotImplementedException.
+        public Task<IEnumerable<Foo>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
+#pragma warning restore RCS1079 // Throwing of new NotImplementedException.
 
         public async Task DeleteAsync(Foo entity) => await ExecuteAsync("DeleteFoo", new { entity.Id });
 

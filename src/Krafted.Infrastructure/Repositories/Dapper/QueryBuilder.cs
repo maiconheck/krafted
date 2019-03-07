@@ -44,6 +44,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
 
                 const string pattern = @"(?<=SET).*?\,|(AND.*?\)\))|(?<=WHERE.)\(|(Original_)";
 
+#pragma warning disable CC0019 // Use 'switch'
                 if (type == StatementType.Insert)
                     return builder.GetInsertCommand(true).CommandText;
                 else if (type == StatementType.Update)
@@ -52,6 +53,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
                     return builder.GetDeleteCommand(true).CommandText.Remove(pattern);
                 else
                     throw new InvalidOperationException();
+#pragma warning restore CC0019 // Use 'switch'
             }
         }
     }

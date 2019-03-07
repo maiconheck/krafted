@@ -25,10 +25,10 @@ namespace Krafted.IntegrationTest.FooBar.Application
             _fooRepository = fooRepository;
         }
 
-        public async Task<ICommandResult> HandleAsync(CreateFooCommand command)
+        public Task<ICommandResult> HandleAsync(CreateFooCommand command)
         {
             var foo = new Foo(command.Name, command.StartDate, command.EndDate);
-            return await CreateAsync(foo, new { foo.Id, foo.Name, foo.StartDate, foo.EndDate }, $"Foo criado com sucesso.").ConfigureAwait(false);
+            return CreateAsync(foo, new { foo.Id, foo.Name, foo.StartDate, foo.EndDate }, "Foo criado com sucesso.");
         }
 
         public async Task<ICommandResult> HandleAsync(ChangeScheduleFooCommand command)

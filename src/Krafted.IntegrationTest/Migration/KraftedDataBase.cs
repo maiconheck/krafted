@@ -13,13 +13,13 @@ namespace Krafted.IntegrationTest.Migration
         {
             EnsureDatabase.For.SqlDatabase(connectionString);
 
-            var upgrader = DeployChanges.To
+            UpgradeEngine upgrader = DeployChanges.To
                                 .SqlDatabase(connectionString)
                                 .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
                                 .LogToConsole()
                                 .Build();
 
-            var result = upgrader.PerformUpgrade();
+            DatabaseUpgradeResult result = upgrader.PerformUpgrade();
 
             ShowMessage(result);
         }

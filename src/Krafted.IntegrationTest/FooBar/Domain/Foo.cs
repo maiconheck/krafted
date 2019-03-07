@@ -1,5 +1,4 @@
 ﻿using System;
-using Flunt.Notifications;
 using Flunt.Validations;
 using SharedKernel.Domain;
 
@@ -20,7 +19,7 @@ namespace Krafted.IntegrationTest.FooBar.Domain
         {
         }
 
-        public string Name { get; private set; }
+        public string Name { get; }
 
         public DateTime StartDate { get; private set; }
 

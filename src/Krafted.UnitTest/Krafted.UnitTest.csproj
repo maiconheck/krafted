@@ -6,9 +6,18 @@
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>CA1014</NoWarn>
+    <WarningsNotAsErrors>RCS1181,RCS1208</WarningsNotAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Analyzers" Version="2.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.2">
       <PrivateAssets>all</PrivateAssets>

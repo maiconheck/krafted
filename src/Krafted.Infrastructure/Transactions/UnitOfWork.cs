@@ -2,7 +2,7 @@
 //
 // This was adapted from Tim Schreiber.
 // Source: https://github.com/timschreiber/DapperUnitOfWork/blob/master/DapperUnitOfWork/UnitOfWork.cs
-// Retrieved in Dezember 2017.
+// Retrieved in December 2017.
 
 using System;
 using System.Data;

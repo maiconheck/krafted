@@ -7,10 +7,15 @@
     <PackageOutputPath>..\..\packages</PackageOutputPath>
     <Version>1.0.0.3</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>    
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>CA1014</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Roslynator.Analyzers" Version="2.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -26,10 +26,8 @@ namespace Krafted.IntegrationTest
         {
             base.ConfigureServices(services);
 
-            services.AddScoped<IConnectionProvider, SqlServerConnectionProvider>(provider =>
-            {
-                return new SqlServerConnectionProvider(Configuration.GetConnectionString("StandardConnection"));
-            });
+            services.AddScoped<IConnectionProvider, SqlServerConnectionProvider>(
+                _ => new SqlServerConnectionProvider(Configuration.GetConnectionString("StandardConnection")));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IRepositoryAsync<Foo>, FooRepository>();

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
 using NSubstitute;
+using SharedKernel.Application.Commands.Result;
 using SharedKernel.Domain;
 using Xunit;
 
@@ -13,7 +15,6 @@ namespace Krafted.UnitTest
         private readonly IRepositoryAsync<Foo> _fooRepository;
         private readonly FooApplicationService _fooAppService;
         private readonly TestFixture _fixture;
-        private readonly Guid _fooId = default(Guid);
 
         public FooApplicationServiceTest(TestFixture fixture)
         {
@@ -22,7 +23,7 @@ namespace Krafted.UnitTest
             _fooRepository = Substitute.For<IRepositoryAsync<Foo>>();
             var foo = new Foo("O nome do foo", new DateTime(2018, 11, 16), new DateTime(2018, 11, 17));
 
-            _fooRepository.GetByIdAsync(_fooId).Returns(foo);
+            _fooRepository.GetByIdAsync(Guid.NewGuid()).Returns(foo);
 
             _fooAppService = new FooApplicationService(_fooRepository, fixture.UnitOfWork, fixture.CommandResultFactory);
         }
@@ -34,10 +35,10 @@ namespace Krafted.UnitTest
             {
                 Name = "O nome do foo",
                 StartDate = new DateTime(2018, 11, 16),
-                EndDate = new DateTime(2018, 11, 17),
+                EndDate = new DateTime(2018, 11, 17)
             };
 
-            var result = _fooAppService.HandleAsync(command);
+            Task<ICommandResult> result = _fooAppService.HandleAsync(command);
 
             Assert.NotNull(result);
             Assert.True(_fooAppService.Valid);
@@ -49,10 +50,10 @@ namespace Krafted.UnitTest
             var command = new ChangeScheduleFooCommand
             {
                 StartDate = new DateTime(2018, 11, 20),
-                EndDate = new DateTime(2018, 11, 21),
+                EndDate = new DateTime(2018, 11, 21)
             };
 
-            var result = _fooAppService.HandleAsync(command);
+            Task<ICommandResult> result = _fooAppService.HandleAsync(command);
 
             Assert.NotNull(result);
             Assert.True(_fooAppService.Valid);
