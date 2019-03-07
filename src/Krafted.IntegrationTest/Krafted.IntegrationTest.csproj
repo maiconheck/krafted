@@ -4,7 +4,7 @@
     <IsPackable>false</IsPackable>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <NoWarn>CA2007,CA1014</NoWarn>
+    <NoWarn>CA2007,CA1014,RCS1090</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Migration\Krafted\001_Create_Table_Foo.sql" />
