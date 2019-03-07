@@ -63,7 +63,7 @@ namespace Krafted.IntegrationTest.FooBar
 
             EnsureSuccessStatusCode(createResponse);
             Assert.Equal(CorrectContentType, createResponse.Content.Headers.ContentType.ToString());
-            Assert.Equal("Falha ao criar o registro. Verifique as mensagens de erro.", result.Message);
+            Assert.Equal("Erro ao executar a requisição. Verifique a lista de notificações.", result.Message);
             Assert.False(result.Success);
         }
 
