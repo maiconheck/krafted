@@ -6,8 +6,17 @@ using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Repositories.Dapper
 {
+    /// <summary>
+    /// Provides extension methods to <see cref="Entity"/>.
+    /// </summary>
     public static class EntityExtension
     {
+        /// <summary>
+        /// Gets the column names.
+        /// </summary>
+        /// <param name="entity">The entity</param>
+        /// <param name="tableName">The name of the table</param>
+        /// <returns>The column names</returns>
         public static IList<string> GetColumnNames(this Entity entity, string tableName)
         {
             var pkName = $"{tableName}{typeof(Entity).GetProperty("Id").Name}";
@@ -22,6 +31,12 @@ namespace Krafted.Infrastructure.Repositories.Dapper
             return columns;
         }
 
+        /// <summary>
+        /// Extract the parameters from an entity.
+        /// </summary>
+        /// <param name="entity">The entity</param>
+        /// <param name="tableName">Name of the table</param>
+        /// <returns>The converted parameters</returns>
         public static DynamicParameters ToParams(this Entity entity, string tableName)
         {
             var pk = typeof(Entity).GetProperty("Id");
@@ -41,6 +56,12 @@ namespace Krafted.Infrastructure.Repositories.Dapper
             return parameters;
         }
 
+        /// <summary>
+        /// Extract the parameters from an entity.
+        /// </summary>
+        /// <param name="entity">The entity</param>
+        /// <param name="tableName">Name of the table</param>
+        /// <returns>The converted parameters</returns>
         public static DynamicParameters ToParam(this Entity entity, string tableName)
         {
             var pkName = typeof(Entity).GetProperty("Id").Name;

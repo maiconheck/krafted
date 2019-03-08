@@ -3,8 +3,15 @@ using Newtonsoft.Json;
 
 namespace Krafted.Api
 {
-    internal static class ConfigurationMvcExtension
+    /// <summary>
+    /// Provides extension methods to <see cref="IServiceCollection"/>.
+    /// </summary>
+    internal static class ServiceCollectionExtension
     {
+        /// <summary>
+        /// Configures the MVC default.
+        /// </summary>
+        /// <param name="services">The services.</param>
         public static void ConfigureMvcDefault(this IServiceCollection services)
         {
             services.AddCors();
