@@ -9,7 +9,7 @@ namespace Krafted.Infrastructure.Maps
     public static class FluentMapConfigurationExtension
     {
         /// <summary>
-        /// Adds the map to the <see cref="TEntity"/>.
+        /// Adds the map to the <see cref="Entity"/>.
         /// </summary>
         /// <typeparam name="TEntity">The entity type</typeparam>
         /// <param name="config">The configuration</param>
