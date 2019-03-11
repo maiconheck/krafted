@@ -5,7 +5,7 @@
     <IsPackable>false</IsPackable>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <NoWarn>CA1014</NoWarn>
+    <NoWarn>CA1014,RCS1208</NoWarn>
     <WarningsNotAsErrors>RCS1181,RCS1208</WarningsNotAsErrors>
   </PropertyGroup>
 

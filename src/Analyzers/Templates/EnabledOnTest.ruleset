@@ -5,5 +5,6 @@
 		<Rule Id="CC0030" Action="None" />   <!-- Make local variable const when it is Possible -->
 		<Rule Id="CA1707" Action="None" />   <!-- Identifiers should not contain underscores -->
 		<Rule Id="RCS1118" Action="None" />  <!-- Mark local variable as const -->
+		<Rule Id="SA1600" Action="None" />  <!-- Elements must be documented -->
 	</Rules>
 </RuleSet>

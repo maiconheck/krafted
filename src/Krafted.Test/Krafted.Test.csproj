@@ -8,7 +8,7 @@
     <Version>1.0.0.3</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>CA1014</NoWarn>
   </PropertyGroup>
 

@@ -549,7 +549,6 @@
 		<Rule Id="RCS1139" Action="Warning" />
 		<Rule Id="RCS1140" Action="Warning" />
 		<Rule Id="RCS1141" Action="Warning" />
-		<Rule Id="RCS1142" Action="Warning" />
 		<Rule Id="RCS1143" Action="Warning" />
 		<Rule Id="RCS1145" Action="Warning" />
 		<Rule Id="RCS1146" Action="Warning" />
@@ -636,5 +635,6 @@
 		<Rule Id="RCS1217" Action="None" />
 		<Rule Id="RCS1050" Action="None" />
 		<Rule Id="RCS1080" Action="None" />
+		<Rule Id="RCS1142" Action="None" />
 	</Rules>
 </RuleSet>
