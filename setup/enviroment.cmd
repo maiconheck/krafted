@@ -1,1 +1,0 @@
-copy pre-push ..\.git\hooks\
