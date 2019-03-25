@@ -6,5 +6,9 @@
 		<Rule Id="CA1707" Action="None" />   <!-- Identifiers should not contain underscores -->
 		<Rule Id="RCS1118" Action="None" />  <!-- Mark local variable as const -->
 		<Rule Id="SA1600" Action="None" />  <!-- Elements must be documented -->
+		<Rule Id="CA1822" Action="None" />  <!-- Elements must be documented -->
+		<Rule Id="CC0037" Action="None" />  <!-- Remove commented code -->
+		<Rule Id="RCS1077" Action="None" />  <!-- Optimize LINQ method call -->
+		<Rule Id="RCS1202" Action="None" />  <!-- Avoid NullReferenceException -->
 	</Rules>
 </RuleSet>
