@@ -41,7 +41,7 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="System.Globalization" Version="4.3.0" />   
-    <PackageReference Include="SharedKernel" Version="1.0.0.9" /> 
+    <PackageReference Include="SharedKernel" Version="1.0.0.10" /> 
   </ItemGroup>
 
   <ItemGroup>

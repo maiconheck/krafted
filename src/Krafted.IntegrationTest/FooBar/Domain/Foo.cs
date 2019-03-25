@@ -40,7 +40,7 @@ namespace Krafted.IntegrationTest.FooBar.Domain
                 Canceled = true;
         }
 
-        protected override void Validate()
+        private void Validate()
         {
             AddNotifications(new Contract()
                 .Requires()
