@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace Krafted.UnitTest
+namespace Krafted.UnitTest.Krafted
 {
     [Trait(nameof(UnitTest), nameof(Krafted))]
     public class EnumerableExtensionTest
@@ -9,20 +9,24 @@ namespace Krafted.UnitTest
         [Fact]
         public void ContainsAll_Itens_True()
         {
-            var values = new int[] { 1, 2, 3 };
             var source = new int[] { 1, 2, 3 };
+            var values = new int[] { 1, 2, 3 };
             Assert.True(source.ContainsAll(values));
 
-            values = new int[] { 1, 2 };
             source = new int[] { 1, 2, 3 };
+            values = new int[] { 1, 2 };
             Assert.True(source.ContainsAll(values));
         }
 
         [Fact]
         public void ContainsAll_Itens_False()
         {
-            var values = new int[] { 1, 2, 3, 4 };
             var source = new int[] { 1, 2, 3 };
+            var values = new int[] { 1, 2, 3, 4 };
+            Assert.False(source.ContainsAll(values));
+
+            source = new int[] { 1, 2, 3 };
+            values = new int[] { 4 };
             Assert.False(source.ContainsAll(values));
         }
     }

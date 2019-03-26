@@ -32,7 +32,7 @@ Task("Test")
             CoverletOutputDirectory = Directory(@".\coverage-results\"),
             CoverletOutputName = "result",
             Exclude = {"[xunit.*]*"},
-            Threshold = 100
+            //Threshold = 100
         };
 
         DotNetCoreTest("src", testSettings, coverletSettings);
