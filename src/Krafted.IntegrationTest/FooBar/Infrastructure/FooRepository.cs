@@ -35,9 +35,7 @@ namespace Krafted.IntegrationTest.FooBar.Infrastructure
         public async Task UpdateAsync(Foo entity, object param = null)
             => await ExecuteAsync("ChangeScheduleFoo", new { entity.Id, entity.StartDate, entity.EndDate });
 
-#pragma warning disable RCS1079 // Throwing of new NotImplementedException.
         public Task<IEnumerable<Foo>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
-#pragma warning restore RCS1079 // Throwing of new NotImplementedException.
 
         public async Task DeleteAsync(Foo entity) => await ExecuteAsync("DeleteFoo", new { entity.Id });
 

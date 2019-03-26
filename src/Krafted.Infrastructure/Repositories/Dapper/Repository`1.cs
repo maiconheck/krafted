@@ -15,7 +15,6 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     /// <seealso cref="Repository" />
     /// <seealso cref="IRepository{TEntity}" />
     [SuppressMessage("Maintainability", "RCS1140:Add exception to documentation comment", Justification = "WIP")]
-    [SuppressMessage("Maintainability", "RCS1079:Implement the functionality instead of throwing new NotImplementedException.", Justification = "WIP")]
     [SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "WIP")]
     [SuppressMessage("Design", "CC0091:Use static method", Justification = "WIP")]
     public abstract class Repository<TEntity> : Repository, IRepository<TEntity>

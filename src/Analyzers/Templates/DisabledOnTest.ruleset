@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Custom Rulset" Description="Custom Rulset" ToolsVersion="14.0">
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
-		<Rule Id="CC0001" Action="Warning" />   <!-- Always use var -->
-		<Rule Id="CC0030" Action="Warning" />   <!-- Make local variable const when it is Possible -->
-		<Rule Id="CA1707" Action="Warning" />   <!-- Identifiers should not contain underscores -->
-		<Rule Id="RCS1118" Action="Warning" />  <!-- Mark local variable as const -->
-		<Rule Id="SA1600" Action="Warning" />  <!-- Elements must be documented -->
-		<Rule Id="CA1822" Action="Warning" />  <!-- Elements must be documented -->
-		<Rule Id="CC0037" Action="Warning" />  <!-- Remove commented code -->
-		<Rule Id="RCS1077" Action="Warning" />  <!-- Optimize LINQ method call -->
-		<Rule Id="RCS1202" Action="Warning" />  <!-- Avoid NullReferenceException -->
+		<Rule Id="CC0001" Action="Error" />  <!-- Always use var -->
+		<Rule Id="CC0030" Action="Error" />  <!-- Make local variable const when it is Possible -->
+		<Rule Id="CA1707" Action="Error" />  <!-- Identifiers should not contain underscores -->
+		<Rule Id="RCS1118" Action="Error" /> <!-- Mark local variable as const -->
+		<Rule Id="SA1600" Action="Error" />  <!-- Elements must be documented -->
+		<Rule Id="CA1822" Action="Error" />  <!-- Elements must be documented -->
+		<Rule Id="CC0037" Action="Error" />  <!-- Remove commented code -->
+		<Rule Id="RCS1077" Action="Error" /> <!-- Optimize LINQ method call -->
+		<Rule Id="RCS1202" Action="Error" /> <!-- Avoid NullReferenceException -->
+		<Rule Id="CA2007" Action="Error" /> <!-- Do not directly await a Task without calling ConfigureAwait -->
+		<Rule Id="RCS1090" Action="Error" /> <!-- Call 'ConfigureAwait(false)' -->
 	</Rules>
 </RuleSet>

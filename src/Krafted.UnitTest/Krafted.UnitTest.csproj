@@ -3,10 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <IsPackable>false</IsPackable>
-    <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsNotAsErrors>SA1005,SA1515</WarningsNotAsErrors>
-    <NoWarn>CA1014,CA1716,AD0001</NoWarn>
+    <IsTestProject>true</IsTestProject>
+    <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>        
   </PropertyGroup>
 
   <ItemGroup>

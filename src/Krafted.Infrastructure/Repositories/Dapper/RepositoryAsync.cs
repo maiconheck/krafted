@@ -37,18 +37,13 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         public Task<IEnumerable<TEntity>> GetAllAsync()
             => Connection.QueryAsync<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction);
 
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-#pragma warning disable RCS1079 // Throwing of new NotImplementedException.
-#pragma warning disable RCS1140 // Add exception to documentation comment.
         /// <summary>
         /// Gets all entities asynchronous based on a criteria.
         /// </summary>
         /// <param name="whereConditions">The where conditions.</param>
         /// <returns>The entities</returns>
-        public async Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
-#pragma warning restore RCS1140 // Add exception to documentation comment.
-#pragma warning restore RCS1079 // Throwing of new NotImplementedException.
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        /// <exception cref="NotImplementedException">WIP</exception>
+        public Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
 
         /// <summary>
         /// Gets an entity by identifier asynchronously.
