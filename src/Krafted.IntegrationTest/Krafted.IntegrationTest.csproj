@@ -15,11 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migration\Krafted\001_Create_Table_Foo.sql" />
-    <EmbeddedResource Include="Migration\Krafted\002_Create_Procedure_DeleteFoo.sql" />
-    <EmbeddedResource Include="Migration\Krafted\003_Create_Procedure_CreateFoo.sql" />
-    <EmbeddedResource Include="Migration\Krafted\004_Create_Procedure_ChangeScheduleFoo.sql" />
-    <EmbeddedResource Include="Migration\Krafted\005_Create_Procedure_GetAllFoo.sql" />
-    <EmbeddedResource Include="Migration\Krafted\006_Create_Procedure_GetFooById.sql" />
   </ItemGroup>
 
   <ItemGroup>

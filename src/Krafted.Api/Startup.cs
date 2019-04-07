@@ -11,11 +11,10 @@ namespace Krafted.Api
     /// <summary>
     /// Represents the Startup base class.
     /// </summary>
-    /// <typeparam name="TStartup">The startup type.</typeparam>
-    public abstract class Startup<TStartup>
+    public abstract class Startup
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Startup{TStartup}"/> class.
+        /// Initializes a new instance of the <see cref="Startup"/> class.
         /// </summary>
         /// <param name="configuration">The configuration.</param>
         protected Startup(IConfiguration configuration)
@@ -38,7 +37,7 @@ namespace Krafted.Api
         {
             services.AddResponseCompression();
             services.AddResponseCaching();
-            services.ConfigureMvcDefault();
+            services.AddMvcDefault();
             services.AddScoped<ICommandResultFactory, DefaultCommandResultFactory>();
         }
 
@@ -53,8 +52,8 @@ namespace Krafted.Api
                 app.UseDeveloperExceptionPage();
 
             app.UseRequestLocalization(new RequestLocalizationOptions { DefaultRequestCulture = new RequestCulture("pt-BR", "pt-BR") });
-            app.UseResponseCaching();
             app.UseResponseCompression();
+            app.UseResponseCaching();
 
             app.UseCors(policy => policy
                 .AllowAnyOrigin()

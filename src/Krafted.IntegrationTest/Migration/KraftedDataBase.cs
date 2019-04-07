@@ -11,6 +11,7 @@ namespace Krafted.IntegrationTest.Migration
     {
         public static void UseMigration(this IApplicationBuilder app, string connectionString)
         {
+            DropDatabase.For.SqlDatabase(connectionString);
             EnsureDatabase.For.SqlDatabase(connectionString);
 
             UpgradeEngine upgrader = DeployChanges.To

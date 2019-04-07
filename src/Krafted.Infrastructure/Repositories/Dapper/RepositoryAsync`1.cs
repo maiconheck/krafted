@@ -51,7 +51,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <param name="id">The identifier</param>
         /// <returns>The entity</returns>
         public Task<TEntity> GetByIdAsync(Guid id)
-            => Connection.QueryFirstAsync<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
+            => Connection.QueryFirstOrDefaultAsync<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
 
         /// <summary>
         /// Creates a new entity asynchronous.
