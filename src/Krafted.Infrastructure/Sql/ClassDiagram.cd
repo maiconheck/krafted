@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Krafted.Infrastructure.Sql.Bultin.BultinSqlBuilderFactory">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\Bultin\BultinSqlBuilderFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Krafted.Infrastructure.Sql.SqlBuilderFactory">
+    <Position X="0.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\SqlBuilderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Krafted.Infrastructure.Sql.Bultin.BultinSqlBuilder&lt;TEntity&gt;">
+    <Position X="4.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAQAAAQAAAAAAAAAQAAIAAAAQAAEAAAAAAAABIA=</HashCode>
+      <FileName>Sql\Bultin\BultinSqlBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Krafted.Infrastructure.Sql.ISqlBuilderFactory">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\ISqlBuilderFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Krafted.Infrastructure.Sql.ISqlBuilder">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAQAAAAAAAAAQAAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Sql\ISqlBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

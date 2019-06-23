@@ -23,8 +23,7 @@
 		<Rule Id="CA1018" Action="Error" />
 		<Rule Id="CA1019" Action="Error" />
 		<Rule Id="CA1021" Action="Error" />
-		<Rule Id="CA1023" Action="Error" />
-		<Rule Id="CA1024" Action="Error" />
+		<Rule Id="CA1023" Action="Error" />		
 		<Rule Id="CA1027" Action="Error" />
 		<Rule Id="CA1028" Action="Error" />
 		<Rule Id="CA1030" Action="Error" />
@@ -107,7 +106,6 @@
 		<Rule Id="CA1801" Action="Error" />
 		<Rule Id="CA1802" Action="Error" />
 		<Rule Id="CA1804" Action="Error" />
-		<Rule Id="CA1806" Action="Error" />
 		<Rule Id="CA1810" Action="Error" />
 		<Rule Id="CA1811" Action="Error" />
 		<Rule Id="CA1812" Action="Error" />
@@ -198,6 +196,7 @@
 		<Rule Id="CA1040" Action="None" /> <!-- Avoid empty interfaces -->
 		<Rule Id="CA2234" Action="None" /> <!-- Pass System.Uri objects instead of strings -->
 		<Rule Id="CA1014" Action="None" /> <!-- Mark assemblies with CLSCompliantAttribute -->
+		<Rule Id="CA1024" Action="None" /> <!-- Use properties where appropriate -->
 	</Rules>
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
 		<Rule Id="SA0001" Action="Error" />
@@ -471,7 +470,6 @@
 		<Rule Id="RCS1040" Action="Error" />
 		<Rule Id="RCS1041" Action="Error" />
 		<Rule Id="RCS1042" Action="Error" />
-		<Rule Id="RCS1043" Action="Error" />
 		<Rule Id="RCS1045" Action="Error" />
 		<Rule Id="RCS1046" Action="Error" />
 		<Rule Id="RCS1047" Action="Error" />
@@ -577,11 +575,9 @@
 		<Rule Id="RCS1189" Action="Error" />
 		<Rule Id="RCS1190" Action="Error" />
 		<Rule Id="RCS1191" Action="Error" />
-		<Rule Id="RCS1192" Action="Error" />
 		<Rule Id="RCS1195" Action="Error" />
 		<Rule Id="RCS1196" Action="Error" />
 		<Rule Id="RCS1197" Action="Error" />
-		<Rule Id="RCS1198" Action="Error" />
 		<Rule Id="RCS1199" Action="Error" />
 		<Rule Id="RCS1200" Action="Error" />
 		<Rule Id="RCS1201" Action="Error" />
@@ -631,5 +627,8 @@
 		<Rule Id="RCS1181" Action="None" /> <!-- Replace comment with documentation comment -->
 		<Rule Id="RCS1029" Action="None" /> <!-- Format binary operator on next line -->
 		<Rule Id="RCS1087" Action="None" /> <!-- Use carriage return + linefeed as newline -->
+		<Rule Id="RCS1192" Action="None" /> <!-- se regular string literal instead of verbatim string literal -->
+		<Rule Id="RCS1198" Action="None" /> <!-- Avoid unnecessary boxing of value type -->
+		<Rule Id="RCS1043" Action="None" /> <!-- Remove 'partial' modifier from type with a single part -->
 	</Rules>
 </RuleSet>

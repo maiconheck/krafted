@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Krafted.Infrastructure.Connections.SqlServer
@@ -10,21 +11,24 @@ namespace Krafted.Infrastructure.Connections.SqlServer
     /// <seealso cref="IConnectionProvider" />
     public class SqlServerConnectionProvider : IConnectionProvider
     {
-        private readonly string _configurationString;
+        private readonly string _connectionString;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SqlServerConnectionProvider"/> class.
         /// </summary>
-        /// <param name="configurationString">The configuration string.</param>
-        public SqlServerConnectionProvider(string configurationString)
+        /// <param name="connectionString">The connection string.</param>
+        public SqlServerConnectionProvider(string connectionString)
         {
-            _configurationString = configurationString;
+            if (string.IsNullOrWhiteSpace(connectionString))
+                throw new ArgumentException("The connection string is invalid.");
+
+            _connectionString = connectionString;
         }
 
         /// <summary>
         /// Create a connection.
         /// </summary>
         /// <returns>The connection</returns>
-        public IDbConnection Create() => new SqlConnection(_configurationString);
+        public IDbConnection Create() => new SqlConnection(_connectionString);
     }
 }

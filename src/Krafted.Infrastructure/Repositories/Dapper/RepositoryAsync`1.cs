@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapper;
+using Krafted.Infrastructure.Sql;
 using SharedKernel.Domain;
 using SharedKernel.Transactions;
 
@@ -18,16 +19,17 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     public class RepositoryAsync<TEntity> : Repository, IRepositoryAsync<TEntity>
         where TEntity : Entity
     {
-        private readonly SqlBuilder<TEntity> _queryBuilder;
+        private readonly ISqlBuilder _queryBuilder;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RepositoryAsync{TEntity}"/> class.
         /// </summary>
         /// <param name="unitOfWork">The unit of work</param>
-        public RepositoryAsync(IUnitOfWork unitOfWork)
+        /// <param name="factory">The SqlBuilder abstract factory.</param>
+        public RepositoryAsync(IUnitOfWork unitOfWork, ISqlBuilderFactory factory)
             : base(unitOfWork)
         {
-            _queryBuilder = new SqlBuilder<TEntity>(Connection);
+            _queryBuilder = SqlBuilderFactory.NewSqlBuilder<TEntity>(factory, Connection);
         }
 
         /// <summary>
@@ -77,7 +79,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <param name="entity">The entity.</param>
         /// <returns>The task</returns>
         public async Task DeleteAsync(TEntity entity) =>
-            await ExecuteAsync(_queryBuilder.GetDeleteCommand(), GetParam(entity)).ConfigureAwait(false);
+            await ExecuteAsync(_queryBuilder.GetDeleteCommand(), entity.ToParam(typeof(TEntity).Name)).ConfigureAwait(false);
 
         /// <summary>
         /// Extract the entity parameters.
@@ -87,18 +89,11 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         private static object GetParams(TEntity entity) => entity.ToParams(typeof(TEntity).Name);
 
         /// <summary>
-        /// Extract the entity parameters.
-        /// </summary>
-        /// <param name="entity">The entity.</param>
-        /// <returns>The entity parameters.</returns>
-        private static object GetParam(TEntity entity) => entity.ToParam(typeof(TEntity).Name);
-
-        /// <summary>
         /// Execute a command asynchronously.
         /// </summary>
         /// <param name="sql">The SQL statement to execute.</param>
         /// <param name="param">The parameters to use for this SQL.</param>
-        /// <returns>The number of rows affected.</returns>
+        /// <returns>The task</returns>
         private async Task ExecuteAsync(string sql, object param)
             => await Connection.ExecuteAsync(sql, param, Transaction).ConfigureAwait(false);
     }

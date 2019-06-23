@@ -32,7 +32,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         }
 
         /// <summary>
-        /// Extract the parameters from an entity.
+        /// Converts the properties of the entity to an <see cref="DynamicParameters" /> object.
         /// </summary>
         /// <param name="entity">The entity</param>
         /// <param name="tableName">Name of the table</param>
@@ -57,7 +57,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         }
 
         /// <summary>
-        /// Extract the parameters from an entity.
+        /// Converts the properties of the entity to an <see cref="DynamicParameters" /> object.
         /// </summary>
         /// <param name="entity">The entity</param>
         /// <param name="tableName">Name of the table</param>

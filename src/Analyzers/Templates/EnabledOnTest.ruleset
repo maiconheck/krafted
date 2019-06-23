@@ -12,5 +12,6 @@
 		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->
 		<Rule Id="CA2007" Action="None" /> <!-- Do not directly await a Task without calling ConfigureAwait -->
 		<Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->
+		<Rule Id="CA1806" Action="None" /> <!-- Do not ignore method results -->
 	</Rules>
 </RuleSet>

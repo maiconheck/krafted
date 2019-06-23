@@ -1,6 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
+[assembly: InternalsVisibleTo("Krafted.UnitTest")]
 namespace Krafted.Api
 {
     /// <summary>
@@ -12,7 +14,7 @@ namespace Krafted.Api
         /// Configures the MVC default.
         /// </summary>
         /// <param name="services">The services.</param>
-        public static void ConfigureMvcDefault(this IServiceCollection services)
+        public static void AddMvcDefault(this IServiceCollection services)
         {
             services.AddCors();
             services.AddMvc()

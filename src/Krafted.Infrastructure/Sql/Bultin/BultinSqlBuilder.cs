@@ -2,15 +2,17 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Serialization;
+using Krafted.Infrastructure.Repositories.Dapper;
 using SharedKernel.Domain;
 
-namespace Krafted.Infrastructure.Repositories.Dapper
+namespace Krafted.Infrastructure.Sql.Bultin
 {
     /// <summary>
     /// Provides services to generate SQL data manipulation statements.
+    /// Represents the ConcreteProduct [Gamma et al.] BultinSqlBuilder.
     /// </summary>
     /// <typeparam name="TEntity">The entity type.</typeparam>
-    public class SqlBuilder<TEntity>
+    public class BultinSqlBuilder<TEntity> : ISqlBuilder
         where TEntity : Entity
     {
         private readonly IDbConnection _connection;
@@ -19,10 +21,10 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         private readonly string _selectCommand;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SqlBuilder{TEntity}"/> class.
+        /// Initializes a new instance of the <see cref="BultinSqlBuilder{TEntity}"/> class.
         /// </summary>
         /// <param name="connection">The connection.</param>
-        public SqlBuilder(IDbConnection connection)
+        public BultinSqlBuilder(IDbConnection connection)
         {
             _connection = connection;
             _tableName = typeof(TEntity).Name;
@@ -79,16 +81,17 @@ namespace Krafted.Infrastructure.Repositories.Dapper
 
                 const string pattern = @"(?<=SET).*?\,|(AND.*?\)\))|(?<=WHERE.)\(|(Original_)";
 
-#pragma warning disable CC0019 // Use 'switch'
-                if (type == StatementType.Insert)
-                    return builder.GetInsertCommand(true).CommandText;
-                else if (type == StatementType.Update)
-                    return builder.GetUpdateCommand(true).CommandText.Remove(pattern);
-                else if (type == StatementType.Delete)
-                    return builder.GetDeleteCommand(true).CommandText.Remove(pattern);
-                else
-                    throw new InvalidOperationException();
-#pragma warning restore CC0019 // Use 'switch'
+                switch (type)
+                {
+                    case StatementType.Insert:
+                        return builder.GetInsertCommand(true).CommandText;
+                    case StatementType.Update:
+                        return builder.GetUpdateCommand(true).CommandText.Remove(pattern).TrimEnd();
+                    case StatementType.Delete:
+                        return builder.GetDeleteCommand(true).CommandText.Remove(pattern).TrimEnd();
+                    default:
+                        throw new InvalidOperationException();
+                }
             }
         }
     }

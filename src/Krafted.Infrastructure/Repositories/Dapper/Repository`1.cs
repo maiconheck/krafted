@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Dapper;
+using Krafted.Infrastructure.Sql;
 using SharedKernel.Domain;
 using SharedKernel.Transactions;
 
@@ -17,23 +19,28 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     [SuppressMessage("Maintainability", "RCS1140:Add exception to documentation comment", Justification = "WIP")]
     [SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "WIP")]
     [SuppressMessage("Design", "CC0091:Use static method", Justification = "WIP")]
-    public abstract class Repository<TEntity> : Repository, IRepository<TEntity>
+    public class Repository<TEntity> : Repository, IRepository<TEntity>
         where TEntity : Entity
     {
+        private readonly ISqlBuilder _queryBuilder;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Repository{TEntity}"/> class.
         /// </summary>
         /// <param name="unitOfWork">The unit of work.</param>
-        protected Repository(IUnitOfWork unitOfWork)
+        /// <param name="factory">The SqlBuilder abstract factory.</param>
+        public Repository(IUnitOfWork unitOfWork, ISqlBuilderFactory factory)
             : base(unitOfWork)
         {
+            _queryBuilder = SqlBuilderFactory.NewSqlBuilder<TEntity>(factory, Connection);
         }
 
         /// <summary>
         /// Gets all entities.
         /// </summary>
         /// <returns>The entities</returns>
-        public IEnumerable<TEntity> GetAll() => throw new NotImplementedException();
+        public IEnumerable<TEntity> GetAll()
+            => Connection.Query<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction);
 
         /// <summary>
         /// Gets all entities based on a criteria.
@@ -47,30 +54,44 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>The entity</returns>
-        public TEntity GetById(Guid id) => throw new NotImplementedException();
+        public TEntity GetById(Guid id)
+            => Connection.QueryFirstOrDefault<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
 
         /// <summary>
         /// Creates a new entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        public virtual void Create(TEntity entity) => throw new NotImplementedException();
+        /// <param name="param">The parameters.</param>
+        public virtual void Create(TEntity entity, object param = null)
+            => Connection.Execute(_queryBuilder.GetInsertCommand(), param ?? GetParams(entity), Transaction);
 
         /// <summary>
         /// Updates the specified entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        public virtual void Update(TEntity entity) => throw new NotImplementedException();
+        /// <param name="param">The parameters.</param>
+        public virtual void Update(TEntity entity, object param = null)
+            => Execute(_queryBuilder.GetUpdateCommand(), param ?? GetParams(entity));
 
         /// <summary>
         /// Deletes the specified entity.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        public void Delete(TEntity entity) => throw new NotImplementedException();
+        public void Delete(TEntity entity)
+            => Execute(_queryBuilder.GetDeleteCommand(), entity.ToParam(typeof(TEntity).Name));
 
         /// <summary>
-        /// Deletes an entity.
+        /// Extract the entity parameters.
         /// </summary>
-        /// <param name="id">The identifier.</param>
-        public void Delete(Guid id) => throw new NotImplementedException();
+        /// <param name="entity">The entity.</param>
+        /// <returns>The entity parameters.</returns>
+        private static object GetParams(TEntity entity) => entity.ToParams(typeof(TEntity).Name);
+
+        /// <summary>
+        /// Execute a command.
+        /// </summary>
+        /// <param name="sql">The SQL statement to execute.</param>
+        /// <param name="param">The parameters to use for this SQL.</param>
+        private void Execute(string sql, object param) => Connection.Execute(sql, param, Transaction);
     }
 }
