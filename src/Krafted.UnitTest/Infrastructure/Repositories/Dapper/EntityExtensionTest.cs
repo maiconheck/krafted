@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Krafted.Infrastructure.Repositories.Dapper;
-using Krafted.IntegrationTest.FooBar.Domain;
 using Xunit;
 
 namespace Krafted.UnitTest.Infrastructure.Repositories.Dapper

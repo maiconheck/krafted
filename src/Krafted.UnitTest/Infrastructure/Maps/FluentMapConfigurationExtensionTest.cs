@@ -1,6 +1,6 @@
 ﻿using Dapper.FluentMap.Configuration;
 using Krafted.Infrastructure.Maps;
-using Krafted.IntegrationTest.FooBar.Domain;
+using Krafted.UnitTest.Infrastructure.Repositories.Dapper;
 using Xunit;
 
 namespace Krafted.UnitTest.Infrastructure.Maps
@@ -9,10 +9,10 @@ namespace Krafted.UnitTest.Infrastructure.Maps
     public class FluentMapConfigurationExtensionTest
     {
         [Fact]
-        public void AddMap_DefaultMap_ShouldBeAdded()
+        public void AddDefaultMap_Foo_DefaultMapShouldBeAdded()
         {
             var config = new FluentMapConfiguration();
-            config.AddMap(new DefaultMap<Foo>());
+            config.AddMap<Foo>();
         }
     }
 }

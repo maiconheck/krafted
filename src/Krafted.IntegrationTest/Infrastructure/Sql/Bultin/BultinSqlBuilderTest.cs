@@ -7,20 +7,19 @@ using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.Test;
 using Xunit;
 
-namespace Krafted.Infrastructure.IntegrationTest.Infrastructure.Sql.Builtin
+namespace Krafted.IntegrationTest.Infrastructure.Sql.Builtin
 {
     [Trait(nameof(IntegrationTest), nameof(Infrastructure))]
-    public class BultinSqlBuilderTest : IntegrationTest<Startup>, IClassFixture<ProviderStateApiFactory<Startup>>
+    public class BultinSqlBuilderTest : IntegrationTest<InfrastructureStartup>, IClassFixture<ProviderStateApiFactory<InfrastructureStartup>>
     {
         private readonly ISqlBuilder _sqlBuilder;
 
-        public BultinSqlBuilderTest(ProviderStateApiFactory<Startup> factory)
+        public BultinSqlBuilderTest(ProviderStateApiFactory<InfrastructureStartup> factory)
             : base(factory, "http://localhost:5001/api/v1")
         {
-            var connectionProvider = new SqlServerConnectionProvider(ConfigurationHelper.GetConnectionString());
+            var connectionProvider = new SqlServerConnectionProvider(ConfigurationHelper.GetConnectionString("InfrastructureConnection"));
             var connection = connectionProvider.Create();
 
-            _sqlBuilder = new BultinSqlBuilder<Foo>(connection);
             _sqlBuilder = SqlBuilderFactory.NewSqlBuilder<Foo>(new BultinSqlBuilderFactory(), connection);
         }
 

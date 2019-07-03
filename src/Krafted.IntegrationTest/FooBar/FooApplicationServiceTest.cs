@@ -2,14 +2,15 @@
 using System.Threading.Tasks;
 using Krafted.IntegrationTest.FooBar.Application;
 using Krafted.IntegrationTest.FooBar.Domain;
+using Krafted.Test;
 using NSubstitute;
 using SharedKernel.Application.Commands.Result;
 using SharedKernel.Domain;
 using Xunit;
 
-namespace Krafted.UnitTest
+namespace Krafted.IntegrationTest.FooBar
 {
-    [Trait(nameof(UnitTest), nameof(Foo))]
+    [Trait(nameof(IntegrationTest), nameof(Foo))]
     public class FooApplicationServiceTest : IClassFixture<TestFixture>
     {
         private readonly IRepositoryAsync<Foo> _fooRepository;

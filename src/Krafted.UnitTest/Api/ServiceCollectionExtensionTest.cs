@@ -11,10 +11,7 @@ namespace Krafted.UnitTest.Api
     {
         private readonly IServiceCollection _services;
 
-        public ServiceCollectionExtensionTest()
-        {
-            _services = Substitute.For<IServiceCollection>();
-        }
+        public ServiceCollectionExtensionTest() => _services = Substitute.For<IServiceCollection>();
 
         [Fact]
         public void CallConfigureMvcDefault_Services_ShouldBeReceived()

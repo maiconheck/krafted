@@ -37,7 +37,6 @@
 
   <ItemGroup>    
     <ProjectReference Include="..\Krafted.Api\Krafted.Api.csproj" />    
-    <ProjectReference Include="..\Krafted.IntegrationTest\Krafted.IntegrationTest.csproj" />    
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
   </ItemGroup>
 

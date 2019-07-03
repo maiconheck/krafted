@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 namespace Krafted
 {
     /// <summary>
-    /// Provides helper methods to get connection strings and settings from appSettings.json throw the <see cref="IConfiguration"/> provider.
+    /// Provides helper methods to get connection strings and settings from appSettings.json through the <see cref="IConfiguration"/> provider.
     /// </summary>
     public static class ConfigurationHelper
     {

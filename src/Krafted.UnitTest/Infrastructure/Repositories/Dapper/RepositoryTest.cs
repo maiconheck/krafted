@@ -2,7 +2,6 @@
 using Dapper;
 using Krafted.Infrastructure.Repositories.Dapper;
 using Krafted.Infrastructure.Sql;
-using Krafted.IntegrationTest.FooBar.Domain;
 using NSubstitute;
 using SharedKernel.Domain;
 using SharedKernel.Transactions;
@@ -33,6 +32,17 @@ namespace Krafted.UnitTest.Infrastructure.Repositories.Dapper
             _repository.GetById(Guid.NewGuid());
             _unitOfWork.Received().Transaction.Connection.QueryFirstOrDefault<Foo>(Arg.Any<string>());
         }
+
+        [Fact]
+        public void GetAll_Call_ShouldBeReceived()
+        {
+            _repository.GetAll();
+            _unitOfWork.Received().Transaction.Connection.Query(Arg.Any<string>());
+        }
+
+        [Fact]
+        public void GetAll_WhereConditions_ThrowsNotImplementedException()
+            => Assert.Throws<NotImplementedException>(() => _repository.GetAll(string.Empty));
 
         [Fact]
         public void Create_Call_ShouldBeReceived()

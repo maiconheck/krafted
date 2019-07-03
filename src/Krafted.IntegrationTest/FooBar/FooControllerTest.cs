@@ -12,9 +12,9 @@ using Xunit;
 namespace Krafted.IntegrationTest.FooBar
 {
     [Trait(nameof(IntegrationTest), nameof(Foo))]
-    public partial class FooControllerTest : IntegrationTest<Startup>, IClassFixture<ProviderStateApiFactory<Startup>>
+    public partial class FooControllerTest : IntegrationTest<ApiStartup>, IClassFixture<ProviderStateApiFactory<ApiStartup>>
     {
-        public FooControllerTest(ProviderStateApiFactory<Startup> factory)
+        public FooControllerTest(ProviderStateApiFactory<ApiStartup> factory)
             : base(factory, "http://localhost:5001/api/v1")
         {
         }

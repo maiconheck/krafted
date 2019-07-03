@@ -1,4 +1,5 @@
-﻿using Krafted.Infrastructure.Connections;
+﻿using System.Diagnostics.CodeAnalysis;
+using Krafted.Infrastructure.Connections;
 using Krafted.Infrastructure.Connections.SqlServer;
 using Krafted.Infrastructure.Repositories.Dapper;
 using Krafted.Infrastructure.Sql;
@@ -16,9 +17,10 @@ using SharedKernel.Transactions;
 
 namespace Krafted.IntegrationTest
 {
-    public class Startup : Api.Startup
+    [ExcludeFromCodeCoverage]
+    public class InfrastructureStartup : Api.Startup
     {
-        public Startup(IConfiguration configuration)
+        public InfrastructureStartup(IConfiguration configuration)
             : base(configuration)
         {
         }
@@ -39,7 +41,7 @@ namespace Krafted.IntegrationTest
         public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             base.Configure(app, env);
-            app.UseMigration(ConfigurationHelper.GetConnectionString());
+            app.UseMigration(ConfigurationHelper.GetConnectionString("InfrastructureConnection"));
         }
     }
 }

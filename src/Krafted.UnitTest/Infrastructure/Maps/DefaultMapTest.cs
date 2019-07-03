@@ -1,6 +1,6 @@
 ﻿using Dapper.FluentMap.Dommel.Mapping;
 using Krafted.Infrastructure.Maps;
-using Krafted.IntegrationTest.FooBar.Domain;
+using Krafted.UnitTest.Infrastructure.Repositories.Dapper;
 using Xunit;
 
 namespace Krafted.UnitTest.Infrastructure.Maps

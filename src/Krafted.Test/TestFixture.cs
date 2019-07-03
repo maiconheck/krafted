@@ -3,7 +3,7 @@ using NSubstitute;
 using SharedKernel.Application.Commands.Result;
 using SharedKernel.Transactions;
 
-namespace Krafted.UnitTest
+namespace Krafted.Test
 {
     /// <summary>
     /// Represents the TestFixture.
@@ -16,22 +16,44 @@ namespace Krafted.UnitTest
     /// <seealso cref="IDisposable" />
     public class TestFixture : IDisposable
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TestFixture"/> class.
+        /// </summary>
         public TestFixture()
         {
             UnitOfWork = Substitute.For<IUnitOfWork>();
             CommandResultFactory = Substitute.For<ICommandResultFactory>();
         }
 
+        /// <summary>
+        /// Gets the unit of work.
+        /// </summary>
+        /// <value>
+        /// The unit of work.
+        /// </value>
         public IUnitOfWork UnitOfWork { get; private set; }
 
+        /// <summary>
+        /// Gets the command result factory.
+        /// </summary>
+        /// <value>
+        /// The command result factory.
+        /// </value>
         public ICommandResultFactory CommandResultFactory { get; }
 
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)

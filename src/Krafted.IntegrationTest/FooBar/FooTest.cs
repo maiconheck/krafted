@@ -2,9 +2,9 @@
 using Krafted.IntegrationTest.FooBar.Domain;
 using Xunit;
 
-namespace Krafted.UnitTest
+namespace KraftedKrafted.IntegrationTest.FooBar
 {
-    [Trait(nameof(UnitTest), nameof(Foo))]
+    [Trait(nameof(IntegrationTest), nameof(Foo))]
     public class FooTest
     {
         [Theory]

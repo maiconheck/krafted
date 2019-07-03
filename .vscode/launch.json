@@ -10,13 +10,12 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Krafted.Framework.IntegrationTest/bin/Debug/netcoreapp2.1/Krafted.Framework.IntegrationTest.dll",
+            "program": "${workspaceFolder}/src/Krafted.UnitTest/bin/Debug/netcoreapp2.1/Krafted.UnitTest.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Krafted.Framework.IntegrationTest",
-            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "cwd": "${workspaceFolder}/src/Krafted.UnitTest",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
-            "stopAtEntry": false,
-            "internalConsoleOptions": "openOnSessionStart"
+            "stopAtEntry": false
         },
         {
             "name": ".NET Core Attach",
@@ -24,5 +23,5 @@
             "request": "attach",
             "processId": "${command:pickProcess}"
         }
-    ,]
+    ]
 }

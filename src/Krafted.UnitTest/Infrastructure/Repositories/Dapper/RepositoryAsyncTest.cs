@@ -2,7 +2,6 @@
 using Dapper;
 using Krafted.Infrastructure.Repositories.Dapper;
 using Krafted.Infrastructure.Sql;
-using Krafted.IntegrationTest.FooBar.Domain;
 using NSubstitute;
 using SharedKernel.Domain;
 using SharedKernel.Transactions;
@@ -33,6 +32,17 @@ namespace Krafted.UnitTest.Infrastructure.Repositories.Dapper
             _repository.GetByIdAsync(Guid.NewGuid());
             _unitOfWork.Received().Transaction.Connection.QueryFirstOrDefaultAsync<Foo>(Arg.Any<string>());
         }
+
+        [Fact]
+        public void GetAllAsync_Call_ShouldBeReceived()
+        {
+            _repository.GetAllAsync();
+            _unitOfWork.Received().Transaction.Connection.QueryAsync<Foo>(Arg.Any<string>());
+        }
+
+        [Fact]
+        public void GetAllAsync_WhereConditions_ThrowsNotImplementedException()
+            => Assert.ThrowsAsync<NotImplementedException>(() => _repository.GetAllAsync(string.Empty));
 
         [Fact]
         public void CreateAsync_Call_ShouldBeReceived()

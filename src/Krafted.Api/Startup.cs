@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +12,7 @@ namespace Krafted.Api
     /// <summary>
     /// Represents the Startup base class.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public abstract class Startup
     {
         /// <summary>
