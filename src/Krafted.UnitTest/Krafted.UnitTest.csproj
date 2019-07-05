@@ -40,4 +40,8 @@
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\Transactions\" />
+  </ItemGroup>
+
 </Project>

@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using Krafted.Infrastructure.Repositories.Dapper;
+using Krafted.Infrastructure.Sql;
 using SharedKernel.Domain;
 
-namespace Krafted.Infrastructure.Sql.Bultin
+namespace Krafted.UnitTest
 {
     /// <summary>
     /// Provides services to generate SQL data manipulation statements.
     /// Represents the ConcreteProduct [Gamma et al.] BultinSqlBuilder.
     /// </summary>
     /// <typeparam name="TEntity">The entity type.</typeparam>
+    [ExcludeFromCodeCoverage]
+    // TODO: Check: It is already covered, but does not reflect in the report. 
     public class BultinSqlBuilder<TEntity> : ISqlBuilder
         where TEntity : Entity
     {

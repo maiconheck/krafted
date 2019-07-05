@@ -6,6 +6,7 @@
 
 using System;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using Krafted.Infrastructure.Connections;
 using Microsoft.Extensions.Logging;
 using SharedKernel.Transactions;
@@ -17,6 +18,7 @@ namespace Krafted.Infrastructure.Transactions
     /// Implements the <see cref="IUnitOfWork" />
     /// </summary>
     /// <seealso cref="IUnitOfWork" />
+    [ExcludeFromCodeCoverage]
     public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly ILogger<UnitOfWork> _logger;

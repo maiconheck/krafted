@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Krafted.Api;
 using Krafted.Test.Result;
@@ -10,7 +11,8 @@ namespace Krafted.Test
     /// <summary>
     /// Represents the IntegrationTest base class.
     /// </summary>
-    /// <typeparam name="TEntryPoint">The type of the t entry point.</typeparam>
+    /// <typeparam name="TEntryPoint">The type of the entry point.</typeparam>
+    [ExcludeFromCodeCoverage]
     public abstract class IntegrationTest<TEntryPoint>
         where TEntryPoint : class
     {

@@ -6,16 +6,23 @@
 
 var target = Argument("target", "Default");
 var sonarLogin = Argument("sonarLogin", "");
-var coveragePath = "./coverage-results/result.opencover.xml";
+var coverageFolder = Directory(System.IO.Directory.GetCurrentDirectory()) + Directory("coverage-results");
+var src = Directory("./src");
 
 Task("Clean").Does(() => DotNetCoreClean("src"));
 
 Task("Restore").Does(() => DotNetCoreRestore("src"));
 
 Task("Build")    
+    .IsDependentOn("Clean")
     .Does(() =>
     {
-        var settings = new DotNetCoreBuildSettings { Configuration = "Debug" };
+        var settings = new DotNetCoreBuildSettings 
+        {
+             Configuration = "Debug",
+             ArgumentCustomization = arg => arg.AppendSwitch("/p:DebugType","=","Full")
+        };
+        
         DotNetCoreBuild("src", settings);
     });
 
@@ -23,24 +30,47 @@ Task("Test")
     .IsDependentOn("Build")
     .Does(() => 
     {
-        var testSettings = new DotNetCoreTestSettings { };
+        CleanDirectory(coverageFolder);
+
+        var testSettings = new DotNetCoreTestSettings 
+        {
+            ArgumentCustomization = args => args.Append($"--logger trx")
+        };
 
         var coverletSettings = new CoverletSettings 
         {
-            CollectCoverage = true,
-            CoverletOutputFormat = CoverletOutputFormat.opencover,
-            CoverletOutputDirectory = Directory(@".\coverage-results\"),
-            CoverletOutputName = "result",
+            CollectCoverage = true,            
+            CoverletOutputName = "coverage",
+            CoverletOutputDirectory = "./coverage-results",
             Exclude = {"[xunit.*]*"},
             //Threshold = 100
         };
 
-        DotNetCoreTest("src", testSettings, coverletSettings);
+        var testProjects = GetFiles(src.Path.FullPath + "/**/*Test.csproj");
+        var jsonResult = coverageFolder.Path.FullPath + "/coverage.json";
+
+        foreach(var project in testProjects)
+        {
+            string projectPath = MakeAbsolute(project).ToString();
+
+            if(project != testProjects.First())
+            {
+                coverletSettings.MergeWithFile = jsonResult;
+            }
+
+            if (project == testProjects.Last())
+            {
+                coverletSettings.CoverletOutputFormat = CoverletOutputFormat.opencover;
+                coverletSettings.CoverletOutputName = "opencover-coverage.xml";
+            }
+
+            DotNetCoreTest(projectPath, testSettings, coverletSettings);
+        }
     });
 
 Task("Coverage")
     .IsDependentOn("Test")
-    .Does(() => ReportGenerator($"{coveragePath}", "./coverage-results/reports/"));
+    .Does(() => ReportGenerator("./coverage-results/opencover-coverage.xml", "./coverage-results/report/"));
 
 Task("SonarBegin")
   .Does(() => 
@@ -52,7 +82,7 @@ Task("SonarBegin")
             Organization = "maiconheck-github",
             Url = "https://sonarcloud.io",
             Login = sonarLogin,
-            ArgumentCustomization = args => args.Append($"/d:sonar.cs.opencover.reportsPaths={coveragePath}")
+            ArgumentCustomization = args => args.Append($"/d:sonar.cs.opencover.reportsPaths=./coverage-results/opencover-coverage.xml")
         });
   });
 

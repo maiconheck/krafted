@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using Microsoft.Extensions.Configuration;
 
 namespace Krafted
@@ -6,6 +7,7 @@ namespace Krafted
     /// <summary>
     /// Provides helper methods to get connection strings and settings from appSettings.json through the <see cref="IConfiguration"/> provider.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class ConfigurationHelper
     {
         /// <summary>
