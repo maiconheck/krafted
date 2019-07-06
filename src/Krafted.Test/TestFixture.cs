@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using NSubstitute;
 using SharedKernel.Application.Commands.Result;
 using SharedKernel.Transactions;
@@ -14,6 +15,7 @@ namespace Krafted.Test
     /// Implements the <see cref="IDisposable" />
     /// </summary>
     /// <seealso cref="IDisposable" />
+    [ExcludeFromCodeCoverage]
     public class TestFixture : IDisposable
     {
         /// <summary>

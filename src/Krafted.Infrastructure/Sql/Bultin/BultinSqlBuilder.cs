@@ -7,6 +7,7 @@ using Krafted.Infrastructure.Repositories.Dapper;
 using Krafted.Infrastructure.Sql;
 using SharedKernel.Domain;
 
+// TODO: Check: It is already covered, but does not reflect in the report.
 namespace Krafted.UnitTest
 {
     /// <summary>
@@ -15,7 +16,6 @@ namespace Krafted.UnitTest
     /// </summary>
     /// <typeparam name="TEntity">The entity type.</typeparam>
     [ExcludeFromCodeCoverage]
-    // TODO: Check: It is already covered, but does not reflect in the report. 
     public class BultinSqlBuilder<TEntity> : ISqlBuilder
         where TEntity : Entity
     {
