@@ -20,10 +20,7 @@ namespace Krafted.IntegrationTest.FooBar.Application
             IRepositoryAsync<Foo> fooRepository,
             IUnitOfWork unitOfWork,
             ICommandResultFactory commandResultFactory)
-                : base(fooRepository, unitOfWork, commandResultFactory)
-        {
-            _fooRepository = fooRepository;
-        }
+                : base(fooRepository, unitOfWork, commandResultFactory) => _fooRepository = fooRepository;
 
         public Task<ICommandResult> HandleAsync(CreateFooCommand command)
         {

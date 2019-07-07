@@ -17,6 +17,10 @@ using SharedKernel.Transactions;
 
 namespace Krafted.IntegrationTest
 {
+    /// <summary>
+    /// Represents the initialization class used for integration testing from the REST API.
+    /// </summary>
+    /// <seealso cref="Api.Startup" />
     [ExcludeFromCodeCoverage]
     public class ApiStartup : Api.Startup
     {

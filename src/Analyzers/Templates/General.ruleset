@@ -419,7 +419,6 @@
 		<Rule Id="CC0034" Action="Error" />
 		<Rule Id="CC0049" Action="Error" />
 		<Rule Id="CC0052" Action="Error" />
-		<Rule Id="CC0057" Action="Error" />
 		<Rule Id="CC0068" Action="Error" />
 		<Rule Id="CC0089" Action="Error" />
 		<Rule Id="CC0038" Action="None" /> <!-- Convert to expression bodied member (already handled by Roslynator) -->
@@ -630,5 +629,6 @@
 		<Rule Id="RCS1192" Action="None" /> <!-- se regular string literal instead of verbatim string literal -->
 		<Rule Id="RCS1198" Action="None" /> <!-- Avoid unnecessary boxing of value type -->
 		<Rule Id="RCS1043" Action="None" /> <!-- Remove 'partial' modifier from type with a single part -->
+		<Rule Id="CC0057" Action="None" /> <!-- This rule is not working with expression-bodied member contructors -->
 	</Rules>
 </RuleSet>

@@ -30,10 +30,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <param name="unitOfWork">The unit of work.</param>
         /// <param name="factory">The SqlBuilder abstract factory.</param>
         public Repository(IUnitOfWork unitOfWork, ISqlBuilderFactory factory)
-            : base(unitOfWork)
-        {
-            _queryBuilder = SqlBuilderFactory.NewSqlBuilder<TEntity>(factory, Connection);
-        }
+            : base(unitOfWork) => _queryBuilder = SqlBuilderFactory.NewSqlBuilder<TEntity>(factory, Connection);
 
         /// <summary>
         /// Gets all entities.
