@@ -5,11 +5,12 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
-    <Version>1.0.0.3</Version>
+    <Version>1.0.0.4</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>7.2</LangVersion>
     <IsTestProject>false</IsTestProject>
+    <Authors>Maicon Heck</Authors>
   </PropertyGroup>
 
   <ItemGroup>

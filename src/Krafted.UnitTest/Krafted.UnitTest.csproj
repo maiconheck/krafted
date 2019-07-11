@@ -5,7 +5,8 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>7.2</LangVersion>        
+    <LangVersion>7.2</LangVersion>
+    <Authors>Maicon Heck</Authors>
   </PropertyGroup>
 
   <ItemGroup>
