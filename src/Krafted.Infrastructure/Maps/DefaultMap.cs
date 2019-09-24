@@ -5,7 +5,7 @@ namespace Krafted.Infrastructure.Maps
 {
     /// <summary>
     /// Represents a entity mapper.
-    /// Implements the <see cref="DommelEntityMap{TEntity}" />
+    /// Implements the <see cref="DommelEntityMap{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">The type of the t entity.</typeparam>
     /// <seealso cref="DommelEntityMap{TEntity}" />

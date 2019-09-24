@@ -11,7 +11,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     /// <summary>
     /// Represents an generic repository.
     /// Implements the <see cref="Repository" />
-    /// Implements the <see cref="IRepositoryAsync{TEntity}" />
+    /// Implements the <see cref="IRepositoryAsync{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">The entity type.</typeparam>
     /// <seealso cref="Repository" />
@@ -24,7 +24,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <summary>
         /// Initializes a new instance of the <see cref="RepositoryAsync{TEntity}"/> class.
         /// </summary>
-        /// <param name="unitOfWork">The unit of work</param>
+        /// <param name="unitOfWork">The unit of work.</param>
         /// <param name="factory">The SqlBuilder abstract factory.</param>
         public RepositoryAsync(IUnitOfWork unitOfWork, ISqlBuilderFactory factory)
             : base(unitOfWork) => _queryBuilder = SqlBuilderFactory.NewSqlBuilder<TEntity>(factory, Connection);
@@ -32,7 +32,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <summary>
         /// Gets all entities asynchronous.
         /// </summary>
-        /// <returns>The entities</returns>
+        /// <returns>The entities.</returns>
         public Task<IEnumerable<TEntity>> GetAllAsync()
             => Connection.QueryAsync<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction);
 
@@ -40,15 +40,15 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// Gets all entities asynchronous based on a criteria.
         /// </summary>
         /// <param name="whereConditions">The where conditions.</param>
-        /// <returns>The entities</returns>
-        /// <exception cref="NotImplementedException">WIP</exception>
+        /// <returns>The entities.</returns>
+        /// <exception cref="NotImplementedException">WIP.</exception>
         public Task<IEnumerable<TEntity>> GetAllAsync(object whereConditions) => throw new NotImplementedException();
 
         /// <summary>
         /// Gets an entity by identifier asynchronously.
         /// </summary>
-        /// <param name="id">The identifier</param>
-        /// <returns>The entity</returns>
+        /// <param name="id">The identifier.</param>
+        /// <returns>The entity.</returns>
         public Task<TEntity> GetByIdAsync(Guid id)
             => Connection.QueryFirstOrDefaultAsync<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
 
@@ -57,7 +57,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// </summary>
         /// <param name="entity">The entity.</param>
         /// <param name="param">The parameters.</param>
-        /// <returns>The task</returns>
+        /// <returns>The task.</returns>
         public async Task CreateAsync(TEntity entity, object param = null)
             => await Connection.ExecuteAsync(_queryBuilder.GetInsertCommand(), param ?? GetParams(entity), Transaction).ConfigureAwait(false);
 
@@ -66,7 +66,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// </summary>
         /// <param name="entity">The entity.</param>
         /// <param name="param">The parameters.</param>
-        /// <returns>The task</returns>
+        /// <returns>The task.</returns>
         public async Task UpdateAsync(TEntity entity, object param = null)
             => await ExecuteAsync(_queryBuilder.GetUpdateCommand(), param ?? GetParams(entity)).ConfigureAwait(false);
 
@@ -74,7 +74,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// Deletes the specified entity asynchronous.
         /// </summary>
         /// <param name="entity">The entity.</param>
-        /// <returns>The task</returns>
+        /// <returns>The task.</returns>
         public async Task DeleteAsync(TEntity entity) =>
             await ExecuteAsync(_queryBuilder.GetDeleteCommand(), entity.ToParam(typeof(TEntity).Name)).ConfigureAwait(false);
 
@@ -90,7 +90,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// </summary>
         /// <param name="sql">The SQL statement to execute.</param>
         /// <param name="param">The parameters to use for this SQL.</param>
-        /// <returns>The task</returns>
+        /// <returns>The task.</returns>
         private async Task ExecuteAsync(string sql, object param)
             => await Connection.ExecuteAsync(sql, param, Transaction).ConfigureAwait(false);
     }

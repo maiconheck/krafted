@@ -6,7 +6,7 @@ namespace Krafted.Infrastructure.Connections.SqlServer
 {
     /// <summary>
     /// Represents a SqlServerConnectionProvider.
-    /// Implements the <see cref="IConnectionProvider" />
+    /// Implements the <see cref="IConnectionProvider" />.
     /// </summary>
     /// <seealso cref="IConnectionProvider" />
     public class SqlServerConnectionProvider : IConnectionProvider
@@ -19,16 +19,14 @@ namespace Krafted.Infrastructure.Connections.SqlServer
         /// <param name="connectionString">The connection string.</param>
         public SqlServerConnectionProvider(string connectionString)
         {
-            if (string.IsNullOrWhiteSpace(connectionString))
-                throw new ArgumentException("The connection string is invalid.");
-
+            connectionString.ThrowIfNullOrWhiteSpace(nameof(connectionString));
             _connectionString = connectionString;
         }
 
         /// <summary>
         /// Create a connection.
         /// </summary>
-        /// <returns>The connection</returns>
+        /// <returns>The connection.</returns>
         public IDbConnection Create() => new SqlConnection(_connectionString);
     }
 }

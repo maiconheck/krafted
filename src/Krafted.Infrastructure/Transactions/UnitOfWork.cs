@@ -1,11 +1,12 @@
 ﻿// A UnitOfWork implementation for dapper.
 //
-// This was adapted from Tim Schreiber.
+// This class was adapted from Tim Schreiber.
 // Source: https://github.com/timschreiber/DapperUnitOfWork/blob/master/DapperUnitOfWork/UnitOfWork.cs
 // Retrieved in December 2017.
 
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 using Krafted.Infrastructure.Connections;
 using Microsoft.Extensions.Logging;
@@ -15,7 +16,7 @@ namespace Krafted.Infrastructure.Transactions
 {
     /// <summary>
     /// Provide a UnitOfWork implementation. This class cannot be inherited.
-    /// Implements the <see cref="IUnitOfWork" />
+    /// Implements the <see cref="IUnitOfWork" />.
     /// </summary>
     /// <seealso cref="IUnitOfWork" />
     [ExcludeFromCodeCoverage]
@@ -32,6 +33,7 @@ namespace Krafted.Infrastructure.Transactions
         /// <param name="logger">The logger.</param>
         public UnitOfWork(IConnectionProvider connectionProvider, ILogger<UnitOfWork> logger)
         {
+            ExceptionHelper.ThrowIfNull(() => connectionProvider, () => logger);
             Connection = connectionProvider.Create();
             Connection.Open();
             Transaction = Connection.BeginTransaction();
@@ -65,11 +67,11 @@ namespace Krafted.Infrastructure.Transactions
             {
                 Transaction.Commit();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                _logger.LogError(ex, "Ocorreu uma exceção no commit.");
+                _logger.LogError(ex, "An exception occurred in commit.");
                 Transaction.Rollback();
-                _logger.LogInformation("Rollback realizado com sucesso.");
+                _logger.LogInformation("Rollback successfully performed.");
             }
             finally
             {

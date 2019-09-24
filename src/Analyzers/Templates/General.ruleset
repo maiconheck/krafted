@@ -51,13 +51,11 @@
 		<Rule Id="CA1058" Action="Error" />
 		<Rule Id="CA1060" Action="Error" />
 		<Rule Id="CA1061" Action="Error" />
-		<Rule Id="CA1062" Action="Error" />
 		<Rule Id="CA1063" Action="Error" />
 		<Rule Id="CA1064" Action="Error" />
 		<Rule Id="CA1065" Action="Error" />
 		<Rule Id="CA1300" Action="Error" />
 		<Rule Id="CA1301" Action="Error" />
-		<Rule Id="CA1303" Action="Error" />
 		<Rule Id="CA1304" Action="Error" />
 		<Rule Id="CA1305" Action="Error" />
 		<Rule Id="CA1306" Action="Error" />
@@ -120,7 +118,6 @@
 		<Rule Id="CA1824" Action="Error" />
 		<Rule Id="CA1900" Action="Error" />
 		<Rule Id="CA1901" Action="Error" />
-		<Rule Id="CA2000" Action="Error" />
 		<Rule Id="CA2001" Action="Error" />
 		<Rule Id="CA2002" Action="Error" />
 		<Rule Id="CA2004" Action="Error" />
@@ -312,7 +309,6 @@
 		<Rule Id="SA1410" Action="Error" />
 		<Rule Id="SA1411" Action="Error" />
 		<Rule Id="SA1412" Action="Error" />
-		<Rule Id="SA1413" Action="Error" />
 		<Rule Id="SA1500" Action="Error" />
 		<Rule Id="SA1501" Action="Error" />
 		<Rule Id="SA1502" Action="Error" />
@@ -630,5 +626,7 @@
 		<Rule Id="RCS1198" Action="None" /> <!-- Avoid unnecessary boxing of value type -->
 		<Rule Id="RCS1043" Action="None" /> <!-- Remove 'partial' modifier from type with a single part -->
 		<Rule Id="CC0057" Action="None" /> <!-- This rule is not working with expression-bodied member contructors -->
+		<Rule Id="SA1413" Action="None" /> <!-- Use Trailing Commas In MultiLine Initializers Analyzer -->
+		<Rule Id="CA1062" Action="Warning" /> <!-- Validate arguments of public methods -->
 	</Rules>
 </RuleSet>

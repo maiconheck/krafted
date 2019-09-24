@@ -11,7 +11,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
     /// <summary>
     /// Represents an generic repository.
     /// Implements the <see cref="Repository" />
-    /// Implements the <see cref="IRepository{TEntity}" />
+    /// Implements the <see cref="IRepository{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">The entity type.</typeparam>
     /// <seealso cref="Repository" />
@@ -35,7 +35,7 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// <summary>
         /// Gets all entities.
         /// </summary>
-        /// <returns>The entities</returns>
+        /// <returns>The entities.</returns>
         public IEnumerable<TEntity> GetAll()
             => Connection.Query<TEntity>(_queryBuilder.GetSelectCommand(), null, Transaction);
 
@@ -43,14 +43,14 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// Gets all entities based on a criteria.
         /// </summary>
         /// <param name="whereConditions">The where conditions.</param>
-        /// <returns>The entities</returns>
+        /// <returns>The entities.</returns>
         public IEnumerable<TEntity> GetAll(object whereConditions) => throw new NotImplementedException();
 
         /// <summary>
         /// Gets an entity by identifier.
         /// </summary>
         /// <param name="id">The identifier.</param>
-        /// <returns>The entity</returns>
+        /// <returns>The entity.</returns>
         public TEntity GetById(Guid id)
             => Connection.QueryFirstOrDefault<TEntity>(_queryBuilder.GetSelectByIdCommand(id), id, Transaction);
 

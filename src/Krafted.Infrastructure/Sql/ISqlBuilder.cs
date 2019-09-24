@@ -4,7 +4,7 @@ namespace Krafted.Infrastructure.Sql
 {
     /// <summary>
     /// Provides an interface to a service that generate SQL data manipulation statements.
-    /// The AbstractProduct participant [Gamma et al.]
+    /// The AbstractProduct participant [Gamma et al.].
     /// </summary>
     public interface ISqlBuilder
     {

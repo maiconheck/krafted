@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
 [assembly: InternalsVisibleTo("Krafted.UnitTest")]
+
 namespace Krafted.Api
 {
     /// <summary>

@@ -12,7 +12,7 @@ namespace Krafted.Test
     /// See: http://xunit.github.io/docs/shared-context#constructor
     /// xUnit.net creates a new instance of the test class for every test that is run,
     /// so any code which is placed into the constructor of the test class will be run for every single test.
-    /// Implements the <see cref="IDisposable" />
+    /// Implements the <see cref="IDisposable" />.
     /// </summary>
     /// <seealso cref="IDisposable" />
     [ExcludeFromCodeCoverage]

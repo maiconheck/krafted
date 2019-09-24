@@ -1,7 +1,7 @@
 ﻿namespace Krafted.Infrastructure.Connections.SqlServer
 {
     /// <summary>
-    /// Enum ConnectionType
+    /// Enum ConnectionType.
     /// </summary>
     public enum ConnectionType
     {

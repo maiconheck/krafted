@@ -17,6 +17,9 @@ namespace Krafted.Infrastructure.Sql
         /// <returns>The concrete SqlBuilder.</returns>
         public static ISqlBuilder NewSqlBuilder<TEntity>(ISqlBuilderFactory factory, IDbConnection connection)
             where TEntity : Entity
-                => factory.NewSqlBuilder<TEntity>(connection);
+        {
+            ExceptionHelper.ThrowIfNull(() => factory, () => connection);
+            return factory.NewSqlBuilder<TEntity>(connection);
+        }
     }
 }

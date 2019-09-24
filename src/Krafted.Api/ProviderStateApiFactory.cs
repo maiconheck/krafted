@@ -7,11 +7,11 @@ namespace Krafted.Api
 {
     /// <summary>
     /// Factory for bootstrapping an application in memory for functional end to end tests.
-    /// Implements the <see cref="WebApplicationFactory{TEntryPoint}" />
+    /// Implements the <see cref="WebApplicationFactory{TEntryPoint}" />.
     /// </summary>
     /// <typeparam name="TEntryPoint">A type in the entry point assembly of the application. Typically the Startup or Program classes can be used.</typeparam>
     /// <seealso cref="WebApplicationFactory{TEntryPoint}" />
-    /// <remarks>https://docs.microsoft.com/pt-br/aspnet/core/test/integration-tests?view=aspnetcore-2.1</remarks>
+    /// <remarks>https://docs.microsoft.com/pt-br/aspnet/core/test/integration-tests?view=aspnetcore-2.1.</remarks>
     [ExcludeFromCodeCoverage]
     public class ProviderStateApiFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint>
         where TEntryPoint : class

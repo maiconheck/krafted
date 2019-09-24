@@ -4,7 +4,7 @@ using SharedKernel.Domain;
 namespace Krafted.Infrastructure.Sql
 {
     /// <summary>
-    /// The AbstractFactory participant [Gamma et al.]
+    /// The AbstractFactory participant [Gamma et al.].
     /// </summary>
     public interface ISqlBuilderFactory
     {

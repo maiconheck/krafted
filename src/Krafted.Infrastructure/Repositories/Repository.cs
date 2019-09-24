@@ -12,7 +12,11 @@ namespace Krafted.Infrastructure.Repositories.Dapper
         /// Initializes a new instance of the <see cref="Repository"/> class.
         /// </summary>
         /// <param name="unitOfWork">The unit of work.</param>
-        protected Repository(IUnitOfWork unitOfWork) => Transaction = unitOfWork.Transaction;
+        protected Repository(IUnitOfWork unitOfWork)
+        {
+            unitOfWork.ThrowIfNull(nameof(unitOfWork));
+            Transaction = unitOfWork.Transaction;
+        }
 
         /// <summary>
         /// Gets or sets the transaction.

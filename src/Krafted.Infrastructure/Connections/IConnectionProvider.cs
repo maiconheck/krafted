@@ -3,14 +3,14 @@
 namespace Krafted.Infrastructure.Connections
 {
     /// <summary>
-    /// Interface IConnectionProvider
+    /// Interface IConnectionProvider.
     /// </summary>
     public interface IConnectionProvider
     {
         /// <summary>
         /// Create a connection.
         /// </summary>
-        /// <returns>The connection</returns>
+        /// <returns>The connection.</returns>
         IDbConnection Create();
     }
 }

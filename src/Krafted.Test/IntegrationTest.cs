@@ -17,7 +17,7 @@ namespace Krafted.Test
         where TEntryPoint : class
     {
         /// <summary>
-        /// The correct content type. That is: application/json; charset=utf-8
+        /// The correct content type. That is: application/json; charset=utf-8.
         /// </summary>
         protected const string CorrectContentType = "application/json; charset=utf-8";
 
@@ -72,7 +72,7 @@ namespace Krafted.Test
         /// deserialize the delete response command asynchronous.
         /// </summary>
         /// <param name="response">The response.</param>
-        /// <returns>The <see cref="ResponseCommandResult"/></returns>
+        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
         protected static async Task<ResponseCommandResult> DeserializeDeleteResponseAsync(HttpResponseMessage response)
         {
             var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
