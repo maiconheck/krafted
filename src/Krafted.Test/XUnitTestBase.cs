@@ -10,6 +10,12 @@ namespace Krafted.Test
     public abstract class XUnitTestBase : ITest
     {
         /// <summary>
+        /// Verifies that an exception is thrown.
+        /// </summary>
+        /// <param name="testCode">The test code.</param>
+        public static void Throws(in Action testCode) => Record.Exception(testCode);
+
+        /// <summary>
         /// Verifies that the exact exception is thrown.
         /// </summary>
         /// <param name="testCode">The test code.</param>

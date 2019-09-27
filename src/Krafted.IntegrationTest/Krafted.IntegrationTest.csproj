@@ -9,7 +9,7 @@
     <Authors>Maicon Heck</Authors>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Migration\Krafted\001_Create_Table_Foo.sql" />
+    <None Remove="Migration\Krafted\001_Create_Table_DummyModel.sql" />
     <None Remove="Migration\Krafted\002_Create_Procedure_DeleteFoo.sql" />
     <None Remove="Migration\Krafted\003_Create_Procedure_CreateFoo.sql" />
     <None Remove="Migration\Krafted\004_Create_Procedure_ChangeScheduleFoo.sql" />
@@ -17,7 +17,7 @@
     <None Remove="Migration\Krafted\006_Create_Procedure_GetFooById.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migration\Krafted\001_Create_Table_Foo.sql" />
+    <EmbeddedResource Include="Migration\Krafted\001_Create_Table_DummyModel.sql" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,8 +37,7 @@
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>    
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.6" />
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />

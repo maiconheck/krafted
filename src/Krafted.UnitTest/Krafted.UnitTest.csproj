@@ -4,11 +4,18 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <NoWarn>CA1812</NoWarn>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>7.2</LangVersion>
     <Authors>Maicon Heck</Authors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infrastructure\Transactions\**" />
+    <EmbeddedResource Remove="Infrastructure\Transactions\**" />
+    <None Remove="Infrastructure\Transactions\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
@@ -43,10 +50,6 @@
   <ItemGroup>    
     <ProjectReference Include="..\Krafted.Api\Krafted.Api.csproj" />    
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Infrastructure\Transactions\" />
   </ItemGroup>
 
 </Project>

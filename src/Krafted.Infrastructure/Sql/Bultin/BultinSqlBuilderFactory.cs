@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using Krafted.UnitTest;
-using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Sql.Bultin
 {

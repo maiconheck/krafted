@@ -3,7 +3,6 @@ using Krafted.Api;
 using Krafted.Infrastructure.Connections.SqlServer;
 using Krafted.Infrastructure.Sql;
 using Krafted.Infrastructure.Sql.Bultin;
-using Krafted.IntegrationTest.FooBar.Domain;
 using Krafted.Test;
 using Xunit;
 
@@ -20,14 +19,14 @@ namespace Krafted.IntegrationTest.Infrastructure.Sql.Builtin
             var connectionProvider = new SqlServerConnectionProvider(ConfigurationHelper.GetConnectionString("InfrastructureConnection"));
             var connection = connectionProvider.Create();
 
-            _sqlBuilder = SqlBuilderFactory.NewSqlBuilder<Foo>(new BultinSqlBuilderFactory(), connection);
+            _sqlBuilder = SqlBuilderFactory.NewSqlBuilder<DummyModel>(new BultinSqlBuilderFactory(), connection);
         }
 
         [Fact]
         public void GetSelectCommand_SelectCommandShouldBeGenerated()
         {
             string sql = _sqlBuilder.GetSelectCommand();
-            Assert.Equal("SELECT FooId,Name,StartDate,EndDate,Canceled FROM Foo", sql);
+            Assert.Equal("SELECT DummyModelId,Name,StartDate,EndDate,Canceled FROM DummyModel", sql);
         }
 
         [Fact]
@@ -35,28 +34,28 @@ namespace Krafted.IntegrationTest.Infrastructure.Sql.Builtin
         {
             var id = Guid.NewGuid();
             string sql = _sqlBuilder.GetSelectByIdCommand(id);
-            Assert.Equal($"SELECT FooId,Name,StartDate,EndDate,Canceled FROM Foo WHERE FooId = '{id}'", sql);
+            Assert.Equal($"SELECT DummyModelId,Name,StartDate,EndDate,Canceled FROM DummyModel WHERE DummyModelId = '{id}'", sql);
         }
 
         [Fact]
         public void GetInsertCommand_GetInsertCommandShouldBeGenerated()
         {
             string sql = _sqlBuilder.GetInsertCommand();
-            Assert.Equal("INSERT INTO [Foo] ([FooId], [Name], [StartDate], [EndDate], [Canceled]) VALUES (@FooId, @Name, @StartDate, @EndDate, @Canceled)", sql);
+            Assert.Equal("INSERT INTO [DummyModel] ([DummyModelId], [Name], [StartDate], [EndDate], [Canceled]) VALUES (@DummyModelId, @Name, @StartDate, @EndDate, @Canceled)", sql);
         }
 
         [Fact]
         public void GetUpdateCommand_GetUpdateCommandShouldBeGenerated()
         {
             string sql = _sqlBuilder.GetUpdateCommand();
-            Assert.Equal("UPDATE [Foo] SET [Name] = @Name, [StartDate] = @StartDate, [EndDate] = @EndDate, [Canceled] = @Canceled WHERE ([FooId] = @FooId)", sql);
+            Assert.Equal("UPDATE [DummyModel] SET [Name] = @Name, [StartDate] = @StartDate, [EndDate] = @EndDate, [Canceled] = @Canceled WHERE ([DummyModelId] = @DummyModelId)", sql);
         }
 
         [Fact]
         public void GetDeleteCommand_GetDeleteCommandShouldBeGenerated()
         {
             string sql = _sqlBuilder.GetDeleteCommand();
-            Assert.Equal("DELETE FROM [Foo] WHERE ([FooId] = @FooId)", sql);
+            Assert.Equal("DELETE FROM [DummyModel] WHERE ([DummyModelId] = @DummyModelId)", sql);
         }
     }
 }

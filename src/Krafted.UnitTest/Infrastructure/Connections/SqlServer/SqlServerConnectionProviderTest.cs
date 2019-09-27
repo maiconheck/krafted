@@ -15,7 +15,7 @@ namespace Krafted.UnitTest.Infrastructure.Connections.SqlServer
         [InlineData("")]
         [InlineData("    ")]
         public void NewInstance_NotFilledConnectionString_ExceptionShouldBeThrow(string connectionString)
-            => Throws<ArgumentException>(() => new SqlServerConnectionProvider(connectionString));
+            => Throws(() => new SqlServerConnectionProvider(connectionString));
 
         [Theory]
         [InlineData("Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;")]

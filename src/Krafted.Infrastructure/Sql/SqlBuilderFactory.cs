@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using SharedKernel.Domain;
 
 namespace Krafted.Infrastructure.Sql
 {

@@ -2,9 +2,8 @@
 using System.Linq;
 using System.Reflection;
 using Dapper;
-using SharedKernel.Domain;
 
-namespace Krafted.Infrastructure.Repositories.Dapper
+namespace Krafted.Dapper
 {
     /// <summary>
     /// Provides extension methods to <see cref="Entity"/>.

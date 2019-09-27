@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SharedKernel.Application.Commands.Result;
-using SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Api
 {
@@ -36,8 +34,7 @@ namespace Krafted.Api
         {
             services.AddResponseCompression();
             services.AddResponseCaching();
-            services.AddMvcDefault();
-            services.AddScoped<ICommandResultFactory, DefaultCommandResultFactory>();
+            services.AddMvcDefault();            
         }
 
         /// <summary>

@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Krafted.Api;
 using Krafted.Test.Result;
 using Newtonsoft.Json;
-using SharedKernel.Application.Commands.Result.Default;
 
 namespace Krafted.Test
 {

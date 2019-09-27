@@ -1,11 +1,11 @@
-CREATE TABLE [dbo].[Foo](
-	[FooId] [uniqueidentifier] NOT NULL,
+CREATE TABLE [dbo].[DummyModel](
+	[DummyModelId] [uniqueidentifier] NOT NULL,
 	[Name] [varchar](100) NOT NULL,
 	[StartDate] [date] NOT NULL,
 	[EndDate] [date] NOT NULL,
 	[Canceled] BIT NOT NULL DEFAULT ((0))
-	CONSTRAINT [PK_FooId] PRIMARY KEY CLUSTERED 
+	CONSTRAINT [PK_DummyModelId] PRIMARY KEY CLUSTERED 
 (
-	[FooId] ASC
+	[DummyModelId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]

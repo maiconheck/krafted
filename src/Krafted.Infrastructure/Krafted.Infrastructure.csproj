@@ -5,12 +5,18 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
-    <Version>1.0.0.6</Version>
+    <Version>1.0.0.9</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>7.2</LangVersion>
     <Authors>Maicon Heck</Authors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Transactions\**" />
+    <EmbeddedResource Remove="Transactions\**" />
+    <None Remove="Transactions\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
@@ -45,10 +51,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.Globalization" Version="4.3.0" />   
     <PackageReference Include="SharedKernel" Version="1.0.0.16" /> 
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Transactions\" />
   </ItemGroup>
 
   <ItemGroup>    

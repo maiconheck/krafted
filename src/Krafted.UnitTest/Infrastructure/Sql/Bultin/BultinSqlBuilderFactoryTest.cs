@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using Krafted.Infrastructure.Sql.Bultin;
-using Krafted.UnitTest.Infrastructure.Repositories.Dapper;
 using NSubstitute;
 using Xunit;
 
@@ -14,10 +13,10 @@ namespace Krafted.UnitTest.Infrastructure.Sql.Bultin
         public BultinSqlBuilderFactoryTest() => _connection = Substitute.For<IDbConnection>();
 
         [Fact]
-        public void NewSqlBuilder_Foo_SqlBuilderShouldBeCreated()
+        public void NewSqlBuilder_DummyModel_SqlBuilderShouldBeCreated()
         {
             var factory = new BultinSqlBuilderFactory();
-            factory.NewSqlBuilder<Foo>(_connection);
+            factory.NewSqlBuilder<DummyModel>(_connection);
 
             Assert.NotNull(factory);
         }

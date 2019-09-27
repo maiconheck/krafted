@@ -3,9 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
-using Krafted.Infrastructure.Repositories.Dapper;
+using Krafted.Dapper;
 using Krafted.Infrastructure.Sql;
-using SharedKernel.Domain;
 
 // TODO: Check: It is already covered, but does not reflect in the report.
 namespace Krafted.UnitTest
