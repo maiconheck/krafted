@@ -1,9 +1,9 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Krafted.Api
 {
@@ -34,7 +34,7 @@ namespace Krafted.Api
         {
             services.AddResponseCompression();
             services.AddResponseCaching();
-            services.AddMvcDefault();            
+            services.AddMvcDefault();
         }
 
         /// <summary>
