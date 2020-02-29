@@ -43,7 +43,7 @@ Task("Test")
             CoverletOutputName = "coverage",
             CoverletOutputDirectory = "./coverage-results",
             Exclude = {"[xunit.*]*"},
-            Threshold = 100
+            //Threshold = 100
         };
 
         var testProjects = GetFiles(src.Path.FullPath + "/**/*Test.csproj");

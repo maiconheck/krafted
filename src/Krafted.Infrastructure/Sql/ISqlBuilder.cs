@@ -9,34 +9,34 @@ namespace Krafted.Infrastructure.Sql
     public interface ISqlBuilder
     {
         /// <summary>
-        /// Generates a SELECT [all properies] FROM <typeparamref name="TEntity"/> statement.
+        /// Generates a SELECT [all properies] FROM statement.
         /// </summary>
-        /// <returns>SELECT [all properies] FROM <typeparamref name="TEntity"/> statement.</returns>
+        /// <returns>A SELECT [all properies] FROM statement.</returns>
         string GetSelectCommand();
 
         /// <summary>
-        /// Generates a SELECT [all properies] FROM <typeparamref name="TEntity"/> WHERE Identifier = id statement.
+        /// Generates a SELECT [all properies] FROM WHERE Identifier = id statement.
         /// </summary>
         /// <param name="id">The identifier.</param>
-        /// <returns>The SELECT [all properies] FROM <typeparamref name="TEntity"/> WHERE Identifier = id statement.</returns>
+        /// <returns>A SELECT [all properies] FROM WHERE Identifier = id statement.</returns>
         string GetSelectByIdCommand(Guid id);
 
         /// <summary>
-        /// Generates the INSERT INTO <typeparamref name="TEntity"/> statement.
+        /// Generates an INSERT INTO statement.
         /// </summary>
-        /// <returns>The INSERT INTO <typeparamref name="TEntity"/> statement.</returns>
+        /// <returns>An INSERT INTO statement.</returns>
         string GetInsertCommand();
 
         /// <summary>
-        /// Generates the UPDATE <typeparamref name="TEntity"/> statement.
+        /// Generates an UPDATE statement.
         /// </summary>
-        /// <returns>The UPDATE <typeparamref name="TEntity"/> statement.</returns>
+        /// <returns>An UPDATE statement.</returns>
         string GetUpdateCommand();
 
         /// <summary>
-        /// Generates the DELETE FROM <typeparamref name="TEntity"/> statement.
+        /// Generates a DELETE FROM statement.
         /// </summary>
-        /// <returns>The DELETE FROM <typeparamref name="TEntity"/> statement.</returns>
+        /// <returns>A DELETE FROM statement.</returns>
         string GetDeleteCommand();
     }
 }

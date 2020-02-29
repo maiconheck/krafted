@@ -44,7 +44,7 @@ namespace Krafted.UnitTest.Krafted
         public void Notifications_InvalidAggregate_Notifications()
         {
             var model = new DummyModel("Foo......");
-            Assert.Equal(1, model.Notifications().Count);
+            Assert.Single(model.Notifications());
             Assert.Equal("The foo must be a maximum of 5 characters.", model.Notifications().First().Message);
 
             var model2 = new DummyModel("Foo.....", "Bar................");
