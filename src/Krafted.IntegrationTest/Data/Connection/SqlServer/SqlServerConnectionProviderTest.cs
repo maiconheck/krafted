@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
-using Krafted.Data.Connection.SqlServer;
+using Krafted.Data.SqlServer.Connection;
 using Xunit;
 using Assert = Krafted.Test.XUnit.AssertExtension;
 

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Krafted.Api;
 using Krafted.Data.Connection;
-using Krafted.Data.Connection.SqlServer;
 using Krafted.Data.Sql;
 using Krafted.Data.Sql.Bultin;
+using Krafted.Data.SqlServer.Connection;
 using Krafted.Test;
 using Xunit;
 

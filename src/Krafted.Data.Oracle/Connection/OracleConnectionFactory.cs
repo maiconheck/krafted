@@ -1,7 +1,8 @@
-﻿using System.Data;
+using System.Data;
+using Krafted.Data.Connection;
 using Oracle.ManagedDataAccess.Client;
 
-namespace Krafted.Data.Connection.SqlServer
+namespace Krafted.Data.Oracle.Connection
 {
     /// <summary>
     /// Represents the ConcreteFactory [Gamma et al.] OracleConnectionFactory.

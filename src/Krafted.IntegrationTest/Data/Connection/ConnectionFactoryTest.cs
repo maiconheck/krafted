@@ -1,6 +1,7 @@
-﻿using System.Data;
+using System.Data;
 using Krafted.Data.Connection;
-using Krafted.Data.Connection.SqlServer;
+using Krafted.Data.Oracle.Connection;
+using Krafted.Data.SqlServer.Connection;
 using Xunit;
 
 namespace Krafted.IntegrationTest.Data.Connection

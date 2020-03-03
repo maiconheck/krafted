@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <IsPackable>false</IsPackable>
@@ -52,6 +52,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
+    <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\Krafted.Data.Oracle\Krafted.Data.Oracle.csproj" />
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
   </ItemGroup>  
 

@@ -1,7 +1,8 @@
-﻿using System.Data;
+using System.Data;
 using System.Data.SqlClient;
+using Krafted.Data.Connection;
 
-namespace Krafted.Data.Connection.SqlServer
+namespace Krafted.Data.SqlServer.Connection
 {
     /// <summary>
     /// Represents the ConcreteFactory [Gamma et al.] SqlServerConnectionFactory.

@@ -1,7 +1,7 @@
-﻿using Krafted.Data.Connection;
-using Krafted.Data.Connection.SqlServer;
+using Krafted.Data.Connection;
 using Krafted.Data.Sql;
 using Krafted.Data.Sql.Bultin;
+using Krafted.Data.SqlServer.Connection;
 using Krafted.IntegrationTest.Data.Sql.Bultin;
 using Xunit;
 
