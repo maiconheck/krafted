@@ -28,7 +28,7 @@ namespace Krafted.Test
         /// <param name="defaultContentType">The default content type. That is: application/json; charset=utf-8.</param>
         protected IntegrationTest(ProviderStateApiFactory<TEntryPoint> factory, string endPoint, string defaultContentType = "application/json; charset=utf-8")
         {
-            ExceptionHelper.ThrowIfNull(() => factory, () => endPoint);
+            ExceptionHelper.ThrowIfAnyNull(() => factory, () => endPoint);
 
             _factory = factory;
             Client = _factory.CreateClient();

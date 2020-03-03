@@ -56,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Infrastructure\Krafted.Infrastructure.csproj" />
+    <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
   </ItemGroup>
 
 </Project>

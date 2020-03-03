@@ -15,5 +15,6 @@
 		<Rule Id="CA1806" Action="None" /> <!-- Do not ignore method results -->
 		<Rule Id="CA1303" Action="None" /> <!-- Do not pass literals as localized parameters -->
 		<Rule Id="CA2000" Action="None" /> <!-- Dispose objects before losing scope -->
+		<Rule Id="RCS1010" Action="None" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
 	</Rules>
 </RuleSet>

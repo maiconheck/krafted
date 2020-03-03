@@ -26,10 +26,10 @@ namespace Krafted.UnitTest.Krafted
 
             Assert.Equal("The message", commandResult.Mensagem);
 
-            Assert.Equal("The property 1", dados[0].Property);
-            Assert.Equal("The message 1", dados[0].Message);
-            Assert.Equal("The property 2", dados[1].Property);
-            Assert.Equal("The message 2", dados[1].Message);
+            Assert.Equal("The property 1", dados.First().Property);
+            Assert.Equal("The message 1", dados.First().Message);
+            Assert.Equal("The property 2", dados.Second().Property);
+            Assert.Equal("The message 2", dados.Second().Message);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Krafted.Infrastructure.Connections;
-using Krafted.Infrastructure.Connections.SqlServer;
-using Krafted.Infrastructure.Sql;
-using Krafted.Infrastructure.Sql.Bultin;
+using Krafted.Data.Connection;
+using Krafted.Data.Connection.SqlServer;
+using Krafted.Data.Sql;
+using Krafted.Data.Sql.Bultin;
 using Krafted.IntegrationTest.Migration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +28,7 @@ namespace Krafted.IntegrationTest
             base.ConfigureServices(services);
 
             services.AddScoped<IConnectionProvider, SqlServerConnectionProvider>(
-                _ => new SqlServerConnectionProvider(ConfigurationHelper.GetConnectionString()));
+                _ => new SqlServerConnectionProvider(Config.Instance().GetConnectionString()));
 
             services.AddScoped<ISqlBuilderFactory, BultinSqlBuilderFactory>();
         }
@@ -36,7 +36,7 @@ namespace Krafted.IntegrationTest
         public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             base.Configure(app, env);
-            app.UseMigration(ConfigurationHelper.GetConnectionString());
+            app.UseMigration(Config.Instance().GetConnectionString());
         }
     }
 }

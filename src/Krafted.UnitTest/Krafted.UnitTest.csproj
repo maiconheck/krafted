@@ -13,12 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Infrastructure\Transactions\**" />
-    <EmbeddedResource Remove="Infrastructure\Transactions\**" />
-    <None Remove="Infrastructure\Transactions\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -51,6 +45,12 @@
   <ItemGroup>    
     <ProjectReference Include="..\Krafted.Api\Krafted.Api.csproj" />    
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

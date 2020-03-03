@@ -11,7 +11,7 @@
     <Authors>Maicon Heck</Authors>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Migration\Krafted\001_Create_Table_DummyModel.sql" />
+    <None Remove="Migration\Krafted\001_Create_Table_EntityDummy.sql" />
     <None Remove="Migration\Krafted\002_Create_Procedure_DeleteFoo.sql" />
     <None Remove="Migration\Krafted\003_Create_Procedure_CreateFoo.sql" />
     <None Remove="Migration\Krafted\004_Create_Procedure_ChangeScheduleFoo.sql" />
@@ -19,7 +19,7 @@
     <None Remove="Migration\Krafted\006_Create_Procedure_GetFooById.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migration\Krafted\001_Create_Table_DummyModel.sql" />
+    <EmbeddedResource Include="Migration\Krafted\001_Create_Table_EntityDummy.sql" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
     <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
   </ItemGroup>  
 

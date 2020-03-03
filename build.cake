@@ -1,8 +1,8 @@
-#tool nuget:?package=NUnit.ConsoleRunner&version=3.4.0
-#addin nuget:?package=Cake.Coverlet&version=2.2.1
-#tool nuget:?package=ReportGenerator&version=4.0.15
-#tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.3.1
-#addin nuget:?package=Cake.Sonar&version=1.1.18
+#tool nuget:?package=NUnit.ConsoleRunner&version=3.10.0
+#addin nuget:?package=Cake.Coverlet&version=2.3.4
+#tool nuget:?package=ReportGenerator&version=4.3.5
+#tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.6.0
+#addin nuget:?package=Cake.Sonar&version=1.1.22
 
 var target = Argument("target", "Default");
 var sonarLogin = Argument("sonarLogin", "");
@@ -42,7 +42,7 @@ Task("Test")
             CollectCoverage = true,            
             CoverletOutputName = "coverage",
             CoverletOutputDirectory = "./coverage-results",
-            Exclude = {"[xunit.*]*"},
+            Exclude = {"[xunit.*]*,[*]*.Texts"},
             //Threshold = 100
         };
 

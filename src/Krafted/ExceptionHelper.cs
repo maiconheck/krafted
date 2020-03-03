@@ -52,7 +52,7 @@ namespace Krafted
         /// </summary>
         /// <param name="params">The parameters to check if any is null.</param>
         /// <exception cref="ArgumentNullException"><paramref name="params"/> is <c>null</c>.</exception>
-        public static void ThrowIfNull(params Expression<Func<object>>[] @params)
+        public static void ThrowIfAnyNull(params Expression<Func<object>>[] @params)
                 => @params.ToList().ForEach(ThrowIfNull);
 
         /// <summary>
@@ -64,10 +64,8 @@ namespace Krafted
         /// <exception cref="ArgumentException"><paramref name="param"/> is empty.</exception>
         public static void ThrowIfNullOrEmpty(this string param, string paramName)
         {
-            param.ThrowIfNull(nameof(param));
-
             if (string.IsNullOrEmpty(param))
-                throw new ArgumentException($"Argument {paramName} can't be empty.");
+                throw new ArgumentException($"Value cannot be null or empty.\r\nParameter name: {paramName}");
         }
 
         /// <summary>
@@ -80,10 +78,8 @@ namespace Krafted
         /// <exception cref="ArgumentException"><paramref name="param"/> is empty, or consists only of white-space.</exception>
         public static void ThrowIfNullOrWhiteSpace(this string param, string paramName)
         {
-            param.ThrowIfNull(nameof(param));
-
             if (string.IsNullOrWhiteSpace(param))
-                throw new ArgumentException($"Argument {paramName} can't be empty or white-space.");
+                throw new ArgumentException($"Value cannot be null, empty or white-space.\r\nParameter name: {paramName}");
         }
     }
 }

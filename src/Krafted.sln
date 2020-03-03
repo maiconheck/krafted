@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Api", "Krafted.Api\Krafted.Api.csproj", "{B3CCC136-05B4-454B-88B2-BA2648D6375E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Infrastructure", "Krafted.Infrastructure\Krafted.Infrastructure.csproj", "{7EF09CD1-702B-4258-944D-934F9CC2EA60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Data", "Krafted.Data\Krafted.Data.csproj", "{7EF09CD1-702B-4258-944D-934F9CC2EA60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.IntegrationTest", "Krafted.IntegrationTest\Krafted.IntegrationTest.csproj", "{EB51D56F-81AD-4ED4-A42F-3FAEED1E75E9}"
 EndProject

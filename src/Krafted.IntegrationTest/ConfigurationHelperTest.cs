@@ -8,10 +8,10 @@ namespace Krafted.IntegrationTest
         [Fact]
         public void GetConnectionString_Name_ConnectionString()
         {
-            string connectionString = ConfigurationHelper.GetConnectionString();
+            string connectionString = Config.Instance().GetConnectionString();
             Assert.Equal("Server=(local)\\SqlExpress;Database=Krafted;Trusted_Connection=True", connectionString);
 
-            connectionString = ConfigurationHelper.GetConnectionString("NotExistentConnectionString");
+            connectionString = Config.Instance().GetConnectionString("NotExistentConnectionString");
             Assert.Null(connectionString);
         }
     }

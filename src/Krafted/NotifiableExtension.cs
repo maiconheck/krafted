@@ -29,8 +29,7 @@ namespace Krafted
 
         private static IEnumerable<Notifiable> GetModels(Notifiable aggregate)
         {
-            if (aggregate == null)
-                throw new ArgumentNullException(nameof(aggregate));
+            aggregate.ThrowIfNull(nameof(aggregate));
 
             var models = aggregate
                 .GetType()
