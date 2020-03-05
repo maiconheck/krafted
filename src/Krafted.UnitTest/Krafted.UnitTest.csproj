@@ -44,7 +44,8 @@
 
   <ItemGroup>    
     <ProjectReference Include="..\Krafted.Api\Krafted.Api.csproj" />    
-    <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
+    <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />    
+    <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />
   </ItemGroup>
 
   <ItemGroup>

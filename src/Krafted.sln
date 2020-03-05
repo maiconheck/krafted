@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.Data.SqlServer", "K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.Data.Oracle", "Krafted.Data.Oracle\Krafted.Data.Oracle.csproj", "{AD6933B3-DCF4-4233-A42C-15CA40D017E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.DesignPatterns", "Krafted.DesignPatterns\Krafted.DesignPatterns.csproj", "{DC4BAFAD-1506-4833-800E-D6671A3A8453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +129,18 @@ Global
 		{AD6933B3-DCF4-4233-A42C-15CA40D017E8}.Release|x64.Build.0 = Release|Any CPU
 		{AD6933B3-DCF4-4233-A42C-15CA40D017E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD6933B3-DCF4-4233-A42C-15CA40D017E8}.Release|x86.Build.0 = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|x64.Build.0 = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Debug|x86.Build.0 = Debug|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|x64.ActiveCfg = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|x64.Build.0 = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC4BAFAD-1506-4833-800E-D6671A3A8453}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
