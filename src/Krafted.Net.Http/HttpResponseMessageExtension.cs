@@ -4,6 +4,9 @@ using System.Net.Http;
 
 namespace Krafted.Net.Http
 {
+    /// <summary>
+    /// Provides extension methods to <see cref="HttpResponseMessage"/>.
+    /// </summary>
     public static class HttpResponseMessageExtension
     {
         /// <summary>
@@ -13,6 +16,7 @@ namespace Krafted.Net.Http
         /// <param name="defaultContentType">The default content type. That is: application/json; charset=utf-8.</param>
         /// <returns>The HTTP response message if the call is successful.</returns>
         /// <exception cref="HttpRequestException">The HTTP response content type is different of the expected.</exception>
+        /// <exception cref="ArgumentNullException">The response is null.</exception>
         public static HttpResponseMessage EnsureContentType(
             this HttpResponseMessage response,
             string defaultContentType = "application/json; charset=utf-8")
