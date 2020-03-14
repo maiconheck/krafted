@@ -18,7 +18,7 @@ namespace Krafted.UnitTest.DesignPatterns.Factories.SqlServer
         /// <returns>The SQL Server connection.</returns>
         public IAbstractProduct New() => new SqlConnection();
 
-        public IAbstractProduct New(string param1) => new SqlConnection(param1);
+        public IAbstractProduct New(string param) => new SqlConnection(param);
 
         public IAbstractProduct New(string param1, string param2) => new SqlConnection(param1, param2);
 
