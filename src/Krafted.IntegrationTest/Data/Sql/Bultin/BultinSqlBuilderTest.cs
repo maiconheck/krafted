@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Krafted.Api;
 using Krafted.Data.Connection;
 using Krafted.Data.Sql;

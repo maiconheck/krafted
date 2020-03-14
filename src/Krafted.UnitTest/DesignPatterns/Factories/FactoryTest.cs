@@ -1,4 +1,4 @@
-using Krafted.DesignPatterns.Factories;
+﻿using Krafted.DesignPatterns.Factories;
 using Krafted.UnitTest.DesignPatterns.Factories.Oracle;
 using Krafted.UnitTest.DesignPatterns.Factories.SqlServer;
 using Xunit;
