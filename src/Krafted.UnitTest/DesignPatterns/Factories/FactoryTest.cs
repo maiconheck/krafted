@@ -11,9 +11,14 @@ namespace Krafted.UnitTest.DesignPatterns.Factories
         [Fact]
         public void New_SqlServerConnectionFactory_SqlServerConnection()
         {
-            var connection = Factory.New<SqlServerConnectionFactory>();
-            Assert.NotNull(connection);
-            Assert.IsType<SqlConnection>(connection);
+            var connection = (SqlConnection)Factory.New<SqlServerConnectionFactory>();
+            AssertConnection(connection, string.Empty);
+
+            var connection1 = (SqlConnection)Factory.New<SqlServerConnectionFactory, string>("A");
+            AssertConnection(connection1, "A");
+
+            var connection2 = (SqlConnection)Factory.New<SqlServerConnectionFactory, string, string>("A", "B");
+            AssertConnection(connection2, "AB");
         }
 
         [Fact]
@@ -22,6 +27,13 @@ namespace Krafted.UnitTest.DesignPatterns.Factories
             var connection = Factory.New<OracleConnectionFactory>();
             Assert.NotNull(connection);
             Assert.IsType<OracleConnection>(connection);
+        }
+
+        private static void AssertConnection(SqlConnection connection, string expected)
+        {
+            Assert.NotNull(connection);
+            Assert.IsType<SqlConnection>(connection);
+            Assert.Equal(expected, connection.ConnectionString);
         }
     }
 }
