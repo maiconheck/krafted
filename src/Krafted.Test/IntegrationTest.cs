@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Krafted.Api;
@@ -18,22 +16,19 @@ namespace Krafted.Test
         where TEntryPoint : class
     {
         private readonly ProviderStateApiFactory<TEntryPoint> _factory;
-        private readonly string _defaultContentType;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IntegrationTest{TEntryPoint}"/> class.
         /// </summary>
         /// <param name="factory">The factory.</param>
         /// <param name="endPoint">The end point.</param>
-        /// <param name="defaultContentType">The default content type. That is: application/json; charset=utf-8.</param>
-        protected IntegrationTest(ProviderStateApiFactory<TEntryPoint> factory, string endPoint, string defaultContentType = "application/json; charset=utf-8")
+        protected IntegrationTest(ProviderStateApiFactory<TEntryPoint> factory, string endPoint)
         {
             ExceptionHelper.ThrowIfAnyNull(() => factory, () => endPoint);
 
             _factory = factory;
             Client = _factory.CreateClient();
             EndPoint = endPoint;
-            _defaultContentType = defaultContentType;
         }
 
         /// <summary>
@@ -77,22 +72,6 @@ namespace Krafted.Test
             var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
 
             return new ResponseCommandResult(content.Success, content.Message);
-        }
-
-        /// <summary>
-        /// Ensures the content type throwing an exception if the .
-        /// </summary>
-        /// <param name="response">The response.</param>
-        /// <returns>The HTTP response message if the call is successful.</returns>
-        /// <exception cref="HttpRequestException">The HTTP response is unsuccessful.</exception>
-        protected HttpResponseMessage EnsureCorrectContentType(HttpResponseMessage response)
-        {
-            response.ThrowIfNull(nameof(response));
-
-            if (response.Content.Headers.ContentType.ToString().Equals(_defaultContentType, StringComparison.OrdinalIgnoreCase))
-                throw new HttpRequestException(string.Format(CultureInfo.InvariantCulture, Texts.IncorrectContentType, _defaultContentType));
-
-            return response;
         }
     }
 }

@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
-    <Version>1.0.0.14</Version>
+    <Version>1.0.0.15</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <NoWarn>CA1812,AD0001</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
