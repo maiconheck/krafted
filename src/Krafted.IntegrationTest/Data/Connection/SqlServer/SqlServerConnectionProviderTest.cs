@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data.SqlClient;
 using Krafted.Data.SqlServer.Connection;
 using Xunit;

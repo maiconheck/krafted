@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Krafted.Data.Connection;
 using Krafted.Data.Sql;
 using Krafted.Data.Sql.Bultin;

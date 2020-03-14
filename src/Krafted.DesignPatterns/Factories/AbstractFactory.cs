@@ -1,6 +1,4 @@
-using System;
-
-namespace Krafted.DesignPatterns.Factories
+﻿namespace Krafted.DesignPatterns.Factories
 {
     /// <summary>
     /// Represents the AbstractFactory participant [Gamma et al.] to the <see cref="IAbstractProduct"/>.

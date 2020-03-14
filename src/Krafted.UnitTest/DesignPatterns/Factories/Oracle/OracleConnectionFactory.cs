@@ -1,4 +1,4 @@
-using Krafted.DesignPatterns.Factories;
+﻿using Krafted.DesignPatterns.Factories;
 
 namespace Krafted.UnitTest.DesignPatterns.Factories.Oracle
 {

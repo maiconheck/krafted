@@ -1,4 +1,4 @@
-using System.Data;
+﻿using System.Data;
 using Krafted.Data.Connection;
 using Oracle.ManagedDataAccess.Client;
 
