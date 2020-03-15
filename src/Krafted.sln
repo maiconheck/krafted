@@ -15,15 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted", "Krafted\Krafted.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.UnitTest", "Krafted.UnitTest\Krafted.UnitTest.csproj", "{D3F710AD-EA6A-4A4A-8999-1934DC894D42}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D1288C5A-919C-48FF-AB74-9B4553BF480C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1288C5A-919C-48FF-AB74-9B4553BF480C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.Data.SqlServer", "Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj", "{5B912A0C-6C57-4B07-ADAA-B3F733EEA761}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Data.SqlServer", "Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj", "{5B912A0C-6C57-4B07-ADAA-B3F733EEA761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.Data.Oracle", "Krafted.Data.Oracle\Krafted.Data.Oracle.csproj", "{AD6933B3-DCF4-4233-A42C-15CA40D017E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Data.Oracle", "Krafted.Data.Oracle\Krafted.Data.Oracle.csproj", "{AD6933B3-DCF4-4233-A42C-15CA40D017E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.DesignPatterns", "Krafted.DesignPatterns\Krafted.DesignPatterns.csproj", "{DC4BAFAD-1506-4833-800E-D6671A3A8453}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.DesignPatterns", "Krafted.DesignPatterns\Krafted.DesignPatterns.csproj", "{DC4BAFAD-1506-4833-800E-D6671A3A8453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.Net.Http", "Krafted.Net.Http\Krafted.Net.Http.csproj", "{76F99DAE-F6FF-4EC6-8BC2-7BFC3853426C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Net.Http", "Krafted.Net.Http\Krafted.Net.Http.csproj", "{76F99DAE-F6FF-4EC6-8BC2-7BFC3853426C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using Assert = Krafted.Test.XUnit.AssertExtension;
+using Assert = Krafted.Test.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted
 {

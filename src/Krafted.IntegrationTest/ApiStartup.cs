@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Krafted.Data.Connection;
-using Krafted.Data.Sql;
-using Krafted.Data.Sql.Bultin;
+using Krafted.Data.SqlBuilder;
 using Krafted.Data.SqlServer.Connection;
+using Krafted.Data.SqlServer.SqlBuilder;
 using Krafted.IntegrationTest.Migration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

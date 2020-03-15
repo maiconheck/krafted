@@ -5,13 +5,13 @@
 		<Rule Id="SA1600" Action="None" />  <!-- Elements must be documented -->
 	</Rules>
 	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-		<Rule Id="CC0001" Action="None" />   <!-- Always use var -->
-		<Rule Id="CC0030" Action="None" />   <!-- Make local variable const when it is Possible -->
-		<Rule Id="CC0021" Action="None" /> <!-- Use nameof -->
+		<Rule Id="CC0001" Action="None" />  <!-- Always use var -->
+		<Rule Id="CC0030" Action="None" />  <!-- Make local variable const when it is Possible -->
+		<Rule Id="CC0021" Action="None" />  <!-- Use 'nameof(Foo)' instead of specifying the program element name -->
 		<Rule Id="CC0037" Action="None" />  <!-- Remove commented code -->
 	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
-		<Rule Id="RCS1118" Action="None" />  <!-- Mark local variable as const -->
+		<Rule Id="RCS1118" Action="None" /> <!-- Mark local variable as const -->
 		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->		
 		<Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->		
 		<Rule Id="RCS1010" Action="None" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
@@ -23,6 +23,7 @@
 		<Rule Id="CA1303" Action="None" /> <!-- Do not pass literals as localized parameters -->
 		<Rule Id="CA2000" Action="None" /> <!-- Dispose objects before losing scope -->
 		<Rule Id="CA2007" Action="None" /> <!-- Do not directly await a Task without calling ConfigureAwait -->
-		<Rule Id="CA1707" Action="None" />  <!-- Identifiers should not contain underscores -->		
+		<Rule Id="CA1707" Action="None" />  <!-- Identifiers should not contain underscores -->
+		<Rule Id="CA1062" Action="None" /> <!-- Validate arguments of public methods -->
 	</Rules>	
 </RuleSet>

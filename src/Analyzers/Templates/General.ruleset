@@ -196,7 +196,6 @@
 		<Rule Id="CA1014" Action="None" /> <!-- Mark assemblies with CLSCompliantAttribute -->
 		<Rule Id="CA1024" Action="None" /> <!-- Use properties where appropriate -->
 		<Rule Id="CA1008" Action="None" /> <!-- Add a member to CategoryGroup that has a value of zero with a suggested name of -->
-		<Rule Id="CA1062" Action="Error" /> <!-- Validate arguments of public methods -->
 	</Rules>
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
 		<Rule Id="SA0001" Action="Error" />
@@ -388,7 +387,6 @@
 		<Rule Id="CC0003" Action="Error" />
 		<Rule Id="CC0004" Action="Error" />
 		<Rule Id="CC0016" Action="Error" />
-		<Rule Id="CC0021" Action="Error" />
 		<Rule Id="CC0024" Action="Error" />
 		<Rule Id="CC0031" Action="Error" />
 		<Rule Id="CC0012" Action="Error" />

@@ -45,19 +45,4 @@
     <PackageReference Include="NSubstitute" Version="4.2.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Texts.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Texts.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Texts.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Texts.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
 </Project>

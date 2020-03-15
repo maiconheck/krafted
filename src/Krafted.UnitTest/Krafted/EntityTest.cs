@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Krafted.Dapper;
 using Xunit;
-using Assert = Krafted.Test.XUnit.AssertExtension;
+using Assert = Krafted.Test.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted
 {
@@ -50,7 +50,9 @@ namespace Krafted.UnitTest.Krafted
             var entity = new EntityDummy();
             entity.SetNewId();
             var param = entity.ToParam("Dummy");
+            var paramNames = param.ParameterNames.ToList();
 
+            Assert.Single(paramNames);
             Assert.Equal("DummyId", param.ParameterNames.First());
             Assert.Equal(entity.Id, param.Get<Guid>("DummyId"));
         }
@@ -69,6 +71,18 @@ namespace Krafted.UnitTest.Krafted
 
             Assert.Equal("Bar", @params.ParameterNames.Third());
             Assert.Equal("The bar", @params.Get<string>("Bar"));
+        }
+
+        [Fact]
+        public void GetColumnNames_Foo_ShouldBeGot()
+        {
+            var entity = new EntityDummy();
+            var columns = entity.GetColumnNames(nameof(EntityDummy));
+
+            Assert.Equal(3, columns.Count);
+            Assert.Equal("EntityDummyId", columns.First());
+            Assert.Equal("Foo", columns.Second());
+            Assert.Equal("Bar", columns.Third());
         }
     }
 }

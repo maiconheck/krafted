@@ -6,7 +6,7 @@
 	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
 		<Rule Id="CC0001" Action="Error" />   <!-- Always use var -->
 		<Rule Id="CC0030" Action="Error" />   <!-- Make local variable const when it is Possible -->
-		<Rule Id="CC0021" Action="Error" /> <!-- Use nameof -->
+		<Rule Id="CC0021" Action="Error" /> <!-- Use 'nameof(Foo)' instead of specifying the program element name -->
 		<Rule Id="CC0037" Action="Error" />  <!-- Remove commented code -->
 	</Rules>
 	<Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
@@ -15,7 +15,8 @@
 		<Rule Id="CA2007" Action="Error" /> <!-- Do not directly await a Task without calling ConfigureAwait -->
 		<Rule Id="CA1822" Action="Error" />  <!-- Elements must be documented -->
 		<Rule Id="CA1806" Action="Error" /> <!-- Do not ignore method results -->
-		<Rule Id="CA1303" Action="Error" /> <!-- Do not pass literals as localized parameters -->		
+		<Rule Id="CA1303" Action="Error" /> <!-- Do not pass literals as localized parameters -->
+		<Rule Id="CA1062" Action="Error" /> <!-- Validate arguments of public methods -->
 	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1118" Action="Error" />  <!-- Mark local variable as const -->
