@@ -12,7 +12,6 @@
 		<Rule Id="CA1005" Action="Error" />
 		<Rule Id="CA1006" Action="Error" />
 		<Rule Id="CA1007" Action="Error" />
-		<Rule Id="CA1008" Action="Error" />
 		<Rule Id="CA1009" Action="Error" />
 		<Rule Id="CA1010" Action="Error" />
 		<Rule Id="CA1011" Action="Error" />
@@ -104,6 +103,7 @@
 		<Rule Id="CA1801" Action="Error" />
 		<Rule Id="CA1802" Action="Error" />
 		<Rule Id="CA1804" Action="Error" />
+		<Rule Id="CA1806" Action="Error" />
 		<Rule Id="CA1810" Action="Error" />
 		<Rule Id="CA1811" Action="Error" />
 		<Rule Id="CA1812" Action="Error" />
@@ -114,6 +114,7 @@
 		<Rule Id="CA1819" Action="Error" />
 		<Rule Id="CA1820" Action="Error" />
 		<Rule Id="CA1821" Action="Error" />
+		<Rule Id="CA1822" Action="Error" />
 		<Rule Id="CA1823" Action="Error" />
 		<Rule Id="CA1824" Action="Error" />
 		<Rule Id="CA1900" Action="Error" />
@@ -194,6 +195,8 @@
 		<Rule Id="CA2234" Action="None" /> <!-- Pass System.Uri objects instead of strings -->
 		<Rule Id="CA1014" Action="None" /> <!-- Mark assemblies with CLSCompliantAttribute -->
 		<Rule Id="CA1024" Action="None" /> <!-- Use properties where appropriate -->
+		<Rule Id="CA1008" Action="None" /> <!-- Add a member to CategoryGroup that has a value of zero with a suggested name of -->
+		<Rule Id="CA1062" Action="Error" /> <!-- Validate arguments of public methods -->
 	</Rules>
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
 		<Rule Id="SA0001" Action="Error" />
@@ -308,7 +311,7 @@
 		<Rule Id="SA1409" Action="Error" />
 		<Rule Id="SA1410" Action="Error" />
 		<Rule Id="SA1411" Action="Error" />
-		<Rule Id="SA1412" Action="Error" />
+		<Rule Id="SA1412" Action="Error" /> <!-- Store files as Utf8 -->
 		<Rule Id="SA1500" Action="Error" />
 		<Rule Id="SA1501" Action="Error" />
 		<Rule Id="SA1502" Action="Error" />
@@ -379,6 +382,7 @@
 		<Rule Id="SA1503" Action="None" /> <!-- Braces must not be omitted -->
 		<Rule Id="SA1309" Action="None" /> <!-- Field names must not begin with underscore -->
 		<Rule Id="SA1652" Action="None" /> <!-- Enable Xml documentation output -->
+		<Rule Id="SA1413" Action="None" /> <!-- Use Trailing Commas In MultiLine Initializers Analyzer -->
 	</Rules>
 	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
 		<Rule Id="CC0003" Action="Error" />
@@ -404,6 +408,7 @@
 		<Rule Id="CC0018" Action="Error" />
 		<Rule Id="CC0019" Action="Error" />
 		<Rule Id="CC0020" Action="Error" />
+		<Rule Id="CC0037" Action="Error" />
 		<Rule Id="CC0048" Action="Error" />
 		<Rule Id="CC0002" Action="Error" />
 		<Rule Id="CC0007" Action="Error" />
@@ -417,7 +422,8 @@
 		<Rule Id="CC0052" Action="Error" />
 		<Rule Id="CC0068" Action="Error" />
 		<Rule Id="CC0089" Action="Error" />
-		<Rule Id="CC0038" Action="None" /> <!-- Convert to expression bodied member (already handled by Roslynator) -->
+		<Rule Id="CC0038" Action="None" /> <!-- Conflicts with RCS1017: Avoid multiline expression body -->
+		<Rule Id="CC0057" Action="None" /> <!-- UnusedParametersAnalyzer - This rule is not working with expression bodied members -->
 	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1044" Action="Error" />
@@ -444,10 +450,10 @@
 		<Rule Id="RCS1003" Action="Error" />
 		<Rule Id="RCS1004" Action="Error" />
 		<Rule Id="RCS1005" Action="Error" />
-		<Rule Id="RCS1009" Action="Error" />
 		<Rule Id="RCS1013" Action="Error" />
 		<Rule Id="RCS1014" Action="Error" />
 		<Rule Id="RCS1015" Action="Error" />
+		<Rule Id="RCS1016" Action="Error" />
 		<Rule Id="RCS1018" Action="Error" />
 		<Rule Id="RCS1020" Action="Error" />
 		<Rule Id="RCS1027" Action="Error" />
@@ -464,6 +470,7 @@
 		<Rule Id="RCS1040" Action="Error" />
 		<Rule Id="RCS1041" Action="Error" />
 		<Rule Id="RCS1042" Action="Error" />
+		<Rule Id="RCS1043" Action="Error" /> <!-- Remove 'partial' modifier from type with a single part -->
 		<Rule Id="RCS1045" Action="Error" />
 		<Rule Id="RCS1046" Action="Error" />
 		<Rule Id="RCS1047" Action="Error" />
@@ -489,12 +496,13 @@
 		<Rule Id="RCS1072" Action="Error" />
 		<Rule Id="RCS1073" Action="Error" />
 		<Rule Id="RCS1074" Action="Error" />
-		<Rule Id="RCS1076" Action="Error" />		
+		<Rule Id="RCS1076" Action="Error" />
 		<Rule Id="RCS1081" Action="Error" />
 		<Rule Id="RCS1084" Action="Error" />
 		<Rule Id="RCS1085" Action="Error" />
 		<Rule Id="RCS1088" Action="Error" />
 		<Rule Id="RCS1089" Action="Error" />
+		<Rule Id="RCS1090" Action="Error" />
 		<Rule Id="RCS1091" Action="Error" />
 		<Rule Id="RCS1092" Action="Error" />
 		<Rule Id="RCS1093" Action="Error" />
@@ -558,6 +566,7 @@
 		<Rule Id="RCS1178" Action="Error" />
 		<Rule Id="RCS1179" Action="Error" />
 		<Rule Id="RCS1180" Action="Error" />
+		<Rule Id="RCS1181" Action="Error" /> <!-- Replace comment with documentation comment -->
 		<Rule Id="RCS1182" Action="Error" />
 		<Rule Id="RCS1183" Action="Error" />
 		<Rule Id="RCS1184" Action="Error" />
@@ -574,6 +583,7 @@
 		<Rule Id="RCS1199" Action="Error" />
 		<Rule Id="RCS1200" Action="Error" />
 		<Rule Id="RCS1201" Action="Error" />
+		<Rule Id="RCS1202" Action="Error" />
 		<Rule Id="RCS1204" Action="Error" />
 		<Rule Id="RCS1205" Action="Error" />
 		<Rule Id="RCS1206" Action="Error" />
@@ -601,7 +611,7 @@
 		<Rule Id="RCS1233" Action="Error" />
 		<Rule Id="RCS1234" Action="Error" />
 		<Rule Id="RCS1016" Action="Error" />
-		<Rule Id="RCS1079" Action="Warning" />
+	    <Rule Id="RCS1079" Action="Warning" />
 		<Rule Id="RCS1086" Action="None" /> <!-- Use linefeed as newline -->
 		<Rule Id="RCS1007" Action="None" /> <!-- Add braces -->
 		<Rule Id="RCS1100" Action="None" /> <!-- Format documentation summary on a single line -->
@@ -612,20 +622,17 @@
 		<Rule Id="RCS1012" Action="None" /> <!-- Use explicit type instead of 'var' (when the type is obvious) -->
 		<Rule Id="RCS1217" Action="None" /> <!-- Replace interpolated string with concatenation -->
 		<Rule Id="RCS1050" Action="None" /> <!-- Add argument list to object creation expression -->
-		<Rule Id="RCS1080" Action="None" /> <!-- Use 'Count/Length' property instead of 'Any' method -->
-		<Rule Id="RCS1142" Action="None" /> <!-- Add 'typeparam' element to documentation comment -->
-		<Rule Id="RCS1008" Action="None" /> <!-- Use explicit type instead of 'var' (when the type is not obvious) -->
+		<Rule Id="RCS1080" Action="None" /> <!-- Use 'Count/Length' property instead of 'Any' method -->	
 		<Rule Id="RCS1208" Action="None" /> <!-- Reduce if nesting (it's not working well) -->
-		<Rule Id="RCS1019" Action="None" /> <!-- Order modifiers -->
-		<Rule Id="RCS1181" Action="None" /> <!-- Replace comment with documentation comment -->
 		<Rule Id="RCS1029" Action="None" /> <!-- Format binary operator on next line -->
 		<Rule Id="RCS1087" Action="None" /> <!-- Use carriage return + linefeed as newline -->
-		<Rule Id="RCS1192" Action="None" /> <!-- se regular string literal instead of verbatim string literal -->
+		<Rule Id="RCS1192" Action="None" /> <!-- Use regular string literal instead of verbatim string literal -->
 		<Rule Id="RCS1198" Action="None" /> <!-- Avoid unnecessary boxing of value type -->
-		<Rule Id="RCS1043" Action="None" /> <!-- Remove 'partial' modifier from type with a single part -->
-		<Rule Id="CC0057" Action="None" /> <!-- This rule is not working with expression-bodied member contructors -->
-		<Rule Id="SA1413" Action="None" /> <!-- Use Trailing Commas In MultiLine Initializers Analyzer -->
-		<Rule Id="CA1062" Action="Warning" /> <!-- Validate arguments of public methods -->
-		<Rule Id="RCS1056" Action="None" /> <!-- Avoid usage of using alias directive -->
+		<Rule Id="RCS1056" Action="None" /> <!-- Avoid usage of using alias directive -->						
+		<Rule Id="RCS1008" Action="None" /> <!-- Use explicit type instead of 'var' (when the type is not obvious) -->
+		<Rule Id="RCS1009" Action="None" /> <!-- Use explicit type instead of 'var' (foreach variable) -->
+		<Rule Id="RCS1142" Action="None" /> <!-- Add 'typeparam' element to documentation -->
+		<Rule Id="RCS1019" Action="None" /> <!-- Order modifiers - Conflicts with another rule -->
+		<Rule Id="AD0001" Action="None" />
 	</Rules>
 </RuleSet>
