@@ -1,4 +1,5 @@
-﻿using Krafted.Data.Connection;
+﻿using Krafted.Configuration;
+using Krafted.Data.Connection;
 using Krafted.Data.SqlBuilder;
 using Krafted.Data.SqlServer.Connection;
 using Krafted.Data.SqlServer.SqlBuilder;

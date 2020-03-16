@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using Krafted.Data.SqlServer.Connection;
 using Xunit;
-using Assert = Krafted.Test.Xunit.AssertExtension;
+using Assert = Krafted.Test.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.IntegrationTest.Krafted.Data.Connection.SqlServer
 {

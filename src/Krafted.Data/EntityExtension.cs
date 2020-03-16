@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Krafted
+namespace Krafted.Data
 {
     /// <summary>
     /// Provides extension methods to <see cref="Entity"/>.

@@ -1,4 +1,4 @@
-﻿namespace Krafted.Test.Result
+﻿namespace Krafted.Test.UnitTest.Result
 {
     /// <summary>
     /// Represents a dummy class for test purpose.

@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Krafted.Data;
+using Xunit;
 
 namespace Krafted.UnitTest.Krafted
 {

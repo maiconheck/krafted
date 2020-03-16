@@ -1,5 +1,6 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using Krafted.Data;
 
 namespace Krafted.UnitTest.Krafted
 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
+using Krafted.DesignPatterns.Specifications;
 
 namespace Krafted.UnitTest.Krafted
 {

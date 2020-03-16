@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -14,12 +13,7 @@
     <Authors>Maicon Heck</Authors>
     <NeutralLanguage>pt-BR</NeutralLanguage>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Krafted.Api\Krafted.Api.csproj" />
-    <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
-  </ItemGroup>
-
+  
   <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -41,8 +35,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="NSubstitute" Version="4.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />
+    <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 
 </Project>

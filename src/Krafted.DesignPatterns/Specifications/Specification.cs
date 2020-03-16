@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Krafted
+namespace Krafted.DesignPatterns.Specifications
 {
     /// <summary>
     /// Represents a base class to Specification Pattern.

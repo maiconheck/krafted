@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using Assert = Krafted.Test.Xunit.AssertExtension;
+using Assert = Krafted.Test.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted
 {
@@ -93,7 +93,7 @@ namespace Krafted.UnitTest.Krafted
         [InlineData(" ")]
         public void ThrowIfNullOrWhiteSpace_NullOrWhiteSpace_ThrowsException(string param)
         {
-            var ex = Assert.Throws<ArgumentException>(() => param.ThrowIfNullOrWhiteSpace(nameof(param)));
+            var ex = Assert.Throws<ArgumentException>(() => ExceptionHelper.ThrowIfNullOrWhiteSpace(param, nameof(param)));
             Assert.Equal("Value cannot be null, empty or white-space.\r\nParameter name: param", ex.Message);
         }
 
@@ -101,7 +101,7 @@ namespace Krafted.UnitTest.Krafted
         public void ThrowIfNullOrWhiteSpace_NotNullOrEmpty_DoesNotThrowsException()
         {
             string param = "value";
-            Assert.DoesNotThrows(() => param.ThrowIfNullOrWhiteSpace(nameof(param)));
+            Assert.DoesNotThrows(() => ExceptionHelper.ThrowIfNullOrWhiteSpace(param, nameof(param)));
         }
     }
 }

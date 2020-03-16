@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Krafted.DesignPatterns.Notifications;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted

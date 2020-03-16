@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Krafted.Dapper;
+using Krafted.Data;
+using Krafted.Data.SqlServer.Dapper;
 using Xunit;
-using Assert = Krafted.Test.Xunit.AssertExtension;
+using Assert = Krafted.Test.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted
 {

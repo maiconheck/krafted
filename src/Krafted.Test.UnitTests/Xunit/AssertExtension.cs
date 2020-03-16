@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace Krafted.Test.Xunit
+namespace Krafted.Test.UnitTest.Xunit
 {
     /// <summary>
     /// Provides assertion methods to xUnit <see cref="Assert"/>.

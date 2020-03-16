@@ -1,10 +1,10 @@
 ﻿using System;
-using Krafted.Api;
+using Krafted.Configuration;
 using Krafted.Data.Connection;
 using Krafted.Data.SqlBuilder;
 using Krafted.Data.SqlServer.Connection;
 using Krafted.Data.SqlServer.SqlBuilder;
-using Krafted.Test;
+using Krafted.Test.IntegrationTests;
 using Xunit;
 
 namespace Krafted.IntegrationTest.Krafted.Data.SqlBuilder

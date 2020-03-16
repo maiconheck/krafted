@@ -76,7 +76,7 @@ namespace Krafted
         /// <param name="paramName">The name of the parameter.</param>
         /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException"><paramref name="param"/> is empty, or consists only of white-space.</exception>
-        public static void ThrowIfNullOrWhiteSpace(this string param, string paramName)
+        public static void ThrowIfNullOrWhiteSpace(string param, string paramName)
         {
             if (string.IsNullOrWhiteSpace(param))
                 throw new ArgumentException($"Value cannot be null, empty or white-space.\r\nParameter name: {paramName}");

@@ -2,7 +2,7 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Krafted
+namespace Krafted.Configuration
 {
     /// <summary>
     /// Represents a wrapper for the <see cref="IConfiguration"/> implemented as a singleton.

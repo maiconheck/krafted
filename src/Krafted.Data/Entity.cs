@@ -2,7 +2,7 @@
 using System.Linq;
 using Flunt.Notifications;
 
-namespace Krafted
+namespace Krafted.Data
 {
     /// <summary>
     /// Represents the entity base.

@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Text;
 using Krafted.Net.Http;
 using Xunit;
-using Assert = Krafted.Test.Xunit.AssertExtension;
+using Assert = Krafted.Test.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.Net.Http
 {

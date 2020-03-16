@@ -1,4 +1,5 @@
 ﻿using System;
+using Krafted.Data;
 
 namespace Krafted.IntegrationTest.Krafted.Data.SqlBuilder
 {

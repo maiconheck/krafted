@@ -1,11 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Krafted.Api;
-using Krafted.Test.Result;
+using Krafted.Test.UnitTest.Result;
 using Newtonsoft.Json;
 
-namespace Krafted.Test
+namespace Krafted.Test.IntegrationTests
 {
     /// <summary>
     /// Represents the IntegrationTest base class.
@@ -24,7 +23,8 @@ namespace Krafted.Test
         /// <param name="endPoint">The end point.</param>
         protected IntegrationTest(ProviderStateApiFactory<TEntryPoint> factory, string endPoint)
         {
-            ExceptionHelper.ThrowIfAnyNull(() => factory, () => endPoint);
+            ExceptionHelper.ThrowIfAnyNull(() => factory);
+            ExceptionHelper.ThrowIfNullOrWhiteSpace(endPoint, nameof(endPoint));
 
             _factory = factory;
             Client = _factory.CreateClient();
@@ -50,7 +50,7 @@ namespace Krafted.Test
         /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
         protected static async Task<ResponseCommandResult> DeserializeResponseAsync(HttpResponseMessage response)
         {
-            response.ThrowIfNull(nameof(response));
+            ExceptionHelper.ThrowIfNull(() => response);
 
             var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
@@ -66,7 +66,7 @@ namespace Krafted.Test
         /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
         protected static async Task<ResponseCommandResult> DeserializeDeleteResponseAsync(HttpResponseMessage response)
         {
-            response.ThrowIfNull(nameof(response));
+            ExceptionHelper.ThrowIfAnyNull(() => response);
 
             var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);

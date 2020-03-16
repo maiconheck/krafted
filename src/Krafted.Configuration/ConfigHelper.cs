@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace Krafted
+namespace Krafted.Configuration
 {
     /// <summary>
     /// Provides helper methods to get connection strings and settings from appSettings.json through the <see cref="IConfiguration"/> provider.

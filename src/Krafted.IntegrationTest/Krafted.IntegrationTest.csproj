@@ -40,23 +40,21 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.ResponseCaching" Version="2.2.0" />
-    <PackageReference Include="nsubstitute" Version="4.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-    <PackageReference Include="Dapper.FluentMap" Version="1.8.0" />
-    <PackageReference Include="Dapper.FluentMap.Dommel" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Krafted.Configuration\Krafted.Configuration.csproj" />
     <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
     <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />
     <ProjectReference Include="..\Krafted.Data.Oracle\Krafted.Data.Oracle.csproj" />
-    <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
+    <ProjectReference Include="..\Krafted.Test.IntegrationTests\Krafted.Test.IntegrationTests.csproj" />    
+    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />     
   </ItemGroup>  
 
   <ItemGroup>

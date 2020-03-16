@@ -2,8 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Serialization;
-using Krafted.Dapper;
 using Krafted.Data.SqlBuilder;
+using Krafted.Data.SqlServer.Dapper;
 
 namespace Krafted.Data.SqlServer.SqlBuilder
 {

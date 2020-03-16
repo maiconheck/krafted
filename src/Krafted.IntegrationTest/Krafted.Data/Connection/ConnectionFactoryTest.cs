@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Krafted.Configuration;
 using Krafted.Data.Connection;
 using Krafted.Data.Oracle.Connection;
 using Krafted.Data.SqlServer.Connection;

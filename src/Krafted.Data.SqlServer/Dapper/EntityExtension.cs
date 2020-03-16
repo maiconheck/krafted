@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Dapper;
 
-namespace Krafted.Dapper
+namespace Krafted.Data.SqlServer.Dapper
 {
     /// <summary>
     /// Provides extension methods to <see cref="Entity"/>.
@@ -18,7 +18,7 @@ namespace Krafted.Dapper
         /// <returns>The column names.</returns>
         public static IList<string> GetColumnNames(this Entity entity, string tableName)
         {
-            entity.ThrowIfNull(nameof(entity));
+            Validate(entity, tableName);
 
             var pkName = $"{tableName}{typeof(Entity).GetProperty("Id").Name}";
 
@@ -40,8 +40,7 @@ namespace Krafted.Dapper
         /// <returns>The converted parameters.</returns>
         public static DynamicParameters ToParams(this Entity entity, string tableName)
         {
-            entity.ThrowIfNull(nameof(entity));
-            tableName.ThrowIfNullOrWhiteSpace(nameof(tableName));
+            Validate(entity, tableName);
 
             var pk = typeof(Entity).GetProperty("Id");
             var pkName = $"{tableName}{pk.Name}";
@@ -68,8 +67,7 @@ namespace Krafted.Dapper
         /// <returns>The converted parameters.</returns>
         public static DynamicParameters ToParam(this Entity entity, string tableName)
         {
-            entity.ThrowIfNull(nameof(entity));
-            tableName.ThrowIfNullOrWhiteSpace(nameof(tableName));
+            Validate(entity, tableName);
 
             var pkName = typeof(Entity).GetProperty("Id").Name;
 
@@ -77,6 +75,12 @@ namespace Krafted.Dapper
             parameters.Add($"{tableName}{pkName}", entity.Id);
 
             return parameters;
+        }
+
+        private static void Validate(Entity entity, string tableName)
+        {
+            ExceptionHelper.ThrowIfNull(() => entity);
+            ExceptionHelper.ThrowIfNullOrWhiteSpace(tableName, nameof(tableName));
         }
     }
 }

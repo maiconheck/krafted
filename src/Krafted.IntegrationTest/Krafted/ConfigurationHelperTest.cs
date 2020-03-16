@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Krafted.Configuration;
+using Xunit;
 
 namespace Krafted.IntegrationTest.Krafted
 {

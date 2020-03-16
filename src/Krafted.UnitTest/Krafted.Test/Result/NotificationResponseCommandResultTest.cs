@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Krafted.Test.Result;
+using Krafted.Test.UnitTest.Result;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted.Test.Result
