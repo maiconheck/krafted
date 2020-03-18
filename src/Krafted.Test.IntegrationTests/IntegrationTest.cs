@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Krafted.Test.UnitTest.Result;
+using Krafted.Test.Result;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Krafted.Test.IntegrationTests
 {
@@ -42,36 +43,5 @@ namespace Krafted.Test.IntegrationTests
         /// </summary>
         /// <value>The <see cref="HttpClient"/>.</value>
         protected HttpClient Client { get; }
-
-        /// <summary>
-        /// Deserialize the response command asynchronous.
-        /// </summary>
-        /// <param name="response">The response.</param>
-        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
-        protected static async Task<ResponseCommandResult> DeserializeResponseAsync(HttpResponseMessage response)
-        {
-            ExceptionHelper.ThrowIfNull(() => response);
-
-            var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
-            var data = JsonConvert.DeserializeAnonymousType(value, new { data = new { id = string.Empty } });
-
-            return new ResponseCommandResult(data.data.id, content.Success, content.Message);
-        }
-
-        /// <summary>
-        /// deserialize the delete response command asynchronous.
-        /// </summary>
-        /// <param name="response">The response.</param>
-        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
-        protected static async Task<ResponseCommandResult> DeserializeDeleteResponseAsync(HttpResponseMessage response)
-        {
-            ExceptionHelper.ThrowIfAnyNull(() => response);
-
-            var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
-
-            return new ResponseCommandResult(content.Success, content.Message);
-        }
     }
 }

@@ -79,7 +79,7 @@ namespace Krafted.Data.SqlServer.SqlBuilder
                 builder.QuotePrefix = "[";
                 builder.QuoteSuffix = "]";
 
-                const string pattern = @"(?<=SET).*?\,|(AND.*?\)\))|(?<=WHERE.)\(|(Original_)";
+                const string pattern = @"(?<=SET).*?\,|(AND.*)|(?<=WHERE.)\(|(Original_)";
 
                 switch (type)
                 {

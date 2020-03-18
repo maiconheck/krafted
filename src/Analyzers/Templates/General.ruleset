@@ -422,6 +422,8 @@
 		<Rule Id="CC0089" Action="Error" />
 		<Rule Id="CC0038" Action="None" /> <!-- Conflicts with RCS1017: Avoid multiline expression body -->
 		<Rule Id="CC0057" Action="None" /> <!-- UnusedParametersAnalyzer - This rule is not working with expression bodied members -->
+		<Rule Id="CC0105" Action="None" />
+		<Rule Id="CC0091" Action="None" />
 	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1044" Action="Error" />
@@ -566,7 +568,6 @@
 		<Rule Id="RCS1180" Action="Error" />
 		<Rule Id="RCS1181" Action="Error" /> <!-- Replace comment with documentation comment -->
 		<Rule Id="RCS1182" Action="Error" />
-		<Rule Id="RCS1183" Action="Error" />
 		<Rule Id="RCS1184" Action="Error" />
 		<Rule Id="RCS1185" Action="Error" />
 		<Rule Id="RCS1186" Action="Error" />
@@ -631,6 +632,7 @@
 		<Rule Id="RCS1009" Action="None" /> <!-- Use explicit type instead of 'var' (foreach variable) -->
 		<Rule Id="RCS1142" Action="None" /> <!-- Add 'typeparam' element to documentation -->
 		<Rule Id="RCS1019" Action="None" /> <!-- Order modifiers - Conflicts with another rule -->
+		<Rule Id="RCS1183" Action="None" /> <!-- Format initializer with single expression on single line -->
 		<Rule Id="AD0001" Action="None" />
 	</Rules>
 </RuleSet>

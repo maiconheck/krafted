@@ -13,7 +13,7 @@ namespace Krafted.IntegrationTest.Krafted.Data.SqlBuilder
         [Fact]
         public void NewSqlBuilder_EntityDummy_SqlBuilder()
         {
-            var connectionString = Config.Instance().GetConnectionString("SqlServerConnection");
+            var connectionString = Config.Instance().GetConnectionString();
             var connection = ConnectionFactory.NewConnection<SqlServerConnectionFactory>(connectionString);
 
             var builder = SqlBuilderFactory.NewSqlBuilder<EntityDummy, BultinSqlBuilderFactory>(connection);

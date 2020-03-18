@@ -10,14 +10,14 @@ using Xunit;
 namespace Krafted.IntegrationTest.Krafted.Data.SqlBuilder
 {
     [Trait(nameof(IntegrationTest), nameof(Data))]
-    public class BultinSqlBuilderTest : IntegrationTest<InfrastructureStartup>, IClassFixture<ProviderStateApiFactory<InfrastructureStartup>>
+    public class BultinSqlBuilderTest : IntegrationTest<Startup>, IClassFixture<ProviderStateApiFactory<Startup>>
     {
         private readonly ISqlBuilder _sqlBuilder;
 
-        public BultinSqlBuilderTest(ProviderStateApiFactory<InfrastructureStartup> factory)
+        public BultinSqlBuilderTest(ProviderStateApiFactory<Startup> factory)
             : base(factory, "http://localhost:5001/api/v1")
         {
-            var connectionString = Config.Instance().GetConnectionString("SqlServerConnection");
+            var connectionString = Config.Instance().GetConnectionString();
             var connection = ConnectionFactory.NewConnection<SqlServerConnectionFactory>(connectionString);
 
             _sqlBuilder = SqlBuilderFactory.NewSqlBuilder<EntityDummy, BultinSqlBuilderFactory>(connection);

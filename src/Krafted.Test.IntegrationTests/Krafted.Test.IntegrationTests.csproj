@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>..\..\packages</PackageOutputPath>
-    <Version>1.0.0.17</Version>
+    <Version>2.0.0.2</Version>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -42,7 +43,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />
+    <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 

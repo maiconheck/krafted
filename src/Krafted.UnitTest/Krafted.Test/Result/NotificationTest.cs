@@ -1,4 +1,4 @@
-﻿using Krafted.Test.UnitTest.Result;
+﻿using Krafted.Test.Result;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted.Test.Result
@@ -7,9 +7,13 @@ namespace Krafted.UnitTest.Krafted.Test.Result
     public class NotificationTest
     {
         [Fact]
-        public void NewNotification_NotificationShouldBeCreated()
+        public void NewNotification_NotificationCreated()
         {
-            var notification = new Notification("The property", "The message");
+            var notification = new Notification
+            {
+                Property = "The property",
+                Message = "The message"
+            };
 
             Assert.Equal("The property", notification.Property);
             Assert.Equal("The message", notification.Message);

@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.Net.Http;
+using System.Threading.Tasks;
+using Krafted.Test.Result;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Krafted.Net.Http
 {
@@ -17,17 +21,58 @@ namespace Krafted.Net.Http
         /// <returns>The HTTP response message if the call is successful.</returns>
         /// <exception cref="HttpRequestException">The HTTP response content type is different of the expected.</exception>
         /// <exception cref="ArgumentNullException">The response is null.</exception>
-        public static HttpResponseMessage EnsureContentType(
-            this HttpResponseMessage response,
-            string defaultContentType = "application/json; charset=utf-8")
+        public static HttpResponseMessage EnsureContentType(this HttpResponseMessage response, string defaultContentType = "application/json; charset=utf-8")
         {
-            if (response is null)
-                throw new ArgumentNullException(nameof(response));
+            ExceptionHelper.ThrowIfNull(() => response);
 
             if (!response.Content.Headers.ContentType.ToString().Equals(defaultContentType, StringComparison.OrdinalIgnoreCase))
                 throw new HttpRequestException(string.Format(CultureInfo.InvariantCulture, Texts.IncorrectContentType, defaultContentType));
 
             return response;
+        }
+
+        /// <summary>
+        /// Deserialize the response command asynchronous.
+        /// </summary>
+        /// <param name="response">The response.</param>
+        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
+        public static async Task<ResponseCommandResult> DeserializeAsync(this HttpResponseMessage response)
+        {
+            ExceptionHelper.ThrowIfNull(() => response);
+
+            var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            bool success = JObject.Parse(value).Value<bool>("success");
+
+            if (success)
+            {
+                var successResult = JsonConvert.DeserializeAnonymousType(value, new
+                {
+                    data = new { id = string.Empty },
+                    success = false,
+                    failure = false,
+                    message = string.Empty
+                });
+
+                return new ResponseCommandResult(successResult.data.id, successResult.success, successResult.message);
+            }
+
+            var failureResult = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
+            return new ResponseCommandResult(failureResult.Success, failureResult.Message, failureResult.Data);
+        }
+
+        /// <summary>
+        /// deserialize the delete response command asynchronous.
+        /// </summary>
+        /// <param name="response">The response.</param>
+        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
+        public static async Task<ResponseCommandResult> DeserializeDeleteAsync(this HttpResponseMessage response)
+        {
+            ExceptionHelper.ThrowIfNull(() => response);
+
+            var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            var content = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
+
+            return new ResponseCommandResult(content.Success, content.Message);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Krafted.IntegrationTest
     /// Represents the initialization class used for integration testing from the Repositories.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public class InfrastructureStartup
+    public class Startup
     {
         /// <summary>
         /// This method gets called by the runtime. Use this method to add services to the container.
@@ -53,13 +53,15 @@ namespace Krafted.IntegrationTest
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
 
-            app.UseRequestLocalization(new RequestLocalizationOptions { DefaultRequestCulture = new RequestCulture("pt-BR", "pt-BR") })
-               .UseCors(policy => policy
+            app.UseRequestLocalization(new RequestLocalizationOptions { DefaultRequestCulture = new RequestCulture("pt-BR", "pt-BR") });
+
+            app.UseCors(policy => policy
                .AllowAnyOrigin()
                .AllowAnyHeader()
-               .AllowAnyMethod())
-               .UseMvcWithDefaultRoute()
-               .UseMigration(Config.Instance().GetConnectionString("SqlServerConnection"));
+               .AllowAnyMethod());
+
+            app.UseMvcWithDefaultRoute()
+               .UseMigration(Config.Instance().GetConnectionString());
         }
     }
 }
