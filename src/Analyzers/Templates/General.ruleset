@@ -540,7 +540,6 @@
 		<Rule Id="RCS1141" Action="Error" />
 		<Rule Id="RCS1143" Action="Error" />
 		<Rule Id="RCS1145" Action="Error" />
-		<Rule Id="RCS1146" Action="Error" />
 		<Rule Id="RCS1150" Action="Error" />
 		<Rule Id="RCS1151" Action="Error" />
 		<Rule Id="RCS1153" Action="Error" />
@@ -633,6 +632,7 @@
 		<Rule Id="RCS1142" Action="None" /> <!-- Add 'typeparam' element to documentation -->
 		<Rule Id="RCS1019" Action="None" /> <!-- Order modifiers - Conflicts with another rule -->
 		<Rule Id="RCS1183" Action="None" /> <!-- Format initializer with single expression on single line -->
+		<Rule Id="RCS1146" Action="None" /> <!-- Use conditional access -->
 		<Rule Id="AD0001" Action="None" />
 	</Rules>
 </RuleSet>

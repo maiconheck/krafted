@@ -53,7 +53,10 @@ namespace Krafted.Net.Http
                     message = string.Empty
                 });
 
-                return new ResponseCommandResult(successResult.data.id, successResult.success, successResult.message);
+                if (successResult.data != null && successResult.data.id != null)
+                    return new ResponseCommandResult(successResult.data.id, successResult.success, successResult.message);
+
+                return new ResponseCommandResult(successResult.success, successResult.message);
             }
 
             var failureResult = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);

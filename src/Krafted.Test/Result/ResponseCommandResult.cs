@@ -15,6 +15,8 @@ namespace Krafted.Test.Result
         /// <param name="message">The message.</param>
         public ResponseCommandResult(bool success, string message)
         {
+            ExceptionHelper.ThrowIfAnyNull(() => success, () => message);
+
             Success = success;
             Message = message;
         }
@@ -27,6 +29,8 @@ namespace Krafted.Test.Result
         /// <param name="message">The message.</param>
         public ResponseCommandResult(string id, bool success, string message)
         {
+            ExceptionHelper.ThrowIfAnyNull(() => id, () => success, () => message);
+
             Id = Guid.Parse(id);
             Success = success;
             Message = message;
@@ -36,12 +40,14 @@ namespace Krafted.Test.Result
         /// Initializes a new instance of the <see cref="ResponseCommandResult"/> class.
         /// </summary>
         /// <param name="success">if set to <c>true</c> [success].</param>
-        /// <param name="messagem">The mensagem.</param>
+        /// <param name="message">The mensagem.</param>
         /// <param name="data">The data.</param>
-        public ResponseCommandResult(bool success, string messagem, List<Notification> data)
+        public ResponseCommandResult(bool success, string message, List<Notification> data)
         {
+            ExceptionHelper.ThrowIfAnyNull(() => success, () => message, () => data);
+
             Success = success;
-            Message = messagem;
+            Message = message;
             Data = data;
         }
 

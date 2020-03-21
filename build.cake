@@ -5,6 +5,7 @@
 #addin nuget:?package=Cake.Sonar&version=1.1.22
 
 var target = Argument("target", "Default");
+var configuration = Argument("configuration", "Debug");
 var sonarLogin = Argument("sonarLogin", "");
 var coverageFolder = Directory(System.IO.Directory.GetCurrentDirectory()) + Directory("coverage-results");
 var src = Directory("./src");
@@ -19,7 +20,7 @@ Task("Build")
     {
         var settings = new DotNetCoreBuildSettings 
         {
-             Configuration = "Debug",
+             Configuration = configuration,
              ArgumentCustomization = arg => arg.AppendSwitch("/p:DebugType","=","Full")
         };
         
@@ -102,8 +103,16 @@ Task("Pack")
     .IsDependentOn("CleanPackage")
     .Does(() => 
     {
-        var settings = new DotNetCoreBuildSettings { Configuration = "Release" };
-        DotNetCoreBuild("src", settings);
+        var settings = new DotNetCorePackSettings
+        {
+            Configuration = configuration,
+            OutputDirectory = "./packages",
+            IncludeSymbols = true,
+            IncludeSource = true,
+            NoBuild = false
+        };
+
+        DotNetCorePack("./src/Krafted.sln", settings);
     });
 
 Task("SetupEnv").Does(() => CopyFile("pre-push", "./.git/hooks/pre-push"));
