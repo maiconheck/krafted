@@ -1,0 +1,46 @@
+; This config file was adapted from aspnetcore repo: https://raw.githubusercontent.com/dotnet/aspnetcore/master/.editorconfig
+; Fetched in April 2020.
+
+; EditorConfig to support per-solution formatting.
+; Use the EditorConfig VS add-in to make this work.
+; http://editorconfig.org/
+
+; Here are some resources for what's supported for .NET/C#
+; https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019
+; https://docs.microsoft.com/en-us/visualstudio/ide/code-styles-and-code-cleanup?view=vs-2019
+; https://kent-boogaart.com/blog/editorconfig-reference-for-c-developers
+
+; Tip
+; When you define coding conventions in an EditorConfig file, you're configuring how you want the code style analyzers 
+; that are built into Visual Studio to analyze your code. 
+; The EditorConfig file is the configuration file for these analyzers.
+
+; Be **careful** editing this because some of the rules don't support adding a severity level
+; For instance if you change to `dotnet_sort_system_directives_first = true:warning` (adding `:warning`)
+; then the rule will be silently ignored.
+
+; Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+[*]
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.cs]
+indent_size = 4
+dotnet_sort_system_directives_first = true
+
+[*.{xml,config,*proj,nuspec,props,resx,targets,yml,tasks}]
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[*.{ps1,psm1}]
+indent_size = 4
+
+[*.sh]
+indent_size = 4
+end_of_line = lf
