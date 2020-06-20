@@ -11,7 +11,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:      
-    - name: Cake Action
-      uses: cake-build/cake-action@v1.1.1
-
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    
+    - name: Restore .NET tools
+      run: dotnet tool restore
+    
+    - name: Execute cake script
+      run: dotnet dotnet-cake
