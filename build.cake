@@ -1,54 +1,69 @@
-#tool nuget:?package=NUnit.ConsoleRunner&version=3.10.0
-#addin nuget:?package=Cake.Coverlet&version=2.3.4
-#tool nuget:?package=ReportGenerator&version=4.3.5
-#tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.6.0
-#addin nuget:?package=Cake.Sonar&version=1.1.22
+#tool nuget:?package=NUnit.ConsoleRunner&version=3.11.1
+#addin nuget:?package=Cake.Coverlet&version=2.4.2
+#tool nuget:?package=ReportGenerator&version=4.6.1
+#tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.8.0
+#addin nuget:?package=Cake.Sonar&version=1.1.25
 
 var target = Argument("target", "Default");
-var configuration = Argument("configuration", "Debug");
+var configuration = Argument("configuration", "Release");
 var sonarLogin = Argument("sonarLogin", "");
-var coverageFolder = Directory(System.IO.Directory.GetCurrentDirectory()) + Directory("coverage-results");
-var src = Directory("./src");
 
-Task("Clean").Does(() => DotNetCoreClean("src"));
+var srcPath = Directory("./src");
+var slnPath = $"{srcPath}/Krafted.sln";
+var coveragePath = Directory("./coverage-results");
 
-Task("Restore").Does(() => DotNetCoreRestore("src"));
+#region CI
 
-Task("Build")    
-    .IsDependentOn("Clean")
+Task("Clean")
+    .Description("Cleans the output of a project.")
     .Does(() =>
     {
-        var settings = new DotNetCoreBuildSettings 
+        var settings = new DotNetCoreCleanSettings { OutputDirectory = "./artifacts/" };
+        DotNetCoreClean(slnPath, settings);
+    });
+
+Task("Restore")
+    .Description("Restores the dependencies and tools of a project.")
+    .Does(() => DotNetCoreRestore(slnPath));
+
+Task("Build")
+    .Description("Clean / Restore / Build a project and all of its dependencies.")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore")
+    .Does(() =>
+    {
+        var settings = new DotNetCoreBuildSettings
         {
              Configuration = configuration,
-             ArgumentCustomization = arg => arg.AppendSwitch("/p:DebugType","=","Full")
+             NoRestore = true
         };
-        
-        DotNetCoreBuild("src", settings);
+
+        DotNetCoreBuild(slnPath, settings);
     });
 
 Task("Test")
+    .Description("Executes all unit / integration tests on the solution.")
     .IsDependentOn("Build")
-    .Does(() => 
+    .Does(() =>
     {
-        CleanDirectory(coverageFolder);
+        CleanDirectory(coveragePath);
 
-        var testSettings = new DotNetCoreTestSettings 
+        var testSettings = new DotNetCoreTestSettings
         {
             ArgumentCustomization = args => args.Append($"--logger trx")
         };
 
-        var coverletSettings = new CoverletSettings 
+        var coverletSettings = new CoverletSettings
         {
-            CollectCoverage = true,            
+            CollectCoverage = true,
             CoverletOutputName = "coverage",
-            CoverletOutputDirectory = "./coverage-results",
+            CoverletOutputDirectory = coveragePath,
             Exclude = {"[xunit.*]*,[*]*.Texts"},
             //Threshold = 100
         };
 
-        var testProjects = GetFiles(src.Path.FullPath + "/**/*Test.csproj");
-        var jsonResult = coverageFolder.Path.FullPath + "/coverage.json";
+        var testProjects = GetFiles($"{srcPath}/**/*Test.csproj");
+        var jsonResult = $"{coveragePath}/coverage.json";
 
         foreach(var project in testProjects)
         {
@@ -70,38 +85,52 @@ Task("Test")
     });
 
 Task("Coverage")
+    .Description("Calculates and generates a code coverage report.")
     .IsDependentOn("Test")
-    .Does(() => ReportGenerator("./coverage-results/opencover-coverage.xml", "./coverage-results/report/"));
+    .Does(() => ReportGenerator($"./{coveragePath}/opencover-coverage.xml", $"./{coveragePath}/report/"));
+
+#endregion
+
+#region Sonar
 
 Task("SonarBegin")
-  .Does(() => 
+  .Does(() =>
   {
      SonarBegin(
-        new SonarBeginSettings 
+        new SonarBeginSettings
         {
-            Key = "maiconheck_krafted",
-            Organization = "maiconheck-github",
+            Key = "key",
+            Organization = "organization",
             Url = "https://sonarcloud.io",
             Login = sonarLogin,
-            ArgumentCustomization = args => args.Append($"/d:sonar.cs.opencover.reportsPaths=./coverage-results/opencover-coverage.xml")
+            ArgumentCustomization = args => args.Append($"/d:sonar.cs.opencover.reportsPaths=./{coveragePath}/opencover-coverage.xml")
         });
   });
 
-Task("SonarEnd").Does(() => SonarEnd(new SonarEndSettings { Login = sonarLogin }));
+Task("SonarEnd")
+    .Does(() => SonarEnd(new SonarEndSettings { Login = sonarLogin }));
 
 Task("Sonar")
+  .Description("Run Sonar code analyzers and send the result to Sonar Cloud.")
   .IsDependentOn("SonarBegin")
   .IsDependentOn("Clean")
   .IsDependentOn("Build")
   .IsDependentOn("Coverage")
   .IsDependentOn("SonarEnd");
 
-Task("CleanPackage").Does(() => CleanDirectory("./packages"));
+#endregion
+
+#region  Nuget
+
+Task("CleanPackage")
+    .Description("Clears the output folder of nuget packages.")
+    .Does(() => CleanDirectory("./packages"));
 
 Task("Pack")
+    .Description("Generates the nuget packages.")
     .IsDependentOn("Clean")
     .IsDependentOn("CleanPackage")
-    .Does(() => 
+    .Does(() =>
     {
         var settings = new DotNetCorePackSettings
         {
@@ -112,18 +141,19 @@ Task("Pack")
             NoBuild = false
         };
 
-        DotNetCorePack("./src/Krafted.sln", settings);
+        DotNetCorePack(slnPath, settings);
     });
 
-Task("SetupEnv").Does(() => CopyFile("pre-push", "./.git/hooks/pre-push"));
+#endregion
 
 Task("Default")
+    .Description("Run the CI pipeline: Clean, Restore, Build, Test, and Coverage tasks, in that order.")
     .IsDependentOn("Clean")
     .IsDependentOn("Restore")
     .IsDependentOn("Build")
     .IsDependentOn("Test")
     .IsDependentOn("Coverage")
-    .Does(() => { 
+    .Does(() => {
 });
 
 RunTarget(target);
