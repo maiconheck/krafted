@@ -58,12 +58,13 @@
     <ProjectReference Include="..\Krafted.Data.Oracle\Krafted.Data.Oracle.csproj" />
     <ProjectReference Include="..\Krafted.Test.IntegrationTests\Krafted.Test.IntegrationTests.csproj" />    
     <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />     
-  </ItemGroup>  
+  </ItemGroup>
 
   <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>        
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
