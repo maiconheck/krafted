@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Krafted.Configuration;
 using Krafted.Data.Connection;
 using Krafted.Data.SqlBuilder;
@@ -8,8 +8,9 @@ using Krafted.IntegrationTest.Migration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
+using Microsoft.Extensions.Hosting;
 
 namespace Krafted.IntegrationTest
 {
@@ -26,16 +27,10 @@ namespace Krafted.IntegrationTest
         /// <param name="services">The services.</param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
-            services.AddMvc()
-            .AddJsonOptions(opt =>
-            {
-                // These should be the defaults, but we can be explicit:
-                opt.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
-                opt.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-                opt.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
-            })
-            .AddDataAnnotationsLocalization();
+            services.AddCors()
+                    .AddMvc(option => option.EnableEndpointRouting = false)
+                    .SetCompatibilityVersion(CompatibilityVersion.Latest)
+                    .AddDataAnnotationsLocalization();
 
             services.AddScoped<IConnectionProvider, SqlServerConnectionProvider>(
                 _ => new SqlServerConnectionProvider(Config.Instance().GetConnectionString()));
@@ -48,7 +43,7 @@ namespace Krafted.IntegrationTest
         /// </summary>
         /// <param name="app">The application builder.</param>
         /// <param name="env">The hosting enviroment.</param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();

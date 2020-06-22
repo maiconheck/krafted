@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-ef": {
+      "version": "3.1.5",
+      "commands": [
+        "dotnet-ef"
+      ]
+    },
+    "cake.tool": {
+      "version": "0.38.2",
+      "commands": [
+        "dotnet-cake"
+      ]
+    }
+  }
+}

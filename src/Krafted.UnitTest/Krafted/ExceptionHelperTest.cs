@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 using Assert = Krafted.Test.UnitTest.Xunit.AssertExtension;
 
@@ -15,17 +15,17 @@ namespace Krafted.UnitTest.Krafted
                 object param = null;
                 param.ThrowIfNull(nameof(param));
             });
-            Assert.Equal("Value cannot be null.\r\nParameter name: param", ex1.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'param')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentNullException>(() =>
             {
                 object param = null;
                 ExceptionHelper.ThrowIfNull(() => param);
             });
-            Assert.Equal("Value cannot be null.\r\nParameter name: param", ex2.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'param')", ex2.Message);
 
             var ex3 = Assert.Throws<ArgumentNullException>(() => ExceptionHelper.ThrowIfNull(null));
-            Assert.Equal("Value cannot be null.\r\nParameter name: param", ex3.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'param')", ex3.Message);
         }
 
         [Fact]
@@ -39,7 +39,7 @@ namespace Krafted.UnitTest.Krafted
                 object param4 = null;
                 ExceptionHelper.ThrowIfAnyNull(() => param1, () => param2, () => param3, () => param4);
             });
-            Assert.Equal("Value cannot be null.\r\nParameter name: param3", ex3.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'param3')", ex3.Message);
         }
 
         [Fact]
