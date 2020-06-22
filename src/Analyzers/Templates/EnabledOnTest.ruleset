@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Custom Rulset" Description="Custom Rulset" ToolsVersion="14.0">
-	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">		
+<RuleSet Name="EnabledOnTest Ruleset" Description="EnabledOnTest Ruleset" ToolsVersion="14.0">
+	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
 		<Rule Id="SA1601" Action="None" /> <!-- Partial elements must be documented -->
 		<Rule Id="SA1600" Action="None" />  <!-- Elements must be documented -->
 	</Rules>
@@ -12,8 +12,8 @@
 	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1118" Action="None" /> <!-- Mark local variable as const -->
-		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->		
-		<Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->		
+		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->
+		<Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->
 		<Rule Id="RCS1010" Action="None" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
 		<Rule Id="RCS1077" Action="None" /> <!-- Optimize LINQ method call -->
 	</Rules>
@@ -25,5 +25,5 @@
 		<Rule Id="CA2007" Action="None" /> <!-- Do not directly await a Task without calling ConfigureAwait -->
 		<Rule Id="CA1707" Action="None" />  <!-- Identifiers should not contain underscores -->
 		<Rule Id="CA1062" Action="None" /> <!-- Validate arguments of public methods -->
-	</Rules>	
+	</Rules>
 </RuleSet>

@@ -32,10 +32,10 @@ namespace Krafted.Net.Http
         }
 
         /// <summary>
-        /// Deserialize the response command asynchronous.
+        /// Deserializes the response command asynchronous.
         /// </summary>
         /// <param name="response">The response.</param>
-        /// <returns>The <see cref="ResponseCommandResult"/>.</returns>
+        /// <returns>The deserialized <see cref="ResponseCommandResult"/> from the <see cref="HttpResponseMessage"/>.</returns>
         public static async Task<ResponseCommandResult> DeserializeAsync(this HttpResponseMessage response)
         {
             ExceptionHelper.ThrowIfNull(() => response);
@@ -61,6 +61,22 @@ namespace Krafted.Net.Http
 
             var failureResult = JsonConvert.DeserializeObject<DefaultDetailedCommandResult>(value);
             return new ResponseCommandResult(failureResult.Success, failureResult.Message, failureResult.Data);
+        }
+
+        /// <summary>
+        /// Deserializes the response command asynchronous to the given anonymous type.
+        /// </summary>
+        /// <typeparam name="T">The anonymous type to deserialize to. This can't be specified traditionally and must be inferred from the anonymous type passed as a parameter.</typeparam>
+        /// <param name="response">The response.</param>
+        /// <param name="anonymousTypeObject">The anonymous type object.</param>
+        /// <returns>The deserialized anonymous type from the JSON string.</returns>
+        public static async Task<T> DeserializeAnonymousTypeAsync<T>(this HttpResponseMessage response, T anonymousTypeObject)
+        {
+            ExceptionHelper.ThrowIfAnyNull(() => response, () => anonymousTypeObject);
+
+            var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+
+            return JsonConvert.DeserializeAnonymousType<T>(value, anonymousTypeObject);
         }
 
         /// <summary>
