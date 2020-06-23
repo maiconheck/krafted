@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Custom Rulset" Description="Custom Rulset" ToolsVersion="14.0">
+<RuleSet Name="Documentation Ruleset" Description="Documentation Ruleset" ToolsVersion="14.0">
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
-		<Rule Id="SA1600" Action="Error" /> <!-- Fix typo in documentation -->
-		<Rule Id="SA1601" Action="Error" /> <!-- Partial elements must be Documented -->
-		<Rule Id="SA1602" Action="Error" /> <!-- Enumeration items must be documented -->
-		<Rule Id="SA1611" Action="Error" /> <!-- Element parameters must be documented -->
-		<Rule Id="SA1615" Action="Error" /> <!-- Element return value must be documented -->
-		<Rule Id="SA1618" Action="Error" /> <!-- Generic type parameters must be documented -->
-		<Rule Id="SA1619" Action="Error" /> <!-- Generic type parameters must be documented partial class -->
+		<Rule Id="SA1600" Action="Warning" /> <!-- Fix typo in documentation -->
+		<Rule Id="SA1601" Action="Warning" /> <!-- Partial elements must be Documented -->
+		<Rule Id="SA1602" Action="Warning" /> <!-- Enumeration items must be documented -->
+		<Rule Id="SA1611" Action="Warning" /> <!-- Element parameters must be documented -->
+		<Rule Id="SA1615" Action="Warning" /> <!-- Element return value must be documented -->
+		<Rule Id="SA1618" Action="Warning" /> <!-- Generic type parameters must be documented -->
+		<Rule Id="SA1619" Action="Warning" /> <!-- Generic type parameters must be documented partial class -->
 	</Rules>
 </RuleSet>
