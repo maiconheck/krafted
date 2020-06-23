@@ -50,7 +50,8 @@ Task("Test")
 
         var testSettings = new DotNetCoreTestSettings
         {
-            ArgumentCustomization = args => args.Append($"--logger trx")
+            ArgumentCustomization = args => args.Append($"--logger trx"),
+            NoRestore = true
         };
 
         var coverletSettings = new CoverletSettings
@@ -62,7 +63,9 @@ Task("Test")
             //Threshold = 100
         };
 
-        var testProjects = GetFiles($"{srcPath}/**/*Test.csproj");
+        // TODO: Krafted.IntegrationTest disabled to replacement DB with docker
+        //var testProjects = GetFiles($"{srcPath}/**/*Test.csproj");
+        var testProjects = GetFiles($"{srcPath}/Krafted.UnitTest/Krafted.UnitTest.csproj");
         var jsonResult = $"{coveragePath}/coverage.json";
 
         foreach(var project in testProjects)
