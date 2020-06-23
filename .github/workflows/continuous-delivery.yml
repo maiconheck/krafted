@@ -1,9 +1,7 @@
-name: CI
+name: Continuous Delivery (CD) pipeline
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
+  create:
     branches: [ master ]
 
 jobs:
@@ -13,14 +11,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    
+
     - name: Restore .NET tools
       run: dotnet tool restore
-    
-    - name: Execute cake script
-      run: dotnet dotnet-cake
+
+    - name: Execute Continuous Delivery (CD) pipeline
+      run: dotnet dotnet-cake --target=CD --apiKey=${{ secrets.GITHUB_TOKEN }}

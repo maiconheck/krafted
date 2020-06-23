@@ -4,13 +4,15 @@
 #tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.8.0
 #addin nuget:?package=Cake.Sonar&version=1.1.25
 
-var target = Argument("target", "Default");
+var target = Argument("target", "CI");
 var configuration = Argument("configuration", "Release");
 var sonarLogin = Argument("sonarLogin", "");
+var apiKey = Argument("apiKey", "");
 
 var srcPath = Directory("./src");
 var slnPath = $"{srcPath}/Krafted.sln";
 var coveragePath = Directory("./coverage-results");
+var artifactsPath = Directory("./artifacts");
 
 #region CI
 
@@ -18,7 +20,7 @@ Task("Clean")
     .Description("Cleans the output of a project.")
     .Does(() =>
     {
-        var settings = new DotNetCoreCleanSettings { OutputDirectory = "./artifacts/" };
+        var settings = new DotNetCoreCleanSettings { OutputDirectory = artifactsPath };
         DotNetCoreClean(slnPath, settings);
     });
 
@@ -92,6 +94,44 @@ Task("Coverage")
     .IsDependentOn("Test")
     .Does(() => ReportGenerator($"./{coveragePath}/opencover-coverage.xml", $"./{coveragePath}/report/"));
 
+
+#endregion
+
+#region CD
+
+Task("Package")
+    .Description("Generates the nuget packages.")
+    .IsDependentOn("Coverage")
+    .Does(() =>
+    {
+        // var version = GetPackageVersion();
+
+        var settings = new DotNetCorePackSettings
+        {
+            Configuration = configuration,
+            OutputDirectory = artifactsPath,
+            IncludeSymbols = true,
+            IncludeSource = true,
+            NoBuild = false
+        };
+
+        DotNetCorePack(slnPath, settings);
+    });
+
+Task("Publish")
+    .Description("Pushes the packages to the server and publishes them.")
+    .IsDependentOn("Package")
+    .Does(() =>
+    {
+        var packages = GetFiles($"./{artifactsPath}/*.nupkg");
+
+        NuGetPush(packages, new NuGetPushSettings
+        {
+            Source = "https://nuget.pkg.github.com/maiconheck/index.json",
+            ApiKey = apiKey
+        });
+    });
+
 #endregion
 
 #region Sonar
@@ -110,8 +150,7 @@ Task("SonarBegin")
         });
   });
 
-Task("SonarEnd")
-    .Does(() => SonarEnd(new SonarEndSettings { Login = sonarLogin }));
+Task("SonarEnd").Does(() => SonarEnd(new SonarEndSettings { Login = sonarLogin }));
 
 Task("Sonar")
   .Description("Run Sonar code analyzers and send the result to Sonar Cloud.")
@@ -123,40 +162,13 @@ Task("Sonar")
 
 #endregion
 
-#region  Nuget
+Task("CI")
+    .Description("Run the CI pipeline: Clean, Restore, Build, Code Quality Analysis, Test, and Coverage tasks, in that order.")
+    .IsDependentOn("Coverage");
 
-Task("CleanPackage")
-    .Description("Clears the output folder of nuget packages.")
-    .Does(() => CleanDirectory("./packages"));
-
-Task("Pack")
-    .Description("Generates the nuget packages.")
-    .IsDependentOn("Clean")
-    .IsDependentOn("CleanPackage")
-    .Does(() =>
-    {
-        var settings = new DotNetCorePackSettings
-        {
-            Configuration = configuration,
-            OutputDirectory = "./packages",
-            IncludeSymbols = true,
-            IncludeSource = true,
-            NoBuild = false
-        };
-
-        DotNetCorePack(slnPath, settings);
-    });
-
-#endregion
-
-Task("Default")
-    .Description("Run the CI pipeline: Clean, Restore, Build, Test, and Coverage tasks, in that order.")
-    .IsDependentOn("Clean")
-    .IsDependentOn("Restore")
-    .IsDependentOn("Build")
-    .IsDependentOn("Test")
-    .IsDependentOn("Coverage")
-    .Does(() => {
-});
+Task("CD")
+    .Description("Run the CD pipeline: Clean, Restore, Build, Code Quality Analysis, Test, Coverage, Package and Publish tasks, in that order.")
+    .IsDependentOn("Publish");
 
 RunTarget(target);
+
