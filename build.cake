@@ -1,5 +1,6 @@
 #tool nuget:?package=NUnit.ConsoleRunner&version=3.11.1
 #addin nuget:?package=Cake.Coverlet&version=2.4.2
+#tool nuget:?package=nuget.commandline&version=5.5.1
 #tool nuget:?package=ReportGenerator&version=4.6.1
 #tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.8.0
 #addin nuget:?package=Cake.Sonar&version=1.1.25
