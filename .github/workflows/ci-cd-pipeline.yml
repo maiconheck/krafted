@@ -1,4 +1,8 @@
-# Run the CI pipeline: Clean, Restore, Build, Code Quality Analysis, Test and Coverage tasks, in that order.
+################ CI and CD pipeline ################
+
+# On push, runs the CI pipeline: Clean, Restore, Build, Code Quality Analysis, Test and Coverage tasks, in that order.
+# On versioning (new tag), runs the CD pipeline: CI pipeline, Package and Publish tasks, in that order.
+
 # Docs:
 #   - https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
 #   - https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore
