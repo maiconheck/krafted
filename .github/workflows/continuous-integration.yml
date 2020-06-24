@@ -1,3 +1,8 @@
+# Run the CI pipeline: Clean, Restore, Build, Code Quality Analysis, Test and Coverage tasks, in that order.
+# Docs:
+#   - https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md
+#   - https://danielpalme.github.io/ReportGenerator/usage.html
+
 name: Continuous Integration (CI) pipeline
 
 on:
@@ -13,14 +18,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Setup .NET Core
+    - name: Setup .NET Core.
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: CLEAN - Cleans the output.
+      run: dotnet clean "./src/Krafted.sln" --output "./artifacts"
 
-    - name: Restore .NET tools
-      run: dotnet tool restore
+    - name: RESTORE - Intall the dependencies and tools.
+      run: dotnet restore "./src/Krafted.sln"
 
-    - name: Execute Continuous Integration (CI) pipeline
-      run: dotnet dotnet-cake
+    - name: BUILD / CODE QUALITY - Build and run code quality analysis.
+      run: dotnet build "./src/Krafted.sln" --configuration Release --no-restore
+
+    - name: TEST - Executes unit and integration tests.
+      run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../../coverage-results/opencover-coverage.xml" /p:Exclude=\"[xunit.*]*%2c[*]*.Texts\"
+
+    - name: COVERAGE - Calculates and generates a code coverage report.
+      run: dotnet reportgenerator "-reports:./coverage-results/opencover-coverage.xml" "-targetdir:./coverage-results/report" -reporttypes:Html
+
+
+
