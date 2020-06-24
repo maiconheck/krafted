@@ -35,14 +35,14 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-    - name: Restore .NET tools
+    - name: Install the .NET tools
       run: dotnet tool restore
 
 ################## CI STEPS ##################
     - name: CLEAN - Cleans the output
       run: dotnet clean "./src/Krafted.sln" --output "./artifacts"
 
-    - name: RESTORE - Intall the dependencies and tools
+    - name: RESTORE - Install the dependencies
       run: dotnet restore "./src/Krafted.sln"
 
     - name: BUILD / CODE QUALITY - Build and run code quality analysis
@@ -57,11 +57,11 @@ jobs:
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet pack "src/Krafted.sln" --output "./artifacts" --include-symbols --include-source --configuration Release
+      run: dotnet pack "./src/Krafted.sln" --no-build --output artifacts --include-symbols --include-source
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push "./artifacts/*.nupkg" --skip-duplicate
+      run: dotnet nuget push "artifacts/*.nupkg" --skip-duplicate
 
 
 
