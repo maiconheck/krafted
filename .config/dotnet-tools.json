@@ -8,6 +8,12 @@
         "dotnet-ef"
       ]
     },
+    "cake.tool": {
+      "version": "0.38.2",
+      "commands": [
+        "dotnet-cake"
+      ]
+    },
     "dotnet-reportgenerator-globaltool": {
       "version": "4.6.1",
       "commands": [
