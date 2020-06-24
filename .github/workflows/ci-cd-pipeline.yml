@@ -33,6 +33,7 @@ jobs:
         dotnet-version: 3.1.101
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
       env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Install the .NET tools
