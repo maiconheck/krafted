@@ -13,15 +13,19 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
+    - name: Checks-out the repo.
     - uses: actions/checkout@v2
+
     - name: Setup .NET Core.
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+
+    - name: Install .NET tools.
+      run: dotnet tool restore
+
     - name: CLEAN - Cleans the output.
       run: dotnet clean "./src/Krafted.sln" --output "./artifacts"
 
