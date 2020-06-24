@@ -24,13 +24,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 ################ SETUP STEPS ################
-    - name: Checks-out the repo
+    - name: Checkout the repo
       uses: actions/checkout@v2
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+        source-url: https://nuget.pkg.github.com/maiconheck/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Restore .NET tools
       run: dotnet tool restore
@@ -58,6 +61,7 @@ jobs:
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push "./artifacts/*.nupkg" --source https://nuget.pkg.github.com/maiconheck/ --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push "./artifacts/*.nupkg" --skip-duplicate
+
 
 
