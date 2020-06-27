@@ -41,7 +41,7 @@ jobs:
 
 ################## CI STEPS ##################
     - name: CLEAN - Cleans the output
-      run: dotnet clean "./src/Krafted.sln" --output "./artifacts"
+      run: dotnet clean "./src/Krafted.sln" --output artifacts
 
     - name: RESTORE - Install the dependencies
       run: dotnet restore "./src/Krafted.sln"
@@ -53,7 +53,7 @@ jobs:
       run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../../coverage-results/opencover-coverage.xml" /p:Exclude=\"[xunit.*]*%2c[*]*.Texts\"
 
     - name: COVERAGE - Calculates and generates a code coverage report
-      run: dotnet reportgenerator "-reports:./coverage-results/opencover-coverage.xml" "-targetdir:./coverage-results/report" -reporttypes:Html
+      run: dotnet reportgenerator "-reports:./coverage-results/opencover-coverage.xml" "-targetdir:./coverage-results/report" "-reporttypes:Html;Badges"
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
