@@ -3,12 +3,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <!--<CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
-    <NoWarn>CS1591</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <LangVersion>7.2</LangVersion>
-    <Authors>Maicon Heck</Authors>
+    <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Migration\Krafted\001_Create_Table_EntityDummy.sql" />
@@ -56,8 +51,8 @@
     <ProjectReference Include="..\Krafted.Data\Krafted.Data.csproj" />
     <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />
     <ProjectReference Include="..\Krafted.Data.Oracle\Krafted.Data.Oracle.csproj" />
-    <ProjectReference Include="..\Krafted.Test.IntegrationTests\Krafted.Test.IntegrationTests.csproj" />    
-    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />     
+    <ProjectReference Include="..\Krafted.Test.IntegrationTests\Krafted.Test.IntegrationTests.csproj" />
+    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />
   </ItemGroup>
 
   <ItemGroup>

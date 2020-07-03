@@ -47,7 +47,7 @@ jobs:
       run: dotnet restore "./src/Krafted.sln"
 
     - name: BUILD / CODE QUALITY - Build and run code quality analysis
-      run: dotnet build "./src/Krafted.sln" --configuration Release --no-restore
+      run: dotnet build "./src/Krafted.sln" --configuration Debug --no-restore -warnaserror
 
     - name: TEST - Executes unit and integration tests
       run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../../coverage-results/opencover-coverage.xml" /p:Exclude=\"[xunit.*]*%2c[*]*.Texts\"

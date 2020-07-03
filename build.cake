@@ -3,7 +3,7 @@
 #tool nuget:?package=ReportGenerator&version=4.6.1
 
 var target = Argument("target", "Default");
-var configuration = Argument("configuration", "Release");
+var configuration = Argument("configuration", "Debug");
 
 var srcPath = Directory("./src");
 var slnPath = $"{srcPath}/Krafted.sln";
@@ -30,7 +30,11 @@ Task("Build")
         var settings = new DotNetCoreBuildSettings
         {
              Configuration = configuration,
-             NoRestore = true
+             NoRestore = true,
+             MSBuildSettings = new DotNetCoreMSBuildSettings
+             {
+                TreatAllWarningsAs = MSBuildTreatAllWarningsAs.Error
+             }
         };
 
         DotNetCoreBuild(slnPath, settings);

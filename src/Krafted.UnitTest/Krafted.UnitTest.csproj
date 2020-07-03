@@ -4,12 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <NoWarn>CS1591</NoWarn>
-    <!--<CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->    
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <LangVersion>7.2</LangVersion>
-    <Authors>Maicon Heck</Authors>
+    <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +13,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     
-    <PackageReference Include="Roslynator.Analyzers" Version="2.1.0">
+    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -53,13 +48,18 @@
     <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />
     <ProjectReference Include="..\Krafted.Net.Http\Krafted.Net.Http.csproj" />    
     <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />    
-    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />
+    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />    
+    <ProjectReference Include="..\Krafted.ValueObjects\Krafted.ValueObjects.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Krafted.ValueObjects\" />
   </ItemGroup>
 
 </Project>

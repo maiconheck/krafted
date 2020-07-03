@@ -1,42 +1,70 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/Krafted.IntegrationTest/Krafted.IntegrationTest.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/Krafted.IntegrationTest/Krafted.IntegrationTest.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "${workspaceFolder}/Krafted.IntegrationTest/Krafted.IntegrationTest.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Clean",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "clean",
+        "${workspaceFolder}/Krafted.sln",
+        "/property:GenerateFullPaths=true",
+        "/property:OutputDirectory=artifacts",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Restore",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "restore",
+        "${workspaceFolder}/Krafted.sln",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Krafted.sln",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Test",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/Krafted.sln",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
 }

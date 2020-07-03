@@ -26,4 +26,7 @@
 		<Rule Id="CA1707" Action="None" />  <!-- Identifiers should not contain underscores -->
 		<Rule Id="CA1062" Action="None" /> <!-- Validate arguments of public methods -->
 	</Rules>
+    <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+        <Rule Id="CS1591" Action="Hidden" />
+    </Rules>
 </RuleSet>

@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <LangVersion>7.2</LangVersion>
-    <Authors>Maicon Heck</Authors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +11,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     
-    <PackageReference Include="Roslynator.Analyzers" Version="2.1.0">
+    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -37,5 +32,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
-
 </Project>
