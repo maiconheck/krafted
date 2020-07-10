@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Documentation Ruleset" Description="Documentation Ruleset" ToolsVersion="14.0">
+	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+		<Rule Id="SA1600" Action="None" /> <!-- Fix typo in documentation -->
+		<Rule Id="SA1601" Action="None" /> <!-- Partial elements must be Documented -->
+		<Rule Id="SA1602" Action="None" /> <!-- Enumeration items must be documented -->
+		<Rule Id="SA1611" Action="None" /> <!-- Element parameters must be documented -->
+		<Rule Id="SA1615" Action="None" /> <!-- Element return value must be documented -->
+		<Rule Id="SA1618" Action="None" /> <!-- Generic type parameters must be documented -->
+		<Rule Id="SA1619" Action="None" /> <!-- Generic type parameters must be documented partial class -->
+	</Rules>
+    <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+        <Rule Id="CS1591" Action="None" /> <!-- C# Missing XML comment for publicly visible type or member -->
+    </Rules>
+</RuleSet>

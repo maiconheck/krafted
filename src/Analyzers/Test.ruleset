@@ -2,4 +2,23 @@
 <RuleSet Name="Test Ruleset" Description="Test Rulesets in ..\Templates folder with some rules ignored. To use on Test projects." ToolsVersion="14.0">
 	<Include Path=".\Templates\General.ruleset" Action="Default" />
 	<Include Path=".\Templates\EnabledOnTest.ruleset" Action="Default" />
+    <Include Path=".\Templates\DisabledDocumentation.ruleset" Action="Default" />
+
+    <!--
+        We no longer need ConfigureAwait (false) on the .NET Core.
+         However, we must continue to use it in netstandard libraries,
+         because in this case, we don't know if the client is FullFramework:
+
+         - https://stackoverflow.com/questions/42053135/configureawaitfalse-relevant-in-asp-net-core
+         - https://blog.stephencleary.com/2017/03/aspnetcore-synchronization-context.html#comment-3582687662
+    -->
+    <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+        <Rule Id="CA2007" Action="None" />  <!-- Do not directly await a Task without calling ConfigureAwait -->
+    </Rules>
+    <Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
+        <Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->
+    </Rules>
+    <Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
+        <Rule Id="CC0001" Action="None" />  <!-- Always use var -->
+    </Rules>
 </RuleSet>
