@@ -1,4 +1,4 @@
-﻿using Krafted.Configuration;
+using Krafted.Configuration;
 using Xunit;
 
 namespace Krafted.IntegrationTest.Krafted
@@ -6,7 +6,7 @@ namespace Krafted.IntegrationTest.Krafted
     [Trait(nameof(IntegrationTest), nameof(Krafted))]
     public class ConfigurationHelperTest
     {
-        [Fact]
+        [Fact(Skip = "wip: database in continuous integration")]
         public void GetConnectionString_Name_ConnectionString()
         {
             string connectionString = Config.Instance().GetConnectionString();

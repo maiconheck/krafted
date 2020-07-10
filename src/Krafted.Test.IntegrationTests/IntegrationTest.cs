@@ -1,9 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
-using System.Threading.Tasks;
-using Krafted.Test.Result;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Krafted.Test.IntegrationTests
 {
@@ -24,8 +20,8 @@ namespace Krafted.Test.IntegrationTests
         /// <param name="endPoint">The end point.</param>
         protected IntegrationTest(ProviderStateApiFactory<TEntryPoint> factory, string endPoint)
         {
-            ExceptionHelper.ThrowIfAnyNull(() => factory);
-            ExceptionHelper.ThrowIfNullOrWhiteSpace(endPoint, nameof(endPoint));
+            GuardAgainst.Null(factory, nameof(factory));
+            GuardAgainst.NullOrWhiteSpace(endPoint, nameof(endPoint));
 
             _factory = factory;
             Client = _factory.CreateClient();

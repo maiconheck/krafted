@@ -1,4 +1,4 @@
-﻿using System.Data;
+using System.Data;
 using Krafted.Configuration;
 using Krafted.Data.Connection;
 using Krafted.Data.Oracle.Connection;
@@ -10,7 +10,7 @@ namespace Krafted.IntegrationTest.Krafted.Data.Connection
     [Trait(nameof(IntegrationTest), nameof(Krafted))]
     public class ConnectionFactoryTest
     {
-        [Fact]
+        [Fact(Skip = "wip: database in continuous integration")]
         public void NewConnection_SqlServerConnectionFactory_SqlServerConnectionCreated()
         {
             var connectionString = Config.Instance().GetConnectionString();

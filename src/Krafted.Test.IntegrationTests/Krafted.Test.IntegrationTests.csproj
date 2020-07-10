@@ -36,7 +36,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Test\Krafted.Test.csproj" />
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 

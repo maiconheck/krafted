@@ -1,4 +1,4 @@
-﻿using Krafted.Configuration;
+using Krafted.Configuration;
 using Krafted.Data.Connection;
 using Krafted.Data.SqlBuilder;
 using Krafted.Data.SqlServer.Connection;
@@ -10,7 +10,7 @@ namespace Krafted.IntegrationTest.Krafted.Data.SqlBuilder
     [Trait(nameof(IntegrationTest), nameof(Krafted))]
     public class SqlBuilderFactoryTest
     {
-        [Fact]
+        [Fact(Skip = "wip: database in continuous integration")]
         public void NewSqlBuilder_EntityDummy_SqlBuilder()
         {
             var connectionString = Config.Instance().GetConnectionString();
