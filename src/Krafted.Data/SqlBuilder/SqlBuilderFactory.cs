@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 
 namespace Krafted.Data.SqlBuilder
@@ -19,7 +19,7 @@ namespace Krafted.Data.SqlBuilder
             where TEntity : Entity
             where TSqlBuilderFactory : ISqlBuilderFactory
         {
-            connection.ThrowIfNull(nameof(connection));
+            GuardAgainst.Null(connection, nameof(connection));
 
             var factory = (TSqlBuilderFactory)Activator.CreateInstance(typeof(TSqlBuilderFactory));
             return factory.NewSqlBuilder<TEntity>(connection);

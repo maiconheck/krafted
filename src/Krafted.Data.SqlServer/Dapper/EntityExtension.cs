@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Dapper;
@@ -79,8 +79,8 @@ namespace Krafted.Data.SqlServer.Dapper
 
         private static void Validate(Entity entity, string tableName)
         {
-            ExceptionHelper.ThrowIfNull(() => entity);
-            ExceptionHelper.ThrowIfNullOrWhiteSpace(tableName, nameof(tableName));
+            GuardAgainst.Null(entity, nameof(entity));
+            GuardAgainst.NullOrWhiteSpace(tableName, nameof(tableName));
         }
     }
 }

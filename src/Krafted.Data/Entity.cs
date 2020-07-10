@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+using System;
 using Flunt.Notifications;
 
 namespace Krafted.Data
@@ -17,12 +16,5 @@ namespace Krafted.Data
         /// The identifier.
         /// </value>
         public Guid Id { get; set; }
-
-        /// <summary>
-        /// Adds the invalid notifications.
-        /// </summary>
-        /// <param name="notifications">The items.</param>
-        protected void AddNotificationsIfInvalid(params Notifiable[] notifications)
-            => AddNotifications(notifications.Where(n => n.Invalid).ToArray());
     }
 }

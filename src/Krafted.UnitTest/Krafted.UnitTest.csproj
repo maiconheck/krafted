@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Krafted.ValueObjects\**" />
+    <EmbeddedResource Remove="Krafted.ValueObjects\**" />
+    <None Remove="Krafted.ValueObjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -45,11 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />
-    <ProjectReference Include="..\Krafted.Net.Http\Krafted.Net.Http.csproj" />    
+    <ProjectReference Include="..\Krafted.Data.SqlServer\Krafted.Data.SqlServer.csproj" />    
     <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />    
-    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />    
-    <ProjectReference Include="..\Krafted.ValueObjects\Krafted.ValueObjects.csproj" />
+    <ProjectReference Include="..\Krafted.Test.UnitTests\Krafted.Test.UnitTests.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,7 +63,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Krafted.ValueObjects\" />
+    <Folder Include="Krafted.DesignPatterns\Specifications\" />
+    <Folder Include="Krafted.Test\" />
   </ItemGroup>
 
 </Project>

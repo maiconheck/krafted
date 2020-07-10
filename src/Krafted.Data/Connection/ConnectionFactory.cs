@@ -17,7 +17,7 @@ namespace Krafted.Data.Connection
         public static IDbConnection NewConnection<TConnectionFactory>(string connectionString)
             where TConnectionFactory : IConnectionFactory
         {
-            ExceptionHelper.ThrowIfNullOrWhiteSpace(connectionString, nameof(connectionString));
+            GuardAgainst.NullOrWhiteSpace(connectionString, nameof(connectionString));
 
             var factory = (TConnectionFactory)Activator.CreateInstance(typeof(TConnectionFactory));
             return factory.NewConnection(connectionString);

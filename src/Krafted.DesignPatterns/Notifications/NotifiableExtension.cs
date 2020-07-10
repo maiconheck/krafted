@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Flunt.Notifications;
@@ -17,7 +17,7 @@ namespace Krafted.DesignPatterns.Notifications
         /// <returns><c>false</c> if any model is invalid; otherwise, <c>true</c>.</returns>
         public static bool Invalid(this Notifiable aggregate)
         {
-            ExceptionHelper.ThrowIfNull(() => aggregate);
+            GuardAgainst.Null(aggregate, nameof(aggregate));
             return GetModels(aggregate).Any(n => n.Invalid);
         }
 
@@ -28,13 +28,13 @@ namespace Krafted.DesignPatterns.Notifications
         /// <returns>A list containing all notifications of all models of the aggregate.</returns>
         public static List<Notification> Notifications(this Notifiable aggregate)
         {
-            ExceptionHelper.ThrowIfNull(() => aggregate);
+            GuardAgainst.Null(aggregate, nameof(aggregate));
             return GetModels(aggregate).SelectMany(m => m.Notifications).ToList();
         }
 
         private static IEnumerable<Notifiable> GetModels(Notifiable aggregate)
         {
-            aggregate.ThrowIfNull(nameof(aggregate));
+            GuardAgainst.Null(aggregate, nameof(aggregate));
 
             var models = aggregate
                 .GetType()

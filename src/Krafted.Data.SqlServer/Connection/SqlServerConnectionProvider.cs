@@ -19,7 +19,7 @@ namespace Krafted.Data.SqlServer.Connection
         /// <param name="connectionString">The connection string.</param>
         public SqlServerConnectionProvider(string connectionString)
         {
-            ExceptionHelper.ThrowIfNullOrWhiteSpace(connectionString, nameof(connectionString));
+            GuardAgainst.NullOrWhiteSpace(connectionString, nameof(connectionString));
             _connectionString = connectionString;
         }
 
