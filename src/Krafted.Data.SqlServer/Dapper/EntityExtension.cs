@@ -78,16 +78,20 @@ namespace Krafted.Data.SqlServer.Dapper
             return parameters;
         }
 
+        /// <summary>
+        /// Sets the new identifier.
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        public static void SetNewId(this Entity entity)
+        {
+            GuardAgainst.Null(entity, nameof(entity));
+            entity.Id = Guid.NewGuid();
+        }
+
         private static void Validate(Entity entity, string tableName)
         {
             GuardAgainst.Null(entity, nameof(entity));
             GuardAgainst.NullOrWhiteSpace(tableName, nameof(tableName));
         }
-
-        /// <summary>
-        /// Sets the new identifier.
-        /// </summary>
-        /// <param name="entity">The entity.</param>
-        public static void SetNewId(this Entity entity) => entity.Id = Guid.NewGuid();
     }
 }

@@ -49,6 +49,8 @@ Task("Test")
         DotNetCoreTest(slnPath, settings);
     });
 
+Task("SetupEnv").Does(() => CopyFile("./setup/pre-push", "./.git/hooks/pre-push"));
+
 Task("Default")
     .Description("Run Clean, Restore, Build and Test tasks, in that order.")
     .IsDependentOn("Test");

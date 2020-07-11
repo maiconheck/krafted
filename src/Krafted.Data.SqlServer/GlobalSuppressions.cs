@@ -1,4 +1,4 @@
-﻿// This file is used by Code Analysis to maintain SuppressMessage
+// This file is used by Code Analysis to maintain SuppressMessage
 // attributes that are applied to this project.
 // Project-level suppressions either have no target or are given
 // a specific target and scoped to a namespace, type, member, etc.
@@ -13,3 +13,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "The concern of this class is generates SQL, and in this case the suffix 'pk' is useful, because represents the primary key from the table.", Scope = "member", Target = "~M:Krafted.Data.SqlServer.Dapper.EntityExtension.GetColumnNames(Krafted.Data.Entity,System.String)~System.Collections.Generic.IList{System.String}")]
 [assembly: SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "The concern of this class is generates SQL, and in this case the suffix 'pk' is useful, because represents the primary key from the table.", Scope = "member", Target = "~M:Krafted.Data.SqlServer.Dapper.EntityExtension.ToParams(Krafted.Data.Entity,System.String)~Dapper.DynamicParameters")]
 [assembly: SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "The concern of this class is generates SQL, and in this case the suffix 'pk' is useful, because represents the primary key from the table.", Scope = "member", Target = "~M:Krafted.Data.SqlServer.Dapper.EntityExtension.ToParam(Krafted.Data.Entity,System.String)~Dapper.DynamicParameters")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "GuardAgainst", Scope = "member", Target = "~M:Krafted.Data.SqlServer.Dapper.EntityExtension.SetNewId(Krafted.Data.Entity)")]
