@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -82,5 +83,11 @@ namespace Krafted.Data.SqlServer.Dapper
             GuardAgainst.Null(entity, nameof(entity));
             GuardAgainst.NullOrWhiteSpace(tableName, nameof(tableName));
         }
+
+        /// <summary>
+        /// Sets the new identifier.
+        /// </summary>
+        /// <param name="entity">The entity.</param>
+        public static void SetNewId(this Entity entity) => entity.Id = Guid.NewGuid();
     }
 }

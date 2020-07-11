@@ -1,4 +1,4 @@
-﻿// This file is used by Code Analysis to maintain SuppressMessage
+// This file is used by Code Analysis to maintain SuppressMessage
 // attributes that are applied to this project.
 // Project-level suppressions either have no target or are given
 // a specific target and scoped to a namespace, type, member, etc.
@@ -12,5 +12,3 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Security", "CA2100:Review SQL queries for security vulnerabilities", Justification = "This query is automatically generated", Scope = "member", Target = "~M:Krafted.UnitTest.BultinSqlBuilder`1.GetCommandBuilder(System.Data.StatementType)~System.String")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "ExceptionHelper.ThrowIfNull(() => factory, () => connection)", Scope = "member", Target = "~M:Krafted.Data.Sql.SqlBuilderFactory.NewSqlBuilder``1(Krafted.Data.Sql.ISqlBuilderFactory,System.Data.IDbConnection)~Krafted.Data.Sql.ISqlBuilder")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "factory.ThrowIfNull(nameof(factory))", Scope = "member", Target = "~M:Krafted.Data.Connection.ConnectionFactory.NewConnection(Krafted.Data.Connection.IConnectionFactory,System.String)~System.Data.IDbConnection")]
-[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.Data.EntityExtension.SetNewId(Krafted.Entity)")]
-[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.Data.EntityExtension.SetNewId(Krafted.Data.Entity)")]
