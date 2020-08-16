@@ -7,14 +7,14 @@
 RED='\033[0;31m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color    
-	
+NC='\033[0m' # No Color
+
 echo -e "${YELLOW}Running pre push to dev check...${NC}"
 
 echo -e "${YELLOW}Trying to build tests project...${NC}"
 
 # build the project
-#dotnet build src/backend/KeepMoney.sln
+#dotnet build src/Krafted.sln
 
 # $? is a shell variable which stores the return code from what we just ran
 #rc=$?
@@ -31,10 +31,7 @@ echo -e "${YELLOW}Running unit tests...${NC}"
 echo ""
 
 # run the unit tests
-dotnet clean "./src/Krafted.sln" --output artifacts
-dotnet restore "./src/Krafted.sln"
-dotnet build "./src/Krafted.sln" --configuration Debug --no-restore -warnaserror
-dotnet test "./src/Krafted.sln"
+dotnet test src/Krafted.sln
 
 # $? is a shell variable which stores the return code from what we just ran
 rc=$?

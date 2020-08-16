@@ -17,7 +17,8 @@
 		<Rule Id="RCS1118" Action="Warning" />  <!-- Mark local variable as const -->
 		<Rule Id="RCS1010" Action="Warning" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
 		<Rule Id="RCS1202" Action="Warning" /> <!-- Avoid NullReferenceException -->
-		<Rule Id="RCS1077" Action="Warning" /> <!-- Optimize LINQ method call -->
+        <Rule Id="RCS1046" Action="Warning" />  <!-- Asynchronous method name should end with 'Async' -->
+        <Rule Id="RCS1181" Action="Warning" /> <!-- Replace comment with documentation comment -->
 	</Rules>
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
         <Rule Id="SA1305" Action="Warning" /> <!-- Field names must not use hungarian notation -->

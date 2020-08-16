@@ -12,15 +12,10 @@ Krafted provide diverse useful and reusable pieces of code, in order to increase
 
 ## Krafted consists in a set of fine-grained libraries
 - Krafted
-- Krafted.Data
-- Krafted.Data.SqlServer
-- Krafted.Data.Oracle
-- Krafted.DesignPatterns
-- Krafted.ValueObjects
-- Krafted.Net.Http
 - Krafted.Configuration
+- Krafted.DesignPatterns
 - Krafted.Test.UnitTests
-- Krafted.Test.IntegrationTests
+- Krafted.Net
 
  ## Each library contains a set of clean, documented and extensible APIs
  ```
