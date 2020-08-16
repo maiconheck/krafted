@@ -11,3 +11,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Design", "RCS1225:Make class sealed.", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.Guards.Guard")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1609:Property documentation should have value", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1623:Property summary documentation should match accessors", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
+[assembly: SuppressMessage("Usage", "RCS1221:Use pattern matching instead of combination of 'as' operator and null check.", Justification = "Not Applicable", Scope = "member", Target = "~M:Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)~System.Boolean")]

@@ -2,7 +2,7 @@ using System;
 using System.Net.NetworkInformation;
 using Krafted.Guards;
 
-namespace Krafted.Net
+namespace Krafted.Net.NetworkInformation
 {
     /// <summary>
     /// Provides network information methods.

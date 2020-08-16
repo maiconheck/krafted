@@ -1,7 +1,7 @@
-using Krafted.Net;
+using Krafted.Net.NetworkInformation;
 using Xunit;
 
-namespace Krafted.IntegrationTest.Krafted.Net
+namespace Krafted.IntegrationTest.Krafted.Net.NetworkInformation
 {
     public class NetworkTest
     {
