@@ -23,5 +23,6 @@
 	</Rules>
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
         <Rule Id="SA1305" Action="None" /> <!-- Field names must not use hungarian notation -->
+        <Rule Id="SA0001" Action="None" /> <!-- Xml comment analysis disabled -->
     </Rules>
 </RuleSet>

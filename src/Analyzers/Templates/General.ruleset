@@ -196,7 +196,6 @@
 		<Rule Id="CA1008" Action="None" /> <!-- Add a member to CategoryGroup that has a value of zero with a suggested name of -->
 	</Rules>
 	<Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
-		<Rule Id="SA0001" Action="Warning" />
 		<Rule Id="SA0002" Action="Warning" />
 		<Rule Id="SA1000" Action="Warning" />
 		<Rule Id="SA1001" Action="Warning" />
