@@ -8,7 +8,7 @@ namespace Krafted.IntegrationTest.Krafted.Net.NetworkInformation
         [Fact]
         public void Available_ExistentHostname_True()
         {
-            var (isAvailable, resultMessage) = Network.Available("maiconheck.com");
+            var (isAvailable, resultMessage) = Network.Available("localhost");
 
             Assert.True(isAvailable);
             Assert.Equal("Status: Success", resultMessage);
