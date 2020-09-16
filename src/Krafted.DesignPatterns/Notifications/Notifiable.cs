@@ -51,7 +51,6 @@ namespace Krafted.DesignPatterns.Notifications
         [NotMapped]
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 
-
         /// <summary>
         /// Adds a notification message.
         /// </summary>
