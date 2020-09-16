@@ -25,9 +25,11 @@
   - Krafted.DataAnnotations
 - Krafted.Configuration
 - Krafted.DesignPatterns
-  - Specifications
-  - Strategies
-  - Factories
+  - Specification
+  - Strategy
+  - Factory Method
+  - Abstract Factory
+  - Notification
 - Krafted.Net
   - NetworkInformation
 - Krafted.UnitTests
