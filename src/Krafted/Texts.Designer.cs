@@ -61,6 +61,15 @@ namespace Krafted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid e-mail address: {0}..
+        /// </summary>
+        internal static string InvalidEmailAddress {
+            get {
+                return ResourceManager.GetString("InvalidEmailAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parameter cannot be null..
         /// </summary>
         internal static string ParameterCannotBeNull {

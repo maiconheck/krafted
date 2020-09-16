@@ -563,7 +563,6 @@
 		<Rule Id="RCS1191" Action="Warning" />
 		<Rule Id="RCS1195" Action="Warning" />
 		<Rule Id="RCS1196" Action="Warning" />
-		<Rule Id="RCS1197" Action="Warning" />
 		<Rule Id="RCS1199" Action="Warning" />
 		<Rule Id="RCS1200" Action="Warning" />
 		<Rule Id="RCS1201" Action="Warning" />
@@ -595,6 +594,7 @@
 		<Rule Id="RCS1233" Action="Warning" />
 		<Rule Id="RCS1234" Action="Warning" />
 	    <Rule Id="RCS1079" Action="Warning" />
+		<Rule Id="RCS1197" Action="None" /> <!-- Optimize StringBuilder.Append/AppendLine call. -->
 		<Rule Id="RCS1002" Action="None" /> <!-- Remove braces -->
 		<Rule Id="RCS1051" Action="None" /> <!-- Parenthesize condition of conditional expression -->
 		<Rule Id="RCS1174" Action="None" /> <!-- Remove redundant async/await -->

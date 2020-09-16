@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace System
 {
@@ -35,5 +36,19 @@ namespace System
         /// current instance, the method returns the current instance unchanged.
         /// </returns>
         public static string Remove(this string input, string pattern) => Replace(input, pattern, string.Empty, RegexOptions.Compiled);
+
+        /// <summary>
+        /// Replaces the format items in a string with the string representations of corresponding
+        /// objects in a specified array. A parameter supplies culture-specific formatting
+        /// information.
+        /// </summary>
+        /// <param name="value">A composite string to be formated.</param>
+        /// <param name="args">An object array that contains objects to format the <c>value</c>.</param>
+        /// <returns>
+        /// A copy of format in which the format items have been replaced by the string representation
+        /// of the corresponding objects in args.
+        /// </returns>
+        public static string Format(this string value, params object[] args)
+            => string.Format(CultureInfo.InvariantCulture, value, args);
     }
 }

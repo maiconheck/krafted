@@ -9,7 +9,4 @@
 		<Rule Id="SA1618" Action="None" /> <!-- Generic type parameters must be documented -->
 		<Rule Id="SA1619" Action="None" /> <!-- Generic type parameters must be documented partial class -->
 	</Rules>
-    <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
-        <Rule Id="CS1591" Action="None" /> <!-- C# Missing XML comment for publicly visible type or member -->
-    </Rules>
 </RuleSet>

@@ -12,7 +12,7 @@ namespace Krafted.Guards
     public partial class Guard
     {
         /// <summary>
-        /// Throws an ArgumentNullException if the parameter is null,
+        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null,
         /// with this error message: Parameter cannot be null.
         /// </summary>
         /// <typeparam name="T">The type of the parameter.</typeparam>
@@ -21,7 +21,6 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
         /// <returns>The guard.</returns>
         public Guard Null<T>(T param, string paramName)
-            where T : class
         {
             if (param is null)
                 throw new ArgumentNullException(paramName, Texts.ParameterCannotBeNull);
@@ -30,7 +29,7 @@ namespace Krafted.Guards
         }
 
         /// <summary>
-        /// Throws an ArgumentNullException if the parameter is null or an empty string,
+        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null or an empty string,
         /// with this error message: Parameter cannot be null or empty.
         /// </summary>
         /// <param name="param">The parameter to check.</param>
@@ -46,7 +45,7 @@ namespace Krafted.Guards
         }
 
         /// <summary>
-        /// Throws an ArgumentNullException if the parameter is null or an empty collection,
+        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null or an empty collection,
         /// with this error message: Parameter cannot be null or empty.
         /// </summary>
         /// <typeparam name="T">The type of the parameter.</typeparam>
@@ -63,7 +62,7 @@ namespace Krafted.Guards
         }
 
         /// <summary>
-        /// Throws an ArgumentNullException if the parameter is null, an empty string or consists only of white-space,
+        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null, an empty string or consists only of white-space,
         /// with this error message: Parameter cannot be null, empty or consists exclusively of white-space characters.
         /// </summary>
         /// <param name="param">The parameter to check.</param>
@@ -80,7 +79,7 @@ namespace Krafted.Guards
         }
 
         /// <summary>
-        /// Throws an ArgumentNullException if the parameter is null, an empty string or consists only of white-space,
+        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null, an empty string or consists only of white-space,
         /// with an custom error message plus "(Parameter 'myParamName')".
         /// e.g. My custom error message (Parameter 'myParamName').
         /// </summary>

@@ -50,5 +50,12 @@ namespace Krafted.UnitTest.Krafted
             Assert.Equal("the foo@demo.net e-mail", EmailInput.Replace(@"\/\*[\s\S]*?\*\/|\/\/.*", "Replaced", RegexOptions.Compiled));
             Assert.Equal("14:00 is the hour", HourInput.Replace(@"\/\*[\s\S]*?\*\/|\/\/.*", "Replaced", RegexOptions.Compiled));
         }
+
+        [Fact]
+        public void Format_Input_Formated()
+        {
+            string input = "Replace {0} {1} in this {2}".Format("some", "words", "phrase");
+            Assert.Equal("Replace some words in this phrase", input);
+        }
     }
 }

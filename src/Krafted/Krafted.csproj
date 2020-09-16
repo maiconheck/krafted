@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Guards\Guard.Boolean.cs" />
+    <Compile Remove="Guards\Guard.Email.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Guards\Guard.Boolean.cs" />
+    <None Include="Guards\Guard.Email.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
   

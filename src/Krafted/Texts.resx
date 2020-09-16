@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidEmailAddress" xml:space="preserve">
+    <value>Invalid e-mail address: {0}.</value>
+  </data>
   <data name="ParameterCannotBeNull" xml:space="preserve">
     <value>Parameter cannot be null.</value>
   </data>
