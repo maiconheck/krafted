@@ -108,6 +108,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         {
             string param = "value";
             Assert.DoesNotThrows(() => Guard.Against.NullOrWhiteSpace(param, nameof(param)));
+            Assert.DoesNotThrows(() => Guard.Against.NullOrWhiteSpace(param, nameof(param), "My custom error message"));
         }
     }
 }

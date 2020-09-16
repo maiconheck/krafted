@@ -50,10 +50,10 @@ jobs:
       run: dotnet build "./src/Krafted.sln" --configuration Debug --no-restore -warnaserror
 
     - name: TEST - Executes unit and integration tests
-      run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../../coverage-results/opencover-coverage.xml" /p:Exclude=\"[xunit.*]*%2c[*]*.Texts\"
+      run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1
 
     - name: COVERAGE - Calculates and generates a code coverage report
-      run: dotnet reportgenerator "-reports:./coverage-results/opencover-coverage.xml" "-targetdir:./coverage-results/report" "-reporttypes:Html;Badges"
+      run: dotnet reportgenerator "-reports:./coverage-results/coverage.opencover.xml" "-targetdir:./coverage-results/report" "-reporttypes:Html;Badges"
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages

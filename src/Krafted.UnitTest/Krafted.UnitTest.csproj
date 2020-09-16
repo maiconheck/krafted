@@ -67,9 +67,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Krafted.DesignPatterns\Notifications\" />
-    <Folder Include="Krafted.DesignPatterns\Specifications\" />
-  </ItemGroup>
-
 </Project>

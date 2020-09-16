@@ -11,7 +11,7 @@
 
 ## Architecture
 
-### Krafted consists in a set of fine-grained libraries (each of one is a nuget package):
+### Krafted consists in a set of fine-grained libraries targeting `netstandard2.1` (each of one is a nuget package):
 - Krafted
 - Krafted.Configuration
 - Krafted.DesignPatterns

@@ -2,7 +2,7 @@ using Krafted.Guards;
 using Xunit;
 using Assert = Krafted.UnitTest.Xunit.AssertExtension;
 
-namespace Krafted.UnitTest.Krafted.Test.UnitTests
+namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
 {
     public class AssertExtensionTest
     {

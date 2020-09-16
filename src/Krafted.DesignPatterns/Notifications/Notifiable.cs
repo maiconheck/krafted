@@ -51,17 +51,6 @@ namespace Krafted.DesignPatterns.Notifications
         [NotMapped]
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 
-        /// <summary>
-        /// Adds a notification message.
-        /// </summary>
-        /// <param name="localizedMessage">
-        ///   The localized resource name that contains the message of the resource that was created.
-        ///   If the localized message was not found, the value passed will be used as fall-back.
-        /// </param>
-        internal void AddNotification(string localizedMessage)
-        {
-            _notifications.Add(new Notification(localizedMessage, localizedMessage, true));
-        }
 
         /// <summary>
         /// Adds a notification message.
@@ -76,17 +65,27 @@ namespace Krafted.DesignPatterns.Notifications
         }
 
         /// <summary>
-        /// Validates the specified entity.
+        /// Adds a notification message.
         /// </summary>
-        /// <typeparam name="T">The type of the entity.</typeparam>
-        /// <param name="entity">The entity.</param>
+        /// <param name="localizedMessage">
+        ///   The localized resource name that contains the message of the resource that was created.
+        ///   If the localized message was not found, the value passed will be used as fall-back.
+        /// </param>
+        protected void AddNotification(string localizedMessage)
+            => _notifications.Add(new Notification(localizedMessage, localizedMessage, true));
+
+        /// <summary>
+        /// Validates the specified model.
+        /// </summary>
+        /// <typeparam name="T">The type of the model.</typeparam>
+        /// <param name="model">The model.</param>
         /// <param name="validator">The validator.</param>
         /// <returns><c>true</c> if valid; otherwise, <c>false</c>.</returns>
-        protected bool Validate<T>(T entity, AbstractValidator<T> validator)
+        protected bool Validate<T>(T model, AbstractValidator<T> validator)
         {
-            Guard.Against.Null(entity, nameof(entity)).Null(validator, nameof(validator));
+            Guard.Against.Null(model, nameof(model)).Null(validator, nameof(validator));
 
-            var validationResult = validator.Validate(entity);
+            var validationResult = validator.Validate(model);
             AddNotifications(validationResult);
 
             return Valid = validationResult.IsValid;

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Krafted.Guards;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -17,6 +18,7 @@ namespace Krafted.Configuration
         /// <summary>
         /// Prevents a default instance of the <see cref="Config"/> class from being created.
         /// </summary>
+        [ExcludeFromCodeCoverage]
         private Config()
         {
         }
