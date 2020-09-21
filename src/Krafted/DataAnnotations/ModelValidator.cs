@@ -15,7 +15,7 @@ namespace Krafted.DataAnnotations
         /// validation results collection, and a value that specifies whether to validate all properties.
         /// </summary>
         /// <param name="model">The model to validate.</param>
-        /// <returns><c>true</c>if the model validates; otherwise, <c>false</c> with validation results.</returns>
+        /// <returns><c>true</c> if the model validates; otherwise, <c>false</c> with validation results.</returns>
         public static (bool isValid, List<ValidationResult> validationResults) Validate(object model)
         {
             var context = new ValidationContext(model);
