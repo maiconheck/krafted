@@ -6,15 +6,7 @@ namespace Krafted.Guards
 {
     public partial class Guard
     {
-        /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null,
-        /// with this error message: Parameter cannot be null.
-        /// </summary>
-        /// <typeparam name="T">The type of the parameter.</typeparam>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
-        /// <returns>The guard.</returns>
+
         public Guard Null<T>(T param, string paramName)
         {
             if (param is null)
