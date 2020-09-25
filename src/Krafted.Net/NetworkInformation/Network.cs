@@ -1,4 +1,3 @@
-using System;
 using System.Net.NetworkInformation;
 using Krafted.Guards;
 
@@ -31,10 +30,6 @@ namespace Krafted.Net.NetworkInformation
             catch (PingException ex)
             {
                 return (false, $"{ex.Message} {ex.InnerException.Message}");
-            }
-            catch (Exception ex)
-            {
-                return (false, ex.Message);
             }
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using Krafted.Net.NetworkInformation;
 using Xunit;
 
@@ -15,12 +16,21 @@ namespace Krafted.IntegrationTest.Krafted.Net.NetworkInformation
         }
 
         [Fact]
-        public void Available_InexistentHostname_True()
+        public void Available_InexistentHostname_False()
         {
             var (isAvailable, resultMessage) = Network.Available("maiconheck.com.br");
 
             Assert.False(isAvailable);
             Assert.Equal("An exception occurred during a Ping request. No such host is known.", resultMessage);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
+        [InlineData(null)]
+        public void Available_InvalidHostName_ThrowsException(string hostname)
+        {
+            Assert.Throws<ArgumentNullException>(() => Network.Available(hostname));
         }
     }
 }
