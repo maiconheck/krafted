@@ -21,10 +21,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard LessThan<T>(T number, T valueToCompare, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                Null(valueToCompare, nameof(valueToCompare)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             if (valueToCompare.CompareTo(number) < 0)
                 throw new ArgumentException(Texts.NumberCannotBeLessThan.Format(valueToCompare), parameterName);
@@ -44,10 +41,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard GreaterThan<T>(T number, T valueToCompare, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                Null(valueToCompare, nameof(valueToCompare)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             if (valueToCompare.CompareTo(number) > 0)
                 throw new ArgumentException(Texts.NumberCannotBeGreaterThan.Format(valueToCompare), parameterName);
@@ -66,9 +60,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard Zero<T>(T number, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             if (number.CompareTo(default(T)) == 0)
                 throw new ArgumentException(Texts.NumberCannotBeZero, parameterName);
@@ -87,9 +79,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard Negative<T>(T number, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             if (number.CompareTo(default(T)) < 0)
                 throw new ArgumentException(Texts.NumberCannotBeNegative, parameterName);
@@ -108,9 +98,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard Positive<T>(T number, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             if (number.CompareTo(default(T)) > 0)
                 throw new ArgumentException(Texts.NumberCannotBePositive, parameterName);
@@ -132,9 +120,7 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard ZeroOrLess<T>(T number, string parameterName) where T : struct, IComparable
         {
-            Guard.Against.
-                Null(number, nameof(number)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
 
             Guard.Against.
                 Zero(number, parameterName).

@@ -80,7 +80,7 @@ namespace Krafted.DesignPatterns.Notifications
         /// <param name="model">The model.</param>
         /// <param name="validator">The validator.</param>
         /// <returns><c>true</c> if valid; otherwise, <c>false</c>.</returns>
-        protected bool Validate<T>(T model, AbstractValidator<T> validator)
+        protected bool Validate<T>(T model, AbstractValidator<T> validator) where T : class
         {
             Guard.Against.Null(model, nameof(model)).Null(validator, nameof(validator));
 
