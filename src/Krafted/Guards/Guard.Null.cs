@@ -20,7 +20,7 @@ namespace Krafted.Guards
         /// <param name="parameterName">The name of the parameter.</param>
         /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
         /// <returns>The guard.</returns>
-        public Guard Null<T>(T parameter, string parameterName)
+        public Guard Null<T>(T parameter, string parameterName) where T : class
         {
             if (parameter is null)
                 throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNull);
