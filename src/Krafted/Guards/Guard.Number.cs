@@ -117,5 +117,30 @@ namespace Krafted.Guards
 
             return this;
         }
+
+        /// <summary>
+        /// Throws an <see cref="ArgumentException"/> if the <c>number</c> is zero or less than zero (i.e. negative),
+        /// with this error message: 'The number cannot be zero.', if it is zero. Or 'The number cannot be negative.', if it is negative.
+        /// </summary>
+        /// <remarks>
+        /// This method is equivalent to chain the <c>Zero(number).Negative(number)</c> methods.
+        /// </remarks>
+        /// <typeparam name="T">The type of the number.</typeparam>
+        /// <param name="number">The number to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
+        /// <returns>The guard.</returns>
+        /// <exception cref="ArgumentException">.</exception>
+        public Guard ZeroOrLess<T>(T number, string parameterName) where T : struct, IComparable
+        {
+            Guard.Against.
+                Null(number, nameof(number)).
+                NullOrWhiteSpace(parameterName, nameof(parameterName));
+
+            Guard.Against.
+                Zero(number, parameterName).
+                Negative(number, parameterName);
+
+            return this;
+        }
     }
 }

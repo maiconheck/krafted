@@ -165,5 +165,43 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.DoesNotThrows(() => Guard.Against.Positive(Convert.ToDecimal(zeroAndNegative), nameof(zeroAndNegative)));
             Assert.DoesNotThrows(() => Guard.Against.Positive(Convert.ToDouble(zeroAndNegative), nameof(zeroAndNegative)));
         }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(-2)]
+        [InlineData(-3)]
+        [InlineData(-4)]
+        public void GuardAgainstZeroOrLess_ZeroOrLess_ThrowsException(int zeroOrLess)
+        {
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.ZeroOrLess(zeroOrLess, nameof(zeroOrLess)));
+            AssertMessage(ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.ZeroOrLess(Convert.ToDecimal(zeroOrLess), nameof(zeroOrLess)));
+            AssertMessage(ex2.Message);
+
+            var ex3 = Assert.Throws<ArgumentException>(() => Guard.Against.ZeroOrLess(Convert.ToDouble(zeroOrLess), nameof(zeroOrLess)));
+            AssertMessage(ex3.Message);
+
+            void AssertMessage(string actualMessage)
+            {
+                if (zeroOrLess == 0)
+                    Assert.Equal("Number cannot be zero. (Parameter 'zeroOrLess')", actualMessage);
+                else
+                    Assert.Equal("Number cannot be negative. (Parameter 'zeroOrLess')", actualMessage);
+            }
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(4)]
+        public void GuardAgainstZeroOrLess_Positive_DoesNotThrowsException(int positive)
+        {
+            Assert.DoesNotThrows(() => Guard.Against.ZeroOrLess(positive, nameof(positive)));
+            Assert.DoesNotThrows(() => Guard.Against.ZeroOrLess(Convert.ToDecimal(positive), nameof(positive)));
+            Assert.DoesNotThrows(() => Guard.Against.ZeroOrLess(Convert.ToDouble(positive), nameof(positive)));
+        }
     }
 }
