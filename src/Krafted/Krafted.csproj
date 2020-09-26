@@ -8,35 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Guards\Guard.Boolean.cs" />
-    <Compile Remove="Guards\Guard.Email.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Guards\Guard.Boolean.cs" />
-    <None Include="Guards\Guard.Email.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
-  
   <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    
     <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -50,7 +36,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Texts.Designer.cs">
+    <Compile Update="Guards\Texts.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Texts.resx</DependentUpon>
@@ -62,10 +48,10 @@
       <LastGenOutput>Texts.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Texts.resx">
+    <EmbeddedResource Update="Guards\Texts.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Texts.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  
+
 </Project>

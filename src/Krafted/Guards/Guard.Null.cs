@@ -12,89 +12,89 @@ namespace Krafted.Guards
     public partial class Guard
     {
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null,
+        /// Throws an <see cref="ArgumentNullException"/> if the <c>parameter</c> is null,
         /// with this error message: Parameter cannot be null.
         /// </summary>
         /// <typeparam name="T">The type of the parameter.</typeparam>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
         /// <returns>The guard.</returns>
-        public Guard Null<T>(T param, string paramName)
+        public Guard Null<T>(T parameter, string parameterName)
         {
-            if (param is null)
-                throw new ArgumentNullException(paramName, Texts.ParameterCannotBeNull);
+            if (parameter is null)
+                throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNull);
 
             return this;
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null or an empty string,
+        /// Throws an <see cref="ArgumentNullException"/> if the <c>parameter</c> is null or an empty string,
         /// with this error message: Parameter cannot be null or empty.
         /// </summary>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
-        public Guard NullOrEmpty(string param, string paramName)
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
+        public Guard NullOrEmpty(string parameter, string parameterName)
         {
-            if (string.IsNullOrEmpty(param))
-                throw new ArgumentNullException(paramName, Texts.ParameterCannotBeNullOrEmpty);
+            if (string.IsNullOrEmpty(parameter))
+                throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNullOrEmpty);
 
             return this;
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null or an empty collection,
+        /// Throws an <see cref="ArgumentNullException"/> if the <c>parameter</c> is null or an empty collection,
         /// with this error message: Parameter cannot be null or empty.
         /// </summary>
         /// <typeparam name="T">The type of the parameter.</typeparam>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
-        public Guard NullOrEmpty<T>(IEnumerable<T> param, string paramName)
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
+        public Guard NullOrEmpty<T>(IEnumerable<T> parameter, string parameterName)
         {
-            if (param is null || !param.Any())
-                throw new ArgumentNullException(paramName, Texts.ParameterCannotBeNullOrEmpty);
+            if (parameter is null || !parameter.Any())
+                throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNullOrEmpty);
 
             return this;
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null, an empty string or consists only of white-space,
+        /// Throws an <see cref="ArgumentNullException"/> if the <c>parameter</c> is null, an empty string or consists only of white-space,
         /// with this error message: Parameter cannot be null, empty or consists exclusively of white-space characters.
         /// </summary>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
-        /// <exception cref="ArgumentException"><paramref name="param"/> is empty, or consists only of white-space.</exception>
-        public Guard NullOrWhiteSpace(string param, string paramName)
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentException"><paramref name="parameter"/> is empty, or consists only of white-space.</exception>
+        public Guard NullOrWhiteSpace(string parameter, string parameterName)
         {
-            if (string.IsNullOrWhiteSpace(param))
-                throw new ArgumentNullException(paramName, Texts.ParameterCannotBeNullEmptyOrWhiteSpace);
+            if (string.IsNullOrWhiteSpace(parameter))
+                throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNullEmptyOrWhiteSpace);
 
             return this;
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the parameter is null, an empty string or consists only of white-space,
+        /// Throws an <see cref="ArgumentNullException"/> if the <c>parameter</c> is null, an empty string or consists only of white-space,
         /// with an custom error message plus "(Parameter 'myParamName')".
         /// e.g. My custom error message (Parameter 'myParamName').
         /// </summary>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="customErrorMessage">
         /// A custom error message that describes the error (e.g. Could not find a connection string named 'MyConnection'.).
         /// </param>
         /// <returns>The guard.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="param"/> is <c>null</c>.</exception>
-        /// <exception cref="ArgumentException"><paramref name="param"/> is empty, or consists only of white-space.</exception>
-        public Guard NullOrWhiteSpace(string param, string paramName, string customErrorMessage)
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentException"><paramref name="parameter"/> is empty, or consists only of white-space.</exception>
+        public Guard NullOrWhiteSpace(string parameter, string parameterName, string customErrorMessage)
         {
-            if (string.IsNullOrWhiteSpace(param))
-                throw new ArgumentNullException(paramName, customErrorMessage);
+            if (string.IsNullOrWhiteSpace(parameter))
+                throw new ArgumentNullException(parameterName, customErrorMessage);
 
             return this;
         }

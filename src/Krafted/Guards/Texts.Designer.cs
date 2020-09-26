@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Krafted {
+namespace Krafted.Guards {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Krafted {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Krafted.Texts", typeof(Texts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Krafted.Guards.Texts", typeof(Texts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,56 @@ namespace Krafted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collection cannot be empty..
+        /// </summary>
+        internal static string CollectionCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("CollectionCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collection should be empty..
+        /// </summary>
+        internal static string CollectionShouldBeEmpty {
+            get {
+                return ResourceManager.GetString("CollectionShouldBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid e-mail address: {0}..
         /// </summary>
         internal static string InvalidEmailAddress {
             get {
                 return ResourceManager.GetString("InvalidEmailAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be false..
+        /// </summary>
+        internal static string ParameterCannotBeFalse {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be greater than {0}..
+        /// </summary>
+        internal static string ParameterCannotBeGreaterThan {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeGreaterThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be less than {0}..
+        /// </summary>
+        internal static string ParameterCannotBeLessThan {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeLessThan", resourceCulture);
             }
         }
         
@@ -93,6 +138,24 @@ namespace Krafted {
         internal static string ParameterCannotBeNullOrEmpty {
             get {
                 return ResourceManager.GetString("ParameterCannotBeNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be true..
+        /// </summary>
+        internal static string ParameterCannotBeTrue {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be zero..
+        /// </summary>
+        internal static string ParameterCannotBeZero {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeZero", resourceCulture);
             }
         }
     }

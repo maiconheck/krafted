@@ -10,20 +10,16 @@ namespace Krafted.UnitTest.Krafted.Guards
     public class GuardNullTest
     {
         [Fact]
-        public void ThrowIfNull_Null_ThrowsException()
+        public void GuardAgainstNull_Null_ThrowsException()
         {
-            var ex = Assert.Throws<ArgumentNullException>(() =>
+            var ex1 = Assert.Throws<ArgumentNullException>(() =>
             {
                 object myParam = null;
                 Guard.Against.Null(myParam, nameof(myParam));
             });
-            Assert.Equal("Parameter cannot be null. (Parameter 'myParam')", ex.Message);
-        }
+            Assert.Equal("Parameter cannot be null. (Parameter 'myParam')", ex1.Message);
 
-        [Fact]
-        public void ThrowIfAnyNull_Null_ThrowsException()
-        {
-            var ex = Assert.Throws<ArgumentNullException>(() =>
+            var ex2 = Assert.Throws<ArgumentNullException>(() =>
             {
                 object param1 = new object();
                 object param2 = new object();
@@ -36,22 +32,18 @@ namespace Krafted.UnitTest.Krafted.Guards
                     .Null(param3, nameof(param3))
                     .Null(param4, nameof(param4));
             });
-            Assert.Equal("Parameter cannot be null. (Parameter 'param3')", ex.Message);
+            Assert.Equal("Parameter cannot be null. (Parameter 'param3')", ex2.Message);
         }
 
         [Fact]
-        public void ThrowIfNull_NotNull_DoesNotThrowsException()
+        public void GuardAgainstNull_NotNull_DoesNotThrowsException()
         {
             Assert.DoesNotThrows(() =>
             {
                 object param = new object();
                 Guard.Against.Null(param, nameof(param));
             });
-        }
 
-        [Fact]
-        public void ThrowIfAnyNull_NotNull_DoesNotThrowsException()
-        {
             Assert.DoesNotThrows(() =>
             {
                 object param1 = new object();
@@ -70,7 +62,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         [Theory]
         [InlineData(null)]
         [InlineData("")]
-        public void ThrowIfNullOrEmpty_NullOrEmpty_ThrowsException(string myParam)
+        public void GuardAgainstNullOrEmpty_NullOrEmpty_ThrowsException(string myParam)
         {
             var ex = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(myParam, nameof(myParam)));
             Assert.Equal("Parameter cannot be null or empty. (Parameter 'myParam')", ex.Message);
@@ -81,7 +73,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Fact]
-        public void ThrowIfNullOrEmpty_NotEmpty_DoesNotThrowsException()
+        public void GuardAgainstNullOrEmpty_NotEmpty_DoesNotThrowsException()
         {
             string param1 = "value";
             Assert.DoesNotThrows(() => Guard.Against.NullOrEmpty(param1, nameof(param1)));
@@ -94,7 +86,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData(null)]
         [InlineData("")]
         [InlineData(" ")]
-        public void ThrowIfNullOrWhiteSpace_NullOrWhiteSpace_ThrowsException(string myParam)
+        public void GuardAgainstNullOrWhiteSpace_NullOrWhiteSpace_ThrowsException(string myParam)
         {
             var ex1 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrWhiteSpace(myParam, nameof(myParam)));
             Assert.Equal("Parameter cannot be null, empty or consists exclusively of white-space characters. (Parameter 'myParam')", ex1.Message);
@@ -104,7 +96,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Fact]
-        public void ThrowIfNullOrWhiteSpace_NotEmpty_DoesNotThrowsException()
+        public void GuardAgainstNullOrWhiteSpace_NotEmpty_DoesNotThrowsException()
         {
             string param = "value";
             Assert.DoesNotThrows(() => Guard.Against.NullOrWhiteSpace(param, nameof(param)));

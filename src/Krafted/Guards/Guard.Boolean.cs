@@ -10,25 +10,35 @@ namespace Krafted.Guards
     public partial class Guard
     {
         /// <summary>
-        /// Throws an <see cref="ArgumentException"/> if the parameter <c>false</c>,
-        /// with this error message: Parameter cannot be <c>false</c>.
+        /// Throws an <see cref="ArgumentException"/> if the <c>parameter</c> is <c>true</c>,
+        /// with this error message: Parameter cannot be <c>true</c>.
         /// </summary>
-        /// <param name="param">The parameter to check.</param>
-        /// <param name="paramName">The name of the parameter.</param>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard False(bool param, string paramName)
+        public Guard True(bool parameter, string parameterName)
         {
-            if (!param)
-                throw new ArgumentException(Texts.InvalidEmailAddress, paramName);
+            if (parameter)
+                throw new ArgumentException(Texts.ParameterCannotBeTrue, parameterName);
 
             return this;
         }
 
-        private static Regex CreateRegEx(string pattern)
+        /// <summary>
+        /// Throws an <see cref="ArgumentException"/> if the <c>parameter</c> is <c>false</c>,
+        /// with this error message: Parameter cannot be <c>false</c>.
+        /// </summary>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
+        /// <returns>The guard.</returns>
+        /// <exception cref="ArgumentException">.</exception>
+        public Guard False(bool parameter, string parameterName)
         {
-            const RegexOptions options = RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture;
-            return new Regex(pattern, options, TimeSpan.FromSeconds(2.0));
+            if (!parameter)
+                throw new ArgumentException(Texts.ParameterCannotBeFalse, parameterName);
+
+            return this;
         }
     }
 }
