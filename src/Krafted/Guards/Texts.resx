@@ -126,14 +126,23 @@
   <data name="InvalidEmailAddress" xml:space="preserve">
     <value>Invalid e-mail address: {0}.</value>
   </data>
+  <data name="NumberCannotBeGreaterThan" xml:space="preserve">
+    <value>Number cannot be greater than {0}.</value>
+  </data>
+  <data name="NumberCannotBeLessThan" xml:space="preserve">
+    <value>Number cannot be less than {0}.</value>
+  </data>
+  <data name="NumberCannotBeNegative" xml:space="preserve">
+    <value>Number cannot be negative.</value>
+  </data>
+  <data name="NumberCannotBePositive" xml:space="preserve">
+    <value>Number cannot be positive.</value>
+  </data>
+  <data name="NumberCannotBeZero" xml:space="preserve">
+    <value>Number cannot be zero.</value>
+  </data>
   <data name="ParameterCannotBeFalse" xml:space="preserve">
     <value>Parameter cannot be false.</value>
-  </data>
-  <data name="ParameterCannotBeGreaterThan" xml:space="preserve">
-    <value>Parameter cannot be greater than {0}.</value>
-  </data>
-  <data name="ParameterCannotBeLessThan" xml:space="preserve">
-    <value>Parameter cannot be less than {0}.</value>
   </data>
   <data name="ParameterCannotBeNull" xml:space="preserve">
     <value>Parameter cannot be null.</value>
@@ -146,8 +155,5 @@
   </data>
   <data name="ParameterCannotBeTrue" xml:space="preserve">
     <value>Parameter cannot be true.</value>
-  </data>
-  <data name="ParameterCannotBeZero" xml:space="preserve">
-    <value>Parameter cannot be zero.</value>
   </data>
 </root>

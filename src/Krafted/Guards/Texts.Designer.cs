@@ -88,29 +88,56 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Number cannot be greater than {0}..
+        /// </summary>
+        internal static string NumberCannotBeGreaterThan {
+            get {
+                return ResourceManager.GetString("NumberCannotBeGreaterThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number cannot be less than {0}..
+        /// </summary>
+        internal static string NumberCannotBeLessThan {
+            get {
+                return ResourceManager.GetString("NumberCannotBeLessThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number cannot be negative..
+        /// </summary>
+        internal static string NumberCannotBeNegative {
+            get {
+                return ResourceManager.GetString("NumberCannotBeNegative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number cannot be positive..
+        /// </summary>
+        internal static string NumberCannotBePositive {
+            get {
+                return ResourceManager.GetString("NumberCannotBePositive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number cannot be zero..
+        /// </summary>
+        internal static string NumberCannotBeZero {
+            get {
+                return ResourceManager.GetString("NumberCannotBeZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parameter cannot be false..
         /// </summary>
         internal static string ParameterCannotBeFalse {
             get {
                 return ResourceManager.GetString("ParameterCannotBeFalse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Parameter cannot be greater than {0}..
-        /// </summary>
-        internal static string ParameterCannotBeGreaterThan {
-            get {
-                return ResourceManager.GetString("ParameterCannotBeGreaterThan", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Parameter cannot be less than {0}..
-        /// </summary>
-        internal static string ParameterCannotBeLessThan {
-            get {
-                return ResourceManager.GetString("ParameterCannotBeLessThan", resourceCulture);
             }
         }
         
@@ -147,15 +174,6 @@ namespace Krafted.Guards {
         internal static string ParameterCannotBeTrue {
             get {
                 return ResourceManager.GetString("ParameterCannotBeTrue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Parameter cannot be zero..
-        /// </summary>
-        internal static string ParameterCannotBeZero {
-            get {
-                return ResourceManager.GetString("ParameterCannotBeZero", resourceCulture);
             }
         }
     }
