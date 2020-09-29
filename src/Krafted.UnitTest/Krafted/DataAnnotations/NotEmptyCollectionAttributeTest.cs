@@ -8,7 +8,7 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
         [Fact]
         public void IsValid_Empty_False()
         {
-            var model = new ModelDummy();
+            var model = new NotEmptyCollectionModelDummy();
             var (isValid, validationResults) = ModelValidator.Validate(model);
 
             Assert.False(isValid);
@@ -22,7 +22,7 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
         [InlineData(new int[] { 1, 2, 3 })]
         public void IsValid_NotEmpty_True(int[] items)
         {
-            var model = new ModelDummy
+            var model = new NotEmptyCollectionModelDummy
             {
                 MyProperty1 = items,
                 MyProperty2 = items

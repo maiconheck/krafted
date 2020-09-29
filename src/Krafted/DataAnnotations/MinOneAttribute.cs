@@ -1,23 +1,22 @@
 using System;
-using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
 namespace Krafted.DataAnnotations
 {
     /// <summary>
-    /// Specifies that at least one item is required in the collection.
+    /// Specifies that the value is at minimum one (that is, positive).
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
-    public sealed class NotEmptyCollectionAttribute : ValidationAttribute
+    public sealed class MinOneAttribute : ValidationAttribute
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotEmptyCollectionAttribute"/> class.
+        /// Initializes a new instance of the <see cref="MinOneAttribute"/> class.
         /// </summary>
         /// <remarks>
         /// This constructor selects a reasonable default error message for <see cref="ValidationAttribute.FormatErrorMessage" />.
         /// </remarks>
-        public NotEmptyCollectionAttribute()
-            : base(Texts.NotEmptyCollection)
+        public MinOneAttribute()
+            : base(Texts.MinOne)
         {
         }
 
@@ -28,12 +27,12 @@ namespace Krafted.DataAnnotations
         /// <returns><c>true</c> if the specified value is valid; otherwise, <c>false</c>.</returns>
         public override bool IsValid(object value)
         {
-            var list = value as IList;
-
-            if (list is null)
+            if (value is null)
                 return false;
 
-            return list.Count > 0;
+            var number = (int)value;
+
+            return number > 0;
         }
     }
 }

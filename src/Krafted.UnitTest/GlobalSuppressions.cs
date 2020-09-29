@@ -5,11 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "Necessary for the extension method", Scope = "member", Target = "~M:Krafted.UnitTest.Data.Connection.SqlServer.AssertExtension.DoesNotThrow(Xunit.Assert,System.Action)")]
-[assembly: SuppressMessage("Redundancy", "RCS1175:Unused this parameter.", Justification = "Necessary for the extension method", Scope = "member", Target = "~M:Krafted.UnitTest.Data.Connection.SqlServer.AssertExtension.DoesNotThrow(Xunit.Assert,System.Action)")]
-[assembly: SuppressMessage("Usage", "CA1806:Do not ignore method results", Justification = "Just to test", Scope = "member", Target = "~M:Krafted.UnitTest.Data.Connection.SqlServer.SqlServerConnectionProviderTest.NewInstance_FilledConnectionString_ArgumentExceptionShouldNotBeThrow(System.String)")]
-[assembly: SuppressMessage("Minor Code Smell", "S1481:Unused local variables should be removed", Justification = "Just to test", Scope = "member", Target = "~M:Krafted.UnitTest.Data.Repositories.Dapper.RepositoryTest.Transaction_Call_ShouldBeReceived")]
-[assembly: SuppressMessage("Usage", "CA1806:Do not ignore method results", Justification = "Just to test", Scope = "member", Target = "~M:Krafted.UnitTest.Data.Connection.SqlServer.SqlServerConnectionProviderTest.NewInstance_NotFilledConnectionString_ExceptionShouldBeThrow(System.String)")]
-[assembly: SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable", Justification = "Just to test", Scope = "type", Target = "~T:Krafted.UnitTest.Api.ProviderStateApiFactoryTest")]
-[assembly: SuppressMessage("Usage", "CC0022:Should dispose object", Justification = "Just to test", Scope = "member", Target = "~T:Krafted.UnitTest.Krafted.Net.Http.HttpResponseMessageExtensionTest")]
-[assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTest.Krafted.DesignPatterns.Notifications.NotifiableStub.Validate``1(``0,FluentValidation.AbstractValidator{``0})~System.Boolean")]
+[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "Required for this class", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionModelDummy")]

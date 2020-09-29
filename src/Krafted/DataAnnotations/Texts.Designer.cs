@@ -61,6 +61,15 @@ namespace Krafted.DataAnnotations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least one..
+        /// </summary>
+        internal static string MinOne {
+            get {
+                return ResourceManager.GetString("MinOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At least one item is required..
         /// </summary>
         internal static string NotEmptyCollection {

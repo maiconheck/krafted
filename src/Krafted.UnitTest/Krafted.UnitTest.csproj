@@ -5,6 +5,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>RCS1060,SA1402</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
