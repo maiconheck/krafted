@@ -4,7 +4,7 @@ using Krafted.Guards;
 namespace Krafted.ValueObjects
 {
     /// <summary>
-    /// The money value object.
+    /// Represents an money value object.
     /// </summary>
     public sealed class Money : IValueObject<decimal>
     {

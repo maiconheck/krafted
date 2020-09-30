@@ -3,6 +3,7 @@ namespace Krafted.ValueObjects
     /// <summary>
     /// Defines a contract to the value objects.
     /// </summary>
+    /// <typeparam name="T">The type of the value.</typeparam>
     public interface IValueObject<T>
     {
         /// <summary>

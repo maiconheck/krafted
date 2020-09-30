@@ -34,7 +34,6 @@ namespace Krafted.DataAnnotations.Pt
                 return false;
 
             return Guards.Pt.Validator.ValidateNif((string)value);
-
         }
     }
 }
