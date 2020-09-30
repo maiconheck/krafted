@@ -61,6 +61,15 @@ namespace Krafted.DataAnnotations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid NIF: {0}..
+        /// </summary>
+        internal static string InvalidNif {
+            get {
+                return ResourceManager.GetString("InvalidNif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} must be at least one..
         /// </summary>
         internal static string MinOne {

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.IntegrationTest", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Net", "Krafted.Net\Krafted.Net.csproj", "{155BB794-730A-44C8-96DB-1DA5C7C75876}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krafted.ValueObjects", "Krafted.ValueObjects\Krafted.ValueObjects.csproj", "{4370F87A-DE90-4550-AD68-802DA71E0BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,18 @@ Global
 		{155BB794-730A-44C8-96DB-1DA5C7C75876}.Release|x64.Build.0 = Release|Any CPU
 		{155BB794-730A-44C8-96DB-1DA5C7C75876}.Release|x86.ActiveCfg = Release|Any CPU
 		{155BB794-730A-44C8-96DB-1DA5C7C75876}.Release|x86.Build.0 = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|x64.Build.0 = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Debug|x86.Build.0 = Debug|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|x64.ActiveCfg = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|x64.Build.0 = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|x86.ActiveCfg = Release|Any CPU
+		{4370F87A-DE90-4550-AD68-802DA71E0BE0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

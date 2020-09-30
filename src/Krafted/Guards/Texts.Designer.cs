@@ -88,6 +88,15 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid NIF: {0}..
+        /// </summary>
+        internal static string InvalidNif {
+            get {
+                return ResourceManager.GetString("InvalidNif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number cannot be greater than {0}..
         /// </summary>
         internal static string NumberCannotBeGreaterThan {

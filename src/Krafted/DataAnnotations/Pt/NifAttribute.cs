@@ -1,23 +1,25 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 
-namespace Krafted.DataAnnotations
+namespace Krafted.DataAnnotations.Pt
 {
     /// <summary>
-    /// Specifies that the value is at minimum one (that is, positive).
+    /// Validates whether the specified <c>nif</c> is valid.
     /// </summary>
+    /// <remarks>
+    /// NIF means "Número de Identificação Fiscal", a.k.a "Número de Contribuinte", identifies a taxpayer entity in Portugal, whether it is a company or an individual.
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
-    public sealed class MinOneAttribute : ValidationAttribute
+    public sealed class NifAttribute : ValidationAttribute
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MinOneAttribute"/> class.
+        /// Initializes a new instance of the <see cref="NifAttribute"/> class.
         /// </summary>
         /// <remarks>
         /// This constructor selects a reasonable default error message for <see cref="ValidationAttribute.FormatErrorMessage" />.
         /// </remarks>
-        public MinOneAttribute()
-            : base(Texts.MinOne)
+        public NifAttribute()
+            : base(Texts.InvalidNif)
         {
         }
 
@@ -31,9 +33,8 @@ namespace Krafted.DataAnnotations
             if (value is null)
                 return false;
 
-            var number = Convert.ToInt64(value, CultureInfo.InvariantCulture);
+            return Guards.Pt.Validator.ValidateNif((string)value);
 
-            return number > 0;
         }
     }
 }

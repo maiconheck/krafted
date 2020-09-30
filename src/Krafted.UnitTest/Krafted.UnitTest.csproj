@@ -9,27 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Krafted.ValueObjects\**" />
-    <EmbeddedResource Remove="Krafted.ValueObjects\**" />
-    <None Remove="Krafted.ValueObjects\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CodeCracker.CSharp" Version="1.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    
+
     <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    
+
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    
+
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -58,14 +52,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />    
+    <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />
     <ProjectReference Include="..\Krafted.UnitTests\Krafted.UnitTests.csproj" />
+    <ProjectReference Include="..\Krafted.ValueObjects\Krafted.ValueObjects.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Krafted\DataAnnotations\Br\" />
   </ItemGroup>
 
 </Project>
