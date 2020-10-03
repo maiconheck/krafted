@@ -5,6 +5,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>A set of utility components for configuration management.</Title>
   </PropertyGroup>
 
   <ItemGroup>

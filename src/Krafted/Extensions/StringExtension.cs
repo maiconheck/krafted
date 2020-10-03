@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+using System.Globalization;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace System
@@ -42,13 +43,28 @@ namespace System
         /// objects in a specified array. A parameter supplies culture-specific formatting
         /// information.
         /// </summary>
-        /// <param name="value">A composite string to be formated.</param>
+        /// <param name="input">A composite string to be formated.</param>
         /// <param name="args">An object array that contains objects to format the <c>value</c>.</param>
         /// <returns>
         /// A copy of format in which the format items have been replaced by the string representation
         /// of the corresponding objects in args.
         /// </returns>
-        public static string Format(this string value, params object[] args)
-            => string.Format(CultureInfo.InvariantCulture, value, args);
+        public static string Format(this string input, params object[] args)
+            => string.Format(CultureInfo.InvariantCulture, input, args);
+
+        /// <summary>
+        /// Transform an specified PascalCase string to an Snake_Case string (that is. underscore separation).
+        /// </summary>
+        /// <param name="input">A PascalCase string to be transformed to an Snake_Case string.</param>
+        /// <example>
+        /// <code>
+        /// "MyPascalCaseString.PascalCaseToSnakeCase()" // My_Camel_Case_String
+        /// </code>
+        /// </example>
+        /// <returns>
+        /// The PascalCase string transformed to an Snake_Case string (that is. underscore separation).
+        /// </returns>
+        public static string PascalCaseToSnakeCase(this string input)
+            => string.Concat(input.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString()));
     }
 }

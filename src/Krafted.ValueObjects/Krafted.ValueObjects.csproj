@@ -5,6 +5,7 @@
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CA1031</NoWarn>
+    <Title>A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.</Title>
   </PropertyGroup>
 
   <ItemGroup>

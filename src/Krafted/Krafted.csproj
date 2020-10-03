@@ -2,9 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>The Krafted's core library, containing a set of classes for the most common uses, like Guard Clauses, DataAnnotations and Extension Methods.</Title>
   </PropertyGroup>
 
   <ItemGroup>

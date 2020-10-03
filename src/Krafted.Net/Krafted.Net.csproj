@@ -5,6 +5,7 @@
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CA1031</NoWarn>
+    <Title>A set of utility components for network operations.</Title>
   </PropertyGroup>
 
   <ItemGroup>

@@ -6,6 +6,7 @@
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <IsTestProject>false</IsTestProject>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Title>Extension methods to enhance the unit tests.</Title>
   </PropertyGroup>
 
   <ItemGroup>
