@@ -11,6 +11,7 @@
 		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->
 		<Rule Id="RCS1010" Action="None" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
         <Rule Id="RCS1046" Action="None" />  <!-- Asynchronous method name should end with 'Async' -->
+        <Rule Id="RCS1004" Action="None" /> <!-- Remove braces from if-else -->
 	</Rules>
 	<Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
 		<Rule Id="CA1822" Action="None" />  <!-- Elements must be documented -->

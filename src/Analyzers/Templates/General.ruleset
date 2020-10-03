@@ -441,7 +441,6 @@
 		<Rule Id="RCS1026" Action="Warning" />
 		<Rule Id="RCS1001" Action="Warning" />
 		<Rule Id="RCS1003" Action="Warning" />
-		<Rule Id="RCS1004" Action="Warning" />
 		<Rule Id="RCS1005" Action="Warning" />
 		<Rule Id="RCS1013" Action="Warning" />
 		<Rule Id="RCS1014" Action="Warning" />

@@ -1,14 +1,25 @@
-using System.Collections.Concurrent;
+// A Entity base class implementation.
+//
+// The equality operations was based in this Khorikov's great article: Entity Base Class.
+// Source: https://enterprisecraftsmanship.com/posts/entity-base-class/
+// Retrieved in October 2020.
+
 using System.ComponentModel.DataAnnotations.Schema;
 using Krafted.DesignPatterns.Notifications;
-using Krafted.Guards;
 
-namespace Krafted.Ddd
+namespace Krafted.DesignPatterns.Ddd
 {
     /// <summary>
     /// Represents an Entity [Evans] base class, providing an identity and common operations to entities.
+    /// If you need <c>Domain Events</c>, implement the <see cref="IDomainEventCollection"/> interface.
+    /// If you need <c>Domain Notifications</c>, implement the <see cref="IDomainNotificationCollection"/> interface.
     /// </summary>
-    public abstract class Entity : Notifiable
+    /// <remarks>
+    /// The <c>long</c> type usually is a good choice for the <see cref="Id"/>.
+    /// But if you need a different type for the <see cref="Id"/> (maybe in legacy systems), grab a copy of this class, and re implement them accordingly.
+    /// Don't try to use generics to the <see cref="Id"/> in order to avoid turning your entity base class in a <see href="https://wiki.c2.com/?GodClass">God Class</see>.
+    /// </remarks>
+    public abstract class Entity : Notifiable, IDomainNotificationCollection
     {
         /// <summary>
         /// Gets or sets the identifier.
@@ -18,20 +29,18 @@ namespace Krafted.Ddd
         /// </value>
         public virtual long Id { get; protected set; }
 
-        [NotMapped]
-        protected virtual object Actual => this;
-
-        [NotMapped]
-        private readonly ConcurrentQueue<IDomainEvent> _domainEvents = new ConcurrentQueue<IDomainEvent>();
-
         /// <summary>
-        /// Gets the domain events.
+        /// Gets the actual object.
         /// </summary>
+        /// <remarks>
+        /// This serves to call Actual.GetType() in order to get the actual type of the object.
+        /// It was added to the base class, in order to overcome the issue where ORMs return the type of a runtime proxy if you just call GetType() on an object.
+        /// </remarks>
         /// <value>
-        /// The domain events.
+        /// The actual object.
         /// </value>
         [NotMapped]
-        public IProducerConsumerCollection<IDomainEvent> DomainEvents => _domainEvents;
+        protected virtual object Actual => this;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Entity"/> class.
@@ -103,15 +112,5 @@ namespace Krafted.Ddd
         /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
         public override int GetHashCode() => (Actual.GetType().ToString() + Id).GetHashCode();
-
-        /// <summary>
-        /// Publishes the event.
-        /// </summary>
-        /// <param name="event">The event.</param>
-        protected void PublishEvent(IDomainEvent @event)
-        {
-            Guard.Against.Null(@event, nameof(@event));
-            _domainEvents.Enqueue(@event);
-        }
     }
 }

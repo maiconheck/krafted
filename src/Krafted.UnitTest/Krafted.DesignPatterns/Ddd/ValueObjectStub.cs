@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Krafted.Ddd;
+using Krafted.DesignPatterns.Ddd;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
 {

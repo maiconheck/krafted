@@ -1,20 +1,67 @@
-using Krafted.Ddd;
+using System.Collections.Concurrent;
+using System.ComponentModel.DataAnnotations.Schema;
+using Krafted.DesignPatterns.Ddd;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
 {
-    public class EntityStub : Entity
+    public class EntityStub : Entity, IDomainEventCollection //, IDomainNotificationCollection
     {
-        public override long Id { get; protected set; }
+        private bool _locked;
 
-        public EntityStub(int age, string name)
+        public EntityStub(int age, string name, string email)
         {
             Age = age;
             Name = name;
+            Email = email;
+
+            var valid = Validate(this, new EntityValidator());
+
+            if (valid)
+            {
+                _domainEvents.PublishEvent(new UserRegisteredEvent(name, email));
+            }
         }
 
-        public int Age { get; }
+        [NotMapped]
+        private readonly ConcurrentQueue<IDomainEvent> _domainEvents = new ConcurrentQueue<IDomainEvent>();
 
-        public string Name { get; }
+        /// <summary>
+        /// Gets the domain events.
+        /// </summary>
+        /// <value>
+        /// The domain events.
+        /// </value>
+        [NotMapped]
+        public IProducerConsumerCollection<IDomainEvent> DomainEvents => _domainEvents;
+
+        public override long Id { get; protected set; }
+
+        public int Age { get; private set; }
+
+        public string Name { get; private set; }
+
+        public string Email { get; }
+
+        public void Edit(int age, string name)
+        {
+            Age = age;
+            Name = name;
+
+            Validate(this, new EntityValidator());
+        }
+
+        public void Lock()
+        {
+            if (_locked)
+            {
+                AddNotification("UserAlreadyLocked");
+            }
+            else
+            {
+                _locked = true;
+                _domainEvents.PublishEvent(new UserLockedEvent(Email));
+            }
+        }
 
         public void SetId(long id) => Id = id;
     }

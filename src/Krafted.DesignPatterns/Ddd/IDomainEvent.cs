@@ -1,4 +1,4 @@
-namespace Krafted.Ddd
+namespace Krafted.DesignPatterns.Ddd
 {
     /// <summary>
     /// Defines an domain event.

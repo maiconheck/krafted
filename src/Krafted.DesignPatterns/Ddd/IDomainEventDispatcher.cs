@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Krafted.Ddd
+namespace Krafted.DesignPatterns.Ddd
 {
     /// <summary>
     /// Defines an dispatcher to the domain events.
