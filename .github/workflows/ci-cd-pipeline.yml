@@ -22,9 +22,11 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    steps:
 ################ SETUP STEPS ################
+    steps:
     - name: Checkout the repo
+      env:
+        sln_path: "./src/Krafted/Krafted.sln"
       uses: actions/checkout@v2
 
     - name: Setup .NET Core
@@ -41,16 +43,16 @@ jobs:
 
 ################## CI STEPS ##################
     - name: CLEAN - Cleans the output
-      run: dotnet clean "./src/Krafted.sln" --output artifacts
+      run: dotnet clean $sln_path --output artifacts
 
     - name: RESTORE - Install the dependencies
-      run: dotnet restore "./src/Krafted.sln"
+      run: dotnet restore $sln_path
 
     - name: BUILD / CODE QUALITY - Build and run code quality analysis
-      run: dotnet build "./src/Krafted.sln" --configuration Release --no-restore -warnaserror
+      run: dotnet build $sln_path --configuration Release --no-restore -warnaserror
 
     - name: TEST - Executes unit and integration tests
-      run: dotnet test "./src/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1
+      run: dotnet test $sln_path --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1
 
     - name: COVERAGE - Calculates and generates a code coverage report
       run: dotnet reportgenerator "-reports:./coverage-results/coverage.opencover.xml" "-targetdir:./coverage-results/report" "-reporttypes:Html;Badges"
@@ -58,7 +60,7 @@ jobs:
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet pack "./src/Krafted.sln" --output artifacts --include-symbols --include-source
+      run: dotnet pack $sln_path --output artifacts --include-symbols --include-source
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')

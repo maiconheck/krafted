@@ -6,6 +6,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>CA1031</NoWarn>
     <Title>A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.</Title>
+    <Description>A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.</Description>
   </PropertyGroup>
 
   <ItemGroup>
