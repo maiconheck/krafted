@@ -6,14 +6,14 @@ using Xunit;
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Notifications
 {
     [Trait(nameof(UnitTest), nameof(DesignPatterns))]
-    public class NotifiableTest
+    public class NotificationExtensionTest
     {
         [Fact]
         public void NewModel_ValidatorRulesSatisfied_Valid()
         {
             var model = new ModelStub(19, "John");
-            Assert.True(model.Valid);
-            Assert.False(model.Invalid);
+            Assert.True(model.Valid());
+            Assert.False(model.Invalid());
             Assert.Equal(0, model.Notifications.Count);
         }
 
@@ -21,8 +21,8 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Notifications
         public void NewModel_ValidatorRulesUnsatisfied_Valid()
         {
             var model = new ModelStub(18, string.Empty);
-            Assert.False(model.Valid);
-            Assert.True(model.Invalid);
+            Assert.False(model.Valid());
+            Assert.True(model.Invalid());
             Assert.Equal(3, model.Notifications.Count);
         }
 

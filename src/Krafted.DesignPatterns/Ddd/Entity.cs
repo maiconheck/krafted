@@ -11,15 +11,15 @@ namespace Krafted.DesignPatterns.Ddd
 {
     /// <summary>
     /// Represents an Entity [Evans] base class, providing an identity and common operations to entities.
-    /// If you need <c>Domain Events</c>, implement the <see cref="IDomainEventCollection"/> interface.
-    /// If you need <c>Domain Notifications</c>, implement the <see cref="IDomainNotificationCollection"/> interface.
+    /// If you need <c>Domain Events</c>, implement the <see cref="IDomainEventCollection"/> interface and use the <see cref="EntityExtension"/>.
+    /// If you need <c>Domain Notifications</c>, implement the <see cref="IDomainNotificationCollection"/> interface and use the <see cref="NotificationExtension"/>.
     /// </summary>
     /// <remarks>
     /// The <c>long</c> type usually is a good choice for the <see cref="Id"/>.
     /// But if you need a different type for the <see cref="Id"/> (maybe in legacy systems), grab a copy of this class, and re implement them accordingly.
     /// Don't try to use generics to the <see cref="Id"/> in order to avoid turning your entity base class in a <see href="https://wiki.c2.com/?GodClass">God Class</see>.
     /// </remarks>
-    public abstract class Entity : Notifiable, IDomainNotificationCollection
+    public abstract class Entity
     {
         /// <summary>
         /// Gets or sets the identifier.

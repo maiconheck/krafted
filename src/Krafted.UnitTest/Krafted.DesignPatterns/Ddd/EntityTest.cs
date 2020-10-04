@@ -1,3 +1,4 @@
+using Krafted.DesignPatterns.Notifications;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
@@ -59,8 +60,8 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
         public void NewEntity_Valid_True()
         {
             var entity = new EntityStub(20, "John", "john@company.com");
-            Assert.True(entity.Valid);
-            Assert.False(entity.Invalid);
+            Assert.True(entity.Valid());
+            Assert.False(entity.Invalid());
             Assert.Empty(entity.Notifications);
         }
 
@@ -76,17 +77,25 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
             user.Lock();
             Assert.NotEmpty(user.Notifications);
             Assert.Equal(1, user.Notifications.Count);
+            Assert.False(user.Valid());
+            Assert.True(user.Invalid());
         }
 
         [Fact]
         public void EditUser_InvalidData_NotificationsAdded()
         {
             var user = new EntityStub(20, "John", "john@company.com");
+
             Assert.Empty(user.Notifications);
+            Assert.True(user.Valid());
+            Assert.False(user.Invalid());
 
             user.Edit(0, string.Empty);
+
             Assert.NotEmpty(user.Notifications);
             Assert.Equal(2, user.Notifications.Count);
+            Assert.False(user.Valid());
+            Assert.True(user.Invalid());
         }
     }
 }

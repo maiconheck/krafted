@@ -1,10 +1,12 @@
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Krafted.DesignPatterns.Ddd;
+using Krafted.DesignPatterns.Notifications;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
 {
-    public class EntityStub : Entity, IDomainEventCollection //, IDomainNotificationCollection
+    public class EntityStub : Entity, IDomainEventCollection, IDomainNotificationCollection
     {
         private bool _locked;
 
@@ -14,13 +16,18 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
             Name = name;
             Email = email;
 
-            var valid = Validate(this, new EntityValidator());
+            this.Validate(_notifications, new EntityValidator());
 
-            if (valid)
+            if (this.Valid())
             {
                 _domainEvents.PublishEvent(new UserRegisteredEvent(name, email));
             }
         }
+
+        [NotMapped]
+        protected readonly List<Notification> _notifications = new List<Notification>();
+
+        public IReadOnlyCollection<Notification> Notifications => _notifications;
 
         [NotMapped]
         private readonly ConcurrentQueue<IDomainEvent> _domainEvents = new ConcurrentQueue<IDomainEvent>();
@@ -47,14 +54,14 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
             Age = age;
             Name = name;
 
-            Validate(this, new EntityValidator());
+            this.Validate(_notifications, new EntityValidator());
         }
 
         public void Lock()
         {
             if (_locked)
             {
-                AddNotification("UserAlreadyLocked");
+                _notifications.AddNotification("UserAlreadyLocked");
             }
             else
             {
