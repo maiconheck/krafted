@@ -13,9 +13,9 @@ echo -e "${YELLOW}Running pre push to dev check...${NC}"
 echo -e "${YELLOW}Trying to build tests project...${NC}"
 
 # clean / restore / build the project
-dotnet clean "./src/Krafted.sln" --output artifacts
-dotnet restore "./src/Krafted.sln"
-dotnet build "./src/Krafted.sln" --configuration Debug --no-restore -warnaserror
+dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
+dotnet restore "./src/Krafted/Krafted.sln"
+dotnet build "./src/Krafted/Krafted.sln" --configuration Debug --no-restore -warnaserror
 
 rb=$?
 if [[ $rb != 0 ]] ; then
@@ -31,7 +31,7 @@ echo -e "${YELLOW}Running unit tests...${NC}"
 echo ""
 
 # run the unit tests
-dotnet test "./src/Krafted.sln"
+dotnet test "./src/Krafted/Krafted.sln"
 
 # $? is a shell variable which stores the return code from what we just ran
 rc=$?
