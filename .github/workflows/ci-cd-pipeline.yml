@@ -64,7 +64,7 @@ jobs:
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push artifacts\*.nupkg --skip-duplicate
+      run: dotnet nuget push "artifacts\*.nupkg" --skip-duplicate
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
