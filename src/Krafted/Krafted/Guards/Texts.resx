@@ -159,4 +159,7 @@
   <data name="ParameterCannotBeTrue" xml:space="preserve">
     <value>Parameter cannot be true.</value>
   </data>
+  <data name="ValueNotExistsIn" xml:space="preserve">
+    <value>{0} not exists in the {1}.</value>
+  </data>
 </root>

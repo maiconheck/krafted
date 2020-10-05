@@ -185,5 +185,14 @@ namespace Krafted.Guards {
                 return ResourceManager.GetString("ParameterCannotBeTrue", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} not exists in the {1}..
+        /// </summary>
+        internal static string ValueNotExistsIn {
+            get {
+                return ResourceManager.GetString("ValueNotExistsIn", resourceCulture);
+            }
+        }
     }
 }
