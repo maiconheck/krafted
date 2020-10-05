@@ -55,7 +55,7 @@ jobs:
       run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1
 
     - name: COVERAGE - Calculates and generates a code coverage report
-      run: dotnet reportgenerator "-reports:./coverage-results/coverage.opencover.xml" "-targetdir:./coverage-results/report" "-reporttypes:Html;Badges"
+      run: dotnet reportgenerator "-reports:./src/coverage-results/coverage.opencover.xml" "-targetdir:./src/coverage-results/report" "-reporttypes:Html;Badges"
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
