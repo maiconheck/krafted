@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Globalization;
+using Krafted.DesignPatterns.Ddd;
 using Krafted.Guards;
 
 namespace Krafted.ValueObjects
@@ -6,7 +8,7 @@ namespace Krafted.ValueObjects
     /// <summary>
     /// Represents an money value object.
     /// </summary>
-    public sealed class Money : IValueObject<decimal>
+    public sealed class Money : ValueObject, IValueObject<decimal>
     {
         private decimal _ammount;
 
@@ -113,5 +115,16 @@ namespace Krafted.ValueObjects
         /// </summary>
         /// <returns>A <see cref="string" /> that represents this instance.</returns>
         public override string ToString() => Value.ToString("C", CultureInfo.CurrentCulture);
+
+        /// <summary>
+        /// Gets the equality components to make the comparison, since a value object must not be based on identity.
+        /// </summary>
+        /// <returns>
+        /// The equality components.
+        /// </returns>
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value;
+        }
     }
 }

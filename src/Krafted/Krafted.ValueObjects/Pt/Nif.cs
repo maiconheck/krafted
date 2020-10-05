@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Krafted.DesignPatterns.Ddd;
 using Krafted.Guards;
 
 namespace Krafted.ValueObjects.Pt
@@ -10,7 +12,7 @@ namespace Krafted.ValueObjects.Pt
     /// identifies a taxpayer entity in Portugal, whether it is a company or an individual.
     /// <see href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal">See more</see>.
     /// </remarks>
-    public class Nif : IValueObject<string>
+    public class Nif : ValueObject, IValueObject<string>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Nif"/> class.
@@ -56,5 +58,16 @@ namespace Krafted.ValueObjects.Pt
         /// </summary>
         /// <returns>A <see cref="string" /> that represents this instance.</returns>
         public override string ToString() => Value;
+
+        /// <summary>
+        /// Gets the equality components to make the comparison, since a value object must not be based on identity.
+        /// </summary>
+        /// <returns>
+        /// The equality components.
+        /// </returns>
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value;
+        }
     }
 }

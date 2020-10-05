@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />
     <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 
