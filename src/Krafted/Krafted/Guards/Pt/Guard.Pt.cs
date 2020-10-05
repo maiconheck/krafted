@@ -1,5 +1,4 @@
 using System;
-using Krafted.Guards.Pt;
 
 namespace Krafted.Guards
 {
@@ -24,7 +23,7 @@ namespace Krafted.Guards
         {
             Guard.Against.NullOrWhiteSpace(nif, nameof(nif));
 
-            if (!Validator.ValidateNif(nif))
+            if (!Pt.Validator.ValidateNif(nif))
                 throw new FormatException(Texts.InvalidNif.Format(nif));
 
             return this;

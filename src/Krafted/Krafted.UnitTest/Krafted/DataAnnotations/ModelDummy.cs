@@ -48,4 +48,13 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
         [Nif(ErrorMessage = "The nif should be valid.")]
         public string MyProperty2 { get; set; }
     }
+
+    public class EmailModelDummy
+    {
+        [EmailAddressRegex]
+        public string MyProperty1 { get; set; }
+
+        [EmailAddressRegex(ErrorMessage = "The e-mail should be valid.")]
+        public string MyProperty2 { get; set; }
+    }
 }
