@@ -25,7 +25,7 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
         }
 
         [NotMapped]
-        protected readonly List<Notification> _notifications = new List<Notification>();
+        private readonly List<Notification> _notifications = new List<Notification>();
 
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 

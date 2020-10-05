@@ -56,35 +56,25 @@ namespace Krafted.DesignPatterns.Notifications
         /// Adds a notification message.
         /// </summary>
         /// <param name="notifications">The notifications.</param>
-        /// <param name="validationResult">The validationResult.</param>
-        internal static void AddNotifications(this List<Notification> notifications, ValidationResult validationResult)
-        {
-            foreach (var error in validationResult.Errors)
-            {
-                notifications.Add(new Notification(error.ErrorCode, error.ErrorMessage, false));
-            }
-        }
-
-        /// <summary>
-        /// Adds a notification message.
-        /// </summary>
-        /// <param name="notifications">The notifications.</param>
         /// <param name="localizedMessage">
         ///   The localized resource name that contains the message of the resource that was created.
         ///   If the localized message was not found, the value passed will be used as fall-back.
         /// </param>
-        public static void AddNotification(this List<Notification> notifications, string localizedMessage)
-            => notifications.Add(new Notification(localizedMessage, localizedMessage, true));
+        public static void AddNotification(this IList<Notification> notifications, string localizedMessage)
+        {
+            Guard.Against.NullOrWhiteSpace(localizedMessage, nameof(localizedMessage));
+            notifications.Add(new Notification(localizedMessage, localizedMessage, true));
+        }
 
         /// <summary>
-        /// Validates the specified model.
+        /// Validates the specified model using an <see cref="AbstractValidator{T}"/> of FluentValidation.
         /// </summary>
         /// <typeparam name="T">The type of the model.</typeparam>
         /// <param name="model">The model.</param>
         /// <param name="notifications">The notifications.</param>
         /// <param name="validator">The validator.</param>
         /// <returns><c>true</c> if valid; otherwise, <c>false</c>.</returns>
-        public static bool Validate<T>(this T model, List<Notification> notifications, AbstractValidator<T> validator)
+        public static bool Validate<T>(this T model, IList<Notification> notifications, AbstractValidator<T> validator)
             where T : class, IDomainNotificationCollection
         {
             Guard.Against
@@ -95,6 +85,23 @@ namespace Krafted.DesignPatterns.Notifications
             AddNotifications(notifications, validationResult);
 
             return model.Valid();
+        }
+
+        /// <summary>
+        /// Adds a notification message.
+        /// </summary>
+        /// <param name="notifications">The notifications.</param>
+        /// <param name="validationResult">The validationResult.</param>
+        internal static void AddNotifications(this IList<Notification> notifications, ValidationResult validationResult)
+        {
+            Guard.Against
+                .Null(notifications, nameof(notifications))
+                .Null(validationResult, nameof(validationResult));
+
+            foreach (var error in validationResult.Errors)
+            {
+                notifications.Add(new Notification(error.ErrorCode, error.ErrorMessage, false));
+            }
         }
     }
 }

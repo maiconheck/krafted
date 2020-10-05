@@ -4,6 +4,7 @@
 // Source: https://enterprisecraftsmanship.com/posts/entity-base-class/
 // Retrieved in October 2020.
 
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using Krafted.DesignPatterns.Notifications;
 
@@ -21,6 +22,13 @@ namespace Krafted.DesignPatterns.Ddd
     /// </remarks>
     public abstract class Entity
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Entity"/> class.
+        /// </summary>
+        protected Entity()
+        {
+        }
+
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
@@ -41,13 +49,6 @@ namespace Krafted.DesignPatterns.Ddd
         /// </value>
         [NotMapped]
         protected virtual object Actual => this;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Entity"/> class.
-        /// </summary>
-        protected Entity()
-        {
-        }
 
         /// <summary>
         /// Implements the operator ==.
@@ -111,6 +112,6 @@ namespace Krafted.DesignPatterns.Ddd
         /// <returns>
         /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
         /// </returns>
-        public override int GetHashCode() => (Actual.GetType().ToString() + Id).GetHashCode();
+        public override int GetHashCode() => (Actual.GetType().ToString() + Id).GetHashCode(StringComparison.Ordinal);
     }
 }

@@ -6,4 +6,7 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "Required for this class", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionModelDummy")]
+[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "Required for this class", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.DesignPatterns.Ddd.UserRegisteredEvent")]
+[assembly: SuppressMessage("StyleCop.CSharp.OrderingRules", "SA1201:Elements should appear in the correct order", Justification = "Improves readability by being close to the backfield", Scope = "member", Target = "~F:Krafted.UnitTest.Krafted.DesignPatterns.Ddd.EntityStub._notifications")]
 [assembly: SuppressMessage("StyleCop.CSharp.OrderingRules", "SA1201:Elements should appear in the correct order", Justification = "Improves readability by being close to the backfield", Scope = "member", Target = "~F:Krafted.UnitTest.Krafted.DesignPatterns.Ddd.EntityStub._domainEvents")]
+[assembly: SuppressMessage("StyleCop.CSharp.OrderingRules", "SA1201:Elements should appear in the correct order", Justification = "Improves readability by being close to the backfield", Scope = "member", Target = "~F:Krafted.UnitTest.Krafted.DesignPatterns.Notifications.ModelStub._notifications")]

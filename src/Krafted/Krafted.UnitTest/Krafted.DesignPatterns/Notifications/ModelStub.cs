@@ -14,7 +14,7 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Notifications
             this.Validate(_notifications, new ModelStubValidator());
         }
 
-        protected readonly List<Notification> _notifications = new List<Notification>();
+        private readonly List<Notification> _notifications = new List<Notification>();
 
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 
