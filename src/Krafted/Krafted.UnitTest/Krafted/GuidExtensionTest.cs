@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+
 namespace Krafted.UnitTest.Krafted
 {
     public class GuidExtensionTest
