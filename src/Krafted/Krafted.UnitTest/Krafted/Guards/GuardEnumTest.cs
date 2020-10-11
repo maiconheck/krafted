@@ -21,7 +21,8 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData(4)]
         public void GuardAgainstNotExists_NotExists_ThrowsException(int value)
         {
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.NotExists<OrderStatus>(value));
+            var orderStatus = (OrderStatus)value;
+            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.NotExists(orderStatus));
             Assert.Equal($"{value} not exists in the OrderStatus.", ex.Message);
         }
 
@@ -31,7 +32,8 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData(3)]
         public void GuardAgainstNotExists_Exists_DoesNotThrows(int value)
         {
-            Assert.DoesNotThrows(() => Guard.Against.NotExists<OrderStatus>(value));
+            var orderStatus = (OrderStatus)value;
+            Assert.DoesNotThrows(() => Guard.Against.NotExists(orderStatus));
         }
     }
 }

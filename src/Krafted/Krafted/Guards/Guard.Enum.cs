@@ -17,7 +17,7 @@ namespace Krafted.Guards
         /// <param name="value">The value to check.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard NotExists<TEnum>(int value) where TEnum : Enum
+        public Guard NotExists<TEnum>(TEnum value) where TEnum : Enum
         {
             var type = typeof(TEnum);
 

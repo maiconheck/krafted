@@ -16,17 +16,33 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
             Assert.Equal(0, money1.Value);
             Assert.Equal(0, money1.IntegralPart);
 
+            var money1_ = Money.NewMoney(0);
+            Assert.Equal(0, money1_.Value);
+            Assert.Equal(0, money1_.IntegralPart);
+
             var money2 = new Money(0m);
             Assert.Equal(0m, money2.Value);
             Assert.Equal(0m, money2.IntegralPart);
+
+            var money2_ = Money.NewMoney(0m);
+            Assert.Equal(0m, money2_.Value);
+            Assert.Equal(0m, money2_.IntegralPart);
 
             var money3 = new Money(12.45m);
             Assert.Equal(12.45m, money3.Value);
             Assert.Equal(12m, money3.IntegralPart);
 
+            var money3_ = Money.NewMoney(12.45m);
+            Assert.Equal(12.45m, money3_.Value);
+            Assert.Equal(12m, money3_.IntegralPart);
+
             var money4 = new Money(0.45m);
             Assert.Equal(0.45m, money4.Value);
             Assert.Equal(0m, money4.IntegralPart);
+
+            var money4_ = Money.NewMoney(0.45m);
+            Assert.Equal(0.45m, money4_.Value);
+            Assert.Equal(0m, money4_.IntegralPart);
         }
 
         [Theory]

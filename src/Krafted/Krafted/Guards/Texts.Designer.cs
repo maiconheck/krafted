@@ -187,6 +187,42 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} must be at least {1} characters..
+        /// </summary>
+        internal static string ParameterMustBeAtLeastLength {
+            get {
+                return ResourceManager.GetString("ParameterMustBeAtLeastLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} must be at most {1} characters..
+        /// </summary>
+        internal static string ParameterMustBeAtMostLength {
+            get {
+                return ResourceManager.GetString("ParameterMustBeAtMostLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} must be length {1}..
+        /// </summary>
+        internal static string ParameterMustBeExactLength {
+            get {
+                return ResourceManager.GetString("ParameterMustBeExactLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} must be at least {1} character, and at most {2} characters..
+        /// </summary>
+        internal static string ParameterMustBeInsideRangeLength {
+            get {
+                return ResourceManager.GetString("ParameterMustBeInsideRangeLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} not exists in the {1}..
         /// </summary>
         internal static string ValueNotExistsIn {

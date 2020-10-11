@@ -54,6 +54,13 @@ namespace Krafted.ValueObjects.Pt
         public static explicit operator Nif(string value) => new Nif(value);
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Nif"/> class.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>A new instance of the <see cref="Nif"/> class.</returns>
+        public static Nif NewNif(string value) => new Nif(value);
+
+        /// <summary>
         /// Returns a <see cref="string" /> that represents this instance.
         /// </summary>
         /// <returns>A <see cref="string" /> that represents this instance.</returns>

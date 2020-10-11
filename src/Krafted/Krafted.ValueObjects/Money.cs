@@ -111,6 +111,13 @@ namespace Krafted.ValueObjects
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Money"/> class.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>A new instance of the <see cref="Money"/> class.</returns>
+        public static Money NewMoney(decimal value) => new Money(value);
+
+        /// <summary>
         /// Returns a <see cref="string" /> that represents this instance.
         /// </summary>
         /// <returns>A <see cref="string" /> that represents this instance.</returns>

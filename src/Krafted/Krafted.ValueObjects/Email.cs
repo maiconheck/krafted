@@ -38,6 +38,13 @@ namespace Krafted.ValueObjects
         public static explicit operator Email(string value) => new Email(value);
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Email"/> class.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>A new instance of the <see cref="Email"/> class.</returns>
+        public static Email NewEmail(string value) => new Email(value);
+
+        /// <summary>
         /// Returns a <see cref="string" /> that represents this instance.
         /// </summary>
         /// <returns>A <see cref="string" /> that represents this instance.</returns>

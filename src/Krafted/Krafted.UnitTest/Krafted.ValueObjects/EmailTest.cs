@@ -12,14 +12,16 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         public void NewEmail_Value_ProperInstantiated()
         {
             var email1 = new Email("contact@maiconheck.com");
-
             Assert.Equal("contact@maiconheck.com", email1.Value);
             Assert.Equal("contact@maiconheck.com", email1.ToString());
 
             var email2 = (Email)"contact@maiconheck.com";
-
             Assert.Equal("contact@maiconheck.com", email2.Value);
             Assert.Equal("contact@maiconheck.com", email2.ToString());
+
+            var email3 = Email.NewEmail("contact@maiconheck.com");
+            Assert.Equal("contact@maiconheck.com", email3.Value);
+            Assert.Equal("contact@maiconheck.com", email3.ToString());
         }
 
         [Theory]

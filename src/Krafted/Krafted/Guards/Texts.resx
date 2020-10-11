@@ -159,6 +159,18 @@
   <data name="ParameterCannotBeTrue" xml:space="preserve">
     <value>Parameter cannot be true.</value>
   </data>
+  <data name="ParameterMustBeAtLeastLength" xml:space="preserve">
+    <value>{0} must be at least {1} characters.</value>
+  </data>
+  <data name="ParameterMustBeAtMostLength" xml:space="preserve">
+    <value>{0} must be at most {1} characters.</value>
+  </data>
+  <data name="ParameterMustBeExactLength" xml:space="preserve">
+    <value>{0} must be length {1}.</value>
+  </data>
+  <data name="ParameterMustBeInsideRangeLength" xml:space="preserve">
+    <value>{0} must be at least {1} character, and at most {2} characters.</value>
+  </data>
   <data name="ValueNotExistsIn" xml:space="preserve">
     <value>{0} not exists in the {1}.</value>
   </data>
