@@ -12,3 +12,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1609:Property documentation should have value", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1623:Property summary documentation should match accessors", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("Usage", "RCS1221:Use pattern matching instead of combination of 'as' operator and null check.", Justification = "Not Applicable", Scope = "member", Target = "~M:Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)~System.Boolean")]
+[assembly: SuppressMessage("Usage", "RCS1165:Unconstrained type parameter checked for null.", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Functional.Maybe`1.HasValue")]
+[assembly: SuppressMessage("Design", "CA1065:Do not raise exceptions in unexpected locations", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Functional.Maybe`1.Value")]

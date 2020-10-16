@@ -3,6 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted
 {
+    [Trait(nameof(UnitTest), nameof(Krafted))]
     public class GuidExtensionTest
     {
         [Fact]

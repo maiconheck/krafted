@@ -3,6 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DataAnnotations.Pt
 {
+    [Trait(nameof(UnitTest), nameof(Krafted))]
     public class NifAttributeTest
     {
         [Theory]
