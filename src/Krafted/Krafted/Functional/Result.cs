@@ -42,7 +42,6 @@ namespace Krafted.Functional
         /// Returns a failure operation, that is, <see cref="Operation.Valid"/> is false, with an associated <c>value</c>. See <see cref="Operation"/>.
         /// </summary>
         /// <typeparam name="T">The type of value.</typeparam>
-        /// <param name="value">The value.</param>
         /// <param name="invalidReason">The optional message describing the reason for the invalid operation.</param>
         /// <returns>A failure operation with an associated <c>value</c>.</returns>
         public static Maybe<Operation<T>> Failure<T>(string invalidReason)
