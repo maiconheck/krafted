@@ -6,7 +6,7 @@ namespace Krafted.Functional
     public static class Result
     {
         /// <summary>
-        /// Returns a valid operation, that is, <see cref="Operation.Valid"/> is true. See <see cref="Operation"/>.
+        /// Returns a success operation, that is, <see cref="Operation.Valid"/> is true. See <see cref="Operation"/>.
         /// </summary>
         /// <returns>A valid operation.</returns>
         public static Maybe<Operation> Success()
@@ -16,10 +16,22 @@ namespace Krafted.Functional
         }
 
         /// <summary>
-        /// Returns a invalid operation, that is, <see cref="Operation.Valid"/> is false. See <see cref="Operation"/>.
+        /// Returns a success operation, that is, <see cref="Operation.Valid"/> is true, with an associated <c>value</c>. See <see cref="Operation"/>.
+        /// </summary>
+        /// <typeparam name="T">The type of value.</typeparam>
+        /// <param name="value">The value.</param>
+        /// <returns>A success operation with an associated <c>value</c>.</returns>
+        public static Maybe<Operation<T>> Success<T>(T value)
+        {
+            var operation = new Operation<T>(value, true);
+            return new Maybe<Operation<T>>(operation);
+        }
+
+        /// <summary>
+        /// Returns a failure operation, that is, <see cref="Operation.Valid"/> is false. See <see cref="Operation"/>.
         /// </summary>
         /// <param name="invalidReason">The optional message describing the reason for the invalid operation.</param>
-        /// <returns>A invalid operation.</returns>
+        /// <returns>A failure operation.</returns>
         public static Maybe<Operation> Failure(string invalidReason)
         {
             var operation = new Operation(false, invalidReason);
@@ -27,18 +39,24 @@ namespace Krafted.Functional
         }
 
         /// <summary>
-        /// Returns a valid operation with some value.
+        /// Returns a failure operation, that is, <see cref="Operation.Valid"/> is false, with an associated <c>value</c>. See <see cref="Operation"/>.
         /// </summary>
         /// <typeparam name="T">The type of value.</typeparam>
         /// <param name="value">The value.</param>
-        /// <returns>A valid operation with some value.</returns>
-        public static Maybe<T> Success<T>(T value) => new Maybe<T>(value);
+        /// <param name="invalidReason">The optional message describing the reason for the invalid operation.</param>
+        /// <returns>A failure operation with an associated <c>value</c>.</returns>
+        public static Maybe<Operation<T>> Failure<T>(T value, string invalidReason)
+        {
+            var operation = new Operation<T>(value, false, invalidReason);
+            return new Maybe<Operation<T>>(operation);
+        }
 
         /// <summary>
-        /// Returns a invalid operation with no value.
+        /// Initializes a new instance of the <see cref="Maybe{T}"/> class.
         /// </summary>
         /// <typeparam name="T">The type of value.</typeparam>
-        /// <returns>A invalid operation with no value.</returns>
-        public static Maybe<T> Failure<T>() => new Maybe<T>();
+        /// <param name="value">The value.</param>
+        /// <returns>A new instance of the <see cref="Maybe{T}"/> class.</returns>
+        public static Maybe<T> Maybe<T>(T value) => new Maybe<T>(value);
     }
 }

@@ -32,22 +32,46 @@ namespace Krafted.UnitTest.Krafted.Functional
         }
 
         [Fact]
-        public void Result_SuccessT_OperationValid()
+        public void Result_SuccessT_OperationTValid()
         {
             var result = Result.Success("My value.");
 
+            Assert.True(result.Value.Valid);
+            Assert.False(result.Value.Invalid);
+            Assert.True(result.HasValue);
+            Assert.False(result.HasNoValue);
+            Assert.Equal("My value.", result.Value.OperationValue);
+            Assert.Equal(string.Empty, result.Value.InvalidReason);
+        }
+
+        [Fact]
+        public void Result_FailureT_OperationInvalid()
+        {
+            var result = Result.Failure("My value.");
+
+            Assert.False(result.Value.Valid);
+            Assert.True(result.Value.Invalid);
+            Assert.True(result.HasValue);
+            Assert.False(result.HasNoValue);
+            Assert.Equal("My value.", result.Value.InvalidReason);
+        }
+
+        [Fact]
+        public void Maybe_Value_HasValue()
+        {
+            var result = Result.Maybe("My value.");
             Assert.True(result.HasValue);
             Assert.False(result.HasNoValue);
             Assert.Equal("My value.", result.Value);
         }
 
         [Fact]
-        public void Result_FailureT_OperationInvalid()
+        public void Maybe_NoValue_HasNoValue()
         {
-            var result = Result.Failure<string>();
-
+            var result = Result.Maybe<string>(null);
             Assert.False(result.HasValue);
             Assert.True(result.HasNoValue);
+
             var ex = Assert.Throws<ArgumentNullException>(() => result.Value);
             Assert.Equal("Value cannot be null. (Parameter 'Value')", ex.Message);
         }

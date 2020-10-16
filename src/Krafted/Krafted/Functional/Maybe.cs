@@ -17,13 +17,6 @@ namespace Krafted.Functional
         internal Maybe(T value) => _value = value;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Maybe{T}"/> class.
-        /// </summary>
-        internal Maybe()
-        {
-        }
-
-        /// <summary>
         /// Gets the value.
         /// </summary>
         /// <value>The value.</value>

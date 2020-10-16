@@ -3,14 +3,14 @@ namespace Krafted.Functional
     /// <summary>
     /// Represents an operation that can be <c>Valid</c> or <c>Invalid</c> for some reason.
     /// </summary>
-    public sealed class Operation
+    public class Operation
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Operation"/> class.
         /// </summary>
         /// <param name="valid"><c>true</c> if valid; otherwise, <c>false</c>.</param>
         /// <param name="invalidReason">The optional message describing the reason for the invalid operation.</param>
-        public Operation(bool valid, string invalidReason = "")
+        internal Operation(bool valid, string invalidReason = "")
         {
             Valid = valid;
             InvalidReason = invalidReason;
