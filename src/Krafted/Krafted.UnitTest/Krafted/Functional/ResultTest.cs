@@ -47,13 +47,30 @@ namespace Krafted.UnitTest.Krafted.Functional
         [Fact]
         public void Result_FailureT_OperationInvalid()
         {
-            var result = Result.Failure("My value.");
+            var result1 = Result.Failure<string>("Fail for some reason.");
 
-            Assert.False(result.Value.Valid);
-            Assert.True(result.Value.Invalid);
-            Assert.True(result.HasValue);
-            Assert.False(result.HasNoValue);
-            Assert.Equal("My value.", result.Value.InvalidReason);
+            Assert.False(result1.Value.Valid);
+            Assert.True(result1.Value.Invalid);
+            Assert.True(result1.HasValue);
+            Assert.False(result1.HasNoValue);
+            Assert.Null(result1.Value.OperationValue);
+            Assert.Equal("Fail for some reason.", result1.Value.InvalidReason);
+        }
+
+        [Fact]
+        public void Result_FailureT_OperationValueDefaultType()
+        {
+            var result2 = Result.Failure<Guid>("Fail for some reason.");
+            Assert.Equal(Guid.Empty, result2.Value.OperationValue);
+            Assert.Equal("Fail for some reason.", result2.Value.InvalidReason);
+
+            var result3 = Result.Failure<int>("Fail for some reason.");
+            Assert.Equal(0, result3.Value.OperationValue);
+            Assert.Equal("Fail for some reason.", result3.Value.InvalidReason);
+
+            var result4 = Result.Failure<bool>("Fail for some reason.");
+            Assert.False(result4.Value.OperationValue);
+            Assert.Equal("Fail for some reason.", result4.Value.InvalidReason);
         }
 
         [Fact]

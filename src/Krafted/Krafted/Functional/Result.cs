@@ -45,9 +45,9 @@ namespace Krafted.Functional
         /// <param name="value">The value.</param>
         /// <param name="invalidReason">The optional message describing the reason for the invalid operation.</param>
         /// <returns>A failure operation with an associated <c>value</c>.</returns>
-        public static Maybe<Operation<T>> Failure<T>(T value, string invalidReason)
+        public static Maybe<Operation<T>> Failure<T>(string invalidReason)
         {
-            var operation = new Operation<T>(value, false, invalidReason);
+            var operation = new Operation<T>(default(T), false, invalidReason);
             return new Maybe<Operation<T>>(operation);
         }
 
