@@ -3,7 +3,7 @@ using System;
 namespace Krafted.Functional
 {
     /// <summary>
-    /// Represents a maybe monad.
+    /// Represents a maybe monad of type <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     public sealed class Maybe<T>
@@ -56,7 +56,7 @@ namespace Krafted.Functional
         public bool HasNoValue => !HasValue;
 
         /// <summary>
-        /// Performs an implicit conversion from <see cref="T"/> to <see cref="Maybe{T}"/>.
+        /// Performs an implicit conversion from <typeparamref name="T"/> to <see cref="Maybe{T}"/>.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>
