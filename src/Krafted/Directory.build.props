@@ -1,8 +1,8 @@
 <Project>
   <PropertyGroup>
     <Authors>Maicon Heck</Authors>
-    <Version>4.1.0</Version>
-    <PackageVersion>4.1.0</PackageVersion>
+    <Version>4.1.1</Version>
+    <PackageVersion>4.1.1</PackageVersion>
     <Product>Krafted</Product>
     <ProductName>Krafted</ProductName>
     <PackageId>$(MSBuildProjectName)</PackageId>
