@@ -13,8 +13,8 @@ namespace Krafted.EntityFrameworkCore
     /// <see href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.design.idesigntimedbcontextfactory-1?view=efcore-3.1">See IDesignTimeDbContextFactory{TContext} Interface</see>.
     /// </summary>
     /// <seealso cref="IDesignTimeDbContextFactory{TContext}" />
-    /// <typeparam name="TDbContext">The type of the DbContext.</typeparam>
-    public abstract class DesignTimeDbContextFactory<TDbContext> : IDesignTimeDbContextFactory<TDbContext> where TDbContext : DbContext
+    /// <typeparam name="TContext">The type of the DbContext.</typeparam>
+    public abstract class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : DbContext
     {
         private readonly string _connectionStringName;
 
@@ -34,11 +34,11 @@ namespace Krafted.EntityFrameworkCore
         /// <value>
         /// The options to be used by a Microsoft.EntityFrameworkCore.DbContext.
         /// </value>
-        protected DbContextOptions Options
+        protected DbContextOptions<TContext> Options
         {
             get
             {
-                var optionsBuilder = new DbContextOptionsBuilder<TDbContext>();
+                var optionsBuilder = new DbContextOptionsBuilder<TContext>();
                 optionsBuilder.UseSqlServer(GetConnectionString());
 
                 return optionsBuilder.Options;
@@ -52,7 +52,7 @@ namespace Krafted.EntityFrameworkCore
         /// <returns>
         /// An instance of <see name="TContext" />.
         /// </returns>
-        public abstract TDbContext CreateDbContext(string[] args);
+        public abstract TContext CreateDbContext(string[] args);
 
         private string GetConnectionString()
         {
