@@ -57,5 +57,23 @@ namespace Krafted.UnitTest.Krafted
             string input = "Replace {0} {1} in this {2}".Format("some", "words", "phrase");
             Assert.Equal("Replace some words in this phrase", input);
         }
+
+        [Fact]
+        public void EncodeToBase64String_Input_Base64StringEncoded()
+        {
+            string plainString = "A clean, simple and extensible, carefully crafted set of libraries for general purpose.";
+            string base64String = plainString.EncodeToBase64String();
+
+            Assert.Equal("QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu", base64String);
+        }
+
+        [Fact]
+        public void DecodeFromBase64String_Input_Base64StringDecoded()
+        {
+            string base64String = "QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu";
+            string plainString = base64String.DecodeFromBase64String();
+
+            Assert.Equal("A clean, simple and extensible, carefully crafted set of libraries for general purpose.", plainString);
+        }
     }
 }
