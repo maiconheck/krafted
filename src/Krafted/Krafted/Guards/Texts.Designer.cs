@@ -223,6 +223,24 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Predicate cannot be false..
+        /// </summary>
+        internal static string PredicateCannotBeFalse {
+            get {
+                return ResourceManager.GetString("PredicateCannotBeFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Predicate cannot be true..
+        /// </summary>
+        internal static string PredicateCannotBeTrue {
+            get {
+                return ResourceManager.GetString("PredicateCannotBeTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} not exists in the {1}..
         /// </summary>
         internal static string ValueNotExistsIn {

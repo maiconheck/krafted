@@ -171,6 +171,12 @@
   <data name="ParameterMustBeInsideRangeLength" xml:space="preserve">
     <value>{0} must be at least {1} character, and at most {2} characters.</value>
   </data>
+  <data name="PredicateCannotBeFalse" xml:space="preserve">
+    <value>Predicate cannot be false.</value>
+  </data>
+  <data name="PredicateCannotBeTrue" xml:space="preserve">
+    <value>Predicate cannot be true.</value>
+  </data>
   <data name="ValueNotExistsIn" xml:space="preserve">
     <value>{0} not exists in the {1}.</value>
   </data>
