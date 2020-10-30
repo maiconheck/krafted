@@ -57,8 +57,14 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         [InlineData("505924437")]
         public void NewNif_InvalidNif_ThrowsException(string invalidNif)
         {
-            var ex = Assert.Throws<FormatException>(() => new Nif(invalidNif));
-            Assert.Equal($"Invalid NIF: {invalidNif}.", ex.Message);
+            var ex1 = Assert.Throws<FormatException>(() => new Nif(invalidNif));
+            Assert.Equal($"Invalid NIF: {invalidNif}.", ex1.Message);
+
+            var ex2 = Assert.Throws<FormatException>(() => (Nif)invalidNif);
+            Assert.Equal($"Invalid NIF: {invalidNif}.", ex2.Message);
+
+            var ex3 = Assert.Throws<FormatException>(() => Nif.NewNif(invalidNif));
+            Assert.Equal($"Invalid NIF: {invalidNif}.", ex3.Message);
         }
 
         [Theory]
@@ -95,6 +101,21 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         public void NewNif_ValidNif_DoesNotThrowsException(string validNif)
         {
             Assert.DoesNotThrows(() => new Nif(validNif));
+            Assert.DoesNotThrows(() => (Nif)validNif);
+            Assert.DoesNotThrows(() => Nif.NewNif(validNif));
+        }
+
+        [Theory]
+        [InlineData("502155051")]
+        [InlineData("501813713")]
+        [InlineData("508559600")]
+        [InlineData("507408977")]
+        [InlineData("503623792")]
+        public void NewNif_ToString_StringNif(string nif)
+        {
+            Assert.Equal(nif, new Nif(nif).ToString());
+            Assert.Equal(nif, ((Nif)nif).ToString());
+            Assert.Equal(nif, Nif.NewNif(nif).ToString());
         }
     }
 }

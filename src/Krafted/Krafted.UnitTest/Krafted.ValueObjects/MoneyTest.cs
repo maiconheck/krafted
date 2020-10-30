@@ -61,6 +61,8 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         public void NewMoney_ValueZeroOrGreater_DoesNotThrowsException(decimal value)
         {
             Assert.DoesNotThrows(() => new Money(value));
+            Assert.DoesNotThrows(() => (Money)value);
+            Assert.DoesNotThrows(() => Money.NewMoney(value));
         }
 
         [Theory]
@@ -75,6 +77,8 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         public void NewMoney_LessThanZero_ThrowsException(decimal ammount)
         {
             Assert.Throws<ArgumentException>(() => new Money(ammount));
+            Assert.Throws<ArgumentException>(() => (Money)ammount);
+            Assert.Throws<ArgumentException>(() => Money.NewMoney(ammount));
         }
 
         [Theory]
@@ -128,15 +132,35 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         }
 
         [Fact]
-        public void Money_ToString_ShouldByCorrect()
+        public void Money_ToString_StringMoney()
         {
-            if (CultureInfo.CurrentCulture.Name.Equals("pt-BR", StringComparison.Ordinal))
-            {
-                Assert.Equal("R$0,00", new Money(0M).ToString());
-                Assert.Equal("R$0,99", new Money(0.99M).ToString());
-                Assert.Equal("R$1,00", new Money(1M).ToString());
-                Assert.Equal("R$12,34", new Money(12.34M).ToString());
-            }
+            Assert.Equal("0.00", new Money(0M).ToString());
+            Assert.Equal("0.00", new Money(0.0M).ToString());
+            Assert.Equal("0.00", new Money(0.00M).ToString());
+            Assert.Equal("0.01", new Money(0.01M).ToString());
+            Assert.Equal("0.10", new Money(0.1M).ToString());
+            Assert.Equal("0.10", new Money(0.10M).ToString());
+            Assert.Equal("0.10", new Money(00.1M).ToString());
+            Assert.Equal("1.00", new Money(1M).ToString());
+            Assert.Equal("1.10", new Money(1.1M).ToString());
+            Assert.Equal("1.01", new Money(1.01M).ToString());
+            Assert.Equal("0.99", new Money(0.99M).ToString());
+            Assert.Equal("1.00", new Money(1M).ToString());
+            Assert.Equal("12.34", new Money(12.34M).ToString());
+
+            Assert.Equal("0.00", new Money(0M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.00", new Money(0.0M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.00", new Money(0.00M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.01", new Money(0.01M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.10", new Money(0.1M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.10", new Money(0.10M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.10", new Money(00.1M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("1.00", new Money(1M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("1.10", new Money(1.1M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("1.01", new Money(1.01M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("0.99", new Money(0.99M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("1.00", new Money(1M).ToString(CultureInfo.InvariantCulture));
+            Assert.Equal("12.34", new Money(12.34M).ToString(CultureInfo.InvariantCulture));
         }
     }
 }

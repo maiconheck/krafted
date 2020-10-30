@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Krafted.DesignPatterns.Ddd;
 using Krafted.Guards;
 
@@ -12,7 +11,7 @@ namespace Krafted.ValueObjects.Pt
     /// identifies a taxpayer entity in Portugal, whether it is a company or an individual.
     /// <see href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal">See more</see>.
     /// </remarks>
-    public class Nif : ValueObject, IValueObject<string>
+    public sealed class Nif : ValueObject<string>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Nif"/> class.
@@ -30,23 +29,6 @@ namespace Krafted.ValueObjects.Pt
         }
 
         /// <summary>
-        /// Gets the value.
-        /// </summary>
-        /// <value>The value.</value>
-        public string Value { get; }
-
-        /// <summary>
-        /// Performs an implicit conversion from <see cref="Nif"/> to <see cref="string"/>.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <returns>The result of the conversion.</returns>
-        public static implicit operator string(Nif value)
-        {
-            Guard.Against.InvalidNif(value);
-            return value.Value;
-        }
-
-        /// <summary>
         /// Performs an explicit conversion from <see cref="string"/> to <see cref="Nif"/>.
         /// </summary>
         /// <param name="value">The value.</param>
@@ -59,22 +41,5 @@ namespace Krafted.ValueObjects.Pt
         /// <param name="value">The value.</param>
         /// <returns>A new instance of the <see cref="Nif"/> class.</returns>
         public static Nif NewNif(string value) => new Nif(value);
-
-        /// <summary>
-        /// Returns a <see cref="string" /> that represents this instance.
-        /// </summary>
-        /// <returns>A <see cref="string" /> that represents this instance.</returns>
-        public override string ToString() => Value;
-
-        /// <summary>
-        /// Gets the equality components to make the comparison, since a value object must not be based on identity.
-        /// </summary>
-        /// <returns>
-        /// The equality components.
-        /// </returns>
-        protected override IEnumerable<object> GetEqualityComponents()
-        {
-            yield return Value;
-        }
     }
 }

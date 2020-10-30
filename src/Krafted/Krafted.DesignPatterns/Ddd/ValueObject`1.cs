@@ -1,13 +1,22 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Krafted.DesignPatterns.Ddd
 {
     /// <summary>
-    /// Represents an Value Object [Evans] base class, providing common operations to value objects.
+    /// Represents an Value Object [Evans] base class for a single value, providing common operations to value objects.
+    /// See <see cref="Value"/>.
     /// </summary>
-    public abstract class ValueObject
+    /// <typeparam name="T">The type of the value.</typeparam>
+    public abstract class ValueObject<T> where T : IComparable, IComparable<T>, IConvertible, IEquatable<T>
     {
+        /// <summary>
+        /// Gets the value.
+        /// </summary>
+        /// <value>The value.</value>
+        public virtual T Value { get; protected set; }
+
         /// <summary>
         /// Implements the operator ==.
         /// </summary>
@@ -16,7 +25,7 @@ namespace Krafted.DesignPatterns.Ddd
         /// <returns>
         /// The result of the operator.
         /// </returns>
-        public static bool operator ==(ValueObject a, ValueObject b)
+        public static bool operator ==(ValueObject<T> a, ValueObject<T> b)
         {
             if (a is null && b is null)
                 return true;
@@ -35,7 +44,7 @@ namespace Krafted.DesignPatterns.Ddd
         /// <returns>
         /// The result of the operator.
         /// </returns>
-        public static bool operator !=(ValueObject a, ValueObject b)
+        public static bool operator !=(ValueObject<T> a, ValueObject<T> b)
             => !(a == b);
 
         /// <summary>
@@ -52,7 +61,7 @@ namespace Krafted.DesignPatterns.Ddd
                 return false;
             }
 
-            var other = (ValueObject)obj;
+            var other = (ValueObject<T>)obj;
 
             return GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
         }
@@ -61,7 +70,7 @@ namespace Krafted.DesignPatterns.Ddd
         /// Creates a shallow copy of the current <see cref="ValueObject"/>.
         /// </summary>
         /// <returns>A shallow copy of the current <see cref="ValueObject"/>.</returns>
-        public ValueObject GetCopy() => MemberwiseClone() as ValueObject;
+        public ValueObject<T> GetCopy() => MemberwiseClone() as ValueObject<T>;
 
         /// <summary>
         /// Returns a hash code for this instance.
@@ -77,28 +86,27 @@ namespace Krafted.DesignPatterns.Ddd
         }
 
         /// <summary>
-        /// Gets the equality components.
+        /// Returns the string representation of <see cref="Value"/>.
         /// </summary>
-        /// <remarks>
-        /// This method must be implemented by the value objects that inherit from this class, to make
-        /// the comparison between all the attributes (since a value object must not be based on identity).
-        ///   <example>
-        ///     <code>
-        ///     protected override IEnumerable{object} GetEqualityComponents()
-        ///     {
-        ///         // Using a yield return statement to return each element one at a time
-        ///         yield return Street;
-        ///         yield return City;
-        ///         yield return State;
-        ///         yield return Country;
-        ///         yield return ZipCode;
-        ///     }
-        ///     </code>
-        ///   </example>
-        /// </remarks>
+        /// <returns>The the string representation of <see cref="Value"/>.</returns>
+        public override string ToString() => Value.ToString();
+
+        /// <summary>
+        /// Returns the string representation of <see cref="Value"/> as specified by <see cref="IFormatProvider"/> provider.
+        /// </summary>
+        /// <param name="provider">An object that supplies culture-specific formatting information.</param>
+        /// <returns>The the string representation of <see cref="Value"/> as specified by <see cref="IFormatProvider"/> provider.</returns>
+        public virtual string ToString(IFormatProvider provider) => Value.ToString(provider);
+
+        /// <summary>
+        /// Gets the equality components to make the comparison, since a value object must not be based on identity.
+        /// </summary>
         /// <returns>
         /// The equality components.
         /// </returns>
-        protected abstract IEnumerable<object> GetEqualityComponents();
+        protected IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Value;
+        }
     }
 }

@@ -11,8 +11,18 @@ namespace Krafted.UnitTest.Xunit
         /// <summary>
         /// Verifies that no exception was thrown.
         /// </summary>
-        /// <param name="testCode">The test code.</param>
+        /// <param name="testCode">A delegate to the code to be tested.</param>
         public static void DoesNotThrows(Action testCode)
+        {
+            var ex = Record.Exception(testCode);
+            Null(ex);
+        }
+
+        /// <summary>
+        /// Verifies that no exception was thrown.
+        /// </summary>
+        /// <param name="testCode">A delegate to the code to be tested.</param>
+        public static void DoesNotThrows(Func<object> testCode)
         {
             var ex = Record.Exception(testCode);
             Null(ex);

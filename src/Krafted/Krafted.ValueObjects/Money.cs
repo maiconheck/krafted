@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-using System.Globalization;
+using System;
 using Krafted.DesignPatterns.Ddd;
 using Krafted.Guards;
 
@@ -8,7 +7,7 @@ namespace Krafted.ValueObjects
     /// <summary>
     /// Represents an money value object.
     /// </summary>
-    public sealed class Money : ValueObject, IValueObject<decimal>
+    public sealed class Money : ValueObject<decimal>
     {
         private decimal _ammount;
 
@@ -27,15 +26,12 @@ namespace Krafted.ValueObjects
         {
         }
 
-        /// <summary>
-        /// Gets the value.
-        /// </summary>
-        /// <value>The value.</value>
-        public decimal Value
+        /// <inheritdoc/>>
+        public override decimal Value
         {
             get => _ammount;
 
-            private set
+            protected set
             {
                 if (_ammount != value)
                 {
@@ -118,20 +114,104 @@ namespace Krafted.ValueObjects
         public static Money NewMoney(decimal value) => new Money(value);
 
         /// <summary>
-        /// Returns a <see cref="string" /> that represents this instance.
+        /// Returns the string representation of <see cref="Value"/> rounding to 2 decimal places.
         /// </summary>
-        /// <returns>A <see cref="string" /> that represents this instance.</returns>
-        public override string ToString() => Value.ToString("C", CultureInfo.CurrentCulture);
+        /// <remarks>
+        ///   <example>
+        ///   Examples:
+        ///     <code>
+        ///     decimal d = 0M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.0M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.00M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.01M; d.ToString() -> 0.01
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.1M; d.ToString() -> 0.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.10M; d.ToString() -> 0.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 00.1M; d.ToString() -> 0.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1M; d.ToString() -> 1.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1.1M; d.ToString() -> 1.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1.01M; d.ToString() -> 1.01
+        ///     </code>
+        ///   </example>
+        /// </remarks>
+        /// <returns>The the string representation of <see cref="Value"/>.</returns>
+        public override string ToString() => Value.ToString("F");
 
         /// <summary>
-        /// Gets the equality components to make the comparison, since a value object must not be based on identity.
+        /// Returns the string representation of <see cref="Value"/> rounding to 2 decimal places.
         /// </summary>
-        /// <returns>
-        /// The equality components.
-        /// </returns>
-        protected override IEnumerable<object> GetEqualityComponents()
-        {
-            yield return Value;
-        }
+        /// <param name="provider">An object that supplies culture-specific formatting information.</param>
+        /// <remarks>
+        ///   <example>
+        ///   Examples:
+        ///     <code>
+        ///     decimal d = 0M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.0M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.00M; d.ToString() -> 0.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.01M; d.ToString() -> 0.01
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.1M; d.ToString() -> 0.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 0.10M; d.ToString() -> 0.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 00.1M; d.ToString() -> 00.01
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1M; d.ToString() -> 1.00
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1.1M; d.ToString() -> 1.10
+        ///     </code>
+        ///
+        ///     <code>
+        ///     decimal d = 1.01M; d.ToString() -> 1.01
+        ///     </code>
+        ///   </example>
+        /// </remarks>
+        /// <returns>The the string representation of <see cref="Value"/>.</returns>
+        public override string ToString(IFormatProvider provider) => Value.ToString("F", provider);
     }
 }
