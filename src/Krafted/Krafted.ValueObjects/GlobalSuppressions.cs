@@ -12,3 +12,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Guard.Against", Scope = "member", Target = "~M:Krafted.ValueObjects.Money.op_Subtraction(Krafted.ValueObjects.Money,System.Decimal)~Krafted.ValueObjects.Money")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Guard.Against", Scope = "member", Target = "~M:Krafted.ValueObjects.Money.op_Implicit(Krafted.ValueObjects.Money)~System.Decimal")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Guard.Against", Scope = "member", Target = "~M:Krafted.ValueObjects.Pt.Nif.op_Implicit(Krafted.ValueObjects.Pt.Nif)~System.String")]
+[assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.ValueObjects.Money.ToString~System.String")]
