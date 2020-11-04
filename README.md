@@ -5,7 +5,7 @@
 
 ### A clean, simple and extensible, carefully `crafted` set of libraries for general purpose.
 ### Krafted provides a misc. of useful and reusable pieces of code, in order to increase the productivity. 🚀
-### Is reliable, 100% documented and 100% test code coverage!
+### Is reliable, 100% documented and highly test code coverage!
 ---
 
 ## Architecture

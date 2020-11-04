@@ -1,3 +1,4 @@
+using Krafted.DesignPatterns.Specifications;
 using Krafted.UnitTest.Krafted.DesignPatterns.Notifications;
 using Xunit;
 
@@ -9,21 +10,33 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
         [Fact]
         public void Spec_IsSatisfiedByModel_True()
         {
-            var model = new ModelStub(35, "Maicon");
-            var spec = new ModelStubSpecification();
+            var model1 = new ModelStub(35, "Maicon", true);
+            var spec1 = Specification<ModelStub>.All
+                .And(new ModelStubSpecification1())
+                .And(new ModelStubSpecification2());
 
-            Assert.True(spec.IsSatisfiedBy(model));
+            Assert.True(spec1.IsSatisfiedBy(model1));
+
+            var model2 = new ModelStub(35, "Maicon", false);
+            var spec2 = Specification<ModelStub>.All
+                .And(new ModelStubSpecification1())
+                .Or(new ModelStubSpecification2());
+
+            Assert.True(spec2.IsSatisfiedBy(model2));
         }
 
         [Fact]
         public void Spec_IsSatisfiedByModel_False()
         {
-            var model = new ModelStub(34, "Maicon");
+            var model1 = new ModelStub(34, "Maicon");
+            var spec1 = new ModelStubSpecification1();
 
-            var spec = new ModelStubSpecification();
-            spec.And(spec);
+            Assert.False(spec1.IsSatisfiedBy(model1));
 
-            Assert.False(spec.IsSatisfiedBy(model));
+            var model2 = new ModelStub(35, "Maicon", false);
+            var spec2 = Specification<ModelStub>.All.Not();
+
+            Assert.False(spec2.IsSatisfiedBy(model2));
         }
     }
 }

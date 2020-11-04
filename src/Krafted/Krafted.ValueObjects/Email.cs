@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Krafted.DesignPatterns.Ddd;
 using Krafted.Guards;
 
@@ -19,6 +20,7 @@ namespace Krafted.ValueObjects
         }
 
         // Required for the ORM.
+        [ExcludeFromCodeCoverage]
         private Email()
         {
         }

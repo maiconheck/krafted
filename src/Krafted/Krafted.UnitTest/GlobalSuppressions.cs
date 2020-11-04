@@ -13,3 +13,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.EmailTest")]
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.MoneyTest")]
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.NifTest")]
+[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "This is a common way to name files that correspond to a generic type. The number after ` correspond to the quantity of generic arguments.", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.DesignPatterns.Ddd.ValueObjectTTest")]

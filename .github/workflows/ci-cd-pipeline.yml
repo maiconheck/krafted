@@ -52,7 +52,7 @@ jobs:
       run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
 
     - name: TEST - Executes unit and integration tests
-      run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1
+      run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=60
 
     - name: COVERAGE - Calculates and generates a code coverage report
       run: dotnet reportgenerator "-reports:./src/coverage-results/coverage.opencover.xml" "-targetdir:./src/coverage-results/report" "-reporttypes:Html;Badges"

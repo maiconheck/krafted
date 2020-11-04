@@ -14,14 +14,8 @@
         "dotnet-cake"
       ]
     },
-    "inheritdoctool": {
-      "version": "2.5.2",
-      "commands": [
-        "InheritDoc"
-      ]
-    },
     "dotnet-reportgenerator-globaltool": {
-      "version": "4.6.7",
+      "version": "4.7.1",
       "commands": [
         "reportgenerator"
       ]
