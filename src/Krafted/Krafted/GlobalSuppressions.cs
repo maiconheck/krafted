@@ -6,12 +6,8 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "CC0037:Remove commented code.", Justification = "This comment is a header documentation")]
-[assembly: SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "In this case the type is not obvious", Scope = "member", Target = "~M:Krafted.Specification`1.IsSatisfiedBy(`0)~System.Boolean")]
-[assembly: SuppressMessage("Usage", "CA2208:Instantiate argument exceptions correctly", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.GuardAgainst.AnyNull(System.Linq.Expressions.Expression{System.Func{System.Object}}[])")]
 [assembly: SuppressMessage("Design", "RCS1225:Make class sealed.", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.Guards.Guard")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1609:Property documentation should have value", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1623:Property summary documentation should match accessors", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("Usage", "RCS1221:Use pattern matching instead of combination of 'as' operator and null check.", Justification = "Not Applicable", Scope = "member", Target = "~M:Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)~System.Boolean")]
-[assembly: SuppressMessage("Usage", "RCS1165:Unconstrained type parameter checked for null.", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Functional.Maybe`1.HasValue")]
-[assembly: SuppressMessage("Design", "CA1065:Do not raise exceptions in unexpected locations", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Functional.Maybe`1.Value")]
-[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "This is a common way to name files that correspond to a generic type. The number after ` correspond to the quantity of generic arguments.", Scope = "type", Target = "~T:Krafted.Functional.Operation`1")]
+[assembly: SuppressMessage("Redundancy", "RCS1175:Unused this parameter.", Justification = "Needed for extension method", Scope = "member", Target = "~M:System.EnumExtension.GetName``1(System.Enum,System.Object)~System.String")]

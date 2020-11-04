@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace Krafted.UnitTest.Krafted
+namespace Krafted.UnitTest.Krafted.Extensions
 {
     [Trait(nameof(UnitTest), nameof(Krafted))]
     public class StringExtensionTest

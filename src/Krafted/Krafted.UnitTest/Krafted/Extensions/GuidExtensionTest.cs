@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Krafted.UnitTest.Krafted
+namespace Krafted.UnitTest.Krafted.Extensions
 {
     [Trait(nameof(UnitTest), nameof(Krafted))]
     public class GuidExtensionTest
