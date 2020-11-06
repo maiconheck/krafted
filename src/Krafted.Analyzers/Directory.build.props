@@ -1,0 +1,7 @@
+<Project>
+  <Import Project="../Krafted/Directory.Build.props" />
+  <PropertyGroup>
+  	<Product>Krafted.Analyzers</Product>
+    <ProductName>Krafted.Analyzers</ProductName>
+  </PropertyGroup>
+</Project>
