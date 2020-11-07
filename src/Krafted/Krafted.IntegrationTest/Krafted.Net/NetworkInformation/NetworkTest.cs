@@ -21,7 +21,7 @@ namespace Krafted.IntegrationTest.Krafted.Net.NetworkInformation
             var (isAvailable, resultMessage) = Network.Available("maiconheck.com.br");
 
             Assert.False(isAvailable);
-            Assert.Equal("An exception occurred during a Ping request. No such host is known.", resultMessage);
+            Assert.Contains("An exception occurred during a Ping request.", resultMessage, StringComparison.Ordinal);
         }
 
         [Theory]

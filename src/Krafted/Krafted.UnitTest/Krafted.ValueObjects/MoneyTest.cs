@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using Krafted.UnitTest.Xunit;
 using Krafted.ValueObjects;
 using Xunit;
 using Assert = Krafted.UnitTest.Xunit.AssertExtension;
@@ -132,6 +133,7 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         }
 
         [Fact]
+        [UseCulture("en-US")]
         public void Money_ToString_StringMoney()
         {
             Assert.Equal("0.00", new Money(0M).ToString());
