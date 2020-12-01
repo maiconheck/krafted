@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using Krafted.DesignPatterns.Notifications;
+using Krafted.DesignPatterns.Notifications.Abstractions;
 
 namespace Krafted.DesignPatterns.Ddd
 {

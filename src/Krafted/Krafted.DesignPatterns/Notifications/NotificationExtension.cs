@@ -3,6 +3,7 @@ using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
 using Krafted.DesignPatterns.Ddd;
+using Krafted.DesignPatterns.Notifications.Abstractions;
 using Krafted.Guards;
 
 namespace Krafted.DesignPatterns.Notifications

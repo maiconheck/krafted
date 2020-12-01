@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Krafted.DesignPatterns.Notifications;
+using Krafted.DesignPatterns.Notifications.Abstractions;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Notifications

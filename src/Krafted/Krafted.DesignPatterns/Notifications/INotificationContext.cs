@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Krafted.DesignPatterns.Notifications.Abstractions;
 
 namespace Krafted.DesignPatterns.Notifications
 {

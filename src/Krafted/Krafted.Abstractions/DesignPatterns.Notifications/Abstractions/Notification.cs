@@ -1,4 +1,4 @@
-namespace Krafted.DesignPatterns.Notifications
+namespace Krafted.DesignPatterns.Notifications.Abstractions
 {
     /// <summary>
     /// Represents a notification message.
