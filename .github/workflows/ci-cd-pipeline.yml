@@ -24,11 +24,6 @@ jobs:
     runs-on: windows-latest
 ################ SETUP STEPS ################
     steps:
-    - name: Set environment variables
-      run: |
-        echo 'DOTNET_CLI_TELEMETRY_OPTOUT=1' >> $GITHUB_ENV
-        echo 'NUGET_AUTH_TOKEN=${{secrets.NUGET_API_KEY}}' >> $GITHUB_ENV
-
     - name: Checkout the repo
       uses: actions/checkout@v2
 
@@ -37,6 +32,10 @@ jobs:
       with:
         dotnet-version: 3.1.301
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
 
     - name: Install the .NET tools
       run: dotnet tool restore
@@ -65,8 +64,9 @@ jobs:
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
       run: dotnet nuget push "artifacts\*.nupkg" --skip-duplicate -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
-      #env:
-      #  NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
 
 
 
