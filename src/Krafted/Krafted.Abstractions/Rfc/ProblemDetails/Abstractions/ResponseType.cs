@@ -1,4 +1,4 @@
-namespace Krafted.Rfc.ProblemDetails
+namespace Krafted.Rfc.ProblemDetails.Abstractions
 {
     /// <summary>
     /// Represents the response types.

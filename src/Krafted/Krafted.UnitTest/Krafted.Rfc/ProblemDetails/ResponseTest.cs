@@ -1,5 +1,6 @@
 using Krafted.Localization.Abstractions;
 using Krafted.Rfc.ProblemDetails;
+using Krafted.Rfc.ProblemDetails.Abstractions;
 using Krafted.Rfc.ProblemDetails.Types;
 using Xunit;
 

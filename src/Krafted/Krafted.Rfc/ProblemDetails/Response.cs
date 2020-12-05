@@ -1,6 +1,7 @@
 using System;
 using Krafted.Guards;
 using Krafted.Localization.Abstractions;
+using Krafted.Rfc.ProblemDetails.Abstractions;
 using Krafted.Rfc.ProblemDetails.Types;
 
 namespace Krafted.Rfc.ProblemDetails

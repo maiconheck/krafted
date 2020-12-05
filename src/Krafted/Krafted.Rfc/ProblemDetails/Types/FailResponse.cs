@@ -3,6 +3,7 @@ using System.Linq;
 using Krafted.DesignPatterns.Notifications.Abstractions;
 using Krafted.Guards;
 using Krafted.Localization.Abstractions;
+using Krafted.Rfc.ProblemDetails.Abstractions;
 
 namespace Krafted.Rfc.ProblemDetails.Types
 {

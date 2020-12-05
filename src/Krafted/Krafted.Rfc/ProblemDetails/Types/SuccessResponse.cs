@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Krafted.Rfc.ProblemDetails.Abstractions;
 
 namespace Krafted.Rfc.ProblemDetails.Types
 {
