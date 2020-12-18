@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="EnabledOnTest Ruleset" Description="EnabledOnTest Ruleset" ToolsVersion="14.0">
-	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-		<Rule Id="CC0030" Action="None" />  <!-- Make local variable const when it is Possible -->
-		<Rule Id="CC0021" Action="None" />  <!-- Use 'nameof(Foo)' instead of specifying the program element name -->
-		<Rule Id="CC0037" Action="None" />  <!-- Remove commented code -->
-		<Rule Id="CC0061" Action="None" />  <!-- Remove commented code -->
-	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1118" Action="None" /> <!-- Mark local variable as const -->
 		<Rule Id="RCS1202" Action="None" /> <!-- Avoid NullReferenceException -->

@@ -1,5 +1,4 @@
 using Krafted.DesignPatterns.Specifications;
-using Krafted.UnitTest.Krafted.DesignPatterns.Notifications;
 using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
@@ -12,14 +11,14 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
         {
             var model1 = new ModelStub(35, "Maicon", true);
             var spec1 = Specification<ModelStub>.All
-                .And(new ModelStubSpecification1())
+                .And(new ModelStubSpecification())
                 .And(new ModelStubSpecification2());
 
             Assert.True(spec1.IsSatisfiedBy(model1));
 
             var model2 = new ModelStub(35, "Maicon", false);
             var spec2 = Specification<ModelStub>.All
-                .And(new ModelStubSpecification1())
+                .And(new ModelStubSpecification())
                 .Or(new ModelStubSpecification2());
 
             Assert.True(spec2.IsSatisfiedBy(model2));
@@ -29,7 +28,7 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
         public void Spec_IsSatisfiedByModel_False()
         {
             var model1 = new ModelStub(34, "Maicon");
-            var spec1 = new ModelStubSpecification1();
+            var spec1 = new ModelStubSpecification();
 
             Assert.False(spec1.IsSatisfiedBy(model1));
 

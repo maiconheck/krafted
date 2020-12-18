@@ -20,9 +20,6 @@
         <Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->
         <Rule Id="RCS1077" Action="None" /> <!-- Optimize LINQ method call -->
     </Rules>
-    <Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-        <Rule Id="CC0001" Action="None" />  <!-- Always use var -->
-    </Rules>
     <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
         <Rule Id="CS1591" Action="None" /> <!-- C# Missing XML comment for publicly visible type or member -->
     </Rules>

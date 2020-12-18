@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="DisabledOnTest Ruleset" Description="DisabledOnTest Ruleset" ToolsVersion="14.0">
-	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-		<Rule Id="CC0030" Action="Warning" />   <!-- Make local variable const when it is Possible -->
-		<Rule Id="CC0021" Action="Warning" /> <!-- Use 'nameof(Foo)' instead of specifying the program element name -->
-		<Rule Id="CC0037" Action="Warning" />  <!-- Remove commented code -->
-	</Rules>
 	<Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
 		<Rule Id="CA1707" Action="Warning" />   <!-- Identifiers should not contain underscores -->
 		<Rule Id="CA2000" Action="Warning" /> <!-- Dispose objects before losing scope -->

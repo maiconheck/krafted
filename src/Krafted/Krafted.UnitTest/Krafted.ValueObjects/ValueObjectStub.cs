@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Krafted.DesignPatterns.Ddd;
+using Krafted.ValueObjects;
 
-namespace Krafted.UnitTest.Krafted.DesignPatterns.Ddd
+namespace Krafted.UnitTest.Krafted.ValueObjects
 {
     public class ValueObjectStub : ValueObject
     {

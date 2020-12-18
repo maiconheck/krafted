@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Krafted.DesignPatterns.Ddd
+namespace Krafted.ValueObjects
 {
     /// <summary>
     /// Represents an Value Object [Evans] base class for a single value, providing common operations to value objects.
@@ -12,7 +12,7 @@ namespace Krafted.DesignPatterns.Ddd
     public abstract class ValueObject<T> where T : IComparable, IComparable<T>, IConvertible, IEquatable<T>
     {
         /// <summary>
-        /// Gets the value.
+        /// Gets or sets the value.
         /// </summary>
         /// <value>The value.</value>
         public virtual T Value { get; protected set; }

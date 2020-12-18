@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Krafted.DesignPatterns.Ddd
+namespace Krafted.ValueObjects
 {
     /// <summary>
     /// Represents an Value Object [Evans] base class, providing common operations to value objects.

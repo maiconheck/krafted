@@ -18,9 +18,6 @@
     <Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
         <Rule Id="RCS1090" Action="Warning" /> <!-- Call 'ConfigureAwait(false)' -->
     </Rules>
-    <Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-        <Rule Id="CC0001" Action="None" />  <!-- Always use var -->
-    </Rules>
     <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
         <Rule Id="CS1591" Action="None" /> <!-- C# Missing XML comment for publicly visible type or member -->
     </Rules>

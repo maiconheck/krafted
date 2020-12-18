@@ -379,47 +379,6 @@
 		<Rule Id="SA1413" Action="None" /> <!-- Use Trailing Commas In MultiLine Initializers Analyzer -->
 		<Rule Id="SA1412" Action="None" /> <!-- Store files as utf-8 - Conflicting with .editorconfig -->
 	</Rules>
-	<Rules AnalyzerId="CodeCracker.CSharp" RuleNamespace="CodeCracker.CSharp">
-		<Rule Id="CC0003" Action="Warning" />
-		<Rule Id="CC0004" Action="Warning" />
-		<Rule Id="CC0016" Action="Warning" />
-		<Rule Id="CC0024" Action="Warning" />
-		<Rule Id="CC0031" Action="Warning" />
-		<Rule Id="CC0012" Action="Warning" />
-		<Rule Id="CC0029" Action="Warning" />
-		<Rule Id="CC0011" Action="Warning" />
-		<Rule Id="CC0023" Action="Warning" />
-		<Rule Id="CC0025" Action="Warning" />
-		<Rule Id="CC0039" Action="Warning" />
-		<Rule Id="CC0005" Action="Warning" />
-		<Rule Id="CC0006" Action="Warning" />
-		<Rule Id="CC0008" Action="Warning" />
-		<Rule Id="CC0009" Action="Warning" />
-		<Rule Id="CC0013" Action="Warning" />
-		<Rule Id="CC0014" Action="Warning" />
-		<Rule Id="CC0015" Action="Warning" />
-		<Rule Id="CC0017" Action="Warning" />
-		<Rule Id="CC0018" Action="Warning" />
-		<Rule Id="CC0019" Action="Warning" />
-		<Rule Id="CC0020" Action="Warning" />
-		<Rule Id="CC0048" Action="Warning" />
-		<Rule Id="CC0002" Action="Warning" />
-		<Rule Id="CC0007" Action="Warning" />
-		<Rule Id="CC0010" Action="Warning" />
-		<Rule Id="CC0022" Action="Warning" />
-		<Rule Id="CC0026" Action="Warning" />
-		<Rule Id="CC0032" Action="Warning" />
-		<Rule Id="CC0033" Action="Warning" />
-		<Rule Id="CC0034" Action="Warning" />
-		<Rule Id="CC0049" Action="Warning" />
-		<Rule Id="CC0052" Action="Warning" />
-		<Rule Id="CC0068" Action="Warning" />
-		<Rule Id="CC0089" Action="Warning" />
-		<Rule Id="CC0038" Action="None" /> <!-- Conflicts with RCS1017: Avoid multiline expression body -->
-		<Rule Id="CC0057" Action="None" /> <!-- UnusedParametersAnalyzer - This rule is not working with expression bodied members -->
-		<Rule Id="CC0105" Action="None" />
-		<Rule Id="CC0091" Action="None" />
-	</Rules>
 	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
 		<Rule Id="RCS1044" Action="Warning" />
 		<Rule Id="RCS1059" Action="Warning" />
@@ -435,10 +394,10 @@
 		<Rule Id="RCS1215" Action="Warning" />
 		<Rule Id="RCS1006" Action="Warning" />
 		<Rule Id="RCS1021" Action="Warning" />
-		<Rule Id="RCS1023" Action="Warning" />
-		<Rule Id="RCS1024" Action="Warning" />
-		<Rule Id="RCS1025" Action="Warning" />
-		<Rule Id="RCS1026" Action="Warning" />
+		<Rule Id="RCS0022" Action="Warning" />
+		<Rule Id="RCS0025" Action="Warning" />
+		<Rule Id="RCS0031" Action="Warning" />
+		<Rule Id="RCS0033" Action="Warning" />
 		<Rule Id="RCS1001" Action="Warning" />
 		<Rule Id="RCS1003" Action="Warning" />
 		<Rule Id="RCS1005" Action="Warning" />
@@ -447,9 +406,9 @@
 		<Rule Id="RCS1015" Action="Warning" />
 		<Rule Id="RCS1018" Action="Warning" />
 		<Rule Id="RCS1020" Action="Warning" />
-		<Rule Id="RCS1027" Action="Warning" />
-		<Rule Id="RCS1028" Action="Warning" />
-		<Rule Id="RCS1030" Action="Warning" />
+		<Rule Id="RCS0030" Action="Warning" />
+		<Rule Id="RCS0024" Action="Warning" />
+		<Rule Id="RCS0001" Action="Warning" />
 		<Rule Id="RCS1032" Action="Warning" />
 		<Rule Id="RCS1033" Action="Warning" />
 		<Rule Id="RCS1034" Action="Warning" />
@@ -469,7 +428,7 @@
 		<Rule Id="RCS1049" Action="Warning" />
 		<Rule Id="RCS1052" Action="Warning" />
 		<Rule Id="RCS1055" Action="Warning" />
-		<Rule Id="RCS1057" Action="Warning" />
+		<Rule Id="RCS0009" Action="Warning" />
 		<Rule Id="RCS1058" Action="Warning" />
 		<Rule Id="RCS1060" Action="Warning" />
 		<Rule Id="RCS1061" Action="Warning" />
@@ -478,21 +437,21 @@
 		<Rule Id="RCS1064" Action="Warning" />
 		<Rule Id="RCS1065" Action="Warning" />
 		<Rule Id="RCS1066" Action="Warning" />
-		<Rule Id="RCS1067" Action="Warning" />
+		<Rule Id="RCS1050a" Action="Warning" />
 		<Rule Id="RCS1068" Action="Warning" />
 		<Rule Id="RCS1070" Action="Warning" />
 		<Rule Id="RCS1071" Action="Warning" />
 		<Rule Id="RCS1072" Action="Warning" />
 		<Rule Id="RCS1073" Action="Warning" />
 		<Rule Id="RCS1074" Action="Warning" />
-		<Rule Id="RCS1076" Action="Warning" />
+		<Rule Id="RCS0023" Action="Warning" />
 		<Rule Id="RCS1081" Action="Warning" />
 		<Rule Id="RCS1084" Action="Warning" />
 		<Rule Id="RCS1085" Action="Warning" />
-		<Rule Id="RCS1088" Action="Warning" />
+		<Rule Id="RCS0046" Action="Warning" />
 		<Rule Id="RCS1089" Action="Warning" />
 		<Rule Id="RCS1091" Action="Warning" />
-		<Rule Id="RCS1092" Action="Warning" />
+		<Rule Id="RCS0004" Action="Warning" />
 		<Rule Id="RCS1093" Action="Warning" />
 		<Rule Id="RCS1094" Action="Warning" />
 		<Rule Id="RCS1096" Action="Warning" />
@@ -529,7 +488,7 @@
 		<Rule Id="RCS1145" Action="Warning" />
 		<Rule Id="RCS1150" Action="Warning" />
 		<Rule Id="RCS1151" Action="Warning" />
-		<Rule Id="RCS1153" Action="Warning" />
+		<Rule Id="RCS0008" Action="Warning" />
 		<Rule Id="RCS1154" Action="Warning" />
 		<Rule Id="RCS1156" Action="Warning" />
 		<Rule Id="RCS1157" Action="Warning" />
@@ -552,8 +511,8 @@
 		<Rule Id="RCS1179" Action="Warning" />
 		<Rule Id="RCS1180" Action="Warning" />
 		<Rule Id="RCS1182" Action="Warning" />
-		<Rule Id="RCS1184" Action="Warning" />
-		<Rule Id="RCS1185" Action="Warning" />
+		<Rule Id="RCS0028" Action="Warning" />
+		<Rule Id="RCS0021" Action="Warning" />
 		<Rule Id="RCS1186" Action="Warning" />
 		<Rule Id="RCS1187" Action="Warning" />
 		<Rule Id="RCS1188" Action="Warning" />
@@ -600,7 +559,7 @@
 		<Rule Id="RCS1069" Action="None" /> <!-- Remove unnecessary case label -->
 		<Rule Id="RCS1017" Action="None" /> <!-- Avoid multiline expression body -->
 		<Rule Id="RCS1111" Action="None" /> <!-- Add braces to switch section with multiple statements -->
-		<Rule Id="RCS1086" Action="None" /> <!-- Use linefeed as newline -->
+		<Rule Id="RCS0045" Action="None" /> <!-- Use linefeed as newline -->
 		<Rule Id="RCS1007" Action="None" /> <!-- Add braces -->
 		<Rule Id="RCS1100" Action="None" /> <!-- Format documentation summary on a single line -->
 		<Rule Id="RCS1126" Action="None" /> <!-- Add braces to if-else -->
@@ -612,8 +571,8 @@
 		<Rule Id="RCS1050" Action="None" /> <!-- Add argument list to object creation expression -->
 		<Rule Id="RCS1080" Action="None" /> <!-- Use 'Count/Length' property instead of 'Any' method -->
 		<Rule Id="RCS1208" Action="None" /> <!-- Reduce if nesting (it's not working well) -->
-		<Rule Id="RCS1029" Action="None" /> <!-- Format binary operator on next line -->
-		<Rule Id="RCS1087" Action="None" /> <!-- Use carriage return + linefeed as newline -->
+		<Rule Id="RCS0027" Action="None" /> <!-- Format binary operator on next line -->
+		<Rule Id="RCS0044" Action="None" /> <!-- Use carriage return + linefeed as newline -->
 		<Rule Id="RCS1192" Action="None" /> <!-- Use regular string literal instead of verbatim string literal -->
 		<Rule Id="RCS1198" Action="None" /> <!-- Avoid unnecessary boxing of value type -->
 		<Rule Id="RCS1056" Action="None" /> <!-- Avoid usage of using alias directive -->
@@ -621,7 +580,7 @@
 		<Rule Id="RCS1009" Action="None" /> <!-- Use explicit type instead of 'var' (foreach variable) -->
 		<Rule Id="RCS1142" Action="None" /> <!-- Add 'typeparam' element to documentation -->
 		<Rule Id="RCS1019" Action="None" /> <!-- Order modifiers - Conflicts with another rule -->
-		<Rule Id="RCS1183" Action="None" /> <!-- Format initializer with single expression on single line -->
+		<Rule Id="RCS0048" Action="None" /> <!-- Format initializer with single expression on single line -->
 		<Rule Id="RCS1146" Action="None" /> <!-- Use conditional access -->
 		<Rule Id="AD0001" Action="None" />
 	</Rules>
