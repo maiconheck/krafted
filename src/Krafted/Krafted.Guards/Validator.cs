@@ -1,5 +1,8 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+
+[assembly: InternalsVisibleTo("Krafted.DataAnnotations")]
 
 namespace Krafted.Guards
 {

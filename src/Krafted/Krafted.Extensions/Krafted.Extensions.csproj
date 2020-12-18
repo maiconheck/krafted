@@ -3,15 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Title>A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.</Title>
-    <Description>A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.</Description>
+    <Title>A set of extension methods for String, Collections, Guid and other types.</Title>
+    <Description>A set of extension methods for String, Collections, Guid and other types.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <CodeAnalysisRuleSet>..\Analyzers\All.ruleset</CodeAnalysisRuleSet>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-    <NoWarn>CA1031</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,10 +23,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
   </ItemGroup>
 
 </Project>

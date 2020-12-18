@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Title>A set of building blocks and participants to implement Design Patterns of GoF, DDD (Domain-Driven Design) and others.</Title>
-    <Description>A set of building blocks and participants to implement Design Patterns of GoF, DDD (Domain-Driven Design) and others.</Description>
+    <Title>A set of building blocks and participants to implement Design Patterns of GoF and others.</Title>
+    <Description>A set of building blocks and participants to implement Design Patterns of GoF and others.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -23,9 +23,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Krafted\Krafted.csproj" />
   </ItemGroup>
 </Project>

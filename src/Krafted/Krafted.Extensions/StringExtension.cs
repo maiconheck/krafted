@@ -2,7 +2,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Krafted.Guards;
 
 namespace System
 {
@@ -76,8 +75,6 @@ namespace System
         /// <returns>The base-64 encoded string.</returns>
         public static string EncodeToBase64String(this string input)
         {
-            Guard.Against.Null(input, nameof(input));
-
             byte[] data = Encoding.UTF8.GetBytes(input);
             return Convert.ToBase64String(data);
         }
@@ -89,8 +86,6 @@ namespace System
         /// <returns>The decoded string.</returns>
         public static string DecodeFromBase64String(this string input)
         {
-            Guard.Against.Null(input, nameof(input));
-
             byte[] data = Convert.FromBase64String(input);
             return Encoding.ASCII.GetString(data);
         }

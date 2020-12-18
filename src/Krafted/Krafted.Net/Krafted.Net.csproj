@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Title>A set of utility components for network operations.</Title>
     <Description>A set of utility components for network operations.</Description>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted\Krafted.csproj" />
+    <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
   </ItemGroup>
 
 </Project>

@@ -49,7 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted\Krafted.csproj" />
+    <ProjectReference Include="..\Krafted.DataAnnotations\Krafted.DataAnnotations.csproj" />
     <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />
     <ProjectReference Include="..\Krafted.UnitTests\Krafted.UnitTests.csproj" />
     <ProjectReference Include="..\Krafted.ValueObjects\Krafted.ValueObjects.csproj" />
