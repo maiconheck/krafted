@@ -1,5 +1,6 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Krafted.Guards
 {
@@ -14,17 +15,18 @@ namespace Krafted.Guards
         /// Throws an <see cref="ArgumentException"/> if the <c>collection</c> is empty,
         /// with this error message: Collection cannot be empty.
         /// </summary>
+        /// <typeparam name="T">The type of enumerable.</typeparam>
         /// <param name="collection">The parameter to check.</param>
         /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard Empty(ICollection collection, string parameterName)
+        public Guard Empty<T>(IEnumerable<T> collection, string parameterName)
         {
             Guard.Against.
                 Null(collection, nameof(collection)).
                 NullOrWhiteSpace(parameterName, nameof(parameterName));
 
-            if (collection.Count == 0)
+            if (!collection.Any())
                 throw new ArgumentException(Texts.CollectionCannotBeEmpty, parameterName);
 
             return this;
@@ -34,17 +36,18 @@ namespace Krafted.Guards
         /// Throws an <see cref="ArgumentException"/> if the <c>collection</c> is not empty,
         /// with this error message: Collection should be empty.
         /// </summary>
+        /// <typeparam name="T">The type of enumerable.</typeparam>
         /// <param name="collection">The parameter to check.</param>
         /// <param name="parameterName">The name of the parameter.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard NotEmpty(ICollection collection, string parameterName)
+        public Guard NotEmpty<T>(IEnumerable<T> collection, string parameterName)
         {
             Guard.Against.
                 Null(collection, nameof(collection)).
                 NullOrWhiteSpace(parameterName, nameof(parameterName));
 
-            if (collection.Count > 0)
+            if (collection.Any())
                 throw new ArgumentException(Texts.CollectionShouldBeEmpty, parameterName);
 
             return this;
