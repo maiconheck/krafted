@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.Extensions
 {
-    [Trait(nameof(UnitTest), nameof(Krafted))]
+    [Trait(nameof(UnitTest), "Krafted.Extensions")]
     public class StringExtensionTest
     {
         private const string _linkInput = @"<a href=\""ViewAllTitlesQuickSearch.aspx?val=2&amp;val1=2171&amp;val65=2171\"">View all titles</a>";

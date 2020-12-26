@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.Extensions
 {
-    [Trait(nameof(UnitTest), nameof(Krafted))]
+    [Trait(nameof(UnitTest), "Krafted.Extensions")]
     public class EnumerableExtensionTest
     {
         [Fact]
@@ -44,6 +44,20 @@ namespace Krafted.UnitTest.Krafted.Extensions
             Assert.Equal("C", itens2.Third());
             Assert.Equal("D", itens2.Fourth());
             Assert.Equal("E", itens2.Fifth());
+        }
+
+        [Fact]
+        public void Empty_SourceContainsElements_False()
+        {
+            var source = new int[] { 1, 2, 3, 4, 5 };
+            Assert.False(source.Empty());
+        }
+
+        [Fact]
+        public void Empty_SourceNotContainsElements_True()
+        {
+            var source = new int[] { };
+            Assert.True(source.Empty());
         }
     }
 }

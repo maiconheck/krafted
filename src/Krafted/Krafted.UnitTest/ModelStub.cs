@@ -1,4 +1,4 @@
-namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
+namespace Krafted.UnitTest
 {
     public class ModelStub
     {

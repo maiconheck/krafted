@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
 {
-    [Trait(nameof(UnitTest), nameof(DesignPatterns))]
+    [Trait(nameof(UnitTest), "Krafted.DesignPatterns")]
     public class SpecificationTest
     {
         [Fact]

@@ -13,6 +13,7 @@ using Xunit.Sdk;
 
 namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
 {
+    [Trait(nameof(UnitTest), "Krafted.UnitTests.Xunit")]
     public class UseCultureAttributeTest
     {
         [Fact]

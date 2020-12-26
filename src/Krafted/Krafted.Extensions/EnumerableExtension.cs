@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 
 namespace System.Collections.Generic
 {
@@ -10,7 +10,7 @@ namespace System.Collections.Generic
         /// <summary>
         /// Verifies if the enumerable contains all the values.
         /// </summary>
-        /// <typeparam name="T">The type of enumerable.</typeparam>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
         /// <param name="source">The source where find.</param>
         /// <param name="values">The value to find ind source.</param>
         /// <returns>True if all itens where found in source, otherwise false.</returns>
@@ -19,7 +19,7 @@ namespace System.Collections.Generic
         /// <summary>
         /// Returns the second element of a sequence.
         /// </summary>
-        /// <typeparam name="T">The type of enumerable.</typeparam>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>The second element in the specified sequence.</returns>
         public static T Second<T>(this IEnumerable<T> source) => source.ToArray()[1];
@@ -27,7 +27,7 @@ namespace System.Collections.Generic
         /// <summary>
         /// Returns the third element of a sequence.
         /// </summary>
-        /// <typeparam name="T">The type of enumerable.</typeparam>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>The third element in the specified sequence.</returns>
         public static T Third<T>(this IEnumerable<T> source) => source.ToArray()[2];
@@ -35,7 +35,7 @@ namespace System.Collections.Generic
         /// <summary>
         /// Returns the fourth element of a sequence.
         /// </summary>
-        /// <typeparam name="T">The type of enumerable.</typeparam>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>The fourth element in the specified sequence.</returns>
         public static T Fourth<T>(this IEnumerable<T> source) => source.ToArray()[3];
@@ -43,9 +43,17 @@ namespace System.Collections.Generic
         /// <summary>
         /// Returns the fifth element of a sequence.
         /// </summary>
-        /// <typeparam name="T">The type of enumerable.</typeparam>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>The fifth element in the specified sequence.</returns>
         public static T Fifth<T>(this IEnumerable<T> source) => source.ToArray()[4];
+
+        /// <summary>
+        /// Determines whether a sequence not contains any elements.
+        /// </summary>
+        /// <typeparam name="T">The type of the elements of source.</typeparam>
+        /// <param name="source">The source.</param>
+        /// <returns><c>true</c> if the source sequence not contains any elements; otherwise, <c>false</c>.</returns>
+        public static bool Empty<T>(this IEnumerable<T> source) => !source.Any();
     }
 }

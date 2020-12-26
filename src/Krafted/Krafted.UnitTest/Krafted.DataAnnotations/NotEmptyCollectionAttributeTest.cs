@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.DataAnnotations
 {
-    [Trait(nameof(UnitTest), nameof(Krafted))]
+    [Trait(nameof(UnitTest), "Krafted.DataAnnotations")]
     public class NotEmptyCollectionAttributeTest
     {
         [Fact]

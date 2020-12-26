@@ -1,12 +1,10 @@
-using System;
-using Krafted.Guards;
+using Krafted.DataAnnotations;
 using Xunit;
-using Assert = Krafted.UnitTest.Xunit.AssertExtension;
 
-namespace Krafted.UnitTest.Krafted.Guards.Pt
+namespace Krafted.UnitTest.Krafted.DataAnnotations.Pt
 {
-    [Trait(nameof(UnitTest), nameof(Krafted))]
-    public class GuardPtTest
+    [Trait(nameof(UnitTest), "Krafted.DataAnnotations")]
+    public class NifAttributeTest
     {
         [Theory]
         [InlineData("5021550510")]
@@ -39,10 +37,20 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
         [InlineData("500522097")]
         [InlineData("514727087")]
         [InlineData("505924437")]
-        public void GuardAgainstInvalidNif_InvalidNif_ThrowsException(string invalidNif)
+
+        public void IsValid_InvalidNif_False(string invalidNif)
         {
-            var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidNif(invalidNif));
-            Assert.Equal("Invalid NIF: {0}.".Format(invalidNif), ex.Message);
+            var model = new NifModelDummy
+            {
+                MyProperty1 = invalidNif,
+                MyProperty2 = invalidNif
+            };
+
+            var (isValid, validationResults) = ModelValidator.Validate(model);
+
+            Assert.False(isValid);
+            Assert.Equal("Invalid NIF: MyProperty1.", validationResults[0].ErrorMessage);
+            Assert.Equal("The nif should be valid.", validationResults[1].ErrorMessage);
         }
 
         [Theory]
@@ -76,9 +84,18 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
         [InlineData("500582092")]
         [InlineData("504777084")]
         [InlineData("505934434")]
-        public void GuardAgainstInvalidNif_ValidNif_DoesNotThrows(string validNif)
+        public void IsValid_ValidNif_True(string validNif)
         {
-            Assert.DoesNotThrows(() => Guard.Against.InvalidNif(validNif));
+            var model = new NifModelDummy
+            {
+                MyProperty1 = validNif,
+                MyProperty2 = validNif
+            };
+
+            var (isValid, validationResults) = ModelValidator.Validate(model);
+
+            Assert.True(isValid);
+            Assert.Empty(validationResults);
         }
     }
 }

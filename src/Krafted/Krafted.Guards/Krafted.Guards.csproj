@@ -30,10 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Krafted.Extensions\Krafted.Extensions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Texts.Designer.cs">
       <DependentUpon>Texts.resx</DependentUpon>
       <DesignTime>True</DesignTime>

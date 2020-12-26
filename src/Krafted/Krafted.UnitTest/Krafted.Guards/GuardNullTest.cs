@@ -6,7 +6,7 @@ using Assert = Krafted.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.Guards
 {
-    [Trait(nameof(UnitTest), nameof(Krafted))]
+    [Trait(nameof(UnitTest), "Krafted.Guards")]
     public class GuardNullTest
     {
         [Fact]

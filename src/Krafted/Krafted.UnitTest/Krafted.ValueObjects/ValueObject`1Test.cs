@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Krafted.UnitTest.Krafted.ValueObjects
 {
-    [Trait(nameof(UnitTest), nameof(DesignPatterns))]
+    [Trait(nameof(UnitTest), "Krafted.ValueObjects")]
     public class ValueObjectTTest
     {
         [Fact]

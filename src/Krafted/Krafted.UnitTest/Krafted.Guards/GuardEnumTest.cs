@@ -12,7 +12,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         Paid = 3
     }
 
-    [Trait(nameof(UnitTest), nameof(Krafted))]
+    [Trait(nameof(UnitTest), "Krafted.Guards")]
     public class GuardEnumTest
     {
         [Theory]

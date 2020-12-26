@@ -7,7 +7,7 @@ using Assert = Krafted.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.ValueObjects
 {
-    [Trait(nameof(UnitTest), nameof(ValueObjects))]
+    [Trait(nameof(UnitTest), "Krafted.ValueObjects")]
     public class MoneyTest
     {
         [Fact]

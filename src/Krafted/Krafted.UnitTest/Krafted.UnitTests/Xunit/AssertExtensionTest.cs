@@ -4,7 +4,7 @@ using Assert = Krafted.UnitTest.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
 {
-    [Trait(nameof(UnitTest), nameof(UnitTests))]
+    [Trait(nameof(UnitTest), "Krafted.UnitTests.Xunit")]
     public class AssertExtensionTest
     {
         [Fact]

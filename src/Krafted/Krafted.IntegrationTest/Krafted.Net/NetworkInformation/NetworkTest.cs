@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Krafted.IntegrationTest.Krafted.Net.NetworkInformation
 {
+    [Trait(nameof(IntegrationTest), "Krafted.Net")]
     public class NetworkTest
     {
         [Fact]
