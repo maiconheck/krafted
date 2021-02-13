@@ -15,8 +15,6 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         [InlineData("firstname-lastname@example.com")]
         [InlineData("firstname_lastname@domain.com")]
         [InlineData("email@subdomain.example.com")]
-        [InlineData("email@123.123.123.123")]
-        [InlineData("email@[123.123.123.123]")]
         [InlineData("email@example-one.com")]
         [InlineData("1234567890@example.com")]
         [InlineData("customer/department=shipping@example.com")]

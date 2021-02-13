@@ -28,9 +28,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex3 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
-                Guard.Against.True(_ => myParam == "abc", nameof(myParam));
+                Guard.Against.True(_ => myParam == "abc", "My message when the expression is true!");
             });
-            Assert.Equal("Predicate cannot be true. (Parameter 'myParam')", ex3.Message);
+            Assert.Equal("My message when the expression is true!", ex3.Message);
         }
 
         [Fact]
@@ -64,9 +64,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex3 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
-                Guard.Against.False(_ => myParam == "a", nameof(myParam));
+                Guard.Against.False(_ => myParam == "a", "My message when the expression is false!");
             });
-            Assert.Equal("Predicate cannot be false. (Parameter 'myParam')", ex3.Message);
+            Assert.Equal("My message when the expression is false!", ex3.Message);
         }
 
         [Fact]
