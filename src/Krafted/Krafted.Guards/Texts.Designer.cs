@@ -97,6 +97,15 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid URL: {0}..
+        /// </summary>
+        internal static string InvalidUrl {
+            get {
+                return ResourceManager.GetString("InvalidUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number cannot be greater than {0}..
         /// </summary>
         internal static string NumberCannotBeGreaterThan {
@@ -187,6 +196,15 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parameter matches the specified regular expression..
+        /// </summary>
+        internal static string ParameterMatchesRegEx {
+            get {
+                return ResourceManager.GetString("ParameterMatchesRegEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} must be at least {1} characters..
         /// </summary>
         internal static string ParameterMustBeAtLeastLength {
@@ -219,6 +237,15 @@ namespace Krafted.Guards {
         internal static string ParameterMustBeInsideRangeLength {
             get {
                 return ResourceManager.GetString("ParameterMustBeInsideRangeLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter not matches the specified regular expression..
+        /// </summary>
+        internal static string ParameterNotMatchesRegEx {
+            get {
+                return ResourceManager.GetString("ParameterNotMatchesRegEx", resourceCulture);
             }
         }
         

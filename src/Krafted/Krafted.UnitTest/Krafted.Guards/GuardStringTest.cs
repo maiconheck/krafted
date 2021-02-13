@@ -8,18 +8,16 @@ namespace Krafted.UnitTest.Krafted.Guards
     [Trait(nameof(UnitTest), "Krafted.Guards")]
     public class GuardStringTest
     {
-        [Fact]
-        public void GuardAgainstExactLength_ExactLength_DoesNotThrows()
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("ABC")]
+        public void GuardAgainstExactLength_ExactLength_DoesNotThrows(string myParam)
         {
-            Assert.DoesNotThrows(() =>
-            {
-                string myParam = "ABC";
-                Guard.Against.Length(3, myParam, nameof(myParam));
-            });
+            Assert.DoesNotThrows(() => Guard.Against.Length(3, myParam, nameof(myParam)));
         }
 
         [Theory]
-        [InlineData("")]
         [InlineData(" ")]
         [InlineData("A")]
         [InlineData("AB")]
@@ -31,6 +29,8 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Theory]
+        [InlineData(null)]
+        [InlineData("")]
         [InlineData(" ")]
         [InlineData("A")]
         [InlineData("AB")]
@@ -43,7 +43,6 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Theory]
-        [InlineData("")]
         [InlineData("ABCDEF")]
         [InlineData("ABCDEFG")]
         public void GuardAgainstMinLengthMaxLength_OutsideMinLengthMaxLength_ThrowsException(string myParam)
@@ -53,6 +52,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Theory]
+        [InlineData(null)]
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("A")]
@@ -75,6 +75,8 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Theory]
+        [InlineData(null)]
+        [InlineData("")]
         [InlineData("ABC")]
         [InlineData("ABCD")]
         [InlineData("ABCDE")]
@@ -87,7 +89,6 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("AB")]
         [InlineData("A")]
         [InlineData(" ")]
-        [InlineData("")]
         public void GuardAgainstMinLength_OutsideMinLength_ThrowsException(string myParam)
         {
             var ex = Assert.Throws<ArgumentException>(() => Guard.Against.MinLength(3, myParam, nameof(myParam)));

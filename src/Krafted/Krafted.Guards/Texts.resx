@@ -129,6 +129,9 @@
   <data name="InvalidNif" xml:space="preserve">
     <value>Invalid NIF: {0}.</value>
   </data>
+  <data name="InvalidUrl" xml:space="preserve">
+    <value>Invalid URL: {0}.</value>
+  </data>
   <data name="NumberCannotBeGreaterThan" xml:space="preserve">
     <value>Number cannot be greater than {0}.</value>
   </data>
@@ -159,6 +162,9 @@
   <data name="ParameterCannotBeTrue" xml:space="preserve">
     <value>Parameter cannot be true.</value>
   </data>
+  <data name="ParameterMatchesRegEx" xml:space="preserve">
+    <value>Parameter matches the specified regular expression.</value>
+  </data>
   <data name="ParameterMustBeAtLeastLength" xml:space="preserve">
     <value>{0} must be at least {1} characters.</value>
   </data>
@@ -170,6 +176,9 @@
   </data>
   <data name="ParameterMustBeInsideRangeLength" xml:space="preserve">
     <value>{0} must be at least {1} character, and at most {2} characters.</value>
+  </data>
+  <data name="ParameterNotMatchesRegEx" xml:space="preserve">
+    <value>Parameter not matches the specified regular expression.</value>
   </data>
   <data name="PredicateCannotBeFalse" xml:space="preserve">
     <value>Predicate cannot be false.</value>

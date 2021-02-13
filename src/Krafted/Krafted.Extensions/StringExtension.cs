@@ -54,16 +54,16 @@ namespace System
             => string.Format(CultureInfo.InvariantCulture, input, args);
 
         /// <summary>
-        /// Transform an specified PascalCase string to an Snake_Case string (that is. underscore separation).
+        /// Converts a specified PascalCase string to its Snake_Case representation (that is. underscore separation).
         /// </summary>
-        /// <param name="input">A PascalCase string to be transformed to an Snake_Case string.</param>
+        /// <param name="input">A PascalCase string to be transformed to a Snake_Case string.</param>
         /// <example>
         /// <code>
-        /// "MyPascalCaseString.PascalCaseToSnakeCase()" // My_Camel_Case_String
+        /// "MyPascalCaseString".PascalCaseToSnakeCase() // "My_Camel_Case_String"
         /// </code>
         /// </example>
         /// <returns>
-        /// The PascalCase string transformed to an Snake_Case string (that is. underscore separation).
+        /// The Snake_Case representation of this PascalCase string.
         /// </returns>
         public static string PascalCaseToSnakeCase(this string input)
             => string.Concat(input.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString()));
@@ -80,7 +80,7 @@ namespace System
         }
 
         /// <summary>
-        /// Converts an base-64 string to its equivalent decoded string.
+        /// Converts a base-64 string to its equivalent decoded string.
         /// </summary>
         /// <param name="input">The base-64 string to be decoded.</param>
         /// <returns>The decoded string.</returns>
@@ -88,6 +88,42 @@ namespace System
         {
             byte[] data = Convert.FromBase64String(input);
             return Encoding.ASCII.GetString(data);
+        }
+
+        /// <summary>
+        /// Converts a phrase to its slug representation.
+        /// </summary>
+        /// <param name="input">The phrase to be transformed to slug format.</param>
+        /// <param name="maxLength">The maximum length before the input be truncated. Default=60.</param>
+        /// <example>
+        /// <code>
+        /// "A persistência é o caminho do êxito".ToSlug() // "a-persistencia-e-o-caminho-do-exito"
+        /// </code>
+        /// </example>
+        /// <returns>The slug representation of this phrase.</returns>
+        public static string ToSlug(this string input, int maxLength = 60)
+        {
+            string str = input.RemoveAccent().ToLowerInvariant();
+
+            // Remove invalid chars.
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", string.Empty, RegexOptions.Compiled);
+
+            // Convert multiple spaces into one space.
+            str = Regex.Replace(str, @"\s+", " ", RegexOptions.Compiled).Trim();
+
+            // Cut and trim.
+            str = str.Substring(0, str.Length <= maxLength ? str.Length : maxLength).Trim();
+            str = Regex.Replace(str, @"\s", "-", RegexOptions.Compiled); // hyphens.
+
+            return str;
+        }
+
+        private static string RemoveAccent(this string txt)
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            byte[] bytes = Encoding.GetEncoding("Cyrillic").GetBytes(txt);
+
+            return Encoding.ASCII.GetString(bytes);
         }
     }
 }

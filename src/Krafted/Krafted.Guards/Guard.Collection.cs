@@ -22,9 +22,9 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard Empty<T>(IEnumerable<T> collection, string parameterName)
         {
-            Guard.Against.
-                Null(collection, nameof(collection)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against
+                .NullOrWhiteSpace(parameterName, nameof(parameterName))
+                .Null(collection, parameterName);
 
             if (!collection.Any())
                 throw new ArgumentException(Texts.CollectionCannotBeEmpty, parameterName);
@@ -43,9 +43,9 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard NotEmpty<T>(IEnumerable<T> collection, string parameterName)
         {
-            Guard.Against.
-                Null(collection, nameof(collection)).
-                NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against
+                .NullOrWhiteSpace(parameterName, nameof(parameterName))
+                .Null(collection, parameterName);
 
             if (collection.Any())
                 throw new ArgumentException(Texts.CollectionShouldBeEmpty, parameterName);

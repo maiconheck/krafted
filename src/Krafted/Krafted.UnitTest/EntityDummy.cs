@@ -1,8 +1,8 @@
 namespace Krafted.UnitTest
 {
-    public class ModelStub
+    public class EntityDummy
     {
-        public ModelStub(int age, string name, bool enabled = false)
+        public EntityDummy(int age, string name, bool enabled = false)
         {
             Age = age;
             Name = name;

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Krafted.Guards;
 using Xunit;
 using Assert = Krafted.UnitTest.Xunit.AssertExtension;
@@ -66,10 +65,6 @@ namespace Krafted.UnitTest.Krafted.Guards
         {
             var ex = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(myParam, nameof(myParam)));
             Assert.Equal("Parameter cannot be null or empty. (Parameter 'myParam')", ex.Message);
-
-            var emptyList = new List<int>();
-            var ex2 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(emptyList, nameof(emptyList)));
-            Assert.Equal("Parameter cannot be null or empty. (Parameter 'emptyList')", ex2.Message);
         }
 
         [Fact]
@@ -77,9 +72,6 @@ namespace Krafted.UnitTest.Krafted.Guards
         {
             string param1 = "value";
             Assert.DoesNotThrows(() => Guard.Against.NullOrEmpty(param1, nameof(param1)));
-
-            var notEmptyList = new List<int> { 1, 2, 3, 4 };
-            Assert.DoesNotThrows(() => Guard.Against.NullOrEmpty(notEmptyList, nameof(notEmptyList)));
         }
 
         [Theory]

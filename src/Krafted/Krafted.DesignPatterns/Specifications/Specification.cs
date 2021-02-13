@@ -1,6 +1,6 @@
 // A Specification Pattern implementation.
 //
-// This implementation is an integral reproduction of the excellent course: Specification Pattern in C# Pluralsight by Vladimir Khorikov.
+// This class is an integral reproduction of the excellent course: Specification Pattern in C# Pluralsight by Vladimir Khorikov.
 // Course: https://app.pluralsight.com/library/courses/csharp-specification-pattern/table-of-contents
 // Source: https://github.com/vkhorikov/SpecPattern
 // Retrieved in July 2020.

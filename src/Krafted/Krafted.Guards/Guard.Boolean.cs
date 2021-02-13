@@ -19,6 +19,8 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard True(bool parameter, string parameterName)
         {
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+
             if (parameter)
                 throw new ArgumentException(Texts.ParameterCannotBeTrue, parameterName);
 
@@ -28,23 +30,24 @@ namespace Krafted.Guards
         /// <summary>
         /// Throws an <see cref="ArgumentException"/> if the <c>predicate</c> is <c>true</c>,
         /// with this error message: Predicate cannot be <c>true</c>.
+        /// Or, if the optional parameter <c>message</c> was set, with their message.
         /// </summary>
         /// <param name="predicate">The predicate to check.</param>
-        /// <param name="parameterName">Optional. The name of the parameter.</param>
+        /// <param name="message">The optional error message passed to <see cref="ArgumentException"/> if the <c>predicate</c> is <c>true</c>.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard True(Predicate<bool> predicate, string parameterName = "")
+        public Guard True(Predicate<bool> predicate, string message = "")
         {
             Guard.Against.Null(predicate, nameof(predicate));
 
             if (predicate.Invoke(true))
             {
-                if (string.IsNullOrWhiteSpace(parameterName))
+                if (string.IsNullOrWhiteSpace(message))
                 {
                     throw new ArgumentException(Texts.PredicateCannotBeTrue);
                 }
 
-                throw new ArgumentException(Texts.PredicateCannotBeTrue, parameterName);
+                throw new ArgumentException(message);
             }
 
             return this;
@@ -60,6 +63,8 @@ namespace Krafted.Guards
         /// <exception cref="ArgumentException">.</exception>
         public Guard False(bool parameter, string parameterName)
         {
+            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+
             if (!parameter)
                 throw new ArgumentException(Texts.ParameterCannotBeFalse, parameterName);
 
@@ -69,23 +74,24 @@ namespace Krafted.Guards
         /// <summary>
         /// Throws an <see cref="ArgumentException"/> if the <c>predicate</c> is <c>false</c>,
         /// with this error message: Predicate cannot be <c>false</c>.
+        /// /// Or, if the optional parameter <c>message</c> was set, with their message.
         /// </summary>
         /// <param name="predicate">The predicate to check.</param>
-        /// <param name="parameterName">Optional. The name of the parameter.</param>
+        /// <param name="message">The optional error message passed to <see cref="ArgumentException"/> if the <c>predicate</c> is <c>false</c>.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard False(Predicate<bool> predicate, string parameterName = "")
+        public Guard False(Predicate<bool> predicate, string message = "")
         {
             Guard.Against.Null(predicate, nameof(predicate));
 
             if (!predicate.Invoke(false))
             {
-                if (string.IsNullOrWhiteSpace(parameterName))
+                if (string.IsNullOrWhiteSpace(message))
                 {
                     throw new ArgumentException(Texts.PredicateCannotBeFalse);
                 }
 
-                throw new ArgumentException(Texts.PredicateCannotBeFalse, parameterName);
+                throw new ArgumentException(message);
             }
 
             return this;

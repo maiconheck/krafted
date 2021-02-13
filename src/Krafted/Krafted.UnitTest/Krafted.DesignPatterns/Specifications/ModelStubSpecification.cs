@@ -4,15 +4,15 @@ using Krafted.DesignPatterns.Specifications;
 
 namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
 {
-    public sealed class ModelStubSpecification : Specification<ModelStub>
+    public sealed class ModelStubSpecification : Specification<EntityDummy>
     {
-        public override Expression<Func<ModelStub, bool>> ToExpression()
+        public override Expression<Func<EntityDummy, bool>> ToExpression()
             => m => m.Name == "Maicon" && m.Age == 35;
     }
 
-    public sealed class ModelStubSpecification2 : Specification<ModelStub>
+    public sealed class ModelStubSpecification2 : Specification<EntityDummy>
     {
-        public override Expression<Func<ModelStub, bool>> ToExpression()
+        public override Expression<Func<EntityDummy, bool>> ToExpression()
             => m => m.Enabled;
     }
 }

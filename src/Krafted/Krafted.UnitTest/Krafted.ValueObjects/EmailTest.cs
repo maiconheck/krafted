@@ -8,28 +8,43 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
     [Trait(nameof(UnitTest), "Krafted.ValueObjects")]
     public class EmailTest
     {
-        [Fact]
-        public void NewEmail_Value_ProperInstantiated()
+        [Theory]
+        [InlineData("email@example.com")]
+        [InlineData("firstname.lastname@example.com")]
+        [InlineData("firstname+lastname@example.com")]
+        [InlineData("firstname-lastname@example.com")]
+        [InlineData("firstname_lastname@domain.com")]
+        [InlineData("email@subdomain.example.com")]
+        [InlineData("email@123.123.123.123")]
+        [InlineData("email@[123.123.123.123]")]
+        [InlineData("email@example-one.com")]
+        [InlineData("1234567890@example.com")]
+        [InlineData("customer/department=shipping@example.com")]
+        [InlineData("$A12345@example.com")]
+        [InlineData("__somename@example.com")]
+        public void NewEmail_ValidEmail_DoesNotThrowsException(string validEmail)
         {
-            var email1 = new Email("contact@maiconheck.com");
-            Assert.Equal("contact@maiconheck.com", email1.Value);
-            Assert.Equal("contact@maiconheck.com", email1.ToString());
-
-            var email2 = (Email)"contact@maiconheck.com";
-            Assert.Equal("contact@maiconheck.com", email2.Value);
-            Assert.Equal("contact@maiconheck.com", email2.ToString());
-
-            var email3 = Email.NewEmail("contact@maiconheck.com");
-            Assert.Equal("contact@maiconheck.com", email3.Value);
-            Assert.Equal("contact@maiconheck.com", email3.ToString());
+            Assert.DoesNotThrows(() => new Email(validEmail));
+            Assert.DoesNotThrows(() => (Email)validEmail);
+            Assert.DoesNotThrows(() => Email.NewEmail(validEmail));
         }
 
         [Theory]
-        [InlineData("contact@maiconheck.")]
-        [InlineData("contact@maiconheck")]
-        [InlineData("contact@")]
-        [InlineData("contact@.com")]
-        [InlineData("@maiconheck.com")]
+        [InlineData("email@example.")]
+        [InlineData("example@example")]
+        [InlineData("customer@")]
+        [InlineData("customer@.com")]
+        [InlineData("@domain.com")]
+        [InlineData("email.example.com")]
+        [InlineData("email@example@example.com")]
+        [InlineData(".email@example.com")]
+        [InlineData("email.@example.com")]
+        [InlineData("email..email@example.com")]
+        [InlineData("email@example.com (Joe Smith)")]
+        [InlineData("email@example")]
+        [InlineData("email@-example.com")]
+        [InlineData("email@example..com")]
+        [InlineData("email@example..co.uk")]
         public void NewEmail_InvalidEmail_ThrowsException(string invalidEmail)
         {
             var ex1 = Assert.Throws<FormatException>(() => new Email(invalidEmail));
@@ -43,21 +58,13 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         }
 
         [Fact]
-        public void NewEmail_ValidEmail_DoesNotThrowsException()
-        {
-            Assert.DoesNotThrows(() => new Email("contact@maiconheck.com"));
-            Assert.DoesNotThrows(() => (Email)"contact@maiconheck.com");
-            Assert.DoesNotThrows(() => Email.NewEmail("contact@maiconheck.com"));
-        }
-
-        [Fact]
         public void NewEmail_ToString_StringEmail()
         {
-            const string email = "contact@maiconheck.com";
+            const string expected = "contact@domain.com";
 
-            Assert.Equal(email, new Email(email).ToString());
-            Assert.Equal(email, ((Email)email).ToString());
-            Assert.Equal(email, Email.NewEmail(email).ToString());
+            Assert.Equal(expected, new Email(expected).ToString());
+            Assert.Equal(expected, ((Email)expected).ToString());
+            Assert.Equal(expected, Email.NewEmail(expected).ToString());
         }
     }
 }

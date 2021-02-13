@@ -18,7 +18,7 @@ namespace Krafted.Guards
         /// A copy of format in which the format items have been replaced by the string representation
         /// of the corresponding objects in args.
         /// </returns>
-        public static string Format(this string input, params object[] args)
+        internal static string Format(this string input, params object[] args)
             => string.Format(CultureInfo.InvariantCulture, input, args);
     }
 }

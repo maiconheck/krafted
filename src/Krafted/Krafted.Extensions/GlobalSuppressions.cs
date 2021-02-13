@@ -7,3 +7,5 @@ using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Guard.Against", Scope = "member", Target = "~M:System.Net.Http.HttpResponseMessageExtension.EnsureContentType(System.Net.Http.HttpResponseMessage,System.String)~System.Net.Http.HttpResponseMessage")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Guard.Against", Scope = "member", Target = "~M:System.Net.Http.HttpResponseMessageExtension.DeserializeAsync``1(System.Net.Http.HttpResponseMessage,System.Boolean)~System.Threading.Tasks.Task{``0}")]
+[assembly: SuppressMessage("Usage", "RCS1186:Use Regex instance instead of static method.", Justification = "Not applicable", Scope = "member", Target = "~M:System.StringExtension.ToSlug(System.String,System.Int32)~System.String")]
+[assembly: SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Not applicable", Scope = "member", Target = "~M:System.StringExtension.ToSlug(System.String,System.Int32)~System.String")]

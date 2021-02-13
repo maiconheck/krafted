@@ -49,7 +49,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
 
-            var result = await response.DeserializeAsync<ModelStub>();
+            var result = await response.DeserializeAsync<ViewModelDummy>();
 
             // Assert
             Assert.Equal(35, result.Age);
