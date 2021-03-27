@@ -16,10 +16,6 @@
         <Rule Id="CA2007" Action="None" />  <!-- Do not directly await a Task without calling ConfigureAwait -->
         <Rule Id="CA1824" Action="None" />  <!-- Mark assemblies with NeutralResourcesLanguageAttribute -->
     </Rules>
-    <Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
-        <Rule Id="RCS1090" Action="None" /> <!-- Call 'ConfigureAwait(false)' -->
-        <Rule Id="RCS1077" Action="None" /> <!-- Optimize LINQ method call -->
-    </Rules>
     <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
         <Rule Id="CS1591" Action="None" /> <!-- C# Missing XML comment for publicly visible type or member -->
     </Rules>

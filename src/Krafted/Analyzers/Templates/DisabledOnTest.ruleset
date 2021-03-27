@@ -8,14 +8,6 @@
 		<Rule Id="CA1303" Action="Warning" /> <!-- Do not pass literals as localized parameters -->
 		<Rule Id="CA1062" Action="Warning" /> <!-- Validate arguments of public methods -->
 	</Rules>
-	<Rules AnalyzerId="Roslynator.CSharp.Analyzers" RuleNamespace="Roslynator.CSharp.Analyzers">
-		<Rule Id="RCS1118" Action="Warning" />  <!-- Mark local variable as const -->
-		<Rule Id="RCS1010" Action="Warning" /> <!-- Use 'var' instead of explicit type (when the type is obvious) -->
-		<Rule Id="RCS1202" Action="Warning" /> <!-- Avoid NullReferenceException -->
-        <Rule Id="RCS1046" Action="Warning" />  <!-- Asynchronous method name should end with 'Async' -->
-        <Rule Id="RCS1181" Action="Warning" /> <!-- Replace comment with documentation comment -->
-        <Rule Id="RCS1004" Action="Warning" /> <!-- Remove braces from if-else -->
-	</Rules>
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
         <Rule Id="SA1305" Action="Warning" /> <!-- Field names must not use hungarian notation -->
         <Rule Id="SA0001" Action="Warning" /> <!-- Xml comment analysis disabled -->
