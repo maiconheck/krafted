@@ -25,7 +25,7 @@
 
 > **`Krafted.ValueObjects`**
 >
-> A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.                                                      |
+> A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use.
 >
 > [![Nuget](https://img.shields.io/nuget/v/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/) [![Nuget](https://img.shields.io/nuget/dt/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/)
 
