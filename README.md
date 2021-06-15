@@ -1,38 +1,25 @@
 ![logo](docs/logo.png)
 
 ![CI / CD pipeline](https://github.com/maiconheck/krafted/workflows/CI%20/%20CD%20pipeline/badge.svg)
-![Nuget](https://img.shields.io/nuget/v/Krafted.Guards)
 
 ### A clean, simple and extensible, carefully `crafted` set of libraries for general purpose.
 ### Krafted provides a misc. of useful and reusable pieces of code, in order to increase the productivity. 🚀
 ### Is reliable, 100% documented and highly test code coverage!
 ---
 
-## Architecture
+## Fine-grained modularity
 
-### Krafted consists in a set of fine-grained libraries targeting `netstandard2.1` (each of one is a nuget package):
-- Krafted
-- Krafted.Configuration
-- Krafted.DesignPatterns
-- Krafted.Net
-- Krafted.UnitTests
+### Krafted consists in a set of fine-grained libraries targeting `netstandard2.1`:
 
-### Each library contains a set of clean, documented and extensible APIs:
-- Krafted
-  - Krafted.Guards
-  - Krafted.Extensions
-  - Krafted.DataAnnotations
-- Krafted.Configuration
-- Krafted.DesignPatterns
-  - Specification
-  - Strategy
-  - Factory Method
-  - Abstract Factory
-  - Notification
-- Krafted.Net
-  - NetworkInformation
-- Krafted.UnitTests
-  - Xunit
+|                |              |           |           |
+| :------------- | :------------| :-------- | :-------- |
+| `Krafted.DesignPatterns`        | [![Nuget](https://img.shields.io/nuget/v/Krafted.DesignPatterns)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | [![Nuget](https://img.shields.io/nuget/dt/Krafted.DesignPatterns)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | A set of building blocks and participants to implement Design Patterns of GoF and others.                 |
+| `Krafted.ValueObjects`          | [![Nuget](https://img.shields.io/nuget/v/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/)       | [![Nuget](https://img.shields.io/nuget/dt/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/)       | A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use. |
+| `Krafted.UnitTests`             | [![Nuget](https://img.shields.io/nuget/v/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/)             | [![Nuget](https://img.shields.io/nuget/dt/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/)             | Extension methods to enhance the unit tests.                                                              |
+| `Krafted.Guards`                | [![Nuget](https://img.shields.io/nuget/v/Krafted.Guards)](https://www.nuget.org/packages/Krafted.Guards/)                   | [![Nuget](https://img.shields.io/nuget/dt/Krafted.Guards)](https://www.nuget.org/packages/Krafted.Guards/)                   | A set of Guard Clauses to validate method arguments, in order to enforce defensive programming practice.  |
+| `Krafted.Extensions`            | [![Nuget](https://img.shields.io/nuget/v/Krafted.Extensions)](https://www.nuget.org/packages/Krafted.Extensions/)           | [![Nuget](https://img.shields.io/nuget/dt/Krafted.Extensions)](https://www.nuget.org/packages/Krafted.Extensions/)           | A set of extension methods for String, Collections, Guid and other types.                                 |
+| `Krafted.Net`                   | [![Nuget](https://img.shields.io/nuget/v/Krafted.Net)](https://www.nuget.org/packages/Krafted.Net/)                         | [![Nuget](https://img.shields.io/nuget/dt/Krafted.Net)](https://www.nuget.org/packages/Krafted.Net/)                         | A set of utility components for network operations.                                                       |
+| `Krafted.DataAnnotations`       | [![Nuget](https://img.shields.io/nuget/v/Krafted.DataAnnotations)](https://www.nuget.org/packages/Krafted.DataAnnotations/) | [![Nuget](https://img.shields.io/nuget/dt/Krafted.DataAnnotations)](https://www.nuget.org/packages/Krafted.DataAnnotations/) | A set of DataAnnotations attributes for validations.                                                      |
 
 ## How to use (some examples):
 [To see the complete API documentation check out the docs.]()
