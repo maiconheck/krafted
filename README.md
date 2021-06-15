@@ -1,6 +1,7 @@
 ![logo](docs/logo.png)
 
 ![CI / CD pipeline](https://github.com/maiconheck/krafted/workflows/CI%20/%20CD%20pipeline/badge.svg)
+![Nuget](https://img.shields.io/nuget/v/Krafted.Guards)
 
 ### A clean, simple and extensible, carefully `crafted` set of libraries for general purpose.
 ### Krafted provides a misc. of useful and reusable pieces of code, in order to increase the productivity. 🚀
