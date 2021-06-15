@@ -11,9 +11,9 @@
 
 ### Krafted consists in a set of fine-grained libraries targeting `netstandard2.1`:
 
-|                |              |           |           |
-| :------------- | :------------| :-------- | :-------- |
-| `Krafted.DesignPatterns`        | [![Nuget](https://img.shields.io/nuget/v/Krafted.DesignPatterns)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | [![Nuget](https://img.shields.io/nuget/dt/Krafted.DesignPatterns)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | A set of building blocks and participants to implement Design Patterns of GoF and others.                 |
+|               |            |        |           |
+| ------------- | ------------| -------- | -------- |
+| `Krafted.DesignPatterns`        | [![Nuget](https://img.shields.io/nuget/v/Krafted.DesignPatterns.svg)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | [![Nuget](https://img.shields.io/nuget/dt/Krafted.DesignPatterns)](https://www.nuget.org/packages/Krafted.DesignPatterns/)   | A set of building blocks and participants to implement Design Patterns of GoF and others.                 |
 | `Krafted.ValueObjects`          | [![Nuget](https://img.shields.io/nuget/v/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/)       | [![Nuget](https://img.shields.io/nuget/dt/Krafted.ValueObjects)](https://www.nuget.org/packages/Krafted.ValueObjects/)       | A set of common Value Objects, with comparison and shallow copy operations, full tested and ready to use. |
 | `Krafted.UnitTests`             | [![Nuget](https://img.shields.io/nuget/v/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/)             | [![Nuget](https://img.shields.io/nuget/dt/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/)             | Extension methods to enhance the unit tests.                                                              |
 | `Krafted.Guards`                | [![Nuget](https://img.shields.io/nuget/v/Krafted.Guards)](https://www.nuget.org/packages/Krafted.Guards/)                   | [![Nuget](https://img.shields.io/nuget/dt/Krafted.Guards)](https://www.nuget.org/packages/Krafted.Guards/)                   | A set of Guard Clauses to validate method arguments, in order to enforce defensive programming practice.  |
