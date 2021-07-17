@@ -16,10 +16,12 @@ on:
     branches: [ master ]
     paths-ignore:
       - '**.md'
+      - 'docfx_project/**'
   pull_request:
     branches: [ master ]
     paths-ignore:
       - '**.md'
+      - 'docfx_project/**'
   create:
     branches: [ master ]
 

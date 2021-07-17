@@ -1,0 +1,14 @@
+- name: Guard Clauses
+  href: guards.md
+- name: Extensions
+  href: extensions.md
+- name: ValueObjects
+  href: value-objects.md
+- name: DataAnnotations
+  href: data-annotations.md
+- name: UnitTests
+  href: unit-tests.md
+- name: Net
+  href: net.md
+- name: DesignPatterns
+  href: design-patterns.md

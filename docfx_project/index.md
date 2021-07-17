@@ -1,6 +1,4 @@
-![logo](docfx_project/images/main/logo.png)
-
-![CI / CD pipeline](https://github.com/maiconheck/krafted/workflows/CI%20/%20CD%20pipeline/badge.svg)
+![logo](images/main/logo.png)
 
 # What is Krafted?
 A clean, simple and extensible, carefully crafted set of libraries for general purpose.

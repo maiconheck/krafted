@@ -1,0 +1,7 @@
+- name: Documentation
+  href: articles/guards.md
+- name: API
+  href: api/
+  homepage: api/index.md
+- name: Source
+  href: https://github.com/maiconheck/krafted

@@ -1,0 +1,58 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["Krafted/**/**.csproj"],
+          "exclude": ["**/bin/**", "**/obj/**"],
+          "src": "../src"
+        }
+      ],
+      "dest": "api",
+      "filter": "filterConfig.yml",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "api/index.md"]
+      },
+      {
+        "files": ["articles/**.md", "articles/**/toc.yml", "toc.yml", "*.md"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/**"]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": ["apidoc/**.md"],
+        "exclude": ["obj/**", "_site/**"]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": ["default", "templates/material", "templates/custom"],
+    "postProcessors": ["ExtractSearchIndex"],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata": {
+      "_appTitle": "Krafted",
+      "_appFooter": "© 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>",
+      "_appLogoPath": "images/header/icon.png",
+      "_appFaviconPath": "images/favicon.ico",
+      "_enableNewTab": true,
+      "_enableSearch": true,
+      "_disableContribution": false,
+      "_gitContribute": { "repo": "https://github.com/maiconheck/krafted.git" }
+    }
+  }
+}

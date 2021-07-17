@@ -1,0 +1,10 @@
+apiRules:
+  - exclude:
+      uidRegex: ^System\.Object
+      type: Type
+  - exclude:
+      uidRegex: ^Microsoft\.AspNetCore\.Mvc\.Controller
+      type: Type
+  - exclude:
+      uidRegex: ^System\.Object\.GetHashCode
+      type: Member

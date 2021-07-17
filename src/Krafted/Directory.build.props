@@ -16,6 +16,6 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="../../../docs/icon.png" Pack="true" PackagePath="\"/>
+    <None Include="../../../docfx_project/images/main/icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
