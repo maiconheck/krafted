@@ -1,0 +1,41 @@
+name: DocFX build and publish
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  generate-docs:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1.5.0
+      with:
+        dotnet-version: 3.1.101
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
+    - name: Setup DocFX
+      uses: crazy-max/ghaction-chocolatey@v1
+      with:
+        args: install docfx
+
+    - name: Install the dependencies
+      run: dotnet restore "./src/Krafted/Krafted.sln"
+
+    - name: DocFX Build
+      working-directory: docfx_project
+      run: docfx docfx.json
+      continue-on-error: false
+
+    - name: Publish
+      if: github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docfx_project/_site
+        force_orphan: true

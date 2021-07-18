@@ -10,7 +10,7 @@ Is reliable, 100% documented and highly test code coverage. ✅
 # Getting started
 Check out the [**docs**](articles/guards.html) to get some samples of how Krafted can help you.
 
-To get more details, check out the [**API reference**](api/index.html).
+To get more details, check out the [**API reference**](api/).
 
 # Where can I get?
 Krafted consists in a set of fine-grained modules, each one is delivered as a nuget package (targeting `netstandard2.0`).
