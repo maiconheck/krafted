@@ -15,13 +15,11 @@ on:
   push:
     branches: [ master ]
     paths-ignore:
-      - '**.md'
-      - 'docfx_project/**'
+      - 'README.md'
   pull_request:
     branches: [ master ]
     paths-ignore:
-      - '**.md'
-      - 'docfx_project/**'
+      - 'README.md'
   create:
     branches: [ master ]
 
@@ -61,6 +59,27 @@ jobs:
 
     - name: COVERAGE - Calculates and generates a code coverage report
       run: dotnet reportgenerator "-reports:./src/coverage-results/coverage.opencover.xml" "-targetdir:./src/coverage-results/report" "-reporttypes:Html;Badges"
+
+################## DOC STEPS ##################
+    - name: Setup DocFX
+      if: github.event_name == 'push'
+      uses: crazy-max/ghaction-chocolatey@v1
+      with:
+        args: install docfx
+
+    - name: DocFX Build
+      if: github.event_name == 'push'
+      working-directory: docfx_project
+      run: docfx docfx.json
+      continue-on-error: false
+
+    - name: DocFX Publish
+      if: github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docfx_project/_site
+        force_orphan: true
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
