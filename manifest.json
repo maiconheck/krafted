@@ -1,0 +1,1354 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/krafted/krafted/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.EmailAddressRegexAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html",
+          "hash": "qai0xi10OfCUQ/df7b3cCX/GCrxpqth6RuLCjZa5Y/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.MinOneAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.MinOneAttribute.html",
+          "hash": "km7Z/YpsGVmxeRLUaHnzg8AxW1SotNLKS/YMBK5E45Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.ModelValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.ModelValidator.html",
+          "hash": "scvLvhqja+NKTW5wCJ3qiS7+gMBrkhkPgCtEuV/Hr/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html",
+          "hash": "N0jG1bEBDV0gqjP41cVbk9NSHdc0mIlcvf8V1y7sDRw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.Pt.NifAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.Pt.NifAttribute.html",
+          "hash": "bUA3h3eAKV4kk0PvRwEk4w8LtEZijTSNrmhqDfUphuc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.Pt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.Pt.html",
+          "hash": "Z+0srnwR9J26+qeqzkq+H4fDJP51Ci1t7Hsf4BwjjfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DataAnnotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DataAnnotations.html",
+          "hash": "HFKXqHiEk+Maex6iBWHJvH4xBy1zTBN8FjhdRBP8FU0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DesignPatterns.Specifications.Specification-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DesignPatterns.Specifications.Specification-1.html",
+          "hash": "+fKwSIEjQe2PxTy5O1VzTxwgI92MlW7K2S/JGkRWU8U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.DesignPatterns.Specifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.DesignPatterns.Specifications.html",
+          "hash": "VHh/mrjz365id1R4AFAOgU5QPR83QRt/bMyHa05W0Kk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.Guards.Guard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.Guards.Guard.html",
+          "hash": "IJ+I4MdcmkF511o7oW58To3CJ4JFHjEwuYOOZurj3f4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.Guards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.Guards.html",
+          "hash": "coRYw1HKY+926tYJPNDOjAcmh/QM6fbmg559/y8iG84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.IntegrationTest.Krafted.Net.NetworkInformation.NetworkTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.IntegrationTest.Krafted.Net.NetworkInformation.NetworkTest.html",
+          "hash": "hlPJ0zAesC1MGqoN4J+fZm3kAbE/ZyU7X25bsKUBViI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.IntegrationTest.Krafted.Net.NetworkInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.IntegrationTest.Krafted.Net.NetworkInformation.html",
+          "hash": "jylg2sNe8RqceISOdy8yMqu47nX9NDAu0uK7kQvHyyI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.Net.NetworkInformation.Network.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.Net.NetworkInformation.Network.html",
+          "hash": "JInM6d7jxVJeEoUqk2kNeBzCbDK8qAmRGsZUETFaUCg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.Net.NetworkInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.Net.NetworkInformation.html",
+          "hash": "GpTBveFb1qAXeb5moELG0AWkIR2E0Y9T3HzmlY1atGM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.EntityDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.EntityDummy.html",
+          "hash": "qDtYe0FIikDo2hE6Zcnrw7EAMxU5j4Q76sk2erkqfJc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.EmailAddressRegexAttributeTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.EmailAddressRegexAttributeTest.html",
+          "hash": "jqxh9po3Tccwfz1Sowrh1EXhWONeWaAqMalhmvQIFfc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.EmailModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.EmailModelDummy.html",
+          "hash": "OZGjcQym9mZfTYGl6bnMmFuZx5ky6QktoEMimbSBNx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneAttributeTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneAttributeTest.html",
+          "hash": "H7i7hQzJiNCUlEshDFTuktA4itJtjwuWlD1QLyZZ8SA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneDecimalModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneDecimalModelDummy.html",
+          "hash": "Q590q3bk1NMt0XC8htXK/FT5qX4uvTYSp1qIog/lg3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneIntModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneIntModelDummy.html",
+          "hash": "sVcYVFMUx5SmUnIYA9QUrOtWoQ4pmWunMFXKB/f4MhE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneLongModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.MinOneLongModelDummy.html",
+          "hash": "3VRMuBhqBcL2gzzX3fTOIrSmCOXWRlfzW63cQ2g2MVo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NifModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NifModelDummy.html",
+          "hash": "JkXkW0Jm69OZcmJai/IzfcGEhBoqb1TkxhZ7tCplKOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionAttributeTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionAttributeTest.html",
+          "hash": "hMJXR+7zZeJ7HsU3Z7+vDKyKwR9VDJvi2kVhPToqcvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionModelDummy.html",
+          "hash": "dRFI0iiB5IEUkuUnsPH+b9AGEioFkyzzwQ13w0G7e04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.Pt.NifAttributeTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.Pt.NifAttributeTest.html",
+          "hash": "nB/WQbh6O8jK+UVauVvBsSn88i0+Av59X3lr5kUDCRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.Pt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.Pt.html",
+          "hash": "YjyVB1qUAat3LfLXhosrE1/HR0e70W7Z97CZTT2IoBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DataAnnotations.html",
+          "hash": "syvknR8v9UgiMu1/4nHriXPTEVshAws2aE56m3OQnAk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.ModelStubSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.ModelStubSpecification.html",
+          "hash": "uxgsUbJyA6gP9MkXmITV7Qw0lTPx/jWtIxwSbUNkMMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.ModelStubSpecification2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.ModelStubSpecification2.html",
+          "hash": "kN6nKOkRKXoDzo8mgRm5wDwqG6b9JA2PPN+/ErQebZc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.SpecificationTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.SpecificationTest.html",
+          "hash": "7n9p4D0b9u223hemm9TFp0vkZUwa62DC+Hn0R7MnSdw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.DesignPatterns.Specifications.html",
+          "hash": "8ENSmFU5wbdUvAAQsqrcZo3GjJN72MxTcxbuGu9dfz8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.EnumerableExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.EnumerableExtensionTest.html",
+          "hash": "nbk0/jcbUz/kFiXfRm08f0w3Zxj4uTsvDHyCIry3uPA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.GuidExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.GuidExtensionTest.html",
+          "hash": "b87I6OfCNM+K3Gzb9aDU0SCO8cdKnl9rozpL5OW6gdU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.HttpResponseMessageExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.HttpResponseMessageExtensionTest.html",
+          "hash": "E87qHPqBE1Xdq52pjxrYjou3aSJwB0WBFl7NLVb8jk8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.ListExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.ListExtensionTest.html",
+          "hash": "aoQ9YUQhtKHt2y9XHmEN89RK6npuDhL/Sdj1z4FdNqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.StringExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.StringExtensionTest.html",
+          "hash": "muHowiNwKZ3z9G0Bs0V8OYHsSSeSHgBvCFiv8xkJGJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Extensions.html",
+          "hash": "l8lIDZXztXuf8ZZzkcPTm6tBaMuZN2vtLcXl96LfzNQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardBooleanTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardBooleanTest.html",
+          "hash": "Jel74V7zmxBemYzfVPQAoV3eIXE69Pw5u5FExDAzP74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardCollectionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardCollectionTest.html",
+          "hash": "DFYRD8ccAp63sLMUK3XGAqwt1xDoUmr8clIScsCfsF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardEmailTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardEmailTest.html",
+          "hash": "CG0gxG5GFMo+hw+qUSyj/j2NAb9eD0RjJoDQQdrX1ns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardEnumTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardEnumTest.html",
+          "hash": "bg1YK04QF0E5xV31EppaLceuSqtZG/0R7DUtlFSuedQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardNullTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardNullTest.html",
+          "hash": "3WTSUJStcBFgJhwYKTAMxSAc0vTGuCQaP4mFhxBzUzk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardNumberTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardNumberTest.html",
+          "hash": "BhGM9+i07PF6EukiYhKY/iRBt9hJ/UedAxjGYckYHfM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardRegexTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardRegexTest.html",
+          "hash": "7WciTQeiJgDAyuljDv/osOT2/Aeh5NqEpKvyQxwXcTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardStringTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.GuardStringTest.html",
+          "hash": "Pt1s/vOzuG8HbaWtpbRGOwCTEgDDYjkpXS8XdTDp+uI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.OrderStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.OrderStatus.html",
+          "hash": "rDyntJFvPowyfCb2fZFgHUjXXS6hHBWLxLaYoilCZos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.Pt.GuardPtTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.Pt.GuardPtTest.html",
+          "hash": "bHm3FZLJbl04a+qy6ik6H6cWcsEklt3lGk/PaUD8t+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.Pt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.Pt.html",
+          "hash": "+3r+boJdvpS/0zf+G7zeNYPXX4Ucwo2S6kpuD73L8yw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.Guards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.Guards.html",
+          "hash": "AuDW4mrc9pDxh2A5+JHP/Iu4K7o6C4gWjeb3DIO8s/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.TestDouble.HttpMessageHandlerMockTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.TestDouble.HttpMessageHandlerMockTest.html",
+          "hash": "kofFskE57FNuE3SpDwhtsujqjm+Ki3GmU70hAM+Yzfg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.TestDouble.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.TestDouble.html",
+          "hash": "ZDSzvAszQsk2Qo1s4pWFEGiqSIFjWTo42hTRJOMh5mY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.AssertExtensionTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.AssertExtensionTest.html",
+          "hash": "q6/hzNc5wOmXEhlKesTjWFhN/rERMVjum89mUJ/vr6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.UseCultureAttributeTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.UseCultureAttributeTest.html",
+          "hash": "1It9GUcwwqNknb2dtvkmHoj1iq6z9Qk38VxPb0XlfLU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.UnitTests.Xunit.html",
+          "hash": "uWMjPL1eOAD6iNLxLQcY5eBlAAjJqUHjkIb6YqQgnQg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.EmailTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.EmailTest.html",
+          "hash": "Bh2Qj/WCRgweo8xXjlmbPbdieBoWafprD2Im6f/IHuY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.MoneyTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.MoneyTest.html",
+          "hash": "gLlKukaXJT5DQnX3NYHYj/Eqqe/PAehStYFANX88m+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.NifTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.NifTest.html",
+          "hash": "D0VQWPhgpPMFyWBoQC6Rwo4nIc2RF7/hP+FWqJkT78E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.UrlTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.UrlTest.html",
+          "hash": "O65HsfutR5QJZvoLqoS6rfavN8UNX3r2nxol5tFSwDw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectStub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectStub.html",
+          "hash": "4xvCT7QNV6Ca4CJap3EhTjU4mEDbhJn1Mm8h2hKLR6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTTest.html",
+          "hash": "f9Fv00Ykr0AGfu7mvEjRoyiUVOI4KbgxOyvGChnA80A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTest.html",
+          "hash": "cf51IXjy3h/QLeUAJqOM8rMWSCDdZvqjJM3v0SBTBCM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Krafted.ValueObjects.html",
+          "hash": "5MEwKUyyYJ4b00x0BdtEMMEhzWsRgnYLjrDhI5sO36I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.ViewModelDummy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.ViewModelDummy.html",
+          "hash": "s6g3Yw9xzcCHR5lQSgdQ4C2oCpH5+fhdh60/P2nmVPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Xunit.AssertExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Xunit.AssertExtension.html",
+          "hash": "H892Jl2PfQI5jixbrBIcWVH++x2xw7OTCf+SB+w5A7U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Xunit.UseCultureAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Xunit.UseCultureAttribute.html",
+          "hash": "RiEauVzOlkoajfLixDMcAoTcvONepVtJG1QBV7nfCVs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.Xunit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.Xunit.html",
+          "hash": "Gmzt2J4QJamOcG4k8jTW8/fIW/j/vYO27CYDg8/BWkQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTest.html",
+          "hash": "GIVQy7rcmygAmeWyHUcS1ONnozrXDVMSeabgEvEn22g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTests.TestDouble.HttpClientMockFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTests.TestDouble.HttpClientMockFactory.html",
+          "hash": "IY6Y2qH8Rj1MrDtFaRSCcBdpWuMl86e55Lp1KSPE4Sc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html",
+          "hash": "MbnaT1qHE+f5rqmD4jL/4Y53STBUwoJeMzulCTLnKGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.UnitTests.TestDouble.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.UnitTests.TestDouble.html",
+          "hash": "BkQjQAU9jmvKqv8dYmQPfpCGM7UL5j558kd1SkQ3nYI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Br.Cnpj.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Br.Cnpj.html",
+          "hash": "RqWdQLenWO8QEOTke6IqSLLeHLKzUjmHCGbwVkiOb8E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Br.Cpf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Br.Cpf.html",
+          "hash": "D54nrivurARU44YKPSEGq/pi5d6Jbz3gcqaCGN+urYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Br.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Br.html",
+          "hash": "OA0IlxRJC5SBi1tp6Foh5npKoRBKXIT23dh6I8aCKYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Email.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Email.html",
+          "hash": "rYNUmG4hewnFggrN/5aUpdM8PkJZB2sSz6Z/3lotruY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Money.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Money.html",
+          "hash": "e+chPX/AyZpx0NBVvZcthtOtXbYwiCoVynyXjets0FE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Pt.Nif.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Pt.Nif.html",
+          "hash": "RqJG8iqraUDurMHBcNGS69c0CUUhR9eX58+T2lqz1yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Pt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Pt.html",
+          "hash": "anvWuagt1OYN1ENaBF8xfT8Up2Dxxx+d+TAY2JId2/w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.Url.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.Url.html",
+          "hash": "yY5jYXI6uNq4ggtcym5K5rYpkqYdtaZXrQXYg/BFcHE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.ValueObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.ValueObject-1.html",
+          "hash": "3klix5Ampn97wqZfau0xnoRyQzi3ewN+eH+i82dR7Kg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.ValueObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.ValueObject.html",
+          "hash": "WzJGztBxExsfQVyi0+iK0FUsW6cAsA+uu3XaQuIsTpE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Krafted.ValueObjects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Krafted.ValueObjects.html",
+          "hash": "AdWFBLBqZFtTmSMdDmPIY0RA3AulrL1JqoVFhCt/K4U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Collections.Generic.EnumerableExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Collections.Generic.EnumerableExtension.html",
+          "hash": "YmnREEw+zTgIt3gJL6pXGEnA+YgWtl0maqFJlTl2Ir4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Collections.Generic.ListExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Collections.Generic.ListExtension.html",
+          "hash": "L0uw/OV6XrbojhudLrPkwdgyAaUZTTeytUU1uEicihI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Collections.Generic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Collections.Generic.html",
+          "hash": "yzEExfLklKCihR7ZWSp8uaO3XeCoFI/PvgbWMVVGPoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.GuidExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.GuidExtension.html",
+          "hash": "DpiY6f4aiAo0tFMh69ui1lnDl77vMjonQkye336xZpY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Net.Http.HttpResponseMessageExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Net.Http.HttpResponseMessageExtension.html",
+          "hash": "9k+JsddP7yDmNOMwJhk+f25hQBF2wTTnf9Q9jShtsgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.Net.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.Net.Http.html",
+          "hash": "onkst+Aw+F3X4PFyebWx/kDY51nn8yRNXTXQinTVQqg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.StringExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.StringExtension.html",
+          "hash": "J6Od5p6N5SXeX6ugmo2G1ajh6EwGM4+Bzk3jE4xwBvE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/System.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/System.html",
+          "hash": "tpqNVuygryPn+uPQT/N9UqU0N+aC/wGOo5IlpbYGOXM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "i4dYgl4OjA6QgVkfTMhLZEsCgjeVib6oFHhodb+Mvh8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "2ub/SaP9AHn2tyISDiPwsE9A7PUTVb2NiqAepT0RgSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/data-annotations.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/data-annotations.html",
+          "hash": "g52+iD1OA+UE/poUJjc6t10AXezscwc7WDd91XjfI8I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/design-patterns.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/design-patterns.html",
+          "hash": "WkQYqHPpaTYZvcJxZIlppR+Ad6aBzGNTaNHfdciFKQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extensions.html",
+          "hash": "aPFeCeIVZeX7s/XExghkz7UZv/zMLZqT/TZWj1Ms25s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/guards.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/guards.html",
+          "hash": "rs4Yi8AgWAsGTGJjxP/I+nbk999aIUBTHsRfaft81Wg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/net.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/net.html",
+          "hash": "4+e0mFp58m1aY8Wt2UIsTtbEcq4uc6c2sACj68qMTe8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "9QaYtUZic055tc1mnKNwkX60XDmexo65IUmuojQ+xiA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/unit-tests.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/unit-tests.html",
+          "hash": "9fQGyOIHaDCqBsYX1LrMV3UderXJpK9mG3wlg90cBr8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/value-objects.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/value-objects.html",
+          "hash": "JpppHauQxxWmlReYd3eC/p9X+nZthIpNd2QWD27vrL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/header/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/header/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/main/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/main/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/main/icon.psd",
+      "output": {
+        "resource": {
+          "relative_path": "images/main/icon.psd"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/main/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/main/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "gy8I1aGVrTdIQBHkJn/1GIg9JthYdJs5/x6/OKG2gIE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Te1hGZpV9j69vvyXN02GVUZgHn/PNVCPkbZ3qXsPiXQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 9,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 90,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
