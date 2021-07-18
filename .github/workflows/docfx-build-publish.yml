@@ -17,6 +17,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
     - name: Setup DocFX
