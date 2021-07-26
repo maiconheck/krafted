@@ -4,6 +4,7 @@
   --header-ft-color: #ffffff;
   --highlight-light: #5e92f3;
   --highlight-dark: #003c8f;
+  --link-active: #ff1a5a;
   --accent-dim: #e0e0e0;
   --accent-super-dim: #f3f3f3;
   --font-color: #34393e;
@@ -39,12 +40,16 @@ a:focus {
 }
 
 .toc .nav > li.active > a {
-  color: var(--highlight-dark);
+  color: var(--link-active);
 }
 
-.toc .nav > li.active > a:hover,
+.toc .nav > li.active > a:hover
 .toc .nav > li.active > a:focus {
-  color: var(--highlight-light);
+  color: var(--link-active);
+}
+
+.toc .nav > li > a {
+  color: var(--highlight-dark);
 }
 
 .pagination > .active > a {
@@ -177,10 +182,6 @@ article h4 {
 
 .toc .level1 > li {
   font-weight: 400;
-}
-
-.toc .nav > li > a {
-  color: var(--font-color);
 }
 
 .sidefilter {

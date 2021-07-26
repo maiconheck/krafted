@@ -513,7 +513,7 @@ body .toc{
 }
 .toc .nav > li > a:hover,
 .toc .nav > li > a:focus {
-  color: #000000;
+  color: #5e92f3;
   background: none;
   text-decoration: inherit;
 }
