@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Threading;
 using Xunit.Sdk;
 
-namespace Krafted.UnitTest.Xunit
+namespace Krafted.UnitTests.Xunit
 {
     /// <summary>
     /// Apply this attribute to your test method to replace the

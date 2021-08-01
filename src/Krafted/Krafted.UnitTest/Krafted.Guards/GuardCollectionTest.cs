@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Krafted.Guards;
 using Xunit;
-using Assert = Krafted.UnitTest.Xunit.AssertExtension;
+using Assert = Krafted.UnitTests.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.Guards
 {

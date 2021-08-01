@@ -1,9 +1,9 @@
 using System;
 using System.Globalization;
-using Krafted.UnitTest.Xunit;
+using Krafted.UnitTests.Xunit;
 using Krafted.ValueObjects;
 using Xunit;
-using Assert = Krafted.UnitTest.Xunit.AssertExtension;
+using Assert = Krafted.UnitTests.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.ValueObjects
 {

@@ -1,4 +1,7 @@
 apiRules:
+  - include:
+      uidRegex: ^Krafted\.UnitTests
+      type: Type
   - exclude:
       uidRegex: ^System\.Object
       type: Type
@@ -8,3 +11,15 @@ apiRules:
   - exclude:
       uidRegex: ^System\.Object\.GetHashCode
       type: Member
+  - exclude:
+      uidRegex: ^Krafted\.UnitTest
+      type: Type
+  - exclude:
+      uidRegex: ^Krafted\.IntegrationTest
+      type: Type
+  - exclude:
+      uidRegex: ^Krafted\.Net\.Network
+      type: Type
+  - exclude:
+      uidRegex: ^Krafted\.ValueObjects\.Br
+      type: Type

@@ -1,7 +1,7 @@
 using System;
 using Krafted.ValueObjects.Pt;
 using Xunit;
-using Assert = Krafted.UnitTest.Xunit.AssertExtension;
+using Assert = Krafted.UnitTests.Xunit.AssertExtension;
 
 namespace Krafted.UnitTest.Krafted.ValueObjects
 {

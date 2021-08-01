@@ -7,7 +7,7 @@
 using System;
 using System.Globalization;
 using System.Threading;
-using Krafted.UnitTest.Xunit;
+using Krafted.UnitTests.Xunit;
 using Xunit;
 using Xunit.Sdk;
 

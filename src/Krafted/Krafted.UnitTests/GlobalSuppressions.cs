@@ -6,7 +6,7 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "CC0037:Remove commented code.", Justification = "Documentation")]
-[assembly: SuppressMessage("Design", "CA1019:Define accessors for attribute arguments", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTest.Xunit.UseCultureAttribute.#ctor(System.String)")]
-[assembly: SuppressMessage("Design", "CA1019:Define accessors for attribute arguments", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTest.Xunit.UseCultureAttribute.#ctor(System.String,System.String)")]
-[assembly: SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "Is an acronym, is not hungarian notation", Scope = "member", Target = "~M:Krafted.UnitTest.Xunit.UseCultureAttribute.#ctor(System.String,System.String)")]
+[assembly: SuppressMessage("Design", "CA1019:Define accessors for attribute arguments", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String)")]
+[assembly: SuppressMessage("Design", "CA1019:Define accessors for attribute arguments", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String,System.String)")]
+[assembly: SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:Field names should not use Hungarian notation", Justification = "Is an acronym, is not hungarian notation", Scope = "member", Target = "~M:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String,System.String)")]
 [assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)~System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}")]

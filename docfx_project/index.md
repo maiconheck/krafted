@@ -1,9 +1,9 @@
 ![logo](images/main/logo.png)
 
 # What is Krafted?
-A clean, high-decoupled and extensible, carefully crafted set of libraries for general purpose.
+A clean, decoupled and extensible, carefully crafted set of libraries for general purpose.
 
-Krafted provides a toolkit of useful and reusable pieces of code, in order to increase the productivity. 🚀
+Krafted provides a toolkit of useful and reusable pieces of code, in order to increase your productivity. 🚀
 
 Is reliable, 100% documented and highly test code coverage. ✅
 
@@ -16,7 +16,7 @@ they get more dependencies on other 3rd packages, and when we install these tool
 Well, this problem doesn't just happen with toolkits. Remember `System.Web.dll`?
 This assembly, over time, became a large monolith that contained several ASP.net (full framework) modules.
 
-In fact, one of the problems that were solved through the new .NET Core / ASP.net Core, was precisely the granularization of the modules, thus solving problems such as the old `System.Web.dll` monolith.
+In fact, one of the problems that were solved by the .NET team through the new .NET Core / ASP.net Core, was precisely the granularization of the modules, thus solving problems such as the old `System.Web.dll` monolith.
 
 When looking at the architecture and fine-grained distribution strategy of the `.NET Core` and `ASP.net Core` packages, I came up with the idea of creating a toolkit with this fine-grained strategy, providing high decoupling, independent evolution, and long life to the modules.
 
@@ -87,6 +87,6 @@ For bugs, issues or feature requests, please, create a [GitHub Issue](https://gi
 >
 > How about being able to reuse your code through the Krafted? 😎
 
-Krafted was created to be a hub of useful and reusable pieces of code for the .NET community.
-So if you have any code snippet that is clean, useful, decoupled and tested,
-and want to contribute to Krafted, please make a [pull request!](https://github.com/maiconheck/krafted/pulls) 💜
+Krafted was created to be a home of useful and reusable pieces of code for the .NET community.
+So if you have any code snippet that is useful, clean, decoupled and tested,
+and want to contribute to this goal, please make a [pull request!](https://github.com/maiconheck/krafted/pulls) 💜
