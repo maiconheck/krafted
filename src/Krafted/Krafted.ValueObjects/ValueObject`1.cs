@@ -5,7 +5,7 @@ using System.Linq;
 namespace Krafted.ValueObjects
 {
     /// <summary>
-    /// Represents an Value Object [Evans] base class for a single value, providing common operations to value objects.
+    /// Represents a Value Object base class for a single value, providing common operations to value objects.
     /// See <see cref="Value"/>.
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
@@ -67,9 +67,9 @@ namespace Krafted.ValueObjects
         }
 
         /// <summary>
-        /// Creates a shallow copy of the current <see cref="ValueObject"/>.
+        /// Creates a shallow copy of the current <see cref="ValueObject{T}"/>.
         /// </summary>
-        /// <returns>A shallow copy of the current <see cref="ValueObject"/>.</returns>
+        /// <returns>A shallow copy of the current <see cref="ValueObject{T}"/>.</returns>
         public ValueObject<T> GetCopy() => MemberwiseClone() as ValueObject<T>;
 
         /// <summary>

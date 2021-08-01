@@ -5,8 +5,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <IsTestProject>false</IsTestProject>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Title>Extension methods to enhance the unit tests.</Title>
-    <Description>Extension methods to enhance the unit tests.</Description>
+    <Title>Extension methods, DataAnnotations and Test Doubles to enhance the unit tests.</Title>
+    <Description>Extension methods, DataAnnotations and Test Doubles to enhance the unit tests.</Description>
   </PropertyGroup>
 
   <PropertyGroup>

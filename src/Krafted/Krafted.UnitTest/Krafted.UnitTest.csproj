@@ -9,7 +9,7 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\Analyzers\Test.ruleset</CodeAnalysisRuleSet>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-    <NoWarn>RCS1060,SA1402</NoWarn>
+    <NoWarn>RCS1060,SA1402,CA1054,CA1305</NoWarn>
   </PropertyGroup>
   
   <ItemGroup>

@@ -96,5 +96,14 @@ namespace Krafted.UnitTest.Krafted.Extensions
         {
             Assert.Equal(expectedSlug, input.ToSlug());
         }
+
+        [Theory]
+        [InlineData("EscolheUmTrabalhoDeQueGostes,ENãoTerásQueTrabalharNemUmDiaNaTuaVida.", "Escolhe_Um_Trabalho_De_Que_Gostes,_E_Não_Terás_Que_Trabalhar_Nem_Um_Dia_Na_Tua_Vida.")] // - Confúcio
+        [InlineData("EuNãoFalhei.SóDescobri10MilCaminhosQueNãoEramOCerto", "Eu_Não_Falhei._Só_Descobri10_Mil_Caminhos_Que_Não_Eram_O_Certo")] // - Thomas Edison
+        [InlineData("OSucessoNormalmenteVemParaQuemEstáOcupadoDemaisParaProcurarPorEle", "O_Sucesso_Normalmente_Vem_Para_Quem_Está_Ocupado_Demais_Para_Procurar_Por_Ele")] // – Henry David Thoreau
+        public void PascalCaseToSnakeCase_InputPascalCase_OutputSnakeCase(string input, string expectedSnakeCase)
+        {
+            Assert.Equal(expectedSnakeCase, input.PascalCaseToSnakeCase());
+        }
     }
 }

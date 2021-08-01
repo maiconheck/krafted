@@ -43,15 +43,9 @@ So get the packages according to the features you want:
 
 > **`Krafted.UnitTests`**
 >
-> Extension methods to enhance the unit tests.
+> Extension methods, DataAnnotations and Test Doubles to enhance the unit tests.
 >
 > [![Nuget](https://img.shields.io/nuget/v/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/) [![Nuget](https://img.shields.io/nuget/dt/Krafted.UnitTests)](https://www.nuget.org/packages/Krafted.UnitTests/)
-
-> **`Krafted.Net`**
->
-> A set of utility components for network operations.
->
-> [![Nuget](https://img.shields.io/nuget/v/Krafted.Net)](https://www.nuget.org/packages/Krafted.Net/) [![Nuget](https://img.shields.io/nuget/dt/Krafted.Net)](https://www.nuget.org/packages/Krafted.Net/)
 
 > **`Krafted.DesignPatterns`**
 >

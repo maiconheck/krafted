@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Krafted.DataAnnotations
 {
     /// <summary>
-    /// Defines a helper class for tests, that can be used to validate objects, properties, and
+    /// Provides a helper class for tests, that can be used to validate objects, properties, and
     /// methods when it is included in their associated System.ComponentModel.DataAnnotations.ValidationAttribute
     /// attributes.
     /// </summary>

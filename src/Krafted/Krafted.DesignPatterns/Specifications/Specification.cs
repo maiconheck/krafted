@@ -1,6 +1,6 @@
 // A Specification Pattern implementation.
 //
-// This class is an integral reproduction of the excellent course: Specification Pattern in C# Pluralsight by Vladimir Khorikov.
+// This class is based on the excellent course: Specification Pattern in C# Pluralsight by Vladimir Khorikov.
 // Course: https://app.pluralsight.com/library/courses/csharp-specification-pattern/table-of-contents
 // Source: https://github.com/vkhorikov/SpecPattern
 // Retrieved in July 2020.
@@ -19,7 +19,7 @@ namespace Krafted.DesignPatterns.Specifications
         /// <summary>
         /// Starting point that return an initialized specification to allows us to build up new specifications on top of it.
         /// </summary>
-        public static readonly Specification<T> All = new IdentitySpecification<T>();
+        public static readonly Specification<T> Default = new IdentitySpecification<T>();
 
         /// <summary>
         /// Determines whether is satisfied by the specified model.
@@ -47,10 +47,10 @@ namespace Krafted.DesignPatterns.Specifications
         /// <returns>The And specification.</returns>
         public Specification<T> And(Specification<T> specification)
         {
-            if (this == All)
+            if (this == Default)
                 return specification;
 
-            if (specification == All)
+            if (specification == Default)
                 return this;
 
             return new AndSpecification<T>(this, specification);
@@ -63,8 +63,8 @@ namespace Krafted.DesignPatterns.Specifications
         /// <returns>The Or specification.</returns>
         public Specification<T> Or(Specification<T> specification)
         {
-            if (this == All || specification == All)
-                return All;
+            if (this == Default || specification == Default)
+                return Default;
 
             return new OrSpecification<T>(this, specification);
         }

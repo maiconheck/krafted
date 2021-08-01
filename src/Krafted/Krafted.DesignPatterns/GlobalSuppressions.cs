@@ -14,4 +14,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "In this case the explicit type improves readability", Scope = "member", Target = "~M:Krafted.DesignPatterns.Specifications.AndSpecification`1.ToExpression~System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}")]
 [assembly: SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "In this case the explicit type improves readability", Scope = "member", Target = "~M:Krafted.DesignPatterns.Specifications.Specification`1.IsSatisfiedBy(`0)~System.Boolean")]
 [assembly: SuppressMessage("Style", "CC0037:Remove commented code.", Justification = "This comment is a header documentation")]
-[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Not applicable", Scope = "member", Target = "~F:Krafted.DesignPatterns.Specifications.Specification`1.All")]
+[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Not applicable", Scope = "member", Target = "~F:Krafted.DesignPatterns.Specifications.Specification`1.Default")]

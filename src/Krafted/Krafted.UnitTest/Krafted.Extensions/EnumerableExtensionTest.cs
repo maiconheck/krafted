@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Xunit;
 
@@ -56,7 +57,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
         [Fact]
         public void Empty_SourceNotContainsElements_True()
         {
-            var source = new int[] { };
+            var source = Array.Empty<int>();
             Assert.True(source.Empty());
         }
     }

@@ -4,7 +4,7 @@ A set of extension methods for String, Collections, Guid and other types.
 
 ---
 ### Samples
-Below are some examples of using the `extension methods`.
+Below are some examples of using `extension methods`.
 
 ### Enumerable
 Provides extension methods to `IEnumerable<T>.`
@@ -195,5 +195,132 @@ public void Move_NewOrder_Reordered(int oldIndex, int newIndex, int[] orderExpec
 	Assert.Equal(orderExpected[0], source[0]);
 	Assert.Equal(orderExpected[1], source[1]);
 	Assert.Equal(orderExpected[2], source[2]);
+}
+```
+
+### String
+Provides extension methods to `string`.
+
+**`Replace`**
+> In a specified input string, replaces all strings that match a specified regular
+> expression with a specified replacement string.
+
+```
+[Fact]
+public void Replace_InputCorrectPattern_ReplacementReplaced()
+{
+    Assert.Equal("ReplacedView all titlesReplaced", _linkInput.Replace(_linkPattern, "Replaced", RegexOptions.Compiled));
+    Assert.Equal("the Replaced e-mail", _emailInput.Replace(_emailPattern, "Replaced", RegexOptions.Compiled));
+    Assert.Equal("Replaced is the hour", _hourInput.Replace(_hourPattern, "Replaced", RegexOptions.Compiled));
+}
+
+[Fact]
+public void Replace_InputIncorrectPattern_ReplacementNotReplaced()
+{
+    Assert.Equal(
+        @"<a href=\""ViewAllTitlesQuickSearch.aspx?val=2&amp;val1=2171&amp;val65=2171\"">View all titles</a>",
+        _linkInput.Replace(_hourPattern, "Replaced", RegexOptions.Compiled));
+
+    Assert.Equal("the foo@demo.net e-mail", _emailInput.Replace(@"\/\*[\s\S]*?\*\/|\/\/.*", "Replaced", RegexOptions.Compiled));
+    Assert.Equal("14:00 is the hour", _hourInput.Replace(@"\/\*[\s\S]*?\*\/|\/\/.*", "Replaced", RegexOptions.Compiled));
+}
+```
+
+**`Remove`**
+> In a specified input string, removes all strings that match a specified regular
+> expression with a specified replacement string.
+```
+[Fact]
+        public void Remove_InputCorrectPattern_Removed()
+        {
+            Assert.Equal("View all titles", _linkInput.Remove(_linkPattern));
+            Assert.Equal("the  e-mail", _emailInput.Remove(_emailPattern));
+            Assert.Equal(" is the hour", _hourInput.Remove(_hourPattern));
+        }
+
+        [Fact]
+        public void Remove_InputIncorrectPattern_NotRemoved()
+        {
+            Assert.Equal(@"<a href=\""ViewAllTitlesQuickSearch.aspx?val=2&amp;val1=2171&amp;val65=2171\"">View all titles</a>", _linkInput.Remove(_hourPattern));
+            Assert.Equal("the foo@demo.net e-mail", _emailInput.Remove(@"\/\*[\s\S]*?\*\/|\/\/.*"));
+            Assert.Equal("14:00 is the hour", _hourInput.Remove(@"\/\*[\s\S]*?\*\/|\/\/.*"));
+        }
+```
+
+**`Format`**
+> Replaces the format items in a string with the string representations of corresponding
+> objects in a specified array. A parameter supplies culture-specific formatting information.
+
+```
+[Fact]
+public void Format_Input_Formated()
+{
+    string input = "Replace {0} {1} in this {2}".Format("some", "words", "phrase");
+    Assert.Equal("Replace some words in this phrase", input);
+}
+```
+
+**`PascalCaseToSnakeCase`**
+> Converts a specified PascalCase string to its Snake_Case representation (that is. underscore separation).
+
+```
+[Theory]
+[InlineData("EscolheUmTrabalhoDeQueGostes,ENãoTerásQueTrabalharNemUmDiaNaTuaVida.", "Escolhe_Um_Trabalho_De_Que_Gostes,_E_Não_Terás_Que_Trabalhar_Nem_Um_Dia_Na_Tua_Vida.")] // - Confúcio
+[InlineData("EuNãoFalhei.SóDescobri10MilCaminhosQueNãoEramOCerto", "Eu_Não_Falhei._Só_Descobri10_Mil_Caminhos_Que_Não_Eram_O_Certo")] // - Thomas Edison
+[InlineData("OSucessoNormalmenteVemParaQuemEstáOcupadoDemaisParaProcurarPorEle", "O_Sucesso_Normalmente_Vem_Para_Quem_Está_Ocupado_Demais_Para_Procurar_Por_Ele")] // – Henry David Thoreau
+public void PascalCaseToSnakeCase_InputPascalCase_OutputSnakeCase(string input, string expectedSnakeCase)
+{
+    Assert.Equal(expectedSnakeCase, input.PascalCaseToSnakeCase());
+}
+```
+
+**`EncodeToBase64String`**
+> Converts an string to its equivalent encoded with base-64.
+
+```
+[Fact]
+public void EncodeToBase64String_Input_Base64StringEncoded()
+{
+    string plainString = "A clean, simple and extensible, carefully crafted set of libraries for general purpose.";
+    string base64String = plainString.EncodeToBase64String();
+
+    Assert.Equal("QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu", base64String);
+}
+```
+
+**`DecodeFromBase64String`**
+> Converts a base-64 string to its equivalent decoded string.
+
+```
+[Fact]
+public void DecodeFromBase64String_Input_Base64StringDecoded()
+{
+    string base64String = "QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu";
+    string plainString = base64String.DecodeFromBase64String();
+
+    Assert.Equal("A clean, simple and extensible, carefully crafted set of libraries for general purpose.", plainString);
+}
+```
+
+**`ToSlug`**
+> Converts a phrase to its slug representation.
+
+```
+[Theory]
+[InlineData("Escolhe um trabalho de que gostes, e não terás que trabalhar nem um dia na tua vida.", "escolhe-um-trabalho-de-que-gostes-e-nao-teras-que-trabalhar-nem-um-dia-na-tua-vida")] // - Confúcio
+[InlineData("A vida vai ficando cada vez mais dura perto do topo", "a-vida-vai-ficando-cada-vez-mais-dura-perto-do-topo")] // - Nietzsche
+[InlineData("O sucesso normalmente vem para quem está ocupado demais para procurar por ele", "o-sucesso-normalmente-vem-para-quem-esta-ocupado-demais-para-procurar-por-ele")] // – Henry David Thoreau
+public void ToSlug_InputMaxLength300_Slug(string input, string expectedSlug)
+{
+    Assert.Equal(expectedSlug, input.ToSlug(maxLength: 300));
+}
+
+[Theory]
+[InlineData("Escolhe um trabalho de que gostes, e não terás que trabalhar nem um dia na tua vida.", "escolhe-um-trabalho-de-que-gostes-e-nao-teras-que-trabalhar")] // - Confúcio
+[InlineData("Eu não falhei. Só descobri 10 mil caminhos que não eram o certo", "eu-nao-falhei-so-descobri-10-mil-caminhos-que-nao-eram-o-cer")] // - Thomas Edison
+[InlineData("O sucesso normalmente vem para quem está ocupado demais para procurar por ele", "o-sucesso-normalmente-vem-para-quem-esta-ocupado-demais-para")] // – Henry David Thoreau
+public void ToSlug_InputLengthDefault60_Slug(string input, string expectedSlug)
+{
+    Assert.Equal(expectedSlug, input.ToSlug());
 }
 ```

@@ -8,7 +8,5 @@
   href: data-annotations.md
 - name: UnitTests
   href: unit-tests.md
-- name: Net
-  href: net.md
 - name: DesignPatterns
   href: design-patterns.md

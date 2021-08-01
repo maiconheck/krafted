@@ -10,14 +10,14 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
         public void Spec_IsSatisfiedByModel_True()
         {
             var model1 = new EntityDummy(35, "Maicon", true);
-            var spec1 = Specification<EntityDummy>.All
+            var spec1 = Specification<EntityDummy>.Default
                 .And(new ModelStubSpecification())
                 .And(new ModelStubSpecification2());
 
             Assert.True(spec1.IsSatisfiedBy(model1));
 
             var model2 = new EntityDummy(35, "Maicon", false);
-            var spec2 = Specification<EntityDummy>.All
+            var spec2 = Specification<EntityDummy>.Default
                 .And(new ModelStubSpecification())
                 .Or(new ModelStubSpecification2());
 
@@ -33,7 +33,7 @@ namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
             Assert.False(spec1.IsSatisfiedBy(model1));
 
             var model2 = new EntityDummy(35, "Maicon", false);
-            var spec2 = Specification<EntityDummy>.All.Not();
+            var spec2 = Specification<EntityDummy>.Default.Not();
 
             Assert.False(spec2.IsSatisfiedBy(model2));
         }

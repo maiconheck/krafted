@@ -1,4 +1,4 @@
-// A attribute to replace the CurrentCulture with another culture.
+// An attribute to replace the CurrentCulture with another culture.
 //
 // This class was obtained from the Xunit samples.
 // Source: https://raw.githubusercontent.com/xunit/samples.xunit/main/UseCulture/UseCultureAttribute.cs
