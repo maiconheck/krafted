@@ -28,7 +28,8 @@ However, I wanted to keep all packages under the same umbrella of the Krafted pr
 - 100% documented (docs, API e IntelliSense).
 - Highly test code coverage.
 - Targeting `netstandard2.0` ([see all supported platforms](https://dotnet.microsoft.com/platform/dotnet-standard)).
-- Code quality analyzed by `StyleCop`, `FxCop` e `Roslynator`.
+- Almost all packages have zero nuget dependencies.
+- Code quality analyzed by [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview) and [StyleCop Analyzers](https://github.com/DotNetAnalyzers/StyleCopAnalyzers).
 
 # Getting started
 Check out the [**docs**](articles/guards.html) to get some samples of how Krafted can help you.
