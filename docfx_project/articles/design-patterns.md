@@ -61,7 +61,6 @@ public void JobForCompositeSpecification_IsSatisfiedByJobApplicant_True()
 public void GetJobsWithCompositeSpecification_CompositeSpecification_NotNull()
 {
     // Arrange
-
     var spec = Specification<JobApplicant>.Default
         .And(new JobForLevelSpecification(EngineeringLevel.SoftwareEngineer))
         .Or(new JobForLevelSpecification(EngineeringLevel.SeniorEngineer))

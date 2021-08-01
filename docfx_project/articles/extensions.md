@@ -4,7 +4,7 @@ A set of extension methods for String, Collections, Guid and other types.
 
 ---
 ### Samples
-Below are some examples of using `extension methods`.
+Below are some examples of each `extension method` contained in this package.
 
 ### Enumerable
 Provides extension methods to `IEnumerable<T>.`

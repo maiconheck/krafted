@@ -8,7 +8,7 @@ the data.
 
 ---
 ### Samples
-Below are some examples of each `DataAnnotations`.
+Below are some examples of each `DataAnnotations` contained in this package.
 
 **`NifAttribute`**
 

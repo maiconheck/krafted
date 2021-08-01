@@ -7,7 +7,7 @@ Provides a fluent API to apply [guard clauses](http://wiki.c2.com/?GuardClause) 
 
 ---
 ### Samples
-Below are some examples of using the `guard clauses` to protect the public APIs of some classes.
+Below are some examples of the `guard clauses` to protect the public APIs of some classes.
 
 >***P.S.:** For simplicity, the examples only contain code snippets of the classes.
 >You can see the full code by clicking on 'See full code'.*
