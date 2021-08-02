@@ -67,13 +67,6 @@ public void CultureIsChangedWithinTest(string culture)
 > Provides a Factory Method to create a `mock` for `HttpClient`.
 ```
 [Fact]
-public void New_ValidParameters_ProperInstantiated()
-{
-    var httpClient = HttpClientMockFactory.New(string.Empty, HttpStatusCode.OK);
-    Assert.NotNull(httpClient);
-}
-
-[Fact]
 public async Task Get_ResponseAndHttpStatus200OK_ResponseAndHttpStatus200OKGet()
 {
     // Arrange

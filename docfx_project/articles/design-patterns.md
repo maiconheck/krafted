@@ -12,7 +12,9 @@ A set of building blocks and participants to implement Design Patterns of `GoF` 
 > a design "right" faster.
 >
 > *[Gamma, Helm, Johnson, Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. (1994)](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)*
+
 ---
+
 ### Samples
 Below are some examples of each `Design Pattern` contained in this package.
 
@@ -25,14 +27,16 @@ Below are some examples of each `Design Pattern` contained in this package.
 > > Course: https://app.pluralsight.com/library/courses/csharp-specification-pattern/table-of-contents
 > >
 > > Source: https://github.com/vkhorikov/SpecPattern
-> *Retrieved in July 2020.*
+> >
+> > *Retrieved in July 2020.*
 ```
 
 [Fact]
 public void JobForSeniorEngineerSpecification_IsSatisfiedByJobApplicant_True()
 {
     // Arrange
-    var applicant = new JobApplicant("John", EngineeringLevel.SeniorEngineer, ProgrammingLanguage.JavaScript, 10);
+    var applicant = new JobApplicant(
+        "John", EngineeringLevel.SeniorEngineer, ProgrammingLanguage.JavaScript, 10);
 
     var spec = new JobForSeniorEngineerSpecification();
 
@@ -44,7 +48,8 @@ public void JobForSeniorEngineerSpecification_IsSatisfiedByJobApplicant_True()
 public void JobForCompositeSpecification_IsSatisfiedByJobApplicant_True()
 {
     // Arrange
-    var applicant = new JobApplicant("Peter", EngineeringLevel.SeniorEngineer, ProgrammingLanguage.CSharp, 15);
+    var applicant = new JobApplicant(
+        "Peter", EngineeringLevel.SeniorEngineer, ProgrammingLanguage.CSharp, 15);
 
     var spec = Specification<JobApplicant>.Default
         .And(new JobForLevelSpecification(EngineeringLevel.SoftwareEngineer))

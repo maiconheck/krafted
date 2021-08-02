@@ -56,23 +56,23 @@ Below are some examples of each `Value Object` contained in this package.
 ```
 public sealed class BillingData
 {
-	public BillingData(string name, Email email, Nif nif)
-	{
-		Guard.Against
-			.NullOrWhiteSpace(name, nameof(name))
-			.Null(email, nameof(email))
-			.Null(nif, nameof(nif));
+    public BillingData(string name, Email email, Nif nif)
+    {
+        Guard.Against
+            .NullOrWhiteSpace(name, nameof(name))
+            .Null(email, nameof(email))
+            .Null(nif, nameof(nif));
 
-		Name = name;
-		Email = email;
-		Nif = nif;
-	}
+        Name = name;
+        Email = email;
+        Nif = nif;
+    }
 
-	public string Name { get; }
+    public string Name { get; }
 
-	public Email Email { get; }
+    public Email Email { get; }
 
-	public Nif Nif { get; }
+    public Nif Nif { get; }
 }
 ```
 
@@ -86,20 +86,20 @@ public class OrderItem : Entity
 
     public Money TotalPrice => Money.NewMoney(Product.Price * Quantity);
 
-	public Money Total => TotalPrice + KindOfPackage.Price;
+    public Money Total => TotalPrice + KindOfPackage.Price;
 
-	...
+    ...
 }
 
 public sealed class Order : Entity, IAggregateRoot
 {
-	...
+    ...
 
-	public Money Subtotal => (Money)_orderItems.Sum(i => i.Total);
+    public Money Subtotal => (Money)_orderItems.Sum(i => i.Total);
 
-	public Money Total => Subtotal + DeliveryFee;
+    public Money Total => Subtotal + DeliveryFee;
 
-	...
+    ...
 }
 ```
 
@@ -109,15 +109,15 @@ public sealed class Order : Entity, IAggregateRoot
 ```
 public class LessonVideo : Lesson
 {
-	...
+    ...
 
-	public Url Link { get; private set; };
+    public Url Link { get; private set; };
 
-	public TimeSpan Duration { get; private set; }
+    public TimeSpan Duration { get; private set; }
 
-	public VideoType VideoType { get; private set; }
+    public VideoType VideoType { get; private set; }
 
-	...
+    ...
 }
 ```
 
@@ -197,7 +197,7 @@ public class Address : ValueObject
 ---
 
 ### `Entity Framework` mapping samples
-Mapping Value Objects with one value (`Money`, `Name`) and with multiple values (`Address`, `GroupLink`, `Payment`):
+Mapping Value Objects with single value (`Money`) and with multiple values (`Address`, `Payment`):
 ```
 public sealed class OrderMap : IEntityTypeConfiguration<Order>
 {
@@ -214,79 +214,56 @@ public sealed class OrderMap : IEntityTypeConfiguration<Order>
             .IsRequired();
 
         builder.OwnsOne(o => o.Address, a =>
-	    {
-		   a.WithOwner();
+        {
+           a.WithOwner();
 
-		   a.Property(p => p.Street)
-			.HasColumnName("Address_Street")
-			.IsRequired(false);
+           a.Property(p => p.Street)
+            .HasColumnName("Address_Street")
+            .IsRequired(false);
 
-		   a.Property(p => p.City)
-			.HasColumnName("Address_City")
-			.IsRequired(false);
+           a.Property(p => p.City)
+            .HasColumnName("Address_City")
+            .IsRequired(false);
 
            a.Property(p => p.ZipCode)
-			.HasColumnName("Address_ZipCode")
-			.IsRequired(false);
-	    });
+            .HasColumnName("Address_ZipCode")
+            .IsRequired(false);
+        });
+
+        builder.OwnsOne(o => o.Payment, a =>
+        {
+           a.WithOwner();
+
+           a.Property(p => p.AccessType)
+            .HasColumnName("Payment_AccessType")
+            .IsRequired(false);
+
+           a.Property(p => p.PaymentMethod)
+            .HasColumnName("Payment_PaymentMethod")
+            .IsRequired(false);
+
+           a.Property(p => p.Price)
+            .HasConversion(p => p.Value, p => new Money(p))
+            .HasColumnName("Payment_Price")
+            .IsRequired(false);
+       });
     }
 }
 ```
 
+If you have `lazy loading` activated, use `ActivatorHelper.CreateInstance<TValueObject>` to map single property Value Objects:
 ```
 public class CourseMap : IEntityTypeConfiguration<Course>
 {
-	public void Configure(EntityTypeBuilder<Course> builder)
-	{
-		...
+    public void Configure(EntityTypeBuilder<Course> builder)
+    {
+        ...
 
-		builder.Property(p => p.Name)
-			.HasConversion(p => p.Value, p => (Name)default(Name)!.CreateInstance(p)!)
-			.HasMaxLength(60)
-			.IsRequired();
-
-		builder.OwnsOne(o => o.GroupLink, a =>
-		{
-			a.WithOwner();
-
-			a.Property(p => p.LinkWhatsApp)
-			 .HasConversion(p => p.Value, p => new Url(p))
-			 .HasColumnType("varchar(300)")
-			 .HasColumnName("GroupLink_Whatsapp")
-			 .IsRequired(false);
-
-			a.Property(p => p.LinkTelegram)
-			 .HasConversion(e => e.Value, p => new Url(p))
-			 .HasColumnType("varchar(300)")
-			 .HasColumnName("GroupLink_Telegram")
-			 .IsRequired(false);
-
-			a.Property(p => p.LinkSlack)
-			 .HasConversion(p => p.Value, p => new Url(p))
-			 .HasColumnType("varchar(300)")
-			 .HasColumnName("GroupLink_Slack")
-			 .IsRequired(false);
-		});
-
-		builder.OwnsOne(o => o.Payment, a =>
-	    {
-		   a.WithOwner();
-
-		   a.Property(p => p.AccessType)
-			.HasColumnName("Payment_AccessType")
-			.IsRequired(false);
-
-		   a.Property(p => p.PaymentMethod)
-			.HasColumnName("Payment_PaymentMethod")
-			.IsRequired(false);
-
-		   a.Property(p => p.Price)
-			.HasConversion(p => p.Value, p => new Money(p))
-			.HasColumnName("Payment_Price")
-			.IsRequired(false);
-	   });
-	}
+        builder.Property(p => p.Name)
+            .HasConversion(p => p.Value, p => ActivatorHelper.CreateInstance<Name>(p))
+            .HasMaxLength(60)
+            .IsRequired();
+    }
 }
 ```
 
-If you are using `lazy loading`, checkout [this sample]().

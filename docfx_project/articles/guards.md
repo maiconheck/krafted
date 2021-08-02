@@ -9,8 +9,8 @@ Provides a fluent API to apply [guard clauses](http://wiki.c2.com/?GuardClause) 
 ### Samples
 Below are some examples of the `guard clauses` to protect the public APIs of some classes.
 
->***P.S.:** For simplicity, the examples only contain code snippets of the classes.
->You can see the full code by clicking on 'See full code'.*
+> **P.S.:** For simplicity, the examples only contain code snippets of the classes.
+> You can see the full code by clicking on 'See full code'.
 
 ```
 public static class ListExtension
@@ -30,7 +30,7 @@ public static class ListExtension
     ...
 }
 ```
-See full code: [ListExtension.cs]()
+See full code: [ListExtension.cs](https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Extensions/ListExtension.cs)
 
 ```
 public class Question : EntityBase, ISortable
@@ -52,7 +52,7 @@ public class Question : EntityBase, ISortable
     ...
 }
 ```
-See full code: [Question.cs]()
+See full code: [Question.cs](https://gist.github.com/maiconheck/440449696a54157ca34cdc77608df388)
 
 ---
 
@@ -119,7 +119,11 @@ public class Product : EntityBase, IAggregateRoot
             ExpireInDays = expireInDays;
         }
 
-    private static Guard Validate(Name name, string shortDescription, Category category, Money price)
+    private static Guard Validate(
+        Name name,
+        string shortDescription,
+        Category category,
+        Money price)
     {
         return Guard.Against
             .Null(name, nameof(name))
@@ -132,13 +136,13 @@ public class Product : EntityBase, IAggregateRoot
     ...
 }
 ```
-See full code: [Product.cs]()
+See full code: [Product.cs](https://gist.github.com/maiconheck/d9f09c6786018c6eb5c151e3bb964f9c)
 
 ---
 
 
 In the example below, since we are getting values from `appsettings.json`, we are also validating them.
-Because like the arguments of a public method, `appsettings.json` settings are data that we receive through external input, so we need to ensure that the data is valid so that we can use it with reliability.
+Because like the arguments of a public method, `appsettings.json` settings are data that we receive through external input, so we need to ensure that the data is valid, so we can use it with reliability.
 
 ```
 public class EmailService : IEmailService
@@ -155,13 +159,13 @@ public class EmailService : IEmailService
     {
         Guard.Against.Null(config, nameof(config));
 
-        _host = config["Office365:Host"];
-        _port = int.Parse(config["Office365:Port"], CultureInfo.InvariantCulture);
-        _secureSocketOptions = (SecureSocketOptions)int.Parse(config["Office365:SecureSocketOptions"], CultureInfo.InvariantCulture);
-        _fromName = config["Office365:FromName"];
-        _fromEmail = config["Office365:FromEmail"];
-        _userName = config["Office365:UserName"];
-        _password = config["Office365:Password"];
+        _host = config["SendGrid:Host"];
+        _port = int.Parse(config["SendGrid:Port"]);
+        _secureSocketOptions = (SecureSocketOptions)int.Parse(config["SendGrid:SecureSocketOptions"]);
+        _fromName = config["SendGrid:FromName"];
+        _fromEmail = config["SendGrid:FromEmail"];
+        _userName = config["SendGrid:UserName"];
+        _password = config["SendGrid:Password"];
 
         Guard.Against
             .NullOrWhiteSpace(_host, nameof(_host))
@@ -186,7 +190,6 @@ public class EmailService : IEmailService
     ...
 }
 ```
-See full code: [EmailService.cs]()
 
 ---
 
@@ -202,7 +205,7 @@ public sealed class Email : ValueObject<string>
     ...
 }
 ```
-See full code: [Email.cs]()
+See full code: [Email.cs](https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.ValueObjects/Email.cs)
 
 ```
 public sealed class Money : ValueObject<decimal>
@@ -216,7 +219,7 @@ public sealed class Money : ValueObject<decimal>
     ...
 }
 ```
-See full code: [Money.cs]()
+See full code: [Money.cs](https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.ValueObjects/Money.cs)
 
 ---
 
@@ -256,7 +259,7 @@ namespace Krafted.Guards
     }
 }
 ```
-See full code: [GuardExtension.cs]()
+See full code: [GuardExtension.cs](https://gist.github.com/maiconheck/6248e870f60e1e4ad9ec64831334392a)
 
 ---
 
@@ -292,14 +295,17 @@ public class Quiz
     ...
 }
 ```
-See full code: [Quiz.cs]()
+See full code: [Quiz.cs](https://gist.github.com/maiconheck/616b2174b948eb0c61b7dff75c1d253b)
 
 ```
-public sealed class RegisterQuestionHandler : IRequestHandler<RegisterQuestionCommand, ICommandResult<RegisterQuestionViewModel>>
+public sealed class RegisterQuestionHandler :
+    IRequestHandler<RegisterQuestionCommand, ICommandResult<RegisterQuestionViewModel>>
 {
     ...
 
-    public async Task<ICommandResult<RegisterQuestionViewModel>> Handle(RegisterQuestionCommand request, CancellationToken cancellationToken)
+    public async Task<ICommandResult<RegisterQuestionViewModel>> Handle(
+        RegisterQuestionCommand request,
+        CancellationToken cancellationToken)
     {
         ...
 
@@ -321,25 +327,24 @@ public sealed class RegisterQuestionHandler : IRequestHandler<RegisterQuestionCo
 }
 
 ```
- See full code: [SaveQuestionCommand.cs]()
 
 ---
 
 ### All available `guard clauses`:
-- [Empty](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty__1_IEnumerable___0__System_String_)
+- [Empty](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty__1_System_Collections_Generic_IEnumerable___0__System_String_)
 - [False](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Boolean_System_String_)
-- [False with predicate](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_Predicate_System_Boolean__System_String_)
+- [False with predicate](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_)
 - [True](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Boolean_System_String_)
-- [True with predicate](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_Predicate_System_Boolean__System_String_)
+- [True with predicate](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_)
 - [Length exactLength](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_)
 - [Length between minLength and maxLength](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_)
 - [LessThan](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan__1___0___0_System_String_)
 - [GreaterThan](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan__1___0___0_System_String_)
-- [Match](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_System_String_System_String_System_String_RegexOptions_)
-- [NotMatch](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_System_String_System_String_System_String_RegexOptions_)
+- [Match](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_)
+- [NotMatch](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_)
 - [MaxLength](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_)
 - [MinLength](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_)
-- [NotEmpty](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty__1_IEnumerable___0__System_String_)
+- [NotEmpty](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_)
 - [NotExists](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists__1___0_)
 - [Null](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null__1___0_System_String_)
 - [NullOrEmpty](http://localhost:8080/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_)
