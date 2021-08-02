@@ -73,7 +73,7 @@ jobs:
       shell: powershell
       run: |
         New-Item -Path .\.sonar\scanner -ItemType Directory
-        dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+        dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
 
     - name: Build and analyze
       env:
