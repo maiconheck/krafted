@@ -1,8 +1,8 @@
 ![logo](images/main/logo.png)
 
 ![CI / CD pipeline](https://github.com/maiconheck/krafted/workflows/CI%20/%20CD%20pipeline/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_shared-kernel&metric=alert_status)](https://sonarcloud.io/dashboard?id=maiconheck_shared-kernel)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_shared-kernel&metric=coverage)](https://sonarcloud.io/dashboard?id=maiconheck_shared-kernel)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=alert_status)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=coverage)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
 
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=code_smells)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
