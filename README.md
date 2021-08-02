@@ -18,7 +18,7 @@ A clean, decoupled and extensible, carefully crafted set of libraries for genera
 
 Krafted provides a toolkit of useful and reusable pieces of code, in order to increase your productivity. 🚀
 
-Is reliable, 100% documented and highly test code coverage. ✅
+It’s reliable, 100% documented and highly test code coverage. ✅
 
 # Why another library?
 There are some very good toolkit libraries, however, there is a problem with many toolkits (especially the general purpose ones):
@@ -36,7 +36,7 @@ When looking at the architecture and fine-grained distribution strategy of the `
 Another way to solve this problem would not be to create several toolkits, each one with a specific purpose?
 
 In fact, and if you look at every Krafted package, you'll see that it's just that. Each package is independent and has a very specific purpose.
-However, I wanted to keep all packages under the same umbrella of the Krafted project, because in addition to being high-decoupled, Krafted has other quality criteria, and all it's packages are consistent with them:
+However, I wanted to keep all packages under the same umbrella of the Krafted project, because in addition to being high-decoupled, Krafted has other quality criteria, and all its packages are consistent with them:
 
 - 100% documented (docs, API e IntelliSense).
 - Highly test code coverage.
