@@ -75,33 +75,40 @@ jobs:
         New-Item -Path .\.sonar\scanner -ItemType Directory
         dotnet tool install dotnet-sonarscanner --version 5.2.2 --tool-path .\.sonar\scanner
 
-    - name: Build and analyze
+
+################## CI STEPS ##################
+    - name: SONAR CODE QUALITY - Build and run code quality analysis with Sonar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: powershell
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
         dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
         dotnet restore "./src/Krafted/Krafted.sln"
-        dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
+        dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
+        dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=60
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
-################## CI STEPS ##################
+# Cannot reuse Sonar build step, because it the "begin" step will modify your build like this:
+#  - the active CodeAnalysisRuleSet will be updated to match the SonarQube quality profile
+#  - WarningsAsErrors will be turned off
+#  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
+
 #    - name: CLEAN - Cleans the output
 #      run: dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
 
 #    - name: RESTORE - Install the dependencies
 #      run: dotnet restore "./src/Krafted/Krafted.sln"
 
-#    - name: BUILD / CODE QUALITY - Build and run code quality analysis
-#      run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
+    - name: ROSLYN CODE QUALITY - Build and run code quality analysis with other Roslyn Analyzers
+      run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
 
-    - name: TEST - Executes unit and integration tests
-      run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=60
+#   - name: TEST - Executes unit and integration tests
+#     run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=60
 
-    - name: COVERAGE - Calculates and generates a code coverage report
-      run: dotnet reportgenerator "-reports:./src/coverage-results/coverage.opencover.xml" "-targetdir:./src/coverage-results/report" "-reporttypes:Html;Badges"
+#   - name: COVERAGE - Calculates and generates a code coverage report
+#     run: dotnet reportgenerator "-reports:./src/coverage-results/coverage.opencover.xml" "-targetdir:./src/coverage-results/report" "-reporttypes:Html;Badges"
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
