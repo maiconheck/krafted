@@ -21,9 +21,9 @@ Krafted provides a toolkit of useful and reusable pieces of code, in order to in
 It’s reliable, 100% documented and highly test code coverage. ✅
 
 # Why another library?
-There are some very good toolkit libraries, however, there is a problem with the toolkit development / deployment (especially the general purpose ones):
+There is a problem in toolkit development, especially for general purpose:
 
-As they get new features, naturally,
+As toolkits get new features, naturally,
 they get more dependencies on other 3rd packages, and when we install these toolkits, we end up relying on a number of nuget packages that we don't need, which causes unnecessary coupling, and in the worst case dependency conflict.
 
 Well, this problem doesn't just happen with toolkits. Remember `System.Web.dll`?
