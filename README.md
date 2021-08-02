@@ -1,6 +1,18 @@
 ![logo](docfx_project/images/main/logo.png)
 
 ![CI / CD pipeline](https://github.com/maiconheck/krafted/workflows/CI%20/%20CD%20pipeline/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_shared-kernel&metric=alert_status)](https://sonarcloud.io/dashboard?id=maiconheck_shared-kernel)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_shared-kernel&metric=coverage)](https://sonarcloud.io/dashboard?id=maiconheck_shared-kernel)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=code_smells)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=sqale_index)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted&metric=security_rating)](https://sonarcloud.io/dashboard?id=maiconheck_krafted)
+
+
 
 # What is Krafted?
 A clean, decoupled and extensible, carefully crafted set of libraries for general purpose.
