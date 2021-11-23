@@ -79,6 +79,24 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guid cannot be empty..
+        /// </summary>
+        internal static string GuidCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("GuidCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guid should be empty..
+        /// </summary>
+        internal static string GuidShouldBeEmpty {
+            get {
+                return ResourceManager.GetString("GuidShouldBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid e-mail address: {0}..
         /// </summary>
         internal static string InvalidEmailAddress {

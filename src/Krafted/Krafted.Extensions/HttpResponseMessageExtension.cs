@@ -43,7 +43,6 @@ namespace System.Net.Http
         /// </param>
         /// <returns>The deserialized <typeparamref name="T"/> from the <see cref="HttpResponseMessage"/>.</returns>
         public static async Task<T> DeserializeAsync<T>(this HttpResponseMessage response, bool propertyNameCaseInsensitive = true)
-            where T : class
         {
             Guard.Against.Null(response, nameof(response));
             return await DoDeserializeAsync<T>(response, propertyNameCaseInsensitive).ConfigureAwait(false);

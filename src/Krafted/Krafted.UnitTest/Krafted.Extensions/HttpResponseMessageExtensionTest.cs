@@ -43,18 +43,36 @@ namespace Krafted.UnitTest.Krafted.Extensions
                                     ""enabled"": true
                                   }";
 
-            // Act
             var response = new HttpResponseMessage
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
 
+            // Act
             var result = await response.DeserializeAsync<ViewModelDummy>();
 
             // Assert
             Assert.Equal(35, result.Age);
             Assert.Equal("Peter", result.Name);
             Assert.True(result.Enabled);
+        }
+
+        [Fact]
+        public async Task DeserializeAsync_Literal_LiteralDeserialized()
+        {
+            // Arrange
+            const string json = "true";
+
+            var response = new HttpResponseMessage
+            {
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+
+            // Act
+            var result = await response.DeserializeAsync<bool>();
+
+            // Assert
+            Assert.True(result);
         }
     }
 }
