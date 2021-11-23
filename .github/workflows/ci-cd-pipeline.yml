@@ -35,9 +35,9 @@ jobs:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1.5.0
+      uses: actions/setup-dotnet@v1.8.0
       with:
-        dotnet-version: 3.1.301
+        dotnet-version: 5.0.204
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
