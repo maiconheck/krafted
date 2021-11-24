@@ -77,6 +77,23 @@ jobs:
 
 
 ################## CI STEPS ##################
+# Cannot reuse Sonar build step, because it the "begin" step will modify your build like this:
+#  - the active CodeAnalysisRuleSet will be updated to match the SonarQube quality profile
+#  - WarningsAsErrors will be turned off
+#  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
+
+    - name: CLEAN - Cleans the output
+      run: dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
+
+    - name: RESTORE - Install the dependencies
+      run: dotnet restore "./src/Krafted/Krafted.sln"
+
+    - name: ROSLYN CODE QUALITY - Run code quality analysis with other Roslyn Analyzers
+      run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
+
+    - name: TEST - Executes unit and integration tests
+      run: dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=90
+
     - name: SONAR CODE QUALITY - Build, Run unit and integration tests, and code quality analysis with Sonar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
@@ -90,14 +107,6 @@ jobs:
         dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
         dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=60
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-
-# Cannot reuse Sonar build step, because it the "begin" step will modify your build like this:
-#  - the active CodeAnalysisRuleSet will be updated to match the SonarQube quality profile
-#  - WarningsAsErrors will be turned off
-#  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
-
-    - name: ROSLYN CODE QUALITY - Run code quality analysis with other Roslyn Analyzers
-      run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
