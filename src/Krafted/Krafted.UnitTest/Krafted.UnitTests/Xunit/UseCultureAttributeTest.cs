@@ -134,10 +134,10 @@ namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
 
             attr.Before(null);
 
-            var ri = new RegionInfo(Thread.CurrentThread.CurrentCulture.LCID);
+            var ci = new CultureInfo(Thread.CurrentThread.CurrentCulture.LCID);
 
             Assert.Equal(attr.Culture, Thread.CurrentThread.CurrentCulture);
-            Assert.Equal(ri.TwoLetterISORegionName, RegionInfo.CurrentRegion.TwoLetterISORegionName);
+            Assert.Equal(ci.TwoLetterISOLanguageName, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
 
             attr.After(null);
 

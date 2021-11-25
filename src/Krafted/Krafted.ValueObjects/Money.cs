@@ -162,7 +162,7 @@ namespace Krafted.ValueObjects
         ///   </example>
         /// </remarks>
         /// <returns>The the string representation of <see cref="Value"/>.</returns>
-        public override string ToString() => Value.ToString("F");
+        public override string ToString() => Value.ToString("F2");
 
         /// <summary>
         /// Returns the string representation of <see cref="Value"/> rounding to 2 decimal places.
