@@ -36,9 +36,9 @@ namespace Krafted.Guards.Pt
                 return false;
             }
 
-            // The first digit must be 1, 2, 3, 5, 6, 8 or 9.
+            // The first digit must be 1, 2, 3, 5, 6, 7, 8 or 9.
             int firstDigit = GetDigit(nif[0]);
-            var firstDigitsAllowed = new int[] { 1, 2, 3, 5, 6, 8, 9 };
+            var firstDigitsAllowed = new int[] { 1, 2, 3, 5, 6, 7, 8, 9 };
 
             if (!firstDigitsAllowed.Contains(firstDigit))
             {

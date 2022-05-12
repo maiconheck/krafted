@@ -76,6 +76,7 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
         [InlineData("500582092")]
         [InlineData("504777084")]
         [InlineData("505934434")]
+        [InlineData("746225482")]
         public void GuardAgainstInvalidNif_ValidNif_DoesNotThrows(string validNif)
         {
             Assert.DoesNotThrows(() => Guard.Against.InvalidNif(validNif));
