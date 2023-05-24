@@ -30,7 +30,7 @@ jobs:
 ################ SETUP .NET STEPS ################
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
@@ -67,12 +67,13 @@ jobs:
 
 ################ SETUP SONAR STEPS ################
     - name: Setup JDK 11
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v3
       with:
-        java-version: 1.11
+        java-version: 11
+        distribution: 'zulu' # Alternative distribution options are available.
 
     - name: Cache SonarCloud packages
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       with:
         path: ~\sonar\cache
         key: ${{ runner.os }}-sonar
@@ -80,7 +81,7 @@ jobs:
 
     - name: Cache SonarCloud scanner
       id: cache-sonar-scanner
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       with:
         path: .\.sonar\scanner
         key: ${{ runner.os }}-sonar-scanner
@@ -91,13 +92,13 @@ jobs:
       shell: powershell
       run: |
         New-Item -Path .\.sonar\scanner -ItemType Directory
-        dotnet tool install dotnet-sonarscanner --version 5.2.2 --tool-path .\.sonar\scanner
+        dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
 
     - name: SONAR CODE QUALITY - Build, Run unit and integration tests, and code quality analysis with Sonar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        DOTNET_ROLL_FORWARD: Major
+        # DOTNET_ROLL_FORWARD: Major
       shell: powershell
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
