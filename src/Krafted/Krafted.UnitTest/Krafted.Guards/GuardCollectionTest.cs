@@ -12,12 +12,19 @@ namespace Krafted.UnitTest.Krafted.Guards
         [Fact]
         public void GuardAgainstEmpty_Empty_ThrowsException()
         {
-            var ex = Assert.Throws<ArgumentException>(() =>
+            var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int>();
                 Guard.Against.Empty(myCollection, nameof(myCollection));
             });
-            Assert.Equal("Collection cannot be empty. (Parameter 'myCollection')", ex.Message);
+            Assert.Equal("Collection cannot be empty. (Parameter 'myCollection')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() =>
+            {
+                var myCollection = new List<int>();
+                Guard.Against.Empty(myCollection, nameof(myCollection), "My custom error message.");
+            });
+            Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }
 
         [Fact]
@@ -36,12 +43,19 @@ namespace Krafted.UnitTest.Krafted.Guards
         [Fact]
         public void GuardAgainstNotEmpty_NotEmpty_ThrowsException()
         {
-            var ex = Assert.Throws<ArgumentException>(() =>
+            var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int> { 1 };
                 Guard.Against.NotEmpty(myCollection, nameof(myCollection));
             });
-            Assert.Equal("Collection should be empty. (Parameter 'myCollection')", ex.Message);
+            Assert.Equal("Collection should be empty. (Parameter 'myCollection')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() =>
+            {
+                var myCollection = new List<int> { 1 };
+                Guard.Against.NotEmpty(myCollection, nameof(myCollection), "My custom error message.");
+            });
+            Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }
 
         [Fact]

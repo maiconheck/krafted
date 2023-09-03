@@ -27,6 +27,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             AssertMessage(ex3.Message);
 
             void AssertMessage(string actualMessage) => Assert.Equal($"Number cannot be less than {lessThan5}. (Parameter 'lessThan5')", actualMessage);
+
+            var ex4 = Assert.Throws<ArgumentException>(() => Guard.Against.LessThan(Convert.ToDouble(5), lessThan5, nameof(lessThan5), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'lessThan5')", ex4.Message);
         }
 
         [Theory]
@@ -50,8 +53,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData(10)]
         public void GuardAgainstGreaterThan5_GreaterThan5_ThrowsException(int greaterThan5)
         {
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.GreaterThan(5, greaterThan5, nameof(greaterThan5)));
-            Assert.Equal($"Number cannot be greater than {greaterThan5}. (Parameter 'greaterThan5')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.GreaterThan(5, greaterThan5, nameof(greaterThan5)));
+            Assert.Equal($"Number cannot be greater than {greaterThan5}. (Parameter 'greaterThan5')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.GreaterThan(5, greaterThan5, nameof(greaterThan5), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'greaterThan5')", ex2.Message);
         }
 
         [Theory]
@@ -84,6 +90,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             AssertMessage(ex3.Message);
 
             void AssertMessage(string actualMessage) => Assert.Equal("Number cannot be zero. (Parameter 'zero')", actualMessage);
+
+            var ex4 = Assert.Throws<ArgumentException>(() => Guard.Against.Zero(Convert.ToDouble(zero), nameof(zero), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'zero')", ex4.Message);
         }
 
         [Theory]
@@ -119,6 +128,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             AssertMessage(ex3.Message);
 
             void AssertMessage(string actualMessage) => Assert.Equal("Number cannot be negative. (Parameter 'negative')", actualMessage);
+
+            var ex4 = Assert.Throws<ArgumentException>(() => Guard.Against.Negative(Convert.ToDouble(negative), nameof(negative), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'negative')", ex4.Message);
         }
 
         [Theory]
@@ -151,6 +163,9 @@ namespace Krafted.UnitTest.Krafted.Guards
             AssertMessage(ex3.Message);
 
             void AssertMessage(string actualMessage) => Assert.Equal("Number cannot be positive. (Parameter 'positive')", actualMessage);
+
+            var ex4 = Assert.Throws<ArgumentException>(() => Guard.Against.Positive(Convert.ToDouble(positive), nameof(positive), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'positive')", ex4.Message);
         }
 
         [Theory]
@@ -190,6 +205,9 @@ namespace Krafted.UnitTest.Krafted.Guards
                 else
                     Assert.Equal("Number cannot be negative. (Parameter 'zeroOrLess')", actualMessage);
             }
+
+            var ex4 = Assert.Throws<ArgumentException>(() => Guard.Against.ZeroOrLess(Convert.ToDouble(zeroOrLess), nameof(zeroOrLess), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'zeroOrLess')", ex4.Message);
         }
 
         [Theory]

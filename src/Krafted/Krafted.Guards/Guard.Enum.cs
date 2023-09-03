@@ -15,14 +15,15 @@ namespace Krafted.Guards
         /// </summary>
         /// <typeparam name="TEnum">The type of the enumeration.</typeparam>
         /// <param name="value">The value to check.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard NotExists<TEnum>(TEnum value) where TEnum : Enum
+        public Guard NotExists<TEnum>(TEnum value, string message = "") where TEnum : Enum
         {
             var type = typeof(TEnum);
 
             if (!Enum.IsDefined(type, value))
-                throw new ArgumentException(Texts.ValueNotExistsIn.Format(value, type.Name));
+                throw new ArgumentException(Texts.ValueNotExistsIn.Format(value, type.Name).OrFallback(message));
 
             return this;
         }

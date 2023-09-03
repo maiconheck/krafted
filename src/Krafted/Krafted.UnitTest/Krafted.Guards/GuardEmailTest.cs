@@ -16,8 +16,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("john@company.")]
         public void GuardAgainstInvalidEmail_InvalidEmail_ThrowsException(string invalidEmail)
         {
-            var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidEmail(invalidEmail));
-            Assert.Equal("Invalid e-mail address: {0}.".Format(invalidEmail), ex.Message);
+            var ex1 = Assert.Throws<FormatException>(() => Guard.Against.InvalidEmail(invalidEmail));
+            Assert.Equal("Invalid e-mail address: {0}.".Format(invalidEmail), ex1.Message);
+
+            var ex2 = Assert.Throws<FormatException>(() => Guard.Against.InvalidEmail(invalidEmail, "My custom error message."));
+            Assert.Equal("My custom error message.", ex2.Message);
         }
 
         [Fact]

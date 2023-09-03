@@ -13,10 +13,12 @@ namespace Krafted.Guards.Pt
     {
         /// <summary>
         /// Validates whether the specified <c>nif</c> is valid.
+        /// <para>
+        /// NIF stands for "Número de Identificação Fiscal" in Portugal.
+        /// It's used to identify an individual or legal entity taxpayer in Portugal.
+        /// <see href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal">See more</see>.
+        /// </para>
         /// </summary>
-        /// <remarks>
-        /// NIF means "Número de Identificação Fiscal", a.k.a "Número de Contribuinte", identifies a taxpayer entity in Portugal, whether it is a company or an individual.
-        /// </remarks>
         /// <param name="nif">The <c>nif</c> to validate.</param>
         /// <returns><c>true</c> if the specified <c>nif</c> is valid; otherwise, <c>false</c>.</returns>
         public static bool ValidateNif(string nif)

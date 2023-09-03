@@ -24,8 +24,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("ABCD")]
         public void GuardAgainstExactLength_NotExactLength_ThrowsException(string myParam)
         {
-            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(3, myParam, nameof(myParam)));
-            Assert.Equal("myParam must be length 3. (Parameter 'myParam')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(3, myParam, nameof(myParam)));
+            Assert.Equal("myParam must be length 3. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(3, myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
         [Theory]
@@ -47,8 +50,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("ABCDEFG")]
         public void GuardAgainstMinLengthMaxLength_OutsideMinLengthMaxLength_ThrowsException(string myParam)
         {
-            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(1, 5, myParam, nameof(myParam)));
-            Assert.Equal("myParam must be at least 1 character, and at most 5 characters. (Parameter 'myParam')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(1, 5, myParam, nameof(myParam)));
+            Assert.Equal("myParam must be at least 1 character, and at most 5 characters. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentOutOfRangeException>(() => Guard.Against.Length(1, 5, myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
         [Theory]
@@ -70,8 +76,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("ABCDEFG")]
         public void GuardAgainstMaxLength_OutsideMaxLength_ThrowsException(string myParam)
         {
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.MaxLength(5, myParam, nameof(myParam)));
-            Assert.Equal("myParam must be at most 5 characters. (Parameter 'myParam')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.MaxLength(5, myParam, nameof(myParam)));
+            Assert.Equal("myParam must be at most 5 characters. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.MaxLength(5, myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
         [Theory]
@@ -91,8 +100,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData(" ")]
         public void GuardAgainstMinLength_OutsideMinLength_ThrowsException(string myParam)
         {
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.MinLength(3, myParam, nameof(myParam)));
-            Assert.Equal("myParam must be at least 3 characters. (Parameter 'myParam')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.MinLength(3, myParam, nameof(myParam)));
+            Assert.Equal("myParam must be at least 3 characters. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.MinLength(3, myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
     }
 }

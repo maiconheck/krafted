@@ -20,17 +20,24 @@ namespace Krafted.UnitTest.Krafted.Guards
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
-                string myParam = "abc";
-                Guard.Against.True(_ => myParam == "abc");
+                bool myParam = true;
+                Guard.Against.True(myParam, nameof(myParam), "My custom error message.");
             });
-            Assert.Equal("Predicate cannot be true.", ex2.Message);
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
 
             var ex3 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
+                Guard.Against.True(_ => myParam == "abc");
+            });
+            Assert.Equal("Predicate cannot be true.", ex3.Message);
+
+            var ex4 = Assert.Throws<ArgumentException>(() =>
+            {
+                string myParam = "abc";
                 Guard.Against.True(_ => myParam == "abc", "My message when the expression is true!");
             });
-            Assert.Equal("My message when the expression is true!", ex3.Message);
+            Assert.Equal("My message when the expression is true!", ex4.Message);
         }
 
         [Fact]
@@ -56,17 +63,24 @@ namespace Krafted.UnitTest.Krafted.Guards
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
-                string myParam = "abc";
-                Guard.Against.False(_ => myParam == "a");
+                bool myParam = false;
+                Guard.Against.False(myParam, nameof(myParam), "My custom error message.");
             });
-            Assert.Equal("Predicate cannot be false.", ex2.Message);
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
 
             var ex3 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
+                Guard.Against.False(_ => myParam == "a");
+            });
+            Assert.Equal("Predicate cannot be false.", ex3.Message);
+
+            var ex4 = Assert.Throws<ArgumentException>(() =>
+            {
+                string myParam = "abc";
                 Guard.Against.False(_ => myParam == "a", "My message when the expression is false!");
             });
-            Assert.Equal("My message when the expression is false!", ex3.Message);
+            Assert.Equal("My message when the expression is false!", ex4.Message);
         }
 
         [Fact]

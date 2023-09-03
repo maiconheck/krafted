@@ -32,6 +32,13 @@ namespace Krafted.UnitTest.Krafted.Guards
                     .Null(param4, nameof(param4));
             });
             Assert.Equal("Parameter cannot be null. (Parameter 'param3')", ex2.Message);
+
+            var ex3 = Assert.Throws<ArgumentNullException>(() =>
+            {
+                object myParam = null;
+                Guard.Against.Null(myParam, nameof(myParam), "My custom error message.");
+            });
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex3.Message);
         }
 
         [Fact]
@@ -63,8 +70,11 @@ namespace Krafted.UnitTest.Krafted.Guards
         [InlineData("")]
         public void GuardAgainstNullOrEmpty_NullOrEmpty_ThrowsException(string myParam)
         {
-            var ex = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(myParam, nameof(myParam)));
-            Assert.Equal("Parameter cannot be null or empty. (Parameter 'myParam')", ex.Message);
+            var ex1 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(myParam, nameof(myParam)));
+            Assert.Equal("Parameter cannot be null or empty. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrEmpty(myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
         [Fact]
@@ -83,8 +93,8 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex1 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrWhiteSpace(myParam, nameof(myParam)));
             Assert.Equal("Parameter cannot be null, empty or consists exclusively of white-space characters. (Parameter 'myParam')", ex1.Message);
 
-            var ex2 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrWhiteSpace(myParam, nameof(myParam), "My custom error message"));
-            Assert.Equal("My custom error message (Parameter 'myParam')", ex2.Message);
+            var ex2 = Assert.Throws<ArgumentNullException>(() => Guard.Against.NullOrWhiteSpace(myParam, nameof(myParam), "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
         [Fact]

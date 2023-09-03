@@ -44,8 +44,12 @@ end_of_line = lf
 [*.cs]
 indent_size = 4
 
+[*.csproj]
+indent_size = 4
+
 #### .NET Coding Conventions ####
 
+[*.{cs,vb}]
 # Organize usings
 dotnet_sort_system_directives_first = true
 
@@ -83,6 +87,9 @@ dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggesti
 
 # Field preferences
 dotnet_style_readonly_field = true:suggestion
+
+# Namespace declaration preferences
+csharp_style_namespace_declarations=file_scoped:suggestion
 
 # Parameter preferences
 dotnet_code_quality_unused_parameters = all:suggestion
@@ -201,26 +208,26 @@ dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
 
 dotnet_naming_symbols.interface.applicable_kinds = interface
 dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.interface.required_modifiers = 
+dotnet_naming_symbols.interface.required_modifiers =
 
 dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
 dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.types.required_modifiers = 
+dotnet_naming_symbols.types.required_modifiers =
 
 dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
 dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.non_field_members.required_modifiers = 
+dotnet_naming_symbols.non_field_members.required_modifiers =
 
 # Naming styles
 
-dotnet_naming_style.pascal_case.required_prefix = 
-dotnet_naming_style.pascal_case.required_suffix = 
-dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
 dotnet_naming_style.begins_with_i.required_prefix = I
-dotnet_naming_style.begins_with_i.required_suffix = 
-dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.required_suffix =
+dotnet_naming_style.begins_with_i.word_separator =
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
 dotnet_naming_rule.private_fields_should_have_prefix.severity = warning
@@ -232,3 +239,1295 @@ dotnet_naming_symbols.private_fields.required_modifiers = private
 
 dotnet_naming_style.private_prefix_style.required_prefix = _
 dotnet_naming_style.private_prefix_style.capitalization = camel_case
+
+
+[*.cs]
+# IDE0052: Remove unread private members
+dotnet_diagnostic.IDE0052.severity = warning
+
+# NOTE: Requires **VS2019 16.3** or later
+
+# All Ruleset
+# Description: All Rulesets in ..\Templates folder. For use in libraries or any project where you want to get the most analyzes, including documentation analyzes.
+
+# Code files
+[*.{cs,vb}]
+dotnet_diagnostic.AD0001.severity = none
+
+dotnet_diagnostic.CA1000.severity = warning
+
+dotnet_diagnostic.CA1001.severity = warning
+
+dotnet_diagnostic.CA1002.severity = warning
+
+dotnet_diagnostic.CA1003.severity = warning
+
+dotnet_diagnostic.CA1004.severity = warning
+
+dotnet_diagnostic.CA1005.severity = warning
+
+dotnet_diagnostic.CA1006.severity = warning
+
+dotnet_diagnostic.CA1007.severity = warning
+
+# Add a member to CategoryGroup that has a value of zero with a suggested name of
+dotnet_diagnostic.CA1008.severity = none
+
+dotnet_diagnostic.CA1009.severity = warning
+
+dotnet_diagnostic.CA1010.severity = warning
+
+dotnet_diagnostic.CA1011.severity = warning
+
+dotnet_diagnostic.CA1012.severity = warning
+
+dotnet_diagnostic.CA1013.severity = warning
+
+# Mark assemblies with CLSCompliantAttribute
+dotnet_diagnostic.CA1014.severity = none
+
+dotnet_diagnostic.CA1016.severity = warning
+
+dotnet_diagnostic.CA1017.severity = warning
+
+dotnet_diagnostic.CA1018.severity = warning
+
+dotnet_diagnostic.CA1019.severity = warning
+
+dotnet_diagnostic.CA1021.severity = warning
+
+dotnet_diagnostic.CA1023.severity = warning
+
+# Use properties where appropriate
+dotnet_diagnostic.CA1024.severity = none
+
+dotnet_diagnostic.CA1027.severity = warning
+
+dotnet_diagnostic.CA1028.severity = warning
+
+dotnet_diagnostic.CA1030.severity = warning
+
+dotnet_diagnostic.CA1031.severity = warning
+
+dotnet_diagnostic.CA1032.severity = warning
+
+dotnet_diagnostic.CA1033.severity = warning
+
+dotnet_diagnostic.CA1034.severity = warning
+
+dotnet_diagnostic.CA1036.severity = warning
+
+# Avoid empty interfaces
+dotnet_diagnostic.CA1040.severity = none
+
+dotnet_diagnostic.CA1041.severity = warning
+
+dotnet_diagnostic.CA1043.severity = warning
+
+dotnet_diagnostic.CA1044.severity = warning
+
+dotnet_diagnostic.CA1045.severity = warning
+
+dotnet_diagnostic.CA1046.severity = warning
+
+dotnet_diagnostic.CA1047.severity = warning
+
+dotnet_diagnostic.CA1048.severity = warning
+
+dotnet_diagnostic.CA1049.severity = warning
+
+dotnet_diagnostic.CA1050.severity = warning
+
+dotnet_diagnostic.CA1051.severity = warning
+
+dotnet_diagnostic.CA1052.severity = warning
+
+dotnet_diagnostic.CA1053.severity = warning
+
+dotnet_diagnostic.CA1054.severity = warning
+
+dotnet_diagnostic.CA1055.severity = warning
+
+dotnet_diagnostic.CA1056.severity = warning
+
+dotnet_diagnostic.CA1057.severity = warning
+
+dotnet_diagnostic.CA1058.severity = warning
+
+dotnet_diagnostic.CA1060.severity = warning
+
+dotnet_diagnostic.CA1061.severity = warning
+
+# Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = warning
+
+dotnet_diagnostic.CA1063.severity = warning
+
+dotnet_diagnostic.CA1064.severity = warning
+
+dotnet_diagnostic.CA1065.severity = warning
+
+dotnet_diagnostic.CA1300.severity = warning
+
+dotnet_diagnostic.CA1301.severity = warning
+
+# Do not pass literals as localized parameters
+dotnet_diagnostic.CA1303.severity = warning
+
+dotnet_diagnostic.CA1304.severity = warning
+
+dotnet_diagnostic.CA1305.severity = warning
+
+dotnet_diagnostic.CA1306.severity = warning
+
+dotnet_diagnostic.CA1307.severity = warning
+
+# Normalize strings to uppercase
+dotnet_diagnostic.CA1308.severity = none
+
+dotnet_diagnostic.CA1309.severity = warning
+
+dotnet_diagnostic.CA1400.severity = warning
+
+dotnet_diagnostic.CA1401.severity = warning
+
+dotnet_diagnostic.CA1402.severity = warning
+
+dotnet_diagnostic.CA1403.severity = warning
+
+dotnet_diagnostic.CA1404.severity = warning
+
+dotnet_diagnostic.CA1405.severity = warning
+
+dotnet_diagnostic.CA1407.severity = warning
+
+dotnet_diagnostic.CA1408.severity = warning
+
+dotnet_diagnostic.CA1409.severity = warning
+
+dotnet_diagnostic.CA1410.severity = warning
+
+dotnet_diagnostic.CA1411.severity = warning
+
+dotnet_diagnostic.CA1412.severity = warning
+
+dotnet_diagnostic.CA1413.severity = warning
+
+dotnet_diagnostic.CA1414.severity = warning
+
+dotnet_diagnostic.CA1415.severity = warning
+
+dotnet_diagnostic.CA1500.severity = warning
+
+dotnet_diagnostic.CA1501.severity = warning
+
+dotnet_diagnostic.CA1600.severity = warning
+
+dotnet_diagnostic.CA1601.severity = warning
+
+dotnet_diagnostic.CA1700.severity = warning
+
+dotnet_diagnostic.CA1704.severity = warning
+
+# Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = warning
+
+dotnet_diagnostic.CA1708.severity = warning
+
+dotnet_diagnostic.CA1709.severity = warning
+
+dotnet_diagnostic.CA1710.severity = warning
+
+dotnet_diagnostic.CA1711.severity = warning
+
+dotnet_diagnostic.CA1712.severity = warning
+
+dotnet_diagnostic.CA1713.severity = warning
+
+dotnet_diagnostic.CA1714.severity = warning
+
+dotnet_diagnostic.CA1715.severity = warning
+
+# Identifiers should not match keywords
+dotnet_diagnostic.CA1716.severity = warning
+
+dotnet_diagnostic.CA1717.severity = warning
+
+dotnet_diagnostic.CA1718.severity = warning
+
+dotnet_diagnostic.CA1719.severity = warning
+
+dotnet_diagnostic.CA1720.severity = warning
+
+dotnet_diagnostic.CA1721.severity = warning
+
+dotnet_diagnostic.CA1722.severity = warning
+
+dotnet_diagnostic.CA1724.severity = warning
+
+dotnet_diagnostic.CA1725.severity = warning
+
+dotnet_diagnostic.CA1726.severity = warning
+
+dotnet_diagnostic.CA1801.severity = warning
+
+dotnet_diagnostic.CA1802.severity = warning
+
+dotnet_diagnostic.CA1804.severity = warning
+
+# Do not ignore method results
+dotnet_diagnostic.CA1806.severity = warning
+
+dotnet_diagnostic.CA1810.severity = warning
+
+dotnet_diagnostic.CA1811.severity = warning
+
+# Avoid uninstantiated internal classes
+dotnet_diagnostic.CA1812.severity = none
+
+dotnet_diagnostic.CA1813.severity = warning
+
+dotnet_diagnostic.CA1814.severity = warning
+
+dotnet_diagnostic.CA1815.severity = warning
+
+dotnet_diagnostic.CA1816.severity = warning
+
+dotnet_diagnostic.CA1819.severity = warning
+
+dotnet_diagnostic.CA1820.severity = warning
+
+dotnet_diagnostic.CA1821.severity = warning
+
+# Elements must be documented
+dotnet_diagnostic.CA1822.severity = warning
+
+dotnet_diagnostic.CA1823.severity = warning
+
+dotnet_diagnostic.CA1900.severity = warning
+
+dotnet_diagnostic.CA1901.severity = warning
+
+# Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = warning
+
+dotnet_diagnostic.CA2001.severity = warning
+
+dotnet_diagnostic.CA2002.severity = warning
+
+dotnet_diagnostic.CA2004.severity = warning
+
+dotnet_diagnostic.CA2006.severity = warning
+
+# Do not directly await a Task without calling ConfigureAwait
+dotnet_diagnostic.CA2007.severity = warning
+
+dotnet_diagnostic.CA2100.severity = warning
+
+dotnet_diagnostic.CA2101.severity = warning
+
+dotnet_diagnostic.CA2108.severity = warning
+
+dotnet_diagnostic.CA2109.severity = warning
+
+dotnet_diagnostic.CA2111.severity = warning
+
+dotnet_diagnostic.CA2112.severity = warning
+
+dotnet_diagnostic.CA2114.severity = warning
+
+dotnet_diagnostic.CA2116.severity = warning
+
+dotnet_diagnostic.CA2117.severity = warning
+
+dotnet_diagnostic.CA2119.severity = warning
+
+dotnet_diagnostic.CA2122.severity = warning
+
+dotnet_diagnostic.CA2123.severity = warning
+
+dotnet_diagnostic.CA2124.severity = warning
+
+dotnet_diagnostic.CA2126.severity = warning
+
+dotnet_diagnostic.CA2131.severity = warning
+
+dotnet_diagnostic.CA2132.severity = warning
+
+dotnet_diagnostic.CA2133.severity = warning
+
+dotnet_diagnostic.CA2134.severity = warning
+
+dotnet_diagnostic.CA2137.severity = warning
+
+dotnet_diagnostic.CA2138.severity = warning
+
+dotnet_diagnostic.CA2140.severity = warning
+
+dotnet_diagnostic.CA2141.severity = warning
+
+dotnet_diagnostic.CA2146.severity = warning
+
+dotnet_diagnostic.CA2147.severity = warning
+
+dotnet_diagnostic.CA2149.severity = warning
+
+dotnet_diagnostic.CA2153.severity = warning
+
+dotnet_diagnostic.CA2200.severity = warning
+
+dotnet_diagnostic.CA2201.severity = warning
+
+dotnet_diagnostic.CA2202.severity = warning
+
+dotnet_diagnostic.CA2204.severity = warning
+
+dotnet_diagnostic.CA2205.severity = warning
+
+dotnet_diagnostic.CA2207.severity = warning
+
+dotnet_diagnostic.CA2208.severity = warning
+
+dotnet_diagnostic.CA2210.severity = warning
+
+dotnet_diagnostic.CA2211.severity = warning
+
+dotnet_diagnostic.CA2212.severity = warning
+
+dotnet_diagnostic.CA2213.severity = warning
+
+dotnet_diagnostic.CA2214.severity = warning
+
+dotnet_diagnostic.CA2215.severity = warning
+
+dotnet_diagnostic.CA2216.severity = warning
+
+dotnet_diagnostic.CA2217.severity = warning
+
+dotnet_diagnostic.CA2218.severity = warning
+
+dotnet_diagnostic.CA2219.severity = warning
+
+dotnet_diagnostic.CA2220.severity = warning
+
+dotnet_diagnostic.CA2222.severity = warning
+
+dotnet_diagnostic.CA2224.severity = warning
+
+# Operator overloads have named alternates
+dotnet_diagnostic.CA2225.severity = none
+
+dotnet_diagnostic.CA2226.severity = warning
+
+dotnet_diagnostic.CA2227.severity = warning
+
+dotnet_diagnostic.CA2229.severity = warning
+
+dotnet_diagnostic.CA2231.severity = warning
+
+dotnet_diagnostic.CA2232.severity = warning
+
+# Pass System.Uri objects instead of strings
+dotnet_diagnostic.CA2234.severity = none
+
+dotnet_diagnostic.CA2235.severity = warning
+
+dotnet_diagnostic.CA2236.severity = warning
+
+dotnet_diagnostic.CA2237.severity = warning
+
+dotnet_diagnostic.CA2238.severity = warning
+
+dotnet_diagnostic.CA2239.severity = warning
+
+dotnet_diagnostic.CA2240.severity = warning
+
+dotnet_diagnostic.CA2241.severity = warning
+
+dotnet_diagnostic.CA2242.severity = warning
+
+dotnet_diagnostic.CA2243.severity = warning
+
+dotnet_diagnostic.CA3063.severity = warning
+
+dotnet_diagnostic.CA3064.severity = warning
+
+dotnet_diagnostic.CA3065.severity = warning
+
+dotnet_diagnostic.CA3071.severity = warning
+
+dotnet_diagnostic.CA3072.severity = warning
+
+dotnet_diagnostic.CA5350.severity = warning
+
+dotnet_diagnostic.CA5351.severity = warning
+
+# C# Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = none
+
+dotnet_diagnostic.RCS0001.severity = warning
+
+dotnet_diagnostic.RCS0004.severity = warning
+
+dotnet_diagnostic.RCS0008.severity = warning
+
+dotnet_diagnostic.RCS0009.severity = warning
+
+dotnet_diagnostic.RCS0021.severity = warning
+
+dotnet_diagnostic.RCS0022.severity = warning
+
+dotnet_diagnostic.RCS0023.severity = warning
+
+dotnet_diagnostic.RCS0024.severity = warning
+
+dotnet_diagnostic.RCS0025.severity = warning
+
+# Format binary operator on next line
+dotnet_diagnostic.RCS0027.severity = none
+
+dotnet_diagnostic.RCS0028.severity = warning
+
+dotnet_diagnostic.RCS0030.severity = warning
+
+dotnet_diagnostic.RCS0031.severity = warning
+
+dotnet_diagnostic.RCS0033.severity = warning
+
+# Use carriage return + linefeed as newline
+dotnet_diagnostic.RCS0044.severity = none
+
+# Use linefeed as newline
+dotnet_diagnostic.RCS0045.severity = none
+
+dotnet_diagnostic.RCS0046.severity = warning
+
+# Format initializer with single expression on single line
+dotnet_diagnostic.RCS0048.severity = none
+
+dotnet_diagnostic.RCS1001.severity = warning
+
+# Remove braces
+dotnet_diagnostic.RCS1002.severity = none
+
+dotnet_diagnostic.RCS1003.severity = warning
+
+# Remove braces from if-else
+dotnet_diagnostic.RCS1004.severity = none
+
+dotnet_diagnostic.RCS1005.severity = warning
+
+dotnet_diagnostic.RCS1006.severity = warning
+
+# Add braces
+dotnet_diagnostic.RCS1007.severity = warning
+
+# Use explicit type instead of 'var' (when the type is not obvious)
+dotnet_diagnostic.RCS1008.severity = none
+
+# Use explicit type instead of 'var' (foreach variable)
+dotnet_diagnostic.RCS1009.severity = none
+
+# Use 'var' instead of explicit type (when the type is obvious)
+dotnet_diagnostic.RCS1010.severity = warning
+
+# Use explicit type instead of 'var' (when the type is obvious)
+dotnet_diagnostic.RCS1012.severity = none
+
+dotnet_diagnostic.RCS1013.severity = warning
+
+# Use explicitly typed array (or vice versa)
+dotnet_diagnostic.RCS1014.severity = none
+
+dotnet_diagnostic.RCS1015.severity = warning
+
+# Use expression-bodied member
+dotnet_diagnostic.RCS1016.severity = suggestion
+
+# Avoid multiline expression body
+dotnet_diagnostic.RCS1017.severity = none
+
+dotnet_diagnostic.RCS1018.severity = warning
+
+# Order modifiers - Conflicts with another rule
+dotnet_diagnostic.RCS1019.severity = none
+
+dotnet_diagnostic.RCS1020.severity = warning
+
+dotnet_diagnostic.RCS1021.severity = warning
+
+dotnet_diagnostic.RCS1032.severity = warning
+
+dotnet_diagnostic.RCS1033.severity = warning
+
+dotnet_diagnostic.RCS1034.severity = warning
+
+dotnet_diagnostic.RCS1035.severity = warning
+
+dotnet_diagnostic.RCS1036.severity = warning
+
+dotnet_diagnostic.RCS1037.severity = warning
+
+dotnet_diagnostic.RCS1038.severity = warning
+
+dotnet_diagnostic.RCS1039.severity = warning
+
+dotnet_diagnostic.RCS1040.severity = warning
+
+dotnet_diagnostic.RCS1041.severity = warning
+
+dotnet_diagnostic.RCS1042.severity = warning
+
+# Remove 'partial' modifier from type with a single part
+dotnet_diagnostic.RCS1043.severity = warning
+
+dotnet_diagnostic.RCS1044.severity = warning
+
+dotnet_diagnostic.RCS1045.severity = warning
+
+# Asynchronous method name should end with 'Async'
+dotnet_diagnostic.RCS1046.severity = warning
+
+dotnet_diagnostic.RCS1047.severity = warning
+
+dotnet_diagnostic.RCS1048.severity = warning
+
+dotnet_diagnostic.RCS1049.severity = warning
+
+# Add argument list to object creation expression
+dotnet_diagnostic.RCS1050.severity = none
+
+dotnet_diagnostic.RCS1050a.severity = warning
+
+# Parenthesize condition of conditional expression
+dotnet_diagnostic.RCS1051.severity = none
+
+dotnet_diagnostic.RCS1052.severity = warning
+
+dotnet_diagnostic.RCS1055.severity = warning
+
+# Avoid usage of using alias directive
+dotnet_diagnostic.RCS1056.severity = none
+
+dotnet_diagnostic.RCS1058.severity = warning
+
+dotnet_diagnostic.RCS1059.severity = warning
+
+dotnet_diagnostic.RCS1060.severity = warning
+
+dotnet_diagnostic.RCS1061.severity = warning
+
+dotnet_diagnostic.RCS1062.severity = warning
+
+dotnet_diagnostic.RCS1063.severity = warning
+
+dotnet_diagnostic.RCS1064.severity = warning
+
+dotnet_diagnostic.RCS1065.severity = warning
+
+dotnet_diagnostic.RCS1066.severity = warning
+
+dotnet_diagnostic.RCS1068.severity = warning
+
+# Remove unnecessary case label
+dotnet_diagnostic.RCS1069.severity = none
+
+dotnet_diagnostic.RCS1070.severity = warning
+
+dotnet_diagnostic.RCS1071.severity = warning
+
+dotnet_diagnostic.RCS1072.severity = warning
+
+dotnet_diagnostic.RCS1073.severity = warning
+
+dotnet_diagnostic.RCS1074.severity = warning
+
+dotnet_diagnostic.RCS1075.severity = warning
+
+# Use "" instead of string.Empty
+dotnet_diagnostic.RCS1078.severity = none
+
+dotnet_diagnostic.RCS1079.severity = warning
+
+# Use 'Count/Length' property instead of 'Any' method
+dotnet_diagnostic.RCS1080.severity = none
+
+dotnet_diagnostic.RCS1081.severity = warning
+
+dotnet_diagnostic.RCS1084.severity = warning
+
+dotnet_diagnostic.RCS1085.severity = warning
+
+dotnet_diagnostic.RCS1089.severity = warning
+
+# Call 'ConfigureAwait(false)'
+dotnet_diagnostic.RCS1090.severity = warning
+
+dotnet_diagnostic.RCS1091.severity = warning
+
+dotnet_diagnostic.RCS1093.severity = warning
+
+dotnet_diagnostic.RCS1094.severity = warning
+
+dotnet_diagnostic.RCS1096.severity = warning
+
+dotnet_diagnostic.RCS1097.severity = warning
+
+dotnet_diagnostic.RCS1098.severity = warning
+
+dotnet_diagnostic.RCS1099.severity = warning
+
+# Format documentation summary on a single line
+dotnet_diagnostic.RCS1100.severity = none
+
+dotnet_diagnostic.RCS1101.severity = warning
+
+dotnet_diagnostic.RCS1102.severity = warning
+
+dotnet_diagnostic.RCS1103.severity = warning
+
+dotnet_diagnostic.RCS1104.severity = warning
+
+dotnet_diagnostic.RCS1105.severity = warning
+
+dotnet_diagnostic.RCS1106.severity = warning
+
+dotnet_diagnostic.RCS1107.severity = warning
+
+dotnet_diagnostic.RCS1108.severity = warning
+
+dotnet_diagnostic.RCS1110.severity = warning
+
+# Add braces to switch section with multiple statements
+dotnet_diagnostic.RCS1111.severity = none
+
+dotnet_diagnostic.RCS1112.severity = warning
+
+dotnet_diagnostic.RCS1113.severity = warning
+
+dotnet_diagnostic.RCS1114.severity = warning
+
+# Mark local variable as const
+dotnet_diagnostic.RCS1118.severity = warning
+
+dotnet_diagnostic.RCS1123.severity = warning
+
+dotnet_diagnostic.RCS1124.severity = warning
+
+# Add braces to if-else
+dotnet_diagnostic.RCS1126.severity = warning
+
+dotnet_diagnostic.RCS1127.severity = warning
+
+dotnet_diagnostic.RCS1128.severity = warning
+
+dotnet_diagnostic.RCS1129.severity = warning
+
+dotnet_diagnostic.RCS1130.severity = warning
+
+dotnet_diagnostic.RCS1132.severity = warning
+
+dotnet_diagnostic.RCS1133.severity = warning
+
+dotnet_diagnostic.RCS1134.severity = warning
+
+dotnet_diagnostic.RCS1135.severity = warning
+
+dotnet_diagnostic.RCS1136.severity = warning
+
+dotnet_diagnostic.RCS1138.severity = warning
+
+dotnet_diagnostic.RCS1139.severity = warning
+
+dotnet_diagnostic.RCS1140.severity = warning
+
+dotnet_diagnostic.RCS1141.severity = warning
+
+# Add 'typeparam' element to documentation
+dotnet_diagnostic.RCS1142.severity = none
+
+dotnet_diagnostic.RCS1143.severity = warning
+
+dotnet_diagnostic.RCS1145.severity = warning
+
+# Use conditional access
+dotnet_diagnostic.RCS1146.severity = none
+
+dotnet_diagnostic.RCS1150.severity = warning
+
+dotnet_diagnostic.RCS1151.severity = warning
+
+dotnet_diagnostic.RCS1154.severity = warning
+
+dotnet_diagnostic.RCS1155.severity = warning
+
+dotnet_diagnostic.RCS1156.severity = warning
+
+dotnet_diagnostic.RCS1157.severity = warning
+
+dotnet_diagnostic.RCS1158.severity = warning
+
+dotnet_diagnostic.RCS1159.severity = warning
+
+dotnet_diagnostic.RCS1160.severity = warning
+
+dotnet_diagnostic.RCS1161.severity = warning
+
+dotnet_diagnostic.RCS1162.severity = warning
+
+dotnet_diagnostic.RCS1163.severity = warning
+
+dotnet_diagnostic.RCS1164.severity = warning
+
+dotnet_diagnostic.RCS1165.severity = warning
+
+dotnet_diagnostic.RCS1166.severity = warning
+
+# Parameter name differs from base name
+dotnet_diagnostic.RCS1168.severity = none
+
+dotnet_diagnostic.RCS1169.severity = warning
+
+dotnet_diagnostic.RCS1170.severity = warning
+
+dotnet_diagnostic.RCS1171.severity = warning
+
+dotnet_diagnostic.RCS1172.severity = warning
+
+dotnet_diagnostic.RCS1173.severity = warning
+
+# Remove redundant async/await
+dotnet_diagnostic.RCS1174.severity = none
+
+dotnet_diagnostic.RCS1175.severity = warning
+
+# Use 'var' instead of explicit type (when the type is not obvious)
+dotnet_diagnostic.RCS1176.severity = none
+
+dotnet_diagnostic.RCS1177.severity = warning
+
+dotnet_diagnostic.RCS1178.severity = warning
+
+dotnet_diagnostic.RCS1179.severity = warning
+
+dotnet_diagnostic.RCS1180.severity = warning
+
+# Replace comment with documentation comment
+dotnet_diagnostic.RCS1181.severity = warning
+
+dotnet_diagnostic.RCS1182.severity = warning
+
+# Use Regex instance instead of static method
+dotnet_diagnostic.RCS1186.severity = none
+
+dotnet_diagnostic.RCS1187.severity = warning
+
+dotnet_diagnostic.RCS1188.severity = warning
+
+dotnet_diagnostic.RCS1189.severity = warning
+
+dotnet_diagnostic.RCS1190.severity = warning
+
+dotnet_diagnostic.RCS1191.severity = warning
+
+# Use regular string literal instead of verbatim string literal
+dotnet_diagnostic.RCS1192.severity = none
+
+dotnet_diagnostic.RCS1193.severity = warning
+
+dotnet_diagnostic.RCS1194.severity = warning
+
+dotnet_diagnostic.RCS1195.severity = warning
+
+dotnet_diagnostic.RCS1196.severity = warning
+
+# Optimize StringBuilder.Append/AppendLine call.
+dotnet_diagnostic.RCS1197.severity = none
+
+# Avoid unnecessary boxing of value type
+dotnet_diagnostic.RCS1198.severity = none
+
+dotnet_diagnostic.RCS1199.severity = warning
+
+dotnet_diagnostic.RCS1200.severity = warning
+
+dotnet_diagnostic.RCS1201.severity = warning
+
+# Avoid NullReferenceException
+dotnet_diagnostic.RCS1202.severity = warning
+
+dotnet_diagnostic.RCS1203.severity = warning
+
+dotnet_diagnostic.RCS1204.severity = warning
+
+dotnet_diagnostic.RCS1205.severity = warning
+
+dotnet_diagnostic.RCS1206.severity = warning
+
+dotnet_diagnostic.RCS1207.severity = warning
+
+# Reduce if nesting (it's not working well)
+dotnet_diagnostic.RCS1208.severity = none
+
+dotnet_diagnostic.RCS1209.severity = warning
+
+dotnet_diagnostic.RCS1210.severity = warning
+
+dotnet_diagnostic.RCS1211.severity = warning
+
+dotnet_diagnostic.RCS1212.severity = warning
+
+dotnet_diagnostic.RCS1213.severity = warning
+
+dotnet_diagnostic.RCS1214.severity = warning
+
+dotnet_diagnostic.RCS1215.severity = warning
+
+dotnet_diagnostic.RCS1216.severity = warning
+
+# Replace interpolated string with concatenation
+dotnet_diagnostic.RCS1217.severity = none
+
+dotnet_diagnostic.RCS1218.severity = warning
+
+dotnet_diagnostic.RCS1219.severity = warning
+
+dotnet_diagnostic.RCS1220.severity = warning
+
+# Use pattern matching instead of combination of 'as' operator and null check.
+dotnet_diagnostic.RCS1221.severity = suggestion
+
+dotnet_diagnostic.RCS1222.severity = warning
+
+# Mark publicly visible type with DebuggerDisplay attribute
+dotnet_diagnostic.RCS1223.severity = none
+
+dotnet_diagnostic.RCS1224.severity = warning
+
+dotnet_diagnostic.RCS1225.severity = warning
+
+dotnet_diagnostic.RCS1226.severity = warning
+
+dotnet_diagnostic.RCS1227.severity = warning
+
+dotnet_diagnostic.RCS1228.severity = warning
+
+dotnet_diagnostic.RCS1229.severity = warning
+
+dotnet_diagnostic.RCS1230.severity = warning
+
+dotnet_diagnostic.RCS1231.severity = warning
+
+dotnet_diagnostic.RCS1232.severity = warning
+
+dotnet_diagnostic.RCS1233.severity = warning
+
+dotnet_diagnostic.RCS1234.severity = warning
+
+# Xml comment analysis disabled
+dotnet_diagnostic.SA0001.severity = warning
+
+dotnet_diagnostic.SA0002.severity = warning
+
+dotnet_diagnostic.SA1000.severity = warning
+
+dotnet_diagnostic.SA1001.severity = warning
+
+dotnet_diagnostic.SA1002.severity = warning
+
+dotnet_diagnostic.SA1003.severity = warning
+
+dotnet_diagnostic.SA1004.severity = warning
+
+# Single line comments must begin with single space. Use //// if the comment is being used to comment out a line of code.
+dotnet_diagnostic.SA1005.severity = warning
+
+dotnet_diagnostic.SA1006.severity = warning
+
+dotnet_diagnostic.SA1007.severity = warning
+
+dotnet_diagnostic.SA1008.severity = warning
+
+# Closing Parenthesis Must Be Spaced Correctly
+dotnet_diagnostic.SA1009.severity = none
+
+dotnet_diagnostic.SA1010.severity = warning
+
+dotnet_diagnostic.SA1011.severity = warning
+
+dotnet_diagnostic.SA1012.severity = warning
+
+dotnet_diagnostic.SA1013.severity = warning
+
+dotnet_diagnostic.SA1014.severity = warning
+
+dotnet_diagnostic.SA1015.severity = warning
+
+dotnet_diagnostic.SA1016.severity = warning
+
+dotnet_diagnostic.SA1017.severity = warning
+
+dotnet_diagnostic.SA1018.severity = warning
+
+dotnet_diagnostic.SA1019.severity = warning
+
+dotnet_diagnostic.SA1020.severity = warning
+
+dotnet_diagnostic.SA1021.severity = warning
+
+dotnet_diagnostic.SA1022.severity = warning
+
+dotnet_diagnostic.SA1023.severity = warning
+
+dotnet_diagnostic.SA1024.severity = warning
+
+dotnet_diagnostic.SA1025.severity = warning
+
+dotnet_diagnostic.SA1026.severity = warning
+
+dotnet_diagnostic.SA1027.severity = warning
+
+dotnet_diagnostic.SA1028.severity = warning
+
+dotnet_diagnostic.SA1100.severity = warning
+
+# Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+dotnet_diagnostic.SA1102.severity = warning
+
+dotnet_diagnostic.SA1103.severity = warning
+
+dotnet_diagnostic.SA1104.severity = warning
+
+dotnet_diagnostic.SA1105.severity = warning
+
+dotnet_diagnostic.SA1106.severity = warning
+
+dotnet_diagnostic.SA1107.severity = warning
+
+dotnet_diagnostic.SA1108.severity = warning
+
+dotnet_diagnostic.SA1109.severity = warning
+
+dotnet_diagnostic.SA1110.severity = warning
+
+dotnet_diagnostic.SA1111.severity = warning
+
+dotnet_diagnostic.SA1112.severity = warning
+
+dotnet_diagnostic.SA1113.severity = warning
+
+dotnet_diagnostic.SA1114.severity = warning
+
+dotnet_diagnostic.SA1115.severity = warning
+
+dotnet_diagnostic.SA1116.severity = warning
+
+dotnet_diagnostic.SA1117.severity = warning
+
+dotnet_diagnostic.SA1118.severity = warning
+
+dotnet_diagnostic.SA1119.severity = warning
+
+dotnet_diagnostic.SA1120.severity = warning
+
+dotnet_diagnostic.SA1121.severity = warning
+
+dotnet_diagnostic.SA1122.severity = warning
+
+dotnet_diagnostic.SA1123.severity = warning
+
+dotnet_diagnostic.SA1124.severity = warning
+
+dotnet_diagnostic.SA1125.severity = warning
+
+dotnet_diagnostic.SA1126.severity = warning
+
+# Generic type constraints must be on own line
+dotnet_diagnostic.SA1127.severity = none
+
+dotnet_diagnostic.SA1128.severity = warning
+
+dotnet_diagnostic.SA1129.severity = warning
+
+dotnet_diagnostic.SA1130.severity = warning
+
+dotnet_diagnostic.SA1131.severity = warning
+
+dotnet_diagnostic.SA1132.severity = warning
+
+dotnet_diagnostic.SA1133.severity = warning
+
+dotnet_diagnostic.SA1134.severity = warning
+
+dotnet_diagnostic.SA1135.severity = warning
+
+dotnet_diagnostic.SA1136.severity = warning
+
+dotnet_diagnostic.SA1137.severity = warning
+
+dotnet_diagnostic.SA1139.severity = warning
+
+# Using directives must be placed correctly
+dotnet_diagnostic.SA1200.severity = none
+
+dotnet_diagnostic.SA1201.severity = warning
+
+dotnet_diagnostic.SA1202.severity = warning
+
+dotnet_diagnostic.SA1203.severity = warning
+
+dotnet_diagnostic.SA1204.severity = warning
+
+dotnet_diagnostic.SA1205.severity = warning
+
+dotnet_diagnostic.SA1206.severity = warning
+
+dotnet_diagnostic.SA1207.severity = warning
+
+dotnet_diagnostic.SA1208.severity = warning
+
+dotnet_diagnostic.SA1209.severity = warning
+
+dotnet_diagnostic.SA1210.severity = warning
+
+dotnet_diagnostic.SA1211.severity = warning
+
+dotnet_diagnostic.SA1212.severity = warning
+
+dotnet_diagnostic.SA1213.severity = warning
+
+dotnet_diagnostic.SA1214.severity = warning
+
+dotnet_diagnostic.SA1215.severity = warning
+
+dotnet_diagnostic.SA1216.severity = warning
+
+dotnet_diagnostic.SA1217.severity = warning
+
+dotnet_diagnostic.SA1300.severity = warning
+
+dotnet_diagnostic.SA1301.severity = warning
+
+dotnet_diagnostic.SA1302.severity = warning
+
+dotnet_diagnostic.SA1303.severity = warning
+
+dotnet_diagnostic.SA1304.severity = warning
+
+# Field names must not use hungarian notation
+dotnet_diagnostic.SA1305.severity = warning
+
+dotnet_diagnostic.SA1306.severity = warning
+
+dotnet_diagnostic.SA1307.severity = warning
+
+dotnet_diagnostic.SA1308.severity = warning
+
+# Field names must not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
+dotnet_diagnostic.SA1310.severity = warning
+
+dotnet_diagnostic.SA1311.severity = warning
+
+dotnet_diagnostic.SA1312.severity = warning
+
+dotnet_diagnostic.SA1313.severity = warning
+
+dotnet_diagnostic.SA1314.severity = warning
+
+dotnet_diagnostic.SA1400.severity = warning
+
+dotnet_diagnostic.SA1401.severity = warning
+
+dotnet_diagnostic.SA1402.severity = warning
+
+dotnet_diagnostic.SA1403.severity = warning
+
+dotnet_diagnostic.SA1404.severity = warning
+
+dotnet_diagnostic.SA1405.severity = warning
+
+dotnet_diagnostic.SA1406.severity = warning
+
+dotnet_diagnostic.SA1407.severity = warning
+
+dotnet_diagnostic.SA1408.severity = warning
+
+dotnet_diagnostic.SA1409.severity = warning
+
+dotnet_diagnostic.SA1410.severity = warning
+
+dotnet_diagnostic.SA1411.severity = warning
+
+# Store files as utf-8 - Conflicting with .editorconfig
+dotnet_diagnostic.SA1412.severity = none
+
+# Use Trailing Commas In MultiLine Initializers Analyzer
+dotnet_diagnostic.SA1413.severity = none
+
+dotnet_diagnostic.SA1500.severity = warning
+
+dotnet_diagnostic.SA1501.severity = warning
+
+dotnet_diagnostic.SA1502.severity = warning
+
+# Braces must not be omitted
+dotnet_diagnostic.SA1503.severity = none
+
+dotnet_diagnostic.SA1504.severity = warning
+
+dotnet_diagnostic.SA1505.severity = warning
+
+dotnet_diagnostic.SA1506.severity = warning
+
+dotnet_diagnostic.SA1507.severity = warning
+
+dotnet_diagnostic.SA1508.severity = warning
+
+dotnet_diagnostic.SA1509.severity = warning
+
+dotnet_diagnostic.SA1510.severity = warning
+
+dotnet_diagnostic.SA1511.severity = warning
+
+dotnet_diagnostic.SA1512.severity = warning
+
+dotnet_diagnostic.SA1513.severity = warning
+
+dotnet_diagnostic.SA1514.severity = warning
+
+# Single line comment must be preceded by blank line. Use //// if the comment is being used to comment out a line of code.
+dotnet_diagnostic.SA1515.severity = warning
+
+dotnet_diagnostic.SA1516.severity = warning
+
+dotnet_diagnostic.SA1517.severity = warning
+
+dotnet_diagnostic.SA1518.severity = warning
+
+dotnet_diagnostic.SA1519.severity = warning
+
+dotnet_diagnostic.SA1520.severity = warning
+
+# Fix typo in documentation
+dotnet_diagnostic.SA1600.severity = warning
+
+# Partial elements must be Documented
+dotnet_diagnostic.SA1601.severity = warning
+
+# Enumeration items must be documented
+dotnet_diagnostic.SA1602.severity = warning
+
+dotnet_diagnostic.SA1603.severity = warning
+
+dotnet_diagnostic.SA1604.severity = warning
+
+dotnet_diagnostic.SA1605.severity = warning
+
+dotnet_diagnostic.SA1606.severity = warning
+
+dotnet_diagnostic.SA1607.severity = warning
+
+dotnet_diagnostic.SA1608.severity = warning
+
+dotnet_diagnostic.SA1609.severity = warning
+
+dotnet_diagnostic.SA1610.severity = warning
+
+# Element parameters must be documented
+dotnet_diagnostic.SA1611.severity = warning
+
+dotnet_diagnostic.SA1612.severity = warning
+
+dotnet_diagnostic.SA1613.severity = warning
+
+dotnet_diagnostic.SA1614.severity = warning
+
+# Element return value must be documented
+dotnet_diagnostic.SA1615.severity = warning
+
+dotnet_diagnostic.SA1616.severity = warning
+
+dotnet_diagnostic.SA1617.severity = warning
+
+# Generic type parameters must be documented
+dotnet_diagnostic.SA1618.severity = warning
+
+# Generic type parameters must be documented partial class
+dotnet_diagnostic.SA1619.severity = warning
+
+dotnet_diagnostic.SA1620.severity = warning
+
+dotnet_diagnostic.SA1621.severity = warning
+
+dotnet_diagnostic.SA1622.severity = warning
+
+dotnet_diagnostic.SA1623.severity = warning
+
+dotnet_diagnostic.SA1624.severity = warning
+
+dotnet_diagnostic.SA1625.severity = warning
+
+dotnet_diagnostic.SA1626.severity = warning
+
+dotnet_diagnostic.SA1627.severity = warning
+
+dotnet_diagnostic.SA1628.severity = warning
+
+dotnet_diagnostic.SA1629.severity = warning
+
+dotnet_diagnostic.SA1630.severity = warning
+
+dotnet_diagnostic.SA1631.severity = warning
+
+dotnet_diagnostic.SA1632.severity = warning
+
+# File must have header
+dotnet_diagnostic.SA1633.severity = none
+
+dotnet_diagnostic.SA1634.severity = warning
+
+dotnet_diagnostic.SA1635.severity = warning
+
+dotnet_diagnostic.SA1636.severity = warning
+
+dotnet_diagnostic.SA1637.severity = warning
+
+dotnet_diagnostic.SA1638.severity = warning
+
+dotnet_diagnostic.SA1639.severity = warning
+
+dotnet_diagnostic.SA1640.severity = warning
+
+dotnet_diagnostic.SA1641.severity = warning
+
+dotnet_diagnostic.SA1642.severity = warning
+
+dotnet_diagnostic.SA1643.severity = warning
+
+dotnet_diagnostic.SA1644.severity = warning
+
+dotnet_diagnostic.SA1645.severity = warning
+
+dotnet_diagnostic.SA1646.severity = warning
+
+dotnet_diagnostic.SA1647.severity = warning
+
+dotnet_diagnostic.SA1648.severity = warning
+
+dotnet_diagnostic.SA1649.severity = warning
+
+dotnet_diagnostic.SA1650.severity = warning
+
+dotnet_diagnostic.SA1651.severity = warning
+
+# Enable Xml documentation output
+dotnet_diagnostic.SA1652.severity = none
+
+dotnet_diagnostic.UseConfigureAwait.severity = warning
+
+# Unconstrained type parameter checked for null
+dotnet_diagnostic.RCS1165.severity = none

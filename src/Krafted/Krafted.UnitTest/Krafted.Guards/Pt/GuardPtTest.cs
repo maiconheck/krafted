@@ -45,6 +45,13 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
             Assert.Equal("Invalid NIF: {0}.".Format(invalidNif), ex.Message);
         }
 
+        [Fact]
+        public void GuardAgainstInvalidNif_InvalidNifWithCustomMessage_ThrowsException()
+        {
+            var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidNif("505924437", "My custom error message."));
+            Assert.Equal("My custom error message.", ex.Message);
+        }
+
         [Theory]
         [InlineData("502155051")]
         [InlineData("501813713")]

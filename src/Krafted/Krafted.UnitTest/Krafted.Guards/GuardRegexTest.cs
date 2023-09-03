@@ -15,6 +15,20 @@ namespace Krafted.UnitTest.Krafted.Guards
         public void GuardAgainstMatch_PatternMatched_ThrowsException(string myParam, string pattern)
         {
             Assert.Throws<ArgumentException>(() => Guard.Against.Match(myParam, pattern, nameof(myParam)));
+
+            // Throws with custom error message.
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.Match(myParam, pattern, nameof(myParam), message: "My custom error message 1."));
+            Assert.Equal("My custom error message 1. (Parameter 'myParam')", ex1.Message);
+
+            // Throws with custom exception type and error message.
+            var ex2 = Assert.Throws<InvalidOperationException>(() => Guard.Against.Match<InvalidOperationException>(myParam, pattern, nameof(myParam), message: "My custom error message 2."));
+            Assert.Equal("My custom error message 2.", ex2.Message);
+
+            var ex3 = Assert.Throws<ApplicationException>(() => Guard.Against.Match<ApplicationException>(myParam, pattern, nameof(myParam), message: "My custom error message 3."));
+            Assert.Equal("My custom error message 3.", ex3.Message);
+
+            var ex4 = Assert.Throws<BadImageFormatException>(() => Guard.Against.Match<BadImageFormatException>(myParam, pattern, nameof(myParam), message: "My custom error message 4."));
+            Assert.Equal("My custom error message 4.", ex4.Message);
         }
 
         [Theory]
@@ -33,6 +47,20 @@ namespace Krafted.UnitTest.Krafted.Guards
         public void GuardAgainstNotMatch_PatternNotMatched_ThrowsException(string myParam, string pattern)
         {
             Assert.Throws<ArgumentException>(() => Guard.Against.NotMatch(myParam, pattern, nameof(myParam)));
+
+            // Throws with custom error message.
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.NotMatch(myParam, pattern, nameof(myParam), message: "My custom error message 1."));
+            Assert.Equal("My custom error message 1. (Parameter 'myParam')", ex1.Message);
+
+            // Throws with custom exception type and error message.
+            var ex2 = Assert.Throws<InvalidOperationException>(() => Guard.Against.NotMatch<InvalidOperationException>(myParam, pattern, nameof(myParam), message: "My custom error message 2."));
+            Assert.Equal("My custom error message 2.", ex2.Message);
+
+            var ex3 = Assert.Throws<ApplicationException>(() => Guard.Against.NotMatch<ApplicationException>(myParam, pattern, nameof(myParam), message: "My custom error message 3."));
+            Assert.Equal("My custom error message 3.", ex3.Message);
+
+            var ex4 = Assert.Throws<BadImageFormatException>(() => Guard.Against.NotMatch<BadImageFormatException>(myParam, pattern, nameof(myParam), message: "My custom error message 4."));
+            Assert.Equal("My custom error message 4.", ex4.Message);
         }
 
         [Theory]

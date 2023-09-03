@@ -37,7 +37,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1.8.0
       with:
-        dotnet-version: 5.0.204
+        dotnet-version: 7.0.400
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'

@@ -19,14 +19,15 @@ namespace Krafted.Guards
         /// with this error message: E-mail address invalid: {emailAddress}.
         /// </summary>
         /// <param name="emailAddress">The e-mail address to check.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="FormatException">.</exception>
-        public Guard InvalidEmail(string emailAddress)
+        public Guard InvalidEmail(string emailAddress, string message = "")
         {
             Guard.Against.NullOrWhiteSpace(emailAddress, nameof(emailAddress));
 
             if (!Validator.ValidateEmail(emailAddress))
-                throw new FormatException(Texts.InvalidEmailAddress.Format(emailAddress));
+                throw new FormatException(Texts.InvalidEmailAddress.Format(emailAddress).OrFallback(message));
 
             return this;
         }

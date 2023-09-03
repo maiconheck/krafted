@@ -88,14 +88,14 @@ namespace Krafted.ValueObjects
         /// <summary>
         /// Returns the string representation of <see cref="Value"/>.
         /// </summary>
-        /// <returns>The the string representation of <see cref="Value"/>.</returns>
+        /// <returns>The string representation of <see cref="Value"/>.</returns>
         public override string ToString() => Value.ToString();
 
         /// <summary>
         /// Returns the string representation of <see cref="Value"/> as specified by <see cref="IFormatProvider"/> provider.
         /// </summary>
         /// <param name="provider">An object that supplies culture-specific formatting information.</param>
-        /// <returns>The the string representation of <see cref="Value"/> as specified by <see cref="IFormatProvider"/> provider.</returns>
+        /// <returns>The string representation of <see cref="Value"/> as specified by <see cref="IFormatProvider"/> provider.</returns>
         public virtual string ToString(IFormatProvider provider) => Value.ToString(provider);
 
         /// <summary>

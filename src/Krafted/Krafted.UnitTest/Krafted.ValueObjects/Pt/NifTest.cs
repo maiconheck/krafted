@@ -3,7 +3,7 @@ using Krafted.ValueObjects.Pt;
 using Xunit;
 using Assert = Krafted.UnitTests.Xunit.AssertExtension;
 
-namespace Krafted.UnitTest.Krafted.ValueObjects
+namespace Krafted.UnitTest.Krafted.ValueObjects.Pt
 {
     [Trait(nameof(UnitTest), "Krafted.ValueObjects")]
     public class NifTest
