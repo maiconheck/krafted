@@ -15,14 +15,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int>();
-                Guard.Against.Empty(myCollection, nameof(myCollection));
+                Guard.Against.Empty(myCollection);
             });
             Assert.Equal("Collection cannot be empty. (Parameter 'myCollection')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int>();
-                Guard.Against.Empty(myCollection, nameof(myCollection), "My custom error message.");
+                Guard.Against.Empty(myCollection, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }
@@ -33,10 +33,10 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.DoesNotThrows(() =>
             {
                 var myCollection1 = new List<int> { 1 };
-                Guard.Against.Empty(myCollection1, nameof(myCollection1));
+                Guard.Against.Empty(myCollection1);
 
                 var myCollection2 = new List<string> { "A" };
-                Guard.Against.Empty(myCollection1, nameof(myCollection2));
+                Guard.Against.Empty(myCollection1);
             });
         }
 
@@ -46,14 +46,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int> { 1 };
-                Guard.Against.NotEmpty(myCollection, nameof(myCollection));
+                Guard.Against.NotEmpty(myCollection);
             });
             Assert.Equal("Collection should be empty. (Parameter 'myCollection')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int> { 1 };
-                Guard.Against.NotEmpty(myCollection, nameof(myCollection), "My custom error message.");
+                Guard.Against.NotEmpty(myCollection, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }

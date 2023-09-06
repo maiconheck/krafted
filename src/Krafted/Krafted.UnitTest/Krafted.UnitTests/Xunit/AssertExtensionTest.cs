@@ -13,7 +13,7 @@ namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
             Assert.DoesNotThrows(() =>
             {
                 object param = new object();
-                Guard.Against.Null(param, nameof(param));
+                Guard.Against.Null(param);
             });
         }
     }

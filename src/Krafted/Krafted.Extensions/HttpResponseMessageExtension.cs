@@ -22,9 +22,9 @@ namespace System.Net.Http
         /// <exception cref="ArgumentNullException">The response is null.</exception>
         public static HttpResponseMessage EnsureContentType(this HttpResponseMessage response, string defaultContentType = "application/json; charset=utf-8")
         {
-            Guard.Against.Null(response, nameof(response));
+            Guard.Against.Null(response);
 
-            string contentType = response.Content.Headers.ContentType.ToString();
+            string contentType = response.Content!.Headers!.ContentType!.ToString();
 
             if (!contentType.Equals(defaultContentType, StringComparison.OrdinalIgnoreCase))
                 throw new HttpRequestException(string.Format(CultureInfo.InvariantCulture, Texts.IncorrectContentType, defaultContentType));
@@ -42,13 +42,13 @@ namespace System.Net.Http
         /// comparison during deserialization. The default value is false.
         /// </param>
         /// <returns>The deserialized <typeparamref name="T"/> from the <see cref="HttpResponseMessage"/>.</returns>
-        public static async Task<T> DeserializeAsync<T>(this HttpResponseMessage response, bool propertyNameCaseInsensitive = true)
+        public static async Task<T?> DeserializeAsync<T>(this HttpResponseMessage response, bool propertyNameCaseInsensitive = true)
         {
-            Guard.Against.Null(response, nameof(response));
+            Guard.Against.Null(response);
             return await DoDeserializeAsync<T>(response, propertyNameCaseInsensitive).ConfigureAwait(false);
         }
 
-        private static async Task<T> DoDeserializeAsync<T>(HttpResponseMessage response, bool propertyNameCaseInsensitive)
+        private static async Task<T?> DoDeserializeAsync<T>(HttpResponseMessage response, bool propertyNameCaseInsensitive)
         {
             var value = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             return JsonSerializer.Deserialize<T>(value, new JsonSerializerOptions { PropertyNameCaseInsensitive = propertyNameCaseInsensitive });

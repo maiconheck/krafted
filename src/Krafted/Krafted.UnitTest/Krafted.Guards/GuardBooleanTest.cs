@@ -14,14 +14,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 bool myParam = true;
-                Guard.Against.True(myParam, nameof(myParam));
+                Guard.Against.True(myParam);
             });
             Assert.Equal("Parameter cannot be true. (Parameter 'myParam')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 bool myParam = true;
-                Guard.Against.True(myParam, nameof(myParam), "My custom error message.");
+                Guard.Against.True(myParam, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
 
@@ -30,14 +30,14 @@ namespace Krafted.UnitTest.Krafted.Guards
                 string myParam = "abc";
                 Guard.Against.True(_ => myParam == "abc");
             });
-            Assert.Equal("Predicate cannot be true.", ex3.Message);
+            Assert.Equal("Predicate cannot be true. (Parameter '_ => myParam == \"abc\"')", ex3.Message);
 
             var ex4 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
                 Guard.Against.True(_ => myParam == "abc", "My message when the expression is true!");
             });
-            Assert.Equal("My message when the expression is true!", ex4.Message);
+            Assert.Equal("My message when the expression is true! (Parameter '_ => myParam == \"abc\"')", ex4.Message);
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.DoesNotThrows(() =>
             {
                 bool myParam = false;
-                Guard.Against.True(myParam, nameof(myParam));
+                Guard.Against.True(myParam);
                 Guard.Against.True(_ => "a" == "b", nameof(myParam));
             });
         }
@@ -57,14 +57,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 bool myParam = false;
-                Guard.Against.False(myParam, nameof(myParam));
+                Guard.Against.False(myParam);
             });
             Assert.Equal("Parameter cannot be false. (Parameter 'myParam')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 bool myParam = false;
-                Guard.Against.False(myParam, nameof(myParam), "My custom error message.");
+                Guard.Against.False(myParam, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
 
@@ -73,14 +73,14 @@ namespace Krafted.UnitTest.Krafted.Guards
                 string myParam = "abc";
                 Guard.Against.False(_ => myParam == "a");
             });
-            Assert.Equal("Predicate cannot be false.", ex3.Message);
+            Assert.Equal("Predicate cannot be false. (Parameter '_ => myParam == \"a\"')", ex3.Message);
 
             var ex4 = Assert.Throws<ArgumentException>(() =>
             {
                 string myParam = "abc";
                 Guard.Against.False(_ => myParam == "a", "My message when the expression is false!");
             });
-            Assert.Equal("My message when the expression is false!", ex4.Message);
+            Assert.Equal("My message when the expression is false! (Parameter '_ => myParam == \"a\"')", ex4.Message);
         }
 
         [Fact]
@@ -89,8 +89,8 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.DoesNotThrows(() =>
             {
                 bool myParam = true;
-                Guard.Against.False(myParam, nameof(myParam));
-                Guard.Against.False(_ => "ab" == "ab", nameof(myParam));
+                Guard.Against.False(myParam);
+                Guard.Against.False(_ => "ab" == "ab");
             });
         }
     }

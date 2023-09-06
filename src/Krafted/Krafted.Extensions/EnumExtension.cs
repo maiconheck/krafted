@@ -18,7 +18,7 @@ namespace System
         /// <exception cref="ArgumentException">Throws when the enum constant '{input}' is not decorated with the <see cref="DisplayAttribute"/> and the <paramref name="fallback"/> is <c>false</c>.</exception>
         public static string GetDisplayName(this Enum input, bool fallback = false)
         {
-            Guard.Against.Null(input, nameof(input));
+            Guard.Against.Null(input);
 
             var member = input
                 .GetType()
@@ -33,8 +33,8 @@ namespace System
                 return input.ToString();
 
             return member
-                .GetCustomAttribute<DisplayAttribute>()
-                .GetName();
+                .GetCustomAttribute<DisplayAttribute>()!
+                .GetName()!;
         }
     }
 }

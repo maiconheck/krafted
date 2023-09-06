@@ -24,7 +24,7 @@ namespace Krafted.Guards
         /// <exception cref="FormatException">.</exception>
         public Guard InvalidNif(string nif, string message = "")
         {
-            Guard.Against.NullOrWhiteSpace(nif, nameof(nif));
+            Guard.Against.NullOrWhiteSpace(nif);
 
             if (!Pt.Validator.ValidateNif(nif))
                 throw new FormatException(Texts.InvalidNif.Format(nif).OrFallback(message));

@@ -45,14 +45,14 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         [InlineData("email@example..co.uk")]
         public void NewEmail_InvalidEmail_ThrowsException(string invalidEmail)
         {
-            var ex1 = Assert.Throws<FormatException>(() => new Email(invalidEmail));
-            Assert.Equal($"Invalid e-mail address: {invalidEmail}.", ex1.Message);
+            var ex1 = Assert.Throws<ArgumentException>(() => new Email(invalidEmail));
+            Assert.Equal($"Invalid e-mail address: {invalidEmail}. (Parameter 'value')", ex1.Message);
 
-            var ex2 = Assert.Throws<FormatException>(() => (Email)invalidEmail);
-            Assert.Equal($"Invalid e-mail address: {invalidEmail}.", ex2.Message);
+            var ex2 = Assert.Throws<ArgumentException>(() => (Email)invalidEmail);
+            Assert.Equal($"Invalid e-mail address: {invalidEmail}. (Parameter 'value')", ex2.Message);
 
-            var ex3 = Assert.Throws<FormatException>(() => Email.NewEmail(invalidEmail));
-            Assert.Equal($"Invalid e-mail address: {invalidEmail}.", ex3.Message);
+            var ex3 = Assert.Throws<ArgumentException>(() => Email.NewEmail(invalidEmail));
+            Assert.Equal($"Invalid e-mail address: {invalidEmail}. (Parameter 'value')", ex3.Message);
         }
 
         [Fact]

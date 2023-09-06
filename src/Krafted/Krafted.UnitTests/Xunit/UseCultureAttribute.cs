@@ -1,3 +1,5 @@
+#nullable disable
+
 // An attribute to replace the CurrentCulture with another culture.
 //
 // This class was obtained from the Xunit samples.

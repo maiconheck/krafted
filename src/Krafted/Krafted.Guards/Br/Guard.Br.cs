@@ -25,8 +25,8 @@ namespace Krafted.Guards
         public Guard InvalidCpf(string cpf, string message = "")
         {
             Guard.Against
-                .NullOrWhiteSpace(cpf, nameof(cpf))
-                .NotMatch<FormatException>(cpf, "^([0-9]{11})$", nameof(cpf), message: Texts.InvalidCpf.Format(cpf).OrFallback(message));
+                .NullOrWhiteSpace(cpf)
+                .NotMatch<FormatException>(cpf, "^([0-9]{11})$", message: Texts.InvalidCpf.Format(cpf).OrFallback(message));
 
             if (!Br.Validator.ValidateCpf(cpf))
                 throw new FormatException(Texts.InvalidCpf.Format(cpf).OrFallback(message));
@@ -51,8 +51,8 @@ namespace Krafted.Guards
         public Guard InvalidCnpj(string cnpj, string message = "")
         {
             Guard.Against
-                .NullOrWhiteSpace(cnpj, nameof(cnpj))
-                .NotMatch<FormatException>(cnpj, "^([0-9]{14})$", nameof(cnpj), message: Texts.InvalidCnpj.Format(cnpj).OrFallback(message));
+                .NullOrWhiteSpace(cnpj)
+                .NotMatch<FormatException>(cnpj, "^([0-9]{14})$", message: Texts.InvalidCnpj.Format(cnpj).OrFallback(message));
 
             if (!Br.Validator.ValidateCnpj(cnpj))
                 throw new FormatException(Texts.InvalidCnpj.Format(cnpj).OrFallback(message));

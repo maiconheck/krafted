@@ -4,6 +4,7 @@
 // Source: https://www.macoratti.net/11/09/c_val1.htm
 // Retrieved in August 2023.
 
+using System;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
@@ -36,7 +37,7 @@ namespace Krafted.Guards.Br
             int rest;
 
             cpf = cpf.Trim();
-            cpf = cpf.Replace(".", string.Empty).Replace("-", string.Empty);
+            cpf = cpf.Replace(".", string.Empty, StringComparison.Ordinal).Replace("-", string.Empty, StringComparison.Ordinal);
 
             if (cpf.Length != 11)
                 return false;
@@ -74,7 +75,7 @@ namespace Krafted.Guards.Br
 
             digit = digit + rest.ToString(CultureInfo.InvariantCulture);
 
-            return cpf.EndsWith(digit);
+            return cpf.EndsWith(digit, StringComparison.Ordinal);
         }
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace Krafted.Guards.Br
             string tempCnpj;
 
             cnpj = cnpj.Trim();
-            cnpj = cnpj.Replace(".", string.Empty).Replace("-", string.Empty).Replace("/", string.Empty);
+            cnpj = cnpj.Replace(".", string.Empty, StringComparison.Ordinal).Replace("-", string.Empty, StringComparison.Ordinal).Replace("/", string.Empty, StringComparison.Ordinal);
 
             if (cnpj.Length != 14)
                 return false;
@@ -136,7 +137,7 @@ namespace Krafted.Guards.Br
 
             digit = digit + rest.ToString(CultureInfo.InvariantCulture);
 
-            return cnpj.EndsWith(digit);
+            return cnpj.EndsWith(digit, StringComparison.Ordinal);
         }
     }
 }

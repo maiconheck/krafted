@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Krafted.Guards
 {
@@ -16,13 +17,13 @@ namespace Krafted.Guards
         /// <remarks>If the parameter is null or empty, no exception will be thrown.</remarks>
         /// <param name="exactLength">The exact length the parameter must be.</param>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentOutOfRangeException">.</exception>
-        public Guard Length(uint exactLength, string parameter, string parameterName, string message = "")
+        public Guard Length(uint exactLength, string parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (string.IsNullOrEmpty(parameter))
                 return this;
@@ -41,13 +42,13 @@ namespace Krafted.Guards
         /// <param name="minLength">The minimum length the parameter must be.</param>
         /// <param name="maxLength">The maximum length the parameter must be.</param>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentOutOfRangeException">.</exception>
-        public Guard Length(uint minLength, uint maxLength, string parameter, string parameterName, string message = "")
+        public Guard Length(uint minLength, uint maxLength, string parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (string.IsNullOrEmpty(parameter))
                 return this;
@@ -65,13 +66,13 @@ namespace Krafted.Guards
         /// <remarks>If the parameter is null or empty, no exception will be thrown.</remarks>
         /// <param name="maxLength">The maximum length the parameter must be.</param>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard MaxLength(uint maxLength, string parameter, string parameterName, string message = "")
+        public Guard MaxLength(uint maxLength, string parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (string.IsNullOrEmpty(parameter))
                 return this;
@@ -89,13 +90,13 @@ namespace Krafted.Guards
         /// <remarks>If the parameter is null or empty, no exception will be thrown.</remarks>
         /// <param name="minLength">The minimum length the parameter must be.</param>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard MinLength(uint minLength, string parameter, string parameterName, string message = "")
+        public Guard MinLength(uint minLength, string parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (string.IsNullOrEmpty(parameter))
                 return this;

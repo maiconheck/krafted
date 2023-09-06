@@ -17,7 +17,7 @@ namespace Krafted.ValueObjects
         /// <param name="value">The value.</param>
         public Money(decimal value)
         {
-            Guard.Against.Negative(value, nameof(value));
+            Guard.Against.Negative(value);
             Value = value;
         }
 
@@ -36,7 +36,7 @@ namespace Krafted.ValueObjects
             {
                 if (_ammount != value)
                 {
-                    Guard.Against.Negative(value, nameof(value));
+                    Guard.Against.Negative(value);
                     _ammount = value;
                 }
             }
@@ -56,8 +56,8 @@ namespace Krafted.ValueObjects
         public static implicit operator decimal(Money value)
         {
             Guard.Against
-                .Null(value, nameof(value))
-                .Negative(value.Value, nameof(value));
+                .Null(value)
+                .Negative(value.Value);
 
             return value.Value;
         }
@@ -78,9 +78,9 @@ namespace Krafted.ValueObjects
         public static Money operator +(Money money, decimal value)
         {
             Guard.Against
-                .Null(money, nameof(money))
-                .Negative(money.Value, nameof(money))
-                .Negative(value, nameof(value));
+                .Null(money)
+                .Negative(money.Value)
+                .Negative(value);
 
             money.Value += value;
 
@@ -96,13 +96,13 @@ namespace Krafted.ValueObjects
         public static Money operator -(Money money, decimal value)
         {
             Guard.Against
-                .Null(money, nameof(money))
-                .Negative(money.Value, nameof(money))
-                .Negative(value, nameof(value));
+                .Null(money)
+                .Negative(money.Value)
+                .Negative(value);
 
             money.Value -= value;
 
-            Guard.Against.Negative(money.Value, nameof(money));
+            Guard.Against.Negative(money.Value);
 
             return money;
         }

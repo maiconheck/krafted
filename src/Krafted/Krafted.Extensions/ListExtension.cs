@@ -17,9 +17,9 @@ namespace System.Collections.Generic
         public static void Move<T>(this IList<T> list, int oldIndex, int newIndex)
         {
             Guard.Against
-                .Empty(list, nameof(list))
-                .Negative(oldIndex, nameof(oldIndex))
-                .Negative(newIndex, nameof(newIndex));
+                .Empty(list)
+                .Negative(oldIndex)
+                .Negative(newIndex);
 
             var item = list[oldIndex];
             list.RemoveAt(oldIndex);

@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 
 namespace Krafted.Guards
 {
@@ -15,13 +17,13 @@ namespace Krafted.Guards
         /// </summary>
         /// <typeparam name="T">The type of the parameter.</typeparam>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
         /// <returns>The guard.</returns>
-        public Guard Null<T>(T parameter, string parameterName, string message = "") where T : class
+        public Guard Null<T>([NotNull] T? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null) where T : class
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName!);
 
             if (parameter is null)
                 throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNull.OrFallback(message));
@@ -34,13 +36,13 @@ namespace Krafted.Guards
         /// with this error message: Parameter cannot be null or empty.
         /// </summary>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
-        public Guard NullOrEmpty(string parameter, string parameterName, string message = "")
+        public Guard NullOrEmpty([NotNull] string? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName!);
 
             if (string.IsNullOrEmpty(parameter))
                 throw new ArgumentNullException(parameterName, Texts.ParameterCannotBeNullOrEmpty.OrFallback(message));
@@ -53,12 +55,12 @@ namespace Krafted.Guards
         /// with this error message: Parameter cannot be null, empty or consists exclusively of white-space characters.
         /// </summary>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException"><paramref name="parameter"/> is empty, or consists only of white-space.</exception>
-        public Guard NullOrWhiteSpace(string parameter, string parameterName, string message = "")
+        public Guard NullOrWhiteSpace([NotNull] string? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
             if (string.IsNullOrWhiteSpace(parameterName))
                 throw new ArgumentNullException(nameof(parameterName), Texts.ParameterCannotBeNullEmptyOrWhiteSpace);
