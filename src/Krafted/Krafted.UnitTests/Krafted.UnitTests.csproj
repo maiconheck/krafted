@@ -32,4 +32,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+      <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
+  </ItemGroup>
+    
 </Project>
