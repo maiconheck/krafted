@@ -65,7 +65,7 @@ namespace Krafted.UnitTests.Xunit
             for (int i = 0; i < parameters.Length; i++)
             {
                 var localParams = GetOriginalParameters();
-                localParams[i] = null;
+                localParams[i] = null!;
 
                 try
                 {
