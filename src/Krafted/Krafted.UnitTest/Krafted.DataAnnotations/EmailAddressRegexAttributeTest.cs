@@ -12,7 +12,9 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
         [InlineData("@company.com")]
         [InlineData("john@.com")]
         [InlineData("john@company.")]
-
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData(" ")]
         public void IsValid_InvalidEmail_False(string invalidEmail)
         {
             var model = new EmailModelDummy

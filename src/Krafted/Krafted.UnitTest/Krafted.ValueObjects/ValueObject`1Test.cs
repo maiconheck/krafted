@@ -23,6 +23,14 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
             Assert.True(valueObjectA.Equals(valueObjectC));
             Assert.True(valueObjectA == valueObjectC);
             Assert.False(valueObjectA != valueObjectC);
+
+            valueObjectA = null;
+            Assert.False(valueObjectA == valueObjectB);
+            Assert.False(valueObjectB.Equals(valueObjectA));
+
+            valueObjectA = null;
+            valueObjectB = null;
+            Assert.True(valueObjectA == valueObjectB);
         }
 
         [Fact]

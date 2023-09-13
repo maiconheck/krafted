@@ -37,6 +37,9 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations.Pt
         [InlineData("500522097")]
         [InlineData("514727087")]
         [InlineData("505924437")]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData(" ")]
 
         public void IsValid_InvalidNif_False(string invalidNif)
         {

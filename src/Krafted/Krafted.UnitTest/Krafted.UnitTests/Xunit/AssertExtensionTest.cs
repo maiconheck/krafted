@@ -1,3 +1,4 @@
+using System;
 using Krafted.Guards;
 using Xunit;
 using Assert = Krafted.UnitTests.Xunit.AssertExtension;
@@ -48,6 +49,13 @@ namespace Krafted.UnitTest.Krafted.UnitTests.Xunit
             string param4 = "My parameter 4";
             string param5 = "My parameter 5";
             Assert.DoesNotContainNullGuardClause<ModelWithoutNullGuardClauses>(param1, param2, param3, param4, param5);
+        }
+
+        [Fact]
+        public void DoesNotContainNullGuardClause_WithoutParameters_ThrowsException()
+        {
+            var ex = Assert.Throws<InvalidOperationException>(() => Assert.DoesNotContainNullGuardClause<ModelWithoutNullGuardClauses>());
+            Assert.Equal($"The constructor of the specified SUT 'ModelWithoutNullGuardClauses' does not contains any parameter.", ex.Message);
         }
     }
 }
