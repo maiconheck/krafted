@@ -29,7 +29,6 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
             valueObjectA = null;
             valueObjectB = null;
             Assert.True(valueObjectA == valueObjectB);
-
         }
 
         [Fact]
