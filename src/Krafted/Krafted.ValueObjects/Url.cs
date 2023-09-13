@@ -15,7 +15,7 @@ namespace Krafted.ValueObjects
         /// <param name="value">The value.</param>
         public Url(string value)
         {
-            Guard.Against.NullOrWhiteSpace(value, nameof(value));
+            Guard.Against.NullOrWhiteSpace(value);
 
             var regEx = Validator.NewRegEx(@"(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})");
 

@@ -12,19 +12,22 @@ namespace Krafted.Guards
         /// <summary>
         /// Throws an <see cref="FormatException"/> if the <c>nif</c> is invalid,
         /// with this error message: Invalid NIF: {nif}.
+        /// <para>
+        /// NIF stands for "Número de Identificação Fiscal" in Portugal.
+        /// It's used to identify an individual or legal entity taxpayer in Portugal.
+        /// <see href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal">See more</see>.
+        /// </para>
         /// </summary>
-        /// <remarks>
-        /// NIF means "Número de Identificação Fiscal", a.k.a "Número de Contribuinte", identifies a taxpayer entity in Portugal, whether it is a company or an individual.
-        /// </remarks>
         /// <param name="nif">The nif to check.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="FormatException">.</exception>
-        public Guard InvalidNif(string nif)
+        public Guard InvalidNif(string nif, string message = "")
         {
-            Guard.Against.NullOrWhiteSpace(nif, nameof(nif));
+            Guard.Against.NullOrWhiteSpace(nif);
 
             if (!Pt.Validator.ValidateNif(nif))
-                throw new FormatException(Texts.InvalidNif.Format(nif));
+                throw new FormatException(Texts.InvalidNif.Format(nif).OrFallback(message));
 
             return this;
         }

@@ -45,6 +45,13 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
             }
         }
 
+        [Fact]
+        public void IsValid_Null_False()
+        {
+            var attribute = new MinOneAttribute();
+            Assert.False(attribute.IsValid(null));
+        }
+
         [Theory]
         [InlineData(1, 1111111111111111111L, 111111111111111.11)]
         [InlineData(2, 2222222222222222222L, 222222222222222.22)]

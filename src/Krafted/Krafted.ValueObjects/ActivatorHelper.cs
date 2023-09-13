@@ -46,8 +46,8 @@ namespace Krafted.ValueObjects
             var type = typeof(TValueObject);
 
             return !string.IsNullOrEmpty(value)
-                ? (TValueObject)Activator.CreateInstance(type, value) // public contructor
-                : (TValueObject)Activator.CreateInstance(type, nonPublic: true); // private contructor
+                ? (TValueObject)Activator.CreateInstance(type, value)! // public contructor
+                : (TValueObject)Activator.CreateInstance(type, nonPublic: true)!; // private contructor
         }
     }
 }

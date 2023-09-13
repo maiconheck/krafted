@@ -13,10 +13,10 @@ namespace Krafted.UnitTest.Krafted.Extensions
         [Fact]
         public void EnsureContentType_DefaultContentType_DoesNotThrowsException()
         {
-            var response1 = new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(string.Empty, Encoding.UTF8, "application/json") };
+            using var response1 = new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(string.Empty, Encoding.UTF8, "application/json") };
             Assert.DoesNotThrows(() => response1.EnsureContentType());
 
-            var response2 = new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(string.Empty, Encoding.ASCII, "text/html") };
+            using var response2 = new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(string.Empty, Encoding.ASCII, "text/html") };
             Assert.DoesNotThrows(() => response2.EnsureContentType("text/html; charset=us-ascii"));
         }
 
@@ -25,7 +25,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
         [InlineData("UTF-8", "text/html")]
         public void EnsureContentType_NotUtf8ApplicationJson_ThrowsException(string encoding, string mediaType)
         {
-            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            using var response = new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(string.Empty, Encoding.GetEncoding(encoding), mediaType)
             };
@@ -43,7 +43,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
                                     ""enabled"": true
                                   }";
 
-            var response = new HttpResponseMessage
+            using var response = new HttpResponseMessage
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
@@ -63,7 +63,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
             // Arrange
             const string json = "true";
 
-            var response = new HttpResponseMessage
+            using var response = new HttpResponseMessage
             {
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };

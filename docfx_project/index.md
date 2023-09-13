@@ -40,7 +40,6 @@ However, I wanted to keep all packages under the same umbrella of the Krafted pr
 
 - 100% documented (docs, API e IntelliSense).
 - Highly test code coverage.
-- Targeting `netstandard2.0` ([see all supported platforms](https://dotnet.microsoft.com/platform/dotnet-standard)).
 - Almost all packages have zero nuget dependencies.
 - Code quality analyzed by [.NET Analyzers](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview), [StyleCop Analyzers](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) and [SonarCloud](https://sonarcloud.io/dashboard?id=maiconheck_krafted).
 
@@ -50,7 +49,7 @@ Check out the [**docs**](articles/guards.html) to get some samples of how Krafte
 To get more details, check out the [**API reference**](api/).
 
 # Features / where can I get?
-As explained above, Krafted consists in a set of fine-grained modules, each one is delivered as a nuget package (targeting `netstandard2.0`).
+As explained above, Krafted consists in a set of fine-grained modules, each one is delivered as a nuget package.
 
 So get the packages according to the features you want:
 

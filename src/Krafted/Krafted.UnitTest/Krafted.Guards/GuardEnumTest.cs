@@ -22,8 +22,12 @@ namespace Krafted.UnitTest.Krafted.Guards
         public void GuardAgainstNotExists_NotExists_ThrowsException(int value)
         {
             var orderStatus = (OrderStatus)value;
-            var ex = Assert.Throws<ArgumentException>(() => Guard.Against.NotExists(orderStatus));
-            Assert.Equal($"{value} not exists in the OrderStatus.", ex.Message);
+
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.NotExists(orderStatus));
+            Assert.Equal($"{value} not exists in the OrderStatus. (Parameter 'orderStatus')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.NotExists(orderStatus, "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'orderStatus')", ex2.Message);
         }
 
         [Theory]

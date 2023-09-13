@@ -1,0 +1,23 @@
+[*.cs]
+
+dotnet_diagnostic.RCS1021.severity = none
+dotnet_diagnostic.CA1822.severity = none
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.RCS1060.severity = none
+dotnet_diagnostic.SA1402.severity = none
+dotnet_diagnostic.CA1812.severity = none
+dotnet_diagnostic.CA2227.severity = none
+dotnet_diagnostic.RCS1168.severity = none
+dotnet_diagnostic.RCS1046.severity = none
+dotnet_diagnostic.CA1716.severity = none
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.CA2007.severity = none
+dotnet_diagnostic.SA1602.severity = none
+dotnet_diagnostic.SA1601.severity = none
+dotnet_diagnostic.SA0001.severity = none
+
+# Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = none
+
+# Field names must not use hungarian notation
+dotnet_diagnostic.SA1305.severity = none

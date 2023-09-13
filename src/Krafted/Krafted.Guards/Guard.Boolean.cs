@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Krafted.Guards
 {
@@ -14,15 +15,16 @@ namespace Krafted.Guards
         /// with this error message: Parameter cannot be <c>true</c>.
         /// </summary>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard True(bool parameter, string parameterName)
+        public Guard True(bool parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (parameter)
-                throw new ArgumentException(Texts.ParameterCannotBeTrue, parameterName);
+                throw new ArgumentException(Texts.ParameterCannotBeTrue.OrFallback(message), parameterName);
 
             return this;
         }
@@ -34,21 +36,15 @@ namespace Krafted.Guards
         /// </summary>
         /// <param name="predicate">The predicate to check.</param>
         /// <param name="message">The optional error message passed to <see cref="ArgumentException"/> if the <c>predicate</c> is <c>true</c>.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="predicate"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard True(Predicate<bool> predicate, string message = "")
+        public Guard True(Predicate<bool> predicate, string message = "", [CallerArgumentExpression("predicate")] string? parameterName = null)
         {
-            Guard.Against.Null(predicate, nameof(predicate));
+            Guard.Against.Null(predicate);
 
             if (predicate.Invoke(true))
-            {
-                if (string.IsNullOrWhiteSpace(message))
-                {
-                    throw new ArgumentException(Texts.PredicateCannotBeTrue);
-                }
-
-                throw new ArgumentException(message);
-            }
+                throw new ArgumentException(Texts.PredicateCannotBeTrue.OrFallback(message), parameterName);
 
             return this;
         }
@@ -58,15 +54,16 @@ namespace Krafted.Guards
         /// with this error message: Parameter cannot be <c>false</c>.
         /// </summary>
         /// <param name="parameter">The parameter to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard False(bool parameter, string parameterName)
+        public Guard False(bool parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (!parameter)
-                throw new ArgumentException(Texts.ParameterCannotBeFalse, parameterName);
+                throw new ArgumentException(Texts.ParameterCannotBeFalse.OrFallback(message), parameterName);
 
             return this;
         }
@@ -74,25 +71,19 @@ namespace Krafted.Guards
         /// <summary>
         /// Throws an <see cref="ArgumentException"/> if the <c>predicate</c> is <c>false</c>,
         /// with this error message: Predicate cannot be <c>false</c>.
-        /// /// Or, if the optional parameter <c>message</c> was set, with their message.
+        /// Or, if the optional parameter <c>message</c> was set, with their message.
         /// </summary>
         /// <param name="predicate">The predicate to check.</param>
         /// <param name="message">The optional error message passed to <see cref="ArgumentException"/> if the <c>predicate</c> is <c>false</c>.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="predicate"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard False(Predicate<bool> predicate, string message = "")
+        public Guard False(Predicate<bool> predicate, string message = "", [CallerArgumentExpression("predicate")] string? parameterName = null)
         {
-            Guard.Against.Null(predicate, nameof(predicate));
+            Guard.Against.Null(predicate);
 
             if (!predicate.Invoke(false))
-            {
-                if (string.IsNullOrWhiteSpace(message))
-                {
-                    throw new ArgumentException(Texts.PredicateCannotBeFalse);
-                }
-
-                throw new ArgumentException(message);
-            }
+                throw new ArgumentException(Texts.PredicateCannotBeFalse.OrFallback(message), parameterName);
 
             return this;
         }

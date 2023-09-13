@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 namespace Krafted.Guards
 {
@@ -16,15 +17,16 @@ namespace Krafted.Guards
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
         /// <param name="valueToCompare">The value to compare.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="valueToCompare"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard LessThan<T>(T number, T valueToCompare, string parameterName) where T : struct, IComparable
+        public Guard LessThan<T>(T number, T valueToCompare, string message = "", [CallerArgumentExpression("valueToCompare")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (valueToCompare.CompareTo(number) < 0)
-                throw new ArgumentException(Texts.NumberCannotBeLessThan.Format(valueToCompare), parameterName);
+                throw new ArgumentException(Texts.NumberCannotBeLessThan.Format(valueToCompare).OrFallback(message), parameterName);
 
             return this;
         }
@@ -36,15 +38,16 @@ namespace Krafted.Guards
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
         /// <param name="valueToCompare">The value to compare.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="valueToCompare"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard GreaterThan<T>(T number, T valueToCompare, string parameterName) where T : struct, IComparable
+        public Guard GreaterThan<T>(T number, T valueToCompare, string message = "", [CallerArgumentExpression("valueToCompare")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (valueToCompare.CompareTo(number) > 0)
-                throw new ArgumentException(Texts.NumberCannotBeGreaterThan.Format(valueToCompare), parameterName);
+                throw new ArgumentException(Texts.NumberCannotBeGreaterThan.Format(valueToCompare).OrFallback(message), parameterName);
 
             return this;
         }
@@ -55,15 +58,16 @@ namespace Krafted.Guards
         /// </summary>
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="number"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard Zero<T>(T number, string parameterName) where T : struct, IComparable
+        public Guard Zero<T>(T number, string message = "", [CallerArgumentExpression("number")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (number.CompareTo(default(T)) == 0)
-                throw new ArgumentException(Texts.NumberCannotBeZero, parameterName);
+                throw new ArgumentException(Texts.NumberCannotBeZero.OrFallback(message), parameterName);
 
             return this;
         }
@@ -74,15 +78,16 @@ namespace Krafted.Guards
         /// </summary>
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="number"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard Negative<T>(T number, string parameterName) where T : struct, IComparable
+        public Guard Negative<T>(T number, string message = "", [CallerArgumentExpression("number")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (number.CompareTo(default(T)) < 0)
-                throw new ArgumentException(Texts.NumberCannotBeNegative, parameterName);
+                throw new ArgumentException(Texts.NumberCannotBeNegative.OrFallback(message), parameterName);
 
             return this;
         }
@@ -93,15 +98,16 @@ namespace Krafted.Guards
         /// </summary>
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="number"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard Positive<T>(T number, string parameterName) where T : struct, IComparable
+        public Guard Positive<T>(T number, string message = "", [CallerArgumentExpression("number")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             if (number.CompareTo(default(T)) > 0)
-                throw new ArgumentException(Texts.NumberCannotBePositive, parameterName);
+                throw new ArgumentException(Texts.NumberCannotBePositive.OrFallback(message), parameterName);
 
             return this;
         }
@@ -115,16 +121,17 @@ namespace Krafted.Guards
         /// </remarks>
         /// <typeparam name="T">The type of the number.</typeparam>
         /// <param name="number">The number to check.</param>
-        /// <param name="parameterName">The name of the parameter.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="number"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        public Guard ZeroOrLess<T>(T number, string parameterName) where T : struct, IComparable
+        public Guard ZeroOrLess<T>(T number, string message = "", [CallerArgumentExpression("number")] string? parameterName = null) where T : struct, IComparable
         {
-            Guard.Against.NullOrWhiteSpace(parameterName, nameof(parameterName));
+            Guard.Against.NullOrWhiteSpace(parameterName);
 
             Guard.Against.
-                Zero(number, parameterName).
-                Negative(number, parameterName);
+                Zero(number, message, parameterName).
+                Negative(number, message, parameterName);
 
             return this;
         }

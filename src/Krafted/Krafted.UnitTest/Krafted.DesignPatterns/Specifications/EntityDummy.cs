@@ -1,4 +1,4 @@
-namespace Krafted.UnitTest
+namespace Krafted.UnitTest.Krafted.DesignPatterns.Specifications
 {
     public class EntityDummy
     {

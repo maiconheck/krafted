@@ -15,7 +15,7 @@ namespace Krafted.Net.NetworkInformation
         /// <returns><c>true</c> if available; otherwise, <c>false</c>. In both cases, containing a message describing the result.</returns>
         public static (bool isAvailable, string resultMessage) Available(string hostNameOrAddress)
         {
-            Guard.Against.NullOrWhiteSpace(hostNameOrAddress, nameof(hostNameOrAddress));
+            Guard.Against.NullOrWhiteSpace(hostNameOrAddress);
 
             try
             {
@@ -29,7 +29,7 @@ namespace Krafted.Net.NetworkInformation
             }
             catch (PingException ex)
             {
-                return (false, $"{ex.Message} {ex.InnerException.Message}");
+                return (false, $"{ex.Message} {ex.InnerException!.Message}");
             }
         }
     }

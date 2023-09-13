@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.UnitTests", "Krafted.UnitTests\Krafted.UnitTests.csproj", "{8C5FCA0F-18B9-48DF-92DC-E5C733533FFC}"
 EndProject
@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krafted.Guards", "Krafted.G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B366D6C-8EB0-401C-B531-AC3C52FDF6FE}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\.editorconfig = ..\..\.editorconfig
 		..\..\.github\workflows\ci-cd-pipeline.yml = ..\..\.github\workflows\ci-cd-pipeline.yml
+		..\..\setup\code-coverage-report.ps1 = ..\..\setup\code-coverage-report.ps1
 		Directory.build.props = Directory.build.props
 		..\..\.config\dotnet-tools.json = ..\..\.config\dotnet-tools.json
 		..\..\README.md = ..\..\README.md
