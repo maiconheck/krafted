@@ -64,15 +64,15 @@ jobs:
 
     - name: TEST - Executes unit and integration tests
       run: |
-        dotnet test "./src/Krafted/Krafted.sln" --no-restore \
-        /p:CollectCoverage=true \
-        /p:CoverletOutput="../../coverage-results/" \
-        /p:MergeWith="../../coverage-results/coverage.json" \
-        /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" \
-        /p:SkipAutoProps=true \
-        /p:CoverletOutputFormat="opencover%2cjson" \
-        -m:1 \
-        /p:Threshold=98 \
+        dotnet test "./src/Krafted/Krafted.sln" --no-restore `
+        /p:CollectCoverage=true `
+        /p:CoverletOutput="../../coverage-results/" `
+        /p:MergeWith="../../coverage-results/coverage.json" `
+        /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" `
+        /p:SkipAutoProps=true `
+        /p:CoverletOutputFormat="opencover%2cjson" `
+        -m:1 `
+        /p:Threshold=98 `
         /p:ThresholdStat=average
 
 ################ SETUP SONAR STEPS ################
