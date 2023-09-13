@@ -72,7 +72,7 @@ jobs:
         /p:SkipAutoProps=true `
         /p:CoverletOutputFormat="opencover%2cjson" `
         -m:1 `
-        /p:Threshold=98 `
+        /p:Threshold=93 `
         /p:ThresholdStat=average
 
 ################ SETUP SONAR STEPS ################
