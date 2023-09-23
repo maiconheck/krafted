@@ -187,6 +187,15 @@ namespace Krafted.Guards {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be empty or consists exclusively of white-space characters..
+        /// </summary>
+        internal static string ParameterCannotBeEmptyOrWhiteSpace {
+            get {
+                return ResourceManager.GetString("ParameterCannotBeEmptyOrWhiteSpace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Parameter cannot be false..
         /// </summary>
         internal static string ParameterCannotBeFalse {

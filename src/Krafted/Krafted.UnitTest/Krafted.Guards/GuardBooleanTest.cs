@@ -47,7 +47,20 @@ namespace Krafted.UnitTest.Krafted.Guards
             {
                 bool myParam = false;
                 Guard.Against.True(myParam);
-                Guard.Against.True(_ => "a" == "b", nameof(myParam));
+                Guard.Against.True(_ => "a" == "b");
+            });
+        }
+
+        [Fact]
+        public void GuardAgainstTrue_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                bool? myParam = null;
+                Guard.Against.True(myParam);
+
+                Predicate<bool>? predicate = null;
+                Guard.Against.True(predicate);
             });
         }
 
@@ -91,6 +104,19 @@ namespace Krafted.UnitTest.Krafted.Guards
                 bool myParam = true;
                 Guard.Against.False(myParam);
                 Guard.Against.False(_ => "ab" == "ab");
+            });
+        }
+
+        [Fact]
+        public void GuardAgainstFalse_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                bool? myParam = null;
+                Guard.Against.False(myParam);
+
+                Predicate<bool>? predicate = null;
+                Guard.Against.False(predicate);
             });
         }
     }

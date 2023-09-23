@@ -7,10 +7,10 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
     public class NotEmptyCollectionModelDummy
     {
         [NotEmptyCollection]
-        public IEnumerable<int> MyProperty1 { get; set; }
+        public IEnumerable<int> MyProperty1 { get; set; } = default!;
 
         [NotEmptyCollection(ErrorMessage = "Provide at least one item.")]
-        public IEnumerable<int> MyProperty2 { get; set; }
+        public IEnumerable<int> MyProperty2 { get; set; } = default!;
     }
 
     public class MinOneIntModelDummy
@@ -43,18 +43,18 @@ namespace Krafted.UnitTest.Krafted.DataAnnotations
     public class NifModelDummy
     {
         [Nif]
-        public string MyProperty1 { get; set; }
+        public string MyProperty1 { get; set; } = default!;
 
         [Nif(ErrorMessage = "The nif should be valid.")]
-        public string MyProperty2 { get; set; }
+        public string MyProperty2 { get; set; } = default!;
     }
 
     public class EmailModelDummy
     {
         [EmailAddressRegex]
-        public string MyProperty1 { get; set; }
+        public string MyProperty1 { get; set; } = default!;
 
         [EmailAddressRegex(ErrorMessage = "The e-mail should be valid.")]
-        public string MyProperty2 { get; set; }
+        public string MyProperty2 { get; set; } = default!;
     }
 }

@@ -37,6 +37,16 @@ namespace Krafted.UnitTest.Krafted.Guards
         }
 
         [Fact]
+        public void GuardAgainstEmpty_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                Guid? myGuid = null;
+                Guard.Against.Empty(myGuid);
+            });
+        }
+
+        [Fact]
         public void GuardAgainstNotEmpty_NotEmpty_ThrowsException()
         {
             var ex1 = Assert.Throws<ArgumentException>(() =>
@@ -60,6 +70,16 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.DoesNotThrows(() =>
             {
                 var myGuid = Guid.Empty;
+                Guard.Against.NotEmpty(myGuid);
+            });
+        }
+
+        [Fact]
+        public void GuardAgainstNotEmpty_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                Guid? myGuid = null;
                 Guard.Against.NotEmpty(myGuid);
             });
         }

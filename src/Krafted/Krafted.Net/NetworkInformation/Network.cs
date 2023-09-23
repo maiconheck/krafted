@@ -13,7 +13,7 @@ namespace Krafted.Net.NetworkInformation
         /// </summary>
         /// <param name="hostNameOrAddress">The host name or address that identifies the computer that is the destination for the check.</param>
         /// <returns><c>true</c> if available; otherwise, <c>false</c>. In both cases, containing a message describing the result.</returns>
-        public static (bool isAvailable, string resultMessage) Available(string hostNameOrAddress)
+        public static (bool IsAvailable, string ResultMessage) Available(string hostNameOrAddress)
         {
             Guard.Against.NullOrWhiteSpace(hostNameOrAddress);
 

@@ -52,7 +52,7 @@ namespace Krafted.UnitTest.Krafted.Extensions
             var result = await response.DeserializeAsync<ViewModelDummy>();
 
             // Assert
-            Assert.Equal(35, result.Age);
+            Assert.Equal(35, result!.Age);
             Assert.Equal("Peter", result.Name);
             Assert.True(result.Enabled);
         }

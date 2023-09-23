@@ -9,12 +9,12 @@ namespace Krafted.UnitTest.Krafted.Guards
     public class GuardStringTest
     {
         [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        [InlineData("ABC")]
-        public void GuardAgainstExactLength_ExactLength_DoesNotThrows(string myParam)
+        [InlineData(1, "A")]
+        [InlineData(2, "AB")]
+        [InlineData(3, "ABC")]
+        public void GuardAgainstExactLength_ExactLength_DoesNotThrows(uint length, string myParam)
         {
-            Assert.DoesNotThrows(() => Guard.Against.Length(3, myParam));
+            Assert.DoesNotThrows(() => Guard.Against.Length(length, myParam));
         }
 
         [Theory]
@@ -31,9 +31,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
+        [Fact]
+        public void GuardAgainstExactLength_Null_DoesNotThrows()
+        {
+            string? myParam = null;
+            Assert.DoesNotThrows(() => Guard.Against.Length(1, myParam));
+        }
+
         [Theory]
-        [InlineData(null)]
-        [InlineData("")]
         [InlineData(" ")]
         [InlineData("A")]
         [InlineData("AB")]
@@ -57,8 +62,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
+        [Fact]
+        public void GuardAgainstMinLengthMaxLength_Null_DoesNotThrows()
+        {
+            string? myParam = null;
+            Assert.DoesNotThrows(() => Guard.Against.Length(1, 5, myParam));
+        }
+
         [Theory]
-        [InlineData(null)]
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("A")]
@@ -83,9 +94,14 @@ namespace Krafted.UnitTest.Krafted.Guards
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
         }
 
+        [Fact]
+        public void GuardAgainstMaxLength_Null_DoesNotThrows()
+        {
+            string? myParam = null;
+            Assert.DoesNotThrows(() => Guard.Against.MaxLength(5, myParam));
+        }
+
         [Theory]
-        [InlineData(null)]
-        [InlineData("")]
         [InlineData("ABC")]
         [InlineData("ABCD")]
         [InlineData("ABCDE")]
@@ -105,6 +121,13 @@ namespace Krafted.UnitTest.Krafted.Guards
 
             var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.MinLength(3, myParam, "My custom error message."));
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
+        }
+
+        [Fact]
+        public void GuardAgainstMinLength_Null_DoesNotThrows()
+        {
+            string? myParam = null;
+            Assert.DoesNotThrows(() => Guard.Against.MinLength(3, myParam));
         }
     }
 }

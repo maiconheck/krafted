@@ -10,3 +10,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1623:Property summary documentation should match accessors", Justification = "Not applicable", Scope = "member", Target = "~P:Krafted.Guards.Guard.Against")]
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.Guards.Br.Validator.ValidateCnpj(System.String)~System.Boolean")]
 [assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.Guards.Br.Validator.ValidateCpf(System.String)~System.Boolean")]
+[assembly: SuppressMessage("Major Bug", "S2583:Conditionally executed code should be reachable", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.Guards.Guard.NotExists``1(``0,System.String,System.String)~Krafted.Guards.Guard")]

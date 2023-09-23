@@ -10,64 +10,84 @@ namespace Krafted.UnitTest.Krafted.Guards
     public class GuardCollectionTest
     {
         [Fact]
-        public void GuardAgainstEmpty_Empty_ThrowsException()
+        public void GuardAgainstNotAny_NotAny_ThrowsException()
         {
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int>();
-                Guard.Against.Empty(myCollection);
+                Guard.Against.NotAny(myCollection);
             });
             Assert.Equal("Collection cannot be empty. (Parameter 'myCollection')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int>();
-                Guard.Against.Empty(myCollection, "My custom error message.");
+                Guard.Against.NotAny(myCollection, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }
 
         [Fact]
-        public void GuardAgainstEmpty_NotEmpty_DoesNotThrows()
+        public void GuardAgainstNotAny_Any_DoesNotThrows()
         {
             Assert.DoesNotThrows(() =>
             {
                 var myCollection1 = new List<int> { 1 };
-                Guard.Against.Empty(myCollection1);
+                Guard.Against.NotAny(myCollection1);
 
                 var myCollection2 = new List<string> { "A" };
-                Guard.Against.Empty(myCollection1);
+                Guard.Against.NotAny(myCollection1);
             });
         }
 
         [Fact]
-        public void GuardAgainstNotEmpty_NotEmpty_ThrowsException()
+        public void GuardAgainstNotAny_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                List<int>? myCollection = null;
+                Guard.Against.NotAny(myCollection);
+            });
+        }
+
+        [Fact]
+        public void GuardAgainstAny_Any_ThrowsException()
         {
             var ex1 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int> { 1 };
-                Guard.Against.NotEmpty(myCollection);
+                Guard.Against.Any(myCollection);
             });
             Assert.Equal("Collection should be empty. (Parameter 'myCollection')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() =>
             {
                 var myCollection = new List<int> { 1 };
-                Guard.Against.NotEmpty(myCollection, "My custom error message.");
+                Guard.Against.Any(myCollection, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myCollection')", ex2.Message);
         }
 
         [Fact]
-        public void GuardAgainstNotEmpty_Empty_DoesNotThrows()
+        public void GuardAgainstAny_NotAny_DoesNotThrows()
         {
             Assert.DoesNotThrows(() =>
             {
                 var myCollection1 = new List<int>();
-                Guard.Against.NotEmpty(myCollection1, nameof(myCollection1));
+                Guard.Against.Any(myCollection1, nameof(myCollection1));
 
                 var myCollection2 = new List<string>();
-                Guard.Against.NotEmpty(myCollection1, nameof(myCollection2));
+                Guard.Against.Any(myCollection1, nameof(myCollection2));
+            });
+        }
+
+        [Fact]
+        public void GuardAgainstAny_Null_DoesNotThrows()
+        {
+            Assert.DoesNotThrows(() =>
+            {
+                List<int>? myCollection = null;
+                Guard.Against.Any(myCollection);
             });
         }
     }

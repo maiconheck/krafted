@@ -8,8 +8,8 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         [Fact]
         public void Equals_EqualValueObjects_True()
         {
-            ValueObjectStub valueObjectA = new ValueObjectStub("Foo Street", "Foo City", "4567898");
-            ValueObjectStub valueObjectB = valueObjectA;
+            ValueObjectStub? valueObjectA = new ValueObjectStub("Foo Street", "Foo City", "4567898");
+            ValueObjectStub? valueObjectB = valueObjectA;
             ValueObjectStub valueObjectC = new ValueObjectStub("Foo Street", "Foo City", "4567898");
 
             Assert.True(valueObjectA.Equals(valueObjectA));

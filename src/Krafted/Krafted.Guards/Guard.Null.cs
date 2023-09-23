@@ -70,5 +70,20 @@ namespace Krafted.Guards
 
             return this;
         }
+
+        /// <summary>
+        /// Throws an <see cref="ArgumentException"/> if the <c>parameter</c> is an empty string or consists only of white-space,
+        /// with this error message: Parameter cannot be empty or consists exclusively of white-space characters.
+        /// </summary>
+        /// <remarks>
+        /// If the <c>parameter</c> is <c>null</c>, the validation is ignored (i.e. does not throws an <see cref="ArgumentException"/>). This is useful for optional parameters whose default value is <c>null</c>.
+        /// </remarks>
+        /// <param name="parameter">The parameter to check.</param>
+        /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
+        /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
+        /// <returns>The guard.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
+        public Guard EmptyOrWhiteSpace(string? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
+            => Validate<string?, ArgumentException>(parameter, _ => string.IsNullOrWhiteSpace(parameter), Texts.ParameterCannotBeEmptyOrWhiteSpace, message, parameterName);
     }
 }

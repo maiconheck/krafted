@@ -18,20 +18,20 @@ namespace Krafted.Guards
         /// <see href="https://pt.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas">See more</see>.
         /// </para>
         /// </summary>
+        /// <remarks>
+        /// If the <c>cpf</c> is <c>null</c>, the validation is ignored (i.e. does not throws an <see cref="FormatException"/>). This is useful for optional parameters whose default value is <c>null</c>.
+        /// </remarks>
         /// <param name="cpf">The cpf to check.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="FormatException">.</exception>
-        public Guard InvalidCpf(string cpf, string message = "")
+        public Guard InvalidCpf(string? cpf, string message = "")
         {
-            Guard.Against
-                .NullOrWhiteSpace(cpf)
-                .NotMatch<FormatException>(cpf, "^([0-9]{11})$", message: Texts.InvalidCpf.Format(cpf).OrFallback(message));
+            if (cpf is null)
+                return this;
 
-            if (!Br.Validator.ValidateCpf(cpf))
-                throw new FormatException(Texts.InvalidCpf.Format(cpf).OrFallback(message));
-
-            return this;
+            Guard.Against.NotMatch<FormatException>(cpf, "^([0-9]{11})$", message: Texts.InvalidCpf.Format(cpf).OrFallback(message));
+            return Validate<string?, FormatException>(cpf, _ => !Br.Validator.ValidateCpf(cpf!), Texts.InvalidCpf.Format(cpf), message, nameof(cpf));
         }
 
         /// <summary>
@@ -44,20 +44,20 @@ namespace Krafted.Guards
         /// <see href="https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica">See more</see>.
         /// </para>
         /// </summary>
+        /// <remarks>
+        /// If the <c>cnpj</c> is <c>null</c>, the validation is ignored (i.e. does not throws an <see cref="FormatException"/>). This is useful for optional parameters whose default value is <c>null</c>.
+        /// </remarks>
         /// <param name="cnpj">The cnpj to check.</param>
         /// <param name="message">The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</param>
         /// <returns>The guard.</returns>
         /// <exception cref="FormatException">.</exception>
-        public Guard InvalidCnpj(string cnpj, string message = "")
+        public Guard InvalidCnpj(string? cnpj, string message = "")
         {
-            Guard.Against
-                .NullOrWhiteSpace(cnpj)
-                .NotMatch<FormatException>(cnpj, "^([0-9]{14})$", message: Texts.InvalidCnpj.Format(cnpj).OrFallback(message));
+            if (cnpj is null)
+                return this;
 
-            if (!Br.Validator.ValidateCnpj(cnpj))
-                throw new FormatException(Texts.InvalidCnpj.Format(cnpj).OrFallback(message));
-
-            return this;
+            Guard.Against.NotMatch<FormatException>(cnpj, "^([0-9]{14})$", message: Texts.InvalidCnpj.Format(cnpj).OrFallback(message));
+            return Validate<string?, FormatException>(cnpj, _ => !Br.Validator.ValidateCnpj(cnpj), Texts.InvalidCnpj.Format(cnpj), message, nameof(cnpj));
         }
     }
 }

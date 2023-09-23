@@ -35,7 +35,7 @@ namespace Krafted.UnitTest.Krafted.UnitTests.TestDouble
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, getResponse.StatusCode);
-            Assert.Equal(35, getResponseDeserialized.Age);
+            Assert.Equal(35, getResponseDeserialized!.Age);
             Assert.Equal("Maicon Heck", getResponseDeserialized.Name);
             Assert.True(getResponseDeserialized.Enabled);
         }

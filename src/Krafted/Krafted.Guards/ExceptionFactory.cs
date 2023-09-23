@@ -21,6 +21,8 @@ namespace Krafted.Guards
 
             if (exceptionType == typeof(ArgumentException))
                 return Activator.CreateInstance(typeof(TException), message!, parameterName!) as TException;
+            else if (exceptionType == typeof(ArgumentOutOfRangeException))
+                return Activator.CreateInstance(typeof(TException), parameterName!, message!) as TException;
             else
                 return Activator.CreateInstance(typeof(TException), message!) as TException;
         }

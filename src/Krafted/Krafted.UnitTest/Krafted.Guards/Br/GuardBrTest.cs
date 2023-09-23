@@ -9,6 +9,8 @@ namespace Krafted.UnitTest.Krafted.Guards.Br
     public class GuardBrTest
     {
         [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
         [InlineData("50215505101")]
         [InlineData("ABCDEFGHI")]
         [InlineData("00855960054")]
@@ -88,7 +90,16 @@ namespace Krafted.UnitTest.Krafted.Guards.Br
             Assert.DoesNotThrows(() => Guard.Against.InvalidCpf(validCpf));
         }
 
+        [Fact]
+        public void GuardAgainstInvalidCpf_Null_DoesNotThrows()
+        {
+            string? cpf = null;
+            Assert.DoesNotThrows(() => Guard.Against.InvalidCpf(cpf));
+        }
+
         [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
         [InlineData("50215505101425")]
         [InlineData("ABCDEFGHIJKLMN")]
         [InlineData("00855960054345")]
@@ -166,6 +177,13 @@ namespace Krafted.UnitTest.Krafted.Guards.Br
         public void GuardAgainstInvalidCnpj_ValidCnpj_DoesNotThrows(string validCnpj)
         {
             Assert.DoesNotThrows(() => Guard.Against.InvalidCnpj(validCnpj));
+        }
+
+        [Fact]
+        public void GuardAgainstInvalidCnpj_Null_DoesNotThrows()
+        {
+            string? cnpj = null;
+            Assert.DoesNotThrows(() => Guard.Against.InvalidCnpj(cnpj));
         }
     }
 }
