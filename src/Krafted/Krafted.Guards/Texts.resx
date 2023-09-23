@@ -159,6 +159,9 @@
   <data name="NumberCannotBeZero" xml:space="preserve">
     <value>Number cannot be zero.</value>
   </data>
+  <data name="ParameterCannotBeEmptyOrWhiteSpace" xml:space="preserve">
+    <value>Parameter cannot be empty or consists exclusively of white-space characters.</value>
+  </data>
   <data name="ParameterCannotBeFalse" xml:space="preserve">
     <value>Parameter cannot be false.</value>
   </data>

@@ -5,7 +5,7 @@ namespace Krafted.Guards
     /// <summary>
     /// Provides extension methods to <see cref="Guards"/>.
     /// </summary>
-    internal static class Extensions
+    internal static class StringExtensions
     {
         /// <summary>
         /// Replaces the format items in a string with the string representations of corresponding

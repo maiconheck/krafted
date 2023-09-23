@@ -3,7 +3,7 @@ using System;
 namespace Krafted.Guards
 {
     /// <summary>
-    /// Provides a factory method to create a new instance of TException.
+    /// Provides a factory method to create a new instance of <c>TException</c>.
     /// </summary>
     internal static class ExceptionFactory
     {
@@ -21,6 +21,8 @@ namespace Krafted.Guards
 
             if (exceptionType == typeof(ArgumentException))
                 return Activator.CreateInstance(typeof(TException), message!, parameterName!) as TException;
+            else if (exceptionType == typeof(ArgumentOutOfRangeException))
+                return Activator.CreateInstance(typeof(TException), parameterName!, message!) as TException;
             else
                 return Activator.CreateInstance(typeof(TException), message!) as TException;
         }

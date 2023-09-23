@@ -10,8 +10,8 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
         [Fact]
         public void Equals_EqualValueObjects_True()
         {
-            Email valueObjectA = new Email("contact@maiconheck.com");
-            Email valueObjectB = valueObjectA;
+            Email? valueObjectA = new Email("contact@maiconheck.com");
+            Email? valueObjectB = valueObjectA;
             Email valueObjectC = new Email("contact@maiconheck.com");
 
             Assert.True(valueObjectA.Equals(valueObjectA));

@@ -29,5 +29,12 @@ namespace Krafted.UnitTest.Krafted.Guards
             const string validEmail = "john@company.com";
             Assert.DoesNotThrows(() => Guard.Against.InvalidEmail(validEmail));
         }
+
+        [Fact]
+        public void GuardAgainstInvalidEmail_Null_DoesNotThrowsException()
+        {
+            const string? email = null;
+            Assert.DoesNotThrows(() => Guard.Against.InvalidEmail(email));
+        }
     }
 }

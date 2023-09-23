@@ -17,7 +17,7 @@ namespace Krafted.ValueObjects
         /// <param name="value">The value.</param>
         public Money(decimal value)
         {
-            Guard.Against.Negative(value);
+            Guard.Against.Negative<decimal>(value);
             Value = value;
         }
 
@@ -36,7 +36,7 @@ namespace Krafted.ValueObjects
             {
                 if (_ammount != value)
                 {
-                    Guard.Against.Negative(value);
+                    Guard.Against.Negative<decimal>(value);
                     _ammount = value;
                 }
             }
@@ -57,7 +57,7 @@ namespace Krafted.ValueObjects
         {
             Guard.Against
                 .Null(value)
-                .Negative(value.Value);
+                .Negative<decimal>(value.Value);
 
             return value.Value;
         }
@@ -79,8 +79,8 @@ namespace Krafted.ValueObjects
         {
             Guard.Against
                 .Null(money)
-                .Negative(money.Value)
-                .Negative(value);
+                .Negative<decimal>(money.Value)
+                .Negative<decimal>(value);
 
             money.Value += value;
 
@@ -97,12 +97,12 @@ namespace Krafted.ValueObjects
         {
             Guard.Against
                 .Null(money)
-                .Negative(money.Value)
-                .Negative(value);
+                .Negative<decimal>(money.Value)
+                .Negative<decimal>(value);
 
             money.Value -= value;
 
-            Guard.Against.Negative(money.Value);
+            Guard.Against.Negative<decimal>(money.Value);
 
             return money;
         }
@@ -212,7 +212,7 @@ namespace Krafted.ValueObjects
         ///     </code>
         ///   </example>
         /// </remarks>
-        /// <returns>The the string representation of <see cref="Value"/>.</returns>
+        /// <returns>The string representation of <see cref="Value"/>.</returns>
         public override string ToString(IFormatProvider provider) => Value.ToString("F", provider);
     }
 }

@@ -9,6 +9,8 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
     public class GuardPtTest
     {
         [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
         [InlineData("5021550510")]
         [InlineData("ABCDEFGHI")]
         [InlineData("008559600")]
@@ -87,6 +89,13 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
         public void GuardAgainstInvalidNif_ValidNif_DoesNotThrows(string validNif)
         {
             Assert.DoesNotThrows(() => Guard.Against.InvalidNif(validNif));
+        }
+
+        [Fact]
+        public void GuardAgainstInvalidNif_Null_DoesNotThrows()
+        {
+            string? nif = null;
+            Assert.DoesNotThrows(() => Guard.Against.InvalidNif(nif));
         }
     }
 }

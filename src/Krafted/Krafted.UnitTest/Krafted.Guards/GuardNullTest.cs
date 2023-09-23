@@ -13,7 +13,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         {
             var ex1 = Assert.Throws<ArgumentNullException>(() =>
             {
-                object myParam = null;
+                object? myParam = null;
                 Guard.Against.Null(myParam);
             });
             Assert.Equal("Parameter cannot be null. (Parameter 'myParam')", ex1.Message);
@@ -22,8 +22,8 @@ namespace Krafted.UnitTest.Krafted.Guards
             {
                 object param1 = new object();
                 object param2 = new object();
-                object param3 = null;
-                object param4 = null;
+                object? param3 = null;
+                object? param4 = null;
 
                 Guard.Against
                     .Null(param1)
@@ -35,7 +35,7 @@ namespace Krafted.UnitTest.Krafted.Guards
 
             var ex3 = Assert.Throws<ArgumentNullException>(() =>
             {
-                object myParam = null;
+                object? myParam = null;
                 Guard.Against.Null(myParam, "My custom error message.");
             });
             Assert.Equal("My custom error message. (Parameter 'myParam')", ex3.Message);
@@ -104,6 +104,33 @@ namespace Krafted.UnitTest.Krafted.Guards
             string param = "value";
             Assert.DoesNotThrows(() => Guard.Against.NullOrWhiteSpace(param));
             Assert.DoesNotThrows(() => Guard.Against.NullOrWhiteSpace(param, "My custom error message"));
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
+        public void GuardAgainstEmptyOrWhiteSpace_EmptyOrWhiteSpace_ThrowsException(string myParam)
+        {
+            var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.EmptyOrWhiteSpace(myParam));
+            Assert.Equal("Parameter cannot be empty or consists exclusively of white-space characters. (Parameter 'myParam')", ex1.Message);
+
+            var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.EmptyOrWhiteSpace(myParam, "My custom error message."));
+            Assert.Equal("My custom error message. (Parameter 'myParam')", ex2.Message);
+        }
+
+        [Fact]
+        public void GuardAgainstEmptyOrWhiteSpace_NotEmpty_DoesNotThrowsException()
+        {
+            string param = "value";
+            Assert.DoesNotThrows(() => Guard.Against.EmptyOrWhiteSpace(param));
+            Assert.DoesNotThrows(() => Guard.Against.EmptyOrWhiteSpace(param, "My custom error message"));
+        }
+
+        [Fact]
+        public void GuardAgainstEmptyOrWhiteSpace_Null_DoesNotThrowsException()
+        {
+            string? param = null;
+            Assert.DoesNotThrows(() => Guard.Against.EmptyOrWhiteSpace(param));
         }
     }
 }

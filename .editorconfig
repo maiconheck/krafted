@@ -242,8 +242,11 @@ dotnet_naming_style.private_prefix_style.capitalization = camel_case
 
 
 [*.cs]
-# IDE0052: Remove unread private members
+# Remove unread private members
 dotnet_diagnostic.IDE0052.severity = warning
+
+# Simplify new expression
+dotnet_diagnostic.IDE0090.severity = warning
 
 # NOTE: Requires **VS2019 16.3** or later
 
@@ -1531,3 +1534,10 @@ dotnet_diagnostic.UseConfigureAwait.severity = warning
 
 # Unconstrained type parameter checked for null
 dotnet_diagnostic.RCS1165.severity = none
+
+# NRT
+# CS8604: Possible null reference argument.
+dotnet_diagnostic.CS8604.severity = error
+
+# CS8625: Possible null reference argument.
+dotnet_diagnostic.CS8625.severity = error
