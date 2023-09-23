@@ -17,7 +17,7 @@ namespace Krafted.ValueObjects
         {
             Guard.Against.NullOrWhiteSpace(value);
 
-            var regEx = Validator.NewRegEx(@"(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})");
+            var regEx = RegexFactory.NewRegex(@"(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})");
 
             if (!regEx.IsMatch(value))
                 throw new FormatException(Texts.InvalidUrl.Format(value));
@@ -36,13 +36,13 @@ namespace Krafted.ValueObjects
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
-        public static explicit operator Url(string value) => new Url(value);
+        public static explicit operator Url(string value) => new(value);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Url"/> class.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>A new instance of the <see cref="Url"/> class.</returns>
-        public static Url NewUrl(string value) => new Url(value);
+        public static Url NewUrl(string value) => new(value);
     }
 }

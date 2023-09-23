@@ -91,7 +91,7 @@ namespace Krafted.Guards
             if (parameter is null)
                 return this;
 
-            var regEx = Validator.NewRegEx(pattern, options);
+            var regEx = RegexFactory.NewRegex(pattern, options);
             string errorMessage = mustMatch ? Texts.ParameterNotMatchesRegEx : Texts.ParameterMatchesRegEx;
 
             return Validate<string?, TException>(parameter, _ => regEx.IsMatch(parameter) != mustMatch, errorMessage, message, parameterName);

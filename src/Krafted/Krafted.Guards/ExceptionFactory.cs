@@ -3,7 +3,7 @@ using System;
 namespace Krafted.Guards
 {
     /// <summary>
-    /// Provides a factory method to create a new instance of TException.
+    /// Provides a factory method to create a new instance of <c>TException</c>.
     /// </summary>
     internal static class ExceptionFactory
     {
