@@ -34,13 +34,13 @@ namespace Krafted.ValueObjects.Pt
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
-        public static explicit operator Nif(string value) => new Nif(value);
+        public static explicit operator Nif(string value) => new(value);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Nif"/> class.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>A new instance of the <see cref="Nif"/> class.</returns>
-        public static Nif NewNif(string value) => new Nif(value);
+        public static Nif NewNif(string value) => new(value);
     }
 }

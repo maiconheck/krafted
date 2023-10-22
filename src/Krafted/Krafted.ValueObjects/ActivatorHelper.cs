@@ -27,27 +27,59 @@ namespace Krafted.ValueObjects
     /// </para>
     /// <para>
     /// The CreateInstance method checks if the value is null or empty, and if it is, it creates the instance through the private constructor via reflection,
-    /// thus avoiding the exception.
-    /// Otherwise, create the instance through the public constructor.
+    /// to bypass the Guard Clauses, thus avoiding an exception.
+    /// Otherwise, it create the instance through the public constructor.
     /// </para>
     /// <para>The value will only be null when the EF does the mapping and starts to materialize the entity,
-    /// because at that time the value has not yet been loaded.</para>
+    /// because at that time the value has not yet been loaded.
+    /// </para>
     /// </remarks>
     public static class ActivatorHelper
     {
         /// <summary>
-        /// Creates a new instance of a Value Object for EF mapping.
+        /// Creates a new instance of a Value Object for EF mapping when using Entity Framework with Lazy Loading.
+        /// <para>
+        /// This method checks if the value is null or empty, and if it is, it creates the instance through the private constructor via reflection,
+        /// to bypass the Guard Clauses, thus avoiding an exception.
+        /// Otherwise, it create the instance through the public constructor.
+        /// </para>
+        /// <para>The value will only be null when the EF does the mapping and starts to materialize the entity,
+        /// because at that time the value has not yet been loaded.
+        /// </para>
         /// </summary>
-        /// <typeparam name="TValueObject">The type.</typeparam>
+        /// <typeparam name="TValueObject">The type of the Value Object.</typeparam>
         /// <param name="value">The value.</param>
-        /// <returns>The new instance of the Value Object.</returns>
+        /// <returns>A new instance of the Value Object.</returns>
         public static TValueObject CreateInstance<TValueObject>(string value)
         {
             var type = typeof(TValueObject);
 
             return !string.IsNullOrEmpty(value)
-                ? (TValueObject)Activator.CreateInstance(type, value)! // public contructor
-                : (TValueObject)Activator.CreateInstance(type, nonPublic: true)!; // private contructor
+                ? (TValueObject)Activator.CreateInstance(type, value)! // public constructor
+                : (TValueObject)Activator.CreateInstance(type, nonPublic: true)!; // private constructor
+        }
+
+        /// <summary>
+        /// Creates a new instance of a Value Object for EF mapping when using Entity Framework with Lazy Loading.
+        /// <para>
+        /// This method checks if the value is the DateTime default, and if it is, it creates the instance through the private constructor via reflection,
+        /// to bypass the Guard Clauses, thus avoiding an exception.
+        /// Otherwise, it create the instance through the public constructor.
+        /// </para>
+        /// <para>The value will only be the DateTime default when the EF does the mapping and starts to materialize the entity,
+        /// because at that time the value has not yet been loaded.
+        /// </para>
+        /// </summary>
+        /// <typeparam name="TValueObject">The type of the Value Object.</typeparam>
+        /// <param name="value">The value.</param>
+        /// <returns>A new instance of the Value Object.</returns>
+        public static TValueObject CreateInstance<TValueObject>(DateTime value)
+        {
+            var type = typeof(TValueObject);
+
+            return value != default
+                ? (TValueObject)Activator.CreateInstance(type, value)! // public constructor
+                : (TValueObject)Activator.CreateInstance(type, nonPublic: true)!; // private constructor
         }
     }
 }

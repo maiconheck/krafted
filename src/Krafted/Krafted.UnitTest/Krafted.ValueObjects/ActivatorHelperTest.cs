@@ -1,3 +1,4 @@
+using System;
 using Krafted.ValueObjects;
 using Krafted.ValueObjects.Pt;
 using Xunit;
@@ -31,6 +32,31 @@ namespace Krafted.UnitTest.Krafted.ValueObjects
                 var nif = ActivatorHelper.CreateInstance<Nif>(notEmptyNif);
                 Assert.NotNull(nif);
                 Assert.Equal(notEmptyNif, nif.Value);
+            });
+        }
+
+        [Fact]
+        public void CreateInstance_DefaultDateOfBirth_InstanceCreated()
+        {
+            var defaultDateOfBirth = default(DateTime);
+
+            Assert.DoesNotThrows(() =>
+            {
+                var dateOfBirth = ActivatorHelper.CreateInstance<DateOfBirthDummy>(defaultDateOfBirth);
+                Assert.NotNull(dateOfBirth);
+            });
+        }
+
+        [Fact]
+        public void CreateInstance_NotDefaultDateOfBirth_InstanceCreated()
+        {
+            var notDefaultDateOfBirth = new DateTime(1990, 10, 20);
+
+            Assert.DoesNotThrows(() =>
+            {
+                var dateOfBirth = ActivatorHelper.CreateInstance<DateOfBirthDummy>(notDefaultDateOfBirth);
+                Assert.NotNull(dateOfBirth);
+                Assert.Equal(notDefaultDateOfBirth, dateOfBirth.Value);
             });
         }
     }
