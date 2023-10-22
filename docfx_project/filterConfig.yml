@@ -20,6 +20,3 @@ apiRules:
   - exclude:
       uidRegex: ^Krafted\.Net\.Network
       type: Type
-  - exclude:
-      uidRegex: ^Krafted\.ValueObjects\.Br
-      type: Type
