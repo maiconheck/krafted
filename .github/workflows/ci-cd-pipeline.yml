@@ -76,10 +76,10 @@ jobs:
         /p:ThresholdStat=average
 
 ################ SETUP SONAR STEPS ################
-    - name: Setup JDK 11
+    - name: Setup JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: 11
+        java-version: 17
         distribution: 'zulu' # Alternative distribution options are available.
 
     - name: Cache SonarCloud packages
