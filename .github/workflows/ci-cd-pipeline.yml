@@ -72,7 +72,7 @@ jobs:
         /p:SkipAutoProps=true `
         /p:CoverletOutputFormat="opencover%2cjson" `
         -m:1 `
-        /p:Threshold=93 `
+        /p:Threshold=98 `
         /p:ThresholdStat=average
 
 ################ SETUP SONAR STEPS ################
@@ -115,7 +115,7 @@ jobs:
         dotnet clean "./src/Krafted/Krafted.sln"
         dotnet restore "./src/Krafted/Krafted.sln"
         dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
-        dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=80 /p:ThresholdStat=average
+        dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=98 /p:ThresholdStat=average
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
 ################## CD STEPS ##################
