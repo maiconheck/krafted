@@ -10,6 +10,8 @@ namespace System
     /// </summary>
     public static class StringExtension
     {
+        private static TimeSpan _matchTimeout = TimeSpan.FromSeconds(10);
+
         /// <summary>
         /// In a specified input string, replaces all strings that match a specified regular
         /// expression with a specified replacement string.
@@ -24,7 +26,7 @@ namespace System
         /// current instance, the method returns the current instance unchanged.
         /// </returns>
         public static string Replace(this string input, string pattern, string replacement, RegexOptions options)
-            => Regex.Replace(input, pattern, replacement, options);
+            => Regex.Replace(input, pattern, replacement, options, _matchTimeout);
 
         /// <summary>
         /// In a specified input string, removes all strings that match a specified regular
@@ -106,14 +108,14 @@ namespace System
             string str = input.RemoveAccent().ToLowerInvariant();
 
             // Remove invalid chars.
-            str = Regex.Replace(str, @"[^a-z0-9\s-]", string.Empty, RegexOptions.Compiled);
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", string.Empty, RegexOptions.Compiled, _matchTimeout);
 
             // Convert multiple spaces into one space.
-            str = Regex.Replace(str, @"\s+", " ", RegexOptions.Compiled).Trim();
+            str = Regex.Replace(str, @"\s+", " ", RegexOptions.Compiled, _matchTimeout).Trim();
 
             // Cut and trim.
             str = str.Substring(0, str.Length <= maxLength ? str.Length : maxLength).Trim();
-            str = Regex.Replace(str, @"\s", "-", RegexOptions.Compiled); // hyphens.
+            str = Regex.Replace(str, @"\s", "-", RegexOptions.Compiled, _matchTimeout); // hyphens.
 
             return str;
         }
