@@ -11,7 +11,7 @@ namespace Krafted.ValueObjects.Br
     /// <see href="https://pt.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas">See more</see>.
     /// </para>
     /// </summary>
-    public class Cpf : ValueObject<string>
+    public class Cpf : ValueObject<string>, IValueObjectMasked
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Cpf"/> class.
@@ -34,14 +34,14 @@ namespace Krafted.ValueObjects.Br
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
-        public static explicit operator Cpf(string value) => new Cpf(value);
+        public static explicit operator Cpf(string value) => new(value);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Cpf"/> class.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>A new instance of the <see cref="Cpf"/> class.</returns>
-        public static Cpf NewCpf(string value) => new Cpf(value);
+        public static Cpf NewCpf(string value) => new(value);
 
         /// <summary>
         /// Returns the string representation of the CPF <c>Value</c>.

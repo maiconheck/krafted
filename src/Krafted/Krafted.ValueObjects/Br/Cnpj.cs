@@ -12,7 +12,7 @@ namespace Krafted.ValueObjects.Br
     /// <see href="https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica">See more</see>.
     /// </para>
     /// </summary>
-    public class Cnpj : ValueObject<string>
+    public class Cnpj : ValueObject<string>, IValueObjectMasked
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Cnpj"/> class.
@@ -35,14 +35,14 @@ namespace Krafted.ValueObjects.Br
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
-        public static explicit operator Cnpj(string value) => new Cnpj(value);
+        public static explicit operator Cnpj(string value) => new(value);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Cnpj"/> class.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>A new instance of the <see cref="Cnpj"/> class.</returns>
-        public static Cnpj NewCnpj(string value) => new Cnpj(value);
+        public static Cnpj NewCnpj(string value) => new(value);
 
         /// <summary>
         /// Returns the string representation of the CNPJ <c>Value</c>.
