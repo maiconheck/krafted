@@ -54,7 +54,7 @@ jobs:
 #  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
 
     - name: CLEAN - Cleans the output
-      run: dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
+      run: dotnet clean "./src/Krafted/Krafted.sln"
 
     - name: RESTORE - Install the dependencies
       run: dotnet restore "./src/Krafted/Krafted.sln"
@@ -112,7 +112,7 @@ jobs:
       shell: powershell
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
-        dotnet clean "./src/Krafted/Krafted.sln" --output artifacts
+        dotnet clean "./src/Krafted/Krafted.sln"
         dotnet restore "./src/Krafted/Krafted.sln"
         dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
         dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=80 /p:ThresholdStat=average
@@ -121,7 +121,7 @@ jobs:
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet pack "./src/Krafted/Krafted.sln" --output artifacts --include-symbols --include-source
+      run: dotnet pack "./src/Krafted/Krafted.sln" --property:PackageOutputPath=artifacts --include-symbols --include-source
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
