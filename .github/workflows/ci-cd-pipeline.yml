@@ -125,7 +125,7 @@ jobs:
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push "artifacts/*.nupkg" --skip-duplicate -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "D:\a\krafted\krafted\artifacts\*.nupkg" --skip-duplicate -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
