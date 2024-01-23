@@ -21,7 +21,7 @@ namespace Krafted.Guards
         /// <param name="parameterName">The name of the parameter with which <paramref name="parameter"/> corresponds. If you omit this parameter, the name of parameter is used.</param>
         /// <exception cref="ArgumentNullException"><paramref name="parameter"/> is <c>null</c>.</exception>
         /// <returns>The guard.</returns>
-        public Guard Null<T>([NotNull] T? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null) where T : class
+        public Guard Null<T>([NotNull] T? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
             Guard.Against.NullOrWhiteSpace(parameterName!);
 
