@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Value Objects | Krafted </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Value Objects | Krafted ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <a class="github-fork-ribbon" href="https://github.com/maiconheck/krafted" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" style="position: fixed;">Fork me on GitHub</a>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header/icon.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="value-objects">Value Objects</h2>
+
+<h3 id="what-is--what-is-it-for">What is / what is it for?</h3>
+<p>A set of common <a href="https://martinfowler.com/bliki/ValueObject.html">Value Objects</a>, with comparison and shallow copy operations.</p>
+<blockquote>
+<p>Value types that measure, quantify, or describe things are easier to create, test, use, optimize, and maintain.</p>
+<ul>
+<li>It measures, quantifies, or describes a thing in the domain.</li>
+<li>It can be maintained as immutable.</li>
+<li>It models a conceptual whole by composing related attributes as an integral unit.</li>
+<li>It is completely replaceable when the measurement or description changes.</li>
+<li>It can be compared with others using Value equality.</li>
+<li>It supplies its collaborators with Side-Effect-Free Behavior [Evans].</li>
+</ul>
+<p><em><a href="https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon-dp-0321834577/dp/0321834577">Vernon, Vaughn. Implementing Domain-Driven Design. (2013)</a></em></p>
+</blockquote>
+<h3 id="where-should-i-use-it">Where should I use it?</h3>
+<p>Value Objects are a DDD (Domain-Driven Design) building block used in the domain modeling.</p>
+<p>It is great to avoid <a href="https://refactoring.guru/smells/primitive-obsession">primitive obsession</a> code smell and enrich the <a href="https://medium.com/cwi-software/domain-driven-design-do-in%C3%ADcio-ao-c%C3%B3digo-569b23cb3d47">domain model</a>.</p>
+<p>In this library, each Value Object already contains:</p>
+<ul>
+<li>The validation for its value. So when you use, for example, <code>Nif</code> or <code>Email</code>, you don't have to
+worrying about creating a validation for them, thus avoiding separating the logic from the data (e.g. <code>ValidationHelper</code>), which would lead to creating anemic classes.</li>
+<li><code>Equals</code> method and <code>==</code> and <code>!=</code> operators.</li>
+<li><code>GetCopy</code> method to creates a shallow copy of the Value Object.</li>
+<li><code>ToString</code> method to returns the string representation of the Value Object.</li>
+<li><code>explicit operator</code> to performs an explicit conversion from the literal value to the Value Object, for example:
+<pre><code>Email email = (Email)&quot;foo@bar.com&quot;;
+</code></pre>
+</li>
+<li>A <code>Factory Method</code> to create a new instance of the Value Object in a convenient way, for example:
+<pre><code>Email email = Email.NewEmail(&quot;foo@bar.com&quot;);
+</code></pre>
+</li>
+<li>These are the common members for all Value Objects. Some Value Objects contain other members depending on their type, for example, <code>Money</code> has increment and decrement operators, and the <code>IntegralPart</code> property:
+<pre><code>var money = Money.NewMoney(10.25);
+money += 5;
+money -= 2;
+
+money.Value; // 13.25
+money.IntegralPart; // 13
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="samples">Samples</h3>
+<p>Below are some examples of each <code>Value Object</code> contained in this package.</p>
+<p><strong><code>Nif</code></strong></p>
+<blockquote>
+<p>Represents an NIF value object.
+NIF means &quot;Número de Identificação Fiscal&quot;, a.k.a &quot;Número de Contribuinte&quot;,
+identifies a taxpayer entity in Portugal, whether it is a company or an individual.</p>
+</blockquote>
+<p><strong><code>Email</code></strong></p>
+<blockquote>
+<p>Represents an email value object.</p>
+</blockquote>
+<pre><code>public sealed class BillingData
+{
+    public BillingData(string name, Email email, Nif nif)
+    {
+        Guard.Against
+            .NullOrWhiteSpace(name, nameof(name))
+            .Null(email, nameof(email))
+            .Null(nif, nameof(nif));
+
+        Name = name;
+        Email = email;
+        Nif = nif;
+    }
+
+    public string Name { get; }
+
+    public Email Email { get; }
+
+    public Nif Nif { get; }
+}
+</code></pre>
+<p><strong><code>Money</code></strong></p>
+<blockquote>
+<p>Represents an money value object.</p>
+</blockquote>
+<pre><code>public class OrderItem : Entity
+{
+    ...
+
+    public Money TotalPrice =&gt; Money.NewMoney(Product.Price * Quantity);
+
+    public Money Total =&gt; TotalPrice + KindOfPackage.Price;
+
+    ...
+}
+
+public sealed class Order : Entity, IAggregateRoot
+{
+    ...
+
+    public Money Subtotal =&gt; (Money)_orderItems.Sum(i =&gt; i.Total);
+
+    public Money Total =&gt; Subtotal + DeliveryFee;
+
+    ...
+}
+</code></pre>
+<p><strong><code>Url</code></strong></p>
+<blockquote>
+<p>Represents an URL (Uniform Resource Locator) value object.</p>
+</blockquote>
+<pre><code>public class LessonVideo : Lesson
+{
+    ...
+
+    public Url Link { get; private set; };
+
+    public TimeSpan Duration { get; private set; }
+
+    public VideoType VideoType { get; private set; }
+
+    ...
+}
+</code></pre>
+<hr>
+<h3 id="you-can-create-your-own-value-objects-by-inheriting-from-the-valueobjectt-class">You can create your own Value Objects by inheriting from the <code>ValueObject&lt;T&gt;</code> class:</h3>
+<pre><code>public class Name : ValueObject&lt;string&gt;
+{
+    public Name(string value)
+    {
+        Guard.Against
+            .NullOrWhiteSpace(value, nameof(value))
+            .Length(1, 60, value, nameof(value));
+
+        Value = value;
+    }
+
+    // Required for ORM mapping
+    private Name()
+    {
+    }
+
+    public static explicit operator Name(string value) =&gt; new Name(value);
+
+    public static Name NewName(string value) =&gt; new Name(value);
+}
+</code></pre>
+<pre><code>public sealed class Slug : ValueObject&lt;string&gt;
+{
+    public Slug(string value)
+    {
+        Guard.Against.NullOrWhiteSpace(value, nameof(value));
+        Value = value.ToSlug();
+    }
+
+    // Required for ORM mapping
+    private Slug()
+    {
+    }
+
+    public static explicit operator Slug(string value) =&gt; new Slug(value);
+
+    public static Slug NewSlug(string value) =&gt; new Slug(value);
+}
+</code></pre>
+<h3 id="and-for-yours-value-objects-with-multiple-property-you-can-create-your-own-value-objects-by-inheriting-from-the-valueobject-class-and-implements-getequalitycomponents">And for yours Value Objects with multiple property, you can create your own Value Objects by inheriting from the <code>ValueObject</code> class, and implements <code>GetEqualityComponents</code>:</h3>
+<pre><code>public class Address : ValueObject
+{
+    public Address(string street, string city, string zipCode)
+    {
+        Street = street;
+        City = city;
+        ZipCode = zipCode;
+    }
+
+    public string Street { get; }
+
+    public string City { get; }
+
+    public string ZipCode { get; }
+
+    protected override IEnumerable&lt;object&gt; GetEqualityComponents()
+    {
+        yield return Street;
+        yield return City;
+        yield return ZipCode;
+    }
+}
+</code></pre>
+<hr>
+<h3 id="entity-framework-mapping-samples"><code>Entity Framework</code> mapping samples</h3>
+<p>Mapping Value Objects with single value (<code>Money</code>) and with multiple values (<code>Address</code>, <code>Payment</code>):</p>
+<pre><code>public sealed class OrderMap : IEntityTypeConfiguration&lt;Order&gt;
+{
+    ...
+
+    public void Configure(EntityTypeBuilder&lt;Order&gt; builder)
+    {
+        builder.Property(p =&gt; p.Subtotal)
+            .HasConversion(p =&gt; p.Value, p =&gt; new Money(p))
+            .IsRequired();
+
+        builder.Property(p =&gt; p.Total)
+            .HasConversion(p =&gt; p.Value, p =&gt; new Money(p))
+            .IsRequired();
+
+        builder.OwnsOne(o =&gt; o.Address, a =&gt;
+        {
+           a.WithOwner();
+
+           a.Property(p =&gt; p.Street)
+            .HasColumnName(&quot;Address_Street&quot;)
+            .IsRequired(false);
+
+           a.Property(p =&gt; p.City)
+            .HasColumnName(&quot;Address_City&quot;)
+            .IsRequired(false);
+
+           a.Property(p =&gt; p.ZipCode)
+            .HasColumnName(&quot;Address_ZipCode&quot;)
+            .IsRequired(false);
+        });
+
+        builder.OwnsOne(o =&gt; o.Payment, a =&gt;
+        {
+           a.WithOwner();
+
+           a.Property(p =&gt; p.AccessType)
+            .HasColumnName(&quot;Payment_AccessType&quot;)
+            .IsRequired(false);
+
+           a.Property(p =&gt; p.PaymentMethod)
+            .HasColumnName(&quot;Payment_PaymentMethod&quot;)
+            .IsRequired(false);
+
+           a.Property(p =&gt; p.Price)
+            .HasConversion(p =&gt; p.Value, p =&gt; new Money(p))
+            .HasColumnName(&quot;Payment_Price&quot;)
+            .IsRequired(false);
+       });
+    }
+}
+</code></pre>
+<p>If you have <code>lazy loading</code> activated, use <code>ActivatorHelper.CreateInstance&lt;TValueObject&gt;</code> to map single property Value Objects:</p>
+<pre><code>public class CourseMap : IEntityTypeConfiguration&lt;Course&gt;
+{
+    public void Configure(EntityTypeBuilder&lt;Course&gt; builder)
+    {
+        ...
+
+        builder.Property(p =&gt; p.Name)
+            .HasConversion(p =&gt; p.Value, p =&gt; ActivatorHelper.CreateInstance&lt;Name&gt;(p))
+            .HasMaxLength(60)
+            .IsRequired();
+    }
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted/blob/master/docfx_project/articles/value-objects.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
+

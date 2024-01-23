@@ -1,0 +1,1976 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Krafted.DataAnnotations
+  name: Krafted.DataAnnotations
+  href: api/Krafted.DataAnnotations.html
+  commentId: N:Krafted.DataAnnotations
+  fullName: Krafted.DataAnnotations
+  nameWithType: Krafted.DataAnnotations
+- uid: Krafted.DataAnnotations.EmailAddressRegexAttribute
+  name: EmailAddressRegexAttribute
+  href: api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html
+  commentId: T:Krafted.DataAnnotations.EmailAddressRegexAttribute
+  fullName: Krafted.DataAnnotations.EmailAddressRegexAttribute
+  nameWithType: EmailAddressRegexAttribute
+- uid: Krafted.DataAnnotations.EmailAddressRegexAttribute.#ctor
+  name: EmailAddressRegexAttribute()
+  href: api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html#Krafted_DataAnnotations_EmailAddressRegexAttribute__ctor
+  commentId: M:Krafted.DataAnnotations.EmailAddressRegexAttribute.#ctor
+  fullName: Krafted.DataAnnotations.EmailAddressRegexAttribute.EmailAddressRegexAttribute()
+  nameWithType: EmailAddressRegexAttribute.EmailAddressRegexAttribute()
+- uid: Krafted.DataAnnotations.EmailAddressRegexAttribute.#ctor*
+  name: EmailAddressRegexAttribute
+  href: api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html#Krafted_DataAnnotations_EmailAddressRegexAttribute__ctor_
+  commentId: Overload:Krafted.DataAnnotations.EmailAddressRegexAttribute.#ctor
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.EmailAddressRegexAttribute.EmailAddressRegexAttribute
+  nameWithType: EmailAddressRegexAttribute.EmailAddressRegexAttribute
+- uid: Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid(System.Object)
+  name: IsValid(Object)
+  href: api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html#Krafted_DataAnnotations_EmailAddressRegexAttribute_IsValid_System_Object_
+  commentId: M:Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid(System.Object)
+  fullName: Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid(System.Object)
+  nameWithType: EmailAddressRegexAttribute.IsValid(Object)
+- uid: Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid*
+  name: IsValid
+  href: api/Krafted.DataAnnotations.EmailAddressRegexAttribute.html#Krafted_DataAnnotations_EmailAddressRegexAttribute_IsValid_
+  commentId: Overload:Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.EmailAddressRegexAttribute.IsValid
+  nameWithType: EmailAddressRegexAttribute.IsValid
+- uid: Krafted.DataAnnotations.MinOneAttribute
+  name: MinOneAttribute
+  href: api/Krafted.DataAnnotations.MinOneAttribute.html
+  commentId: T:Krafted.DataAnnotations.MinOneAttribute
+  fullName: Krafted.DataAnnotations.MinOneAttribute
+  nameWithType: MinOneAttribute
+- uid: Krafted.DataAnnotations.MinOneAttribute.#ctor
+  name: MinOneAttribute()
+  href: api/Krafted.DataAnnotations.MinOneAttribute.html#Krafted_DataAnnotations_MinOneAttribute__ctor
+  commentId: M:Krafted.DataAnnotations.MinOneAttribute.#ctor
+  fullName: Krafted.DataAnnotations.MinOneAttribute.MinOneAttribute()
+  nameWithType: MinOneAttribute.MinOneAttribute()
+- uid: Krafted.DataAnnotations.MinOneAttribute.#ctor*
+  name: MinOneAttribute
+  href: api/Krafted.DataAnnotations.MinOneAttribute.html#Krafted_DataAnnotations_MinOneAttribute__ctor_
+  commentId: Overload:Krafted.DataAnnotations.MinOneAttribute.#ctor
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.MinOneAttribute.MinOneAttribute
+  nameWithType: MinOneAttribute.MinOneAttribute
+- uid: Krafted.DataAnnotations.MinOneAttribute.IsValid(System.Object)
+  name: IsValid(Object)
+  href: api/Krafted.DataAnnotations.MinOneAttribute.html#Krafted_DataAnnotations_MinOneAttribute_IsValid_System_Object_
+  commentId: M:Krafted.DataAnnotations.MinOneAttribute.IsValid(System.Object)
+  fullName: Krafted.DataAnnotations.MinOneAttribute.IsValid(System.Object)
+  nameWithType: MinOneAttribute.IsValid(Object)
+- uid: Krafted.DataAnnotations.MinOneAttribute.IsValid*
+  name: IsValid
+  href: api/Krafted.DataAnnotations.MinOneAttribute.html#Krafted_DataAnnotations_MinOneAttribute_IsValid_
+  commentId: Overload:Krafted.DataAnnotations.MinOneAttribute.IsValid
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.MinOneAttribute.IsValid
+  nameWithType: MinOneAttribute.IsValid
+- uid: Krafted.DataAnnotations.ModelValidator
+  name: ModelValidator
+  href: api/Krafted.DataAnnotations.ModelValidator.html
+  commentId: T:Krafted.DataAnnotations.ModelValidator
+  fullName: Krafted.DataAnnotations.ModelValidator
+  nameWithType: ModelValidator
+- uid: Krafted.DataAnnotations.ModelValidator.Validate(System.Object)
+  name: Validate(Object)
+  href: api/Krafted.DataAnnotations.ModelValidator.html#Krafted_DataAnnotations_ModelValidator_Validate_System_Object_
+  commentId: M:Krafted.DataAnnotations.ModelValidator.Validate(System.Object)
+  fullName: Krafted.DataAnnotations.ModelValidator.Validate(System.Object)
+  nameWithType: ModelValidator.Validate(Object)
+- uid: Krafted.DataAnnotations.ModelValidator.Validate*
+  name: Validate
+  href: api/Krafted.DataAnnotations.ModelValidator.html#Krafted_DataAnnotations_ModelValidator_Validate_
+  commentId: Overload:Krafted.DataAnnotations.ModelValidator.Validate
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.ModelValidator.Validate
+  nameWithType: ModelValidator.Validate
+- uid: Krafted.DataAnnotations.NotEmptyCollectionAttribute
+  name: NotEmptyCollectionAttribute
+  href: api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html
+  commentId: T:Krafted.DataAnnotations.NotEmptyCollectionAttribute
+  fullName: Krafted.DataAnnotations.NotEmptyCollectionAttribute
+  nameWithType: NotEmptyCollectionAttribute
+- uid: Krafted.DataAnnotations.NotEmptyCollectionAttribute.#ctor
+  name: NotEmptyCollectionAttribute()
+  href: api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html#Krafted_DataAnnotations_NotEmptyCollectionAttribute__ctor
+  commentId: M:Krafted.DataAnnotations.NotEmptyCollectionAttribute.#ctor
+  fullName: Krafted.DataAnnotations.NotEmptyCollectionAttribute.NotEmptyCollectionAttribute()
+  nameWithType: NotEmptyCollectionAttribute.NotEmptyCollectionAttribute()
+- uid: Krafted.DataAnnotations.NotEmptyCollectionAttribute.#ctor*
+  name: NotEmptyCollectionAttribute
+  href: api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html#Krafted_DataAnnotations_NotEmptyCollectionAttribute__ctor_
+  commentId: Overload:Krafted.DataAnnotations.NotEmptyCollectionAttribute.#ctor
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.NotEmptyCollectionAttribute.NotEmptyCollectionAttribute
+  nameWithType: NotEmptyCollectionAttribute.NotEmptyCollectionAttribute
+- uid: Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)
+  name: IsValid(Object)
+  href: api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html#Krafted_DataAnnotations_NotEmptyCollectionAttribute_IsValid_System_Object_
+  commentId: M:Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)
+  fullName: Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid(System.Object)
+  nameWithType: NotEmptyCollectionAttribute.IsValid(Object)
+- uid: Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid*
+  name: IsValid
+  href: api/Krafted.DataAnnotations.NotEmptyCollectionAttribute.html#Krafted_DataAnnotations_NotEmptyCollectionAttribute_IsValid_
+  commentId: Overload:Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.NotEmptyCollectionAttribute.IsValid
+  nameWithType: NotEmptyCollectionAttribute.IsValid
+- uid: Krafted.DataAnnotations.Pt
+  name: Krafted.DataAnnotations.Pt
+  href: api/Krafted.DataAnnotations.Pt.html
+  commentId: N:Krafted.DataAnnotations.Pt
+  fullName: Krafted.DataAnnotations.Pt
+  nameWithType: Krafted.DataAnnotations.Pt
+- uid: Krafted.DataAnnotations.Pt.NifAttribute
+  name: NifAttribute
+  href: api/Krafted.DataAnnotations.Pt.NifAttribute.html
+  commentId: T:Krafted.DataAnnotations.Pt.NifAttribute
+  fullName: Krafted.DataAnnotations.Pt.NifAttribute
+  nameWithType: NifAttribute
+- uid: Krafted.DataAnnotations.Pt.NifAttribute.#ctor
+  name: NifAttribute()
+  href: api/Krafted.DataAnnotations.Pt.NifAttribute.html#Krafted_DataAnnotations_Pt_NifAttribute__ctor
+  commentId: M:Krafted.DataAnnotations.Pt.NifAttribute.#ctor
+  fullName: Krafted.DataAnnotations.Pt.NifAttribute.NifAttribute()
+  nameWithType: NifAttribute.NifAttribute()
+- uid: Krafted.DataAnnotations.Pt.NifAttribute.#ctor*
+  name: NifAttribute
+  href: api/Krafted.DataAnnotations.Pt.NifAttribute.html#Krafted_DataAnnotations_Pt_NifAttribute__ctor_
+  commentId: Overload:Krafted.DataAnnotations.Pt.NifAttribute.#ctor
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.Pt.NifAttribute.NifAttribute
+  nameWithType: NifAttribute.NifAttribute
+- uid: Krafted.DataAnnotations.Pt.NifAttribute.IsValid(System.Object)
+  name: IsValid(Object)
+  href: api/Krafted.DataAnnotations.Pt.NifAttribute.html#Krafted_DataAnnotations_Pt_NifAttribute_IsValid_System_Object_
+  commentId: M:Krafted.DataAnnotations.Pt.NifAttribute.IsValid(System.Object)
+  fullName: Krafted.DataAnnotations.Pt.NifAttribute.IsValid(System.Object)
+  nameWithType: NifAttribute.IsValid(Object)
+- uid: Krafted.DataAnnotations.Pt.NifAttribute.IsValid*
+  name: IsValid
+  href: api/Krafted.DataAnnotations.Pt.NifAttribute.html#Krafted_DataAnnotations_Pt_NifAttribute_IsValid_
+  commentId: Overload:Krafted.DataAnnotations.Pt.NifAttribute.IsValid
+  isSpec: "True"
+  fullName: Krafted.DataAnnotations.Pt.NifAttribute.IsValid
+  nameWithType: NifAttribute.IsValid
+- uid: Krafted.DesignPatterns.Specifications
+  name: Krafted.DesignPatterns.Specifications
+  href: api/Krafted.DesignPatterns.Specifications.html
+  commentId: N:Krafted.DesignPatterns.Specifications
+  fullName: Krafted.DesignPatterns.Specifications
+  nameWithType: Krafted.DesignPatterns.Specifications
+- uid: Krafted.DesignPatterns.Specifications.Specification`1
+  name: Specification<T>
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html
+  commentId: T:Krafted.DesignPatterns.Specifications.Specification`1
+  name.vb: Specification(Of T)
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T)
+  nameWithType: Specification<T>
+  nameWithType.vb: Specification(Of T)
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.And(Krafted.DesignPatterns.Specifications.Specification{`0})
+  name: And(Specification<T>)
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_And_Krafted_DesignPatterns_Specifications_Specification__0__
+  commentId: M:Krafted.DesignPatterns.Specifications.Specification`1.And(Krafted.DesignPatterns.Specifications.Specification{`0})
+  name.vb: And(Specification(Of T))
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.And(Krafted.DesignPatterns.Specifications.Specification<T>)
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).And(Krafted.DesignPatterns.Specifications.Specification(Of T))
+  nameWithType: Specification<T>.And(Specification<T>)
+  nameWithType.vb: Specification(Of T).And(Specification(Of T))
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.And*
+  name: And
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_And_
+  commentId: Overload:Krafted.DesignPatterns.Specifications.Specification`1.And
+  isSpec: "True"
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.And
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).And
+  nameWithType: Specification<T>.And
+  nameWithType.vb: Specification(Of T).And
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.Default
+  name: Default
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_Default
+  commentId: F:Krafted.DesignPatterns.Specifications.Specification`1.Default
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.Default
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).Default
+  nameWithType: Specification<T>.Default
+  nameWithType.vb: Specification(Of T).Default
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.IsSatisfiedBy(`0)
+  name: IsSatisfiedBy(T)
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_IsSatisfiedBy__0_
+  commentId: M:Krafted.DesignPatterns.Specifications.Specification`1.IsSatisfiedBy(`0)
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.IsSatisfiedBy(T)
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).IsSatisfiedBy(T)
+  nameWithType: Specification<T>.IsSatisfiedBy(T)
+  nameWithType.vb: Specification(Of T).IsSatisfiedBy(T)
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.IsSatisfiedBy*
+  name: IsSatisfiedBy
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_IsSatisfiedBy_
+  commentId: Overload:Krafted.DesignPatterns.Specifications.Specification`1.IsSatisfiedBy
+  isSpec: "True"
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.IsSatisfiedBy
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).IsSatisfiedBy
+  nameWithType: Specification<T>.IsSatisfiedBy
+  nameWithType.vb: Specification(Of T).IsSatisfiedBy
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.Not
+  name: Not()
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_Not
+  commentId: M:Krafted.DesignPatterns.Specifications.Specification`1.Not
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.Not()
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).Not()
+  nameWithType: Specification<T>.Not()
+  nameWithType.vb: Specification(Of T).Not()
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.Not*
+  name: Not
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_Not_
+  commentId: Overload:Krafted.DesignPatterns.Specifications.Specification`1.Not
+  isSpec: "True"
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.Not
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).Not
+  nameWithType: Specification<T>.Not
+  nameWithType.vb: Specification(Of T).Not
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.Or(Krafted.DesignPatterns.Specifications.Specification{`0})
+  name: Or(Specification<T>)
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_Or_Krafted_DesignPatterns_Specifications_Specification__0__
+  commentId: M:Krafted.DesignPatterns.Specifications.Specification`1.Or(Krafted.DesignPatterns.Specifications.Specification{`0})
+  name.vb: Or(Specification(Of T))
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.Or(Krafted.DesignPatterns.Specifications.Specification<T>)
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).Or(Krafted.DesignPatterns.Specifications.Specification(Of T))
+  nameWithType: Specification<T>.Or(Specification<T>)
+  nameWithType.vb: Specification(Of T).Or(Specification(Of T))
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.Or*
+  name: Or
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_Or_
+  commentId: Overload:Krafted.DesignPatterns.Specifications.Specification`1.Or
+  isSpec: "True"
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.Or
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).Or
+  nameWithType: Specification<T>.Or
+  nameWithType.vb: Specification(Of T).Or
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.ToExpression
+  name: ToExpression()
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_ToExpression
+  commentId: M:Krafted.DesignPatterns.Specifications.Specification`1.ToExpression
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.ToExpression()
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).ToExpression()
+  nameWithType: Specification<T>.ToExpression()
+  nameWithType.vb: Specification(Of T).ToExpression()
+- uid: Krafted.DesignPatterns.Specifications.Specification`1.ToExpression*
+  name: ToExpression
+  href: api/Krafted.DesignPatterns.Specifications.Specification-1.html#Krafted_DesignPatterns_Specifications_Specification_1_ToExpression_
+  commentId: Overload:Krafted.DesignPatterns.Specifications.Specification`1.ToExpression
+  isSpec: "True"
+  fullName: Krafted.DesignPatterns.Specifications.Specification<T>.ToExpression
+  fullName.vb: Krafted.DesignPatterns.Specifications.Specification(Of T).ToExpression
+  nameWithType: Specification<T>.ToExpression
+  nameWithType.vb: Specification(Of T).ToExpression
+- uid: Krafted.Guards
+  name: Krafted.Guards
+  href: api/Krafted.Guards.html
+  commentId: N:Krafted.Guards
+  fullName: Krafted.Guards
+  nameWithType: Krafted.Guards
+- uid: Krafted.Guards.Guard
+  name: Guard
+  href: api/Krafted.Guards.Guard.html
+  commentId: T:Krafted.Guards.Guard
+  fullName: Krafted.Guards.Guard
+  nameWithType: Guard
+- uid: Krafted.Guards.Guard.Against
+  name: Against
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Against
+  commentId: P:Krafted.Guards.Guard.Against
+  fullName: Krafted.Guards.Guard.Against
+  nameWithType: Guard.Against
+- uid: Krafted.Guards.Guard.Against*
+  name: Against
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Against_
+  commentId: Overload:Krafted.Guards.Guard.Against
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Against
+  nameWithType: Guard.Against
+- uid: Krafted.Guards.Guard.Any*
+  name: Any
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Any_
+  commentId: Overload:Krafted.Guards.Guard.Any
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Any
+  nameWithType: Guard.Any
+- uid: Krafted.Guards.Guard.Any``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name: Any<T>(IEnumerable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Any__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Any``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name.vb: Any(Of T)(IEnumerable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.Any<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Any(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.String)
+  nameWithType: Guard.Any<T>(IEnumerable<T>, String, String)
+  nameWithType.vb: Guard.Any(Of T)(IEnumerable(Of T), String, String)
+- uid: Krafted.Guards.Guard.Empty(System.Nullable{System.Guid},System.String,System.String)
+  name: Empty(Nullable<Guid>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty_System_Nullable_System_Guid__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Empty(System.Nullable{System.Guid},System.String,System.String)
+  name.vb: Empty(Nullable(Of Guid), String, String)
+  fullName: Krafted.Guards.Guard.Empty(System.Nullable<System.Guid>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Empty(System.Nullable(Of System.Guid), System.String, System.String)
+  nameWithType: Guard.Empty(Nullable<Guid>, String, String)
+  nameWithType.vb: Guard.Empty(Nullable(Of Guid), String, String)
+- uid: Krafted.Guards.Guard.Empty*
+  name: Empty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty_
+  commentId: Overload:Krafted.Guards.Guard.Empty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Empty
+  nameWithType: Guard.Empty
+- uid: Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String,System.String,System.String)
+  name: EmptyOrWhiteSpace(String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_EmptyOrWhiteSpace_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String, System.String, System.String)
+  nameWithType: Guard.EmptyOrWhiteSpace(String, String, String)
+- uid: Krafted.Guards.Guard.EmptyOrWhiteSpace*
+  name: EmptyOrWhiteSpace
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_EmptyOrWhiteSpace_
+  commentId: Overload:Krafted.Guards.Guard.EmptyOrWhiteSpace
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.EmptyOrWhiteSpace
+  nameWithType: Guard.EmptyOrWhiteSpace
+- uid: Krafted.Guards.Guard.False(System.Nullable{System.Boolean},System.String,System.String)
+  name: False(Nullable<Boolean>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Nullable_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.False(System.Nullable{System.Boolean},System.String,System.String)
+  name.vb: False(Nullable(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.False(System.Nullable<System.Boolean>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.False(System.Nullable(Of System.Boolean), System.String, System.String)
+  nameWithType: Guard.False(Nullable<Boolean>, String, String)
+  nameWithType.vb: Guard.False(Nullable(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.False(System.Predicate{System.Boolean},System.String,System.String)
+  name: False(Predicate<Boolean>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.False(System.Predicate{System.Boolean},System.String,System.String)
+  name.vb: False(Predicate(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.False(System.Predicate<System.Boolean>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.False(System.Predicate(Of System.Boolean), System.String, System.String)
+  nameWithType: Guard.False(Predicate<Boolean>, String, String)
+  nameWithType.vb: Guard.False(Predicate(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.False*
+  name: "False"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_
+  commentId: Overload:Krafted.Guards.Guard.False
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.False
+  nameWithType: Guard.False
+- uid: Krafted.Guards.Guard.GreaterThan*
+  name: GreaterThan
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan_
+  commentId: Overload:Krafted.Guards.Guard.GreaterThan
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.GreaterThan
+  nameWithType: Guard.GreaterThan
+- uid: Krafted.Guards.Guard.GreaterThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name: GreaterThan<T>(Nullable<T>, T, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan__1_System_Nullable___0____0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.GreaterThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name.vb: GreaterThan(Of T)(Nullable(Of T), T, String, String)
+  fullName: Krafted.Guards.Guard.GreaterThan<T>(System.Nullable<T>, T, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.GreaterThan(Of T)(System.Nullable(Of T), T, System.String, System.String)
+  nameWithType: Guard.GreaterThan<T>(Nullable<T>, T, String, String)
+  nameWithType.vb: Guard.GreaterThan(Of T)(Nullable(Of T), T, String, String)
+- uid: Krafted.Guards.Guard.InvalidCnpj(System.String,System.String)
+  name: InvalidCnpj(String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCnpj_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidCnpj(System.String,System.String)
+  fullName: Krafted.Guards.Guard.InvalidCnpj(System.String, System.String)
+  nameWithType: Guard.InvalidCnpj(String, String)
+- uid: Krafted.Guards.Guard.InvalidCnpj*
+  name: InvalidCnpj
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCnpj_
+  commentId: Overload:Krafted.Guards.Guard.InvalidCnpj
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidCnpj
+  nameWithType: Guard.InvalidCnpj
+- uid: Krafted.Guards.Guard.InvalidCpf(System.String,System.String)
+  name: InvalidCpf(String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCpf_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidCpf(System.String,System.String)
+  fullName: Krafted.Guards.Guard.InvalidCpf(System.String, System.String)
+  nameWithType: Guard.InvalidCpf(String, String)
+- uid: Krafted.Guards.Guard.InvalidCpf*
+  name: InvalidCpf
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCpf_
+  commentId: Overload:Krafted.Guards.Guard.InvalidCpf
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidCpf
+  nameWithType: Guard.InvalidCpf
+- uid: Krafted.Guards.Guard.InvalidEmail(System.String,System.String,System.String)
+  name: InvalidEmail(String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidEmail_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidEmail(System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.InvalidEmail(System.String, System.String, System.String)
+  nameWithType: Guard.InvalidEmail(String, String, String)
+- uid: Krafted.Guards.Guard.InvalidEmail*
+  name: InvalidEmail
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidEmail_
+  commentId: Overload:Krafted.Guards.Guard.InvalidEmail
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidEmail
+  nameWithType: Guard.InvalidEmail
+- uid: Krafted.Guards.Guard.InvalidNif(System.String,System.String)
+  name: InvalidNif(String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidNif_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidNif(System.String,System.String)
+  fullName: Krafted.Guards.Guard.InvalidNif(System.String, System.String)
+  nameWithType: Guard.InvalidNif(String, String)
+- uid: Krafted.Guards.Guard.InvalidNif*
+  name: InvalidNif
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidNif_
+  commentId: Overload:Krafted.Guards.Guard.InvalidNif
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidNif
+  nameWithType: Guard.InvalidNif
+- uid: Krafted.Guards.Guard.Length(System.UInt32,System.String,System.String,System.String)
+  name: Length(UInt32, String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Length(System.UInt32,System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.Length(System.UInt32, System.String, System.String, System.String)
+  nameWithType: Guard.Length(UInt32, String, String, String)
+- uid: Krafted.Guards.Guard.Length(System.UInt32,System.UInt32,System.String,System.String,System.String)
+  name: Length(UInt32, UInt32, String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Length(System.UInt32,System.UInt32,System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.Length(System.UInt32, System.UInt32, System.String, System.String, System.String)
+  nameWithType: Guard.Length(UInt32, UInt32, String, String, String)
+- uid: Krafted.Guards.Guard.Length*
+  name: Length
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_
+  commentId: Overload:Krafted.Guards.Guard.Length
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Length
+  nameWithType: Guard.Length
+- uid: Krafted.Guards.Guard.LessThan*
+  name: LessThan
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan_
+  commentId: Overload:Krafted.Guards.Guard.LessThan
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.LessThan
+  nameWithType: Guard.LessThan
+- uid: Krafted.Guards.Guard.LessThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name: LessThan<T>(Nullable<T>, T, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan__1_System_Nullable___0____0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.LessThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name.vb: LessThan(Of T)(Nullable(Of T), T, String, String)
+  fullName: Krafted.Guards.Guard.LessThan<T>(System.Nullable<T>, T, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.LessThan(Of T)(System.Nullable(Of T), T, System.String, System.String)
+  nameWithType: Guard.LessThan<T>(Nullable<T>, T, String, String)
+  nameWithType.vb: Guard.LessThan(Of T)(Nullable(Of T), T, String, String)
+- uid: Krafted.Guards.Guard.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: Match(String, String, RegexOptions, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  fullName: Krafted.Guards.Guard.Match(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  nameWithType: Guard.Match(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.Match*
+  name: Match
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_
+  commentId: Overload:Krafted.Guards.Guard.Match
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Match
+  nameWithType: Guard.Match
+- uid: Krafted.Guards.Guard.Match``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: Match<TException>(String, String, RegexOptions, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Match``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: Match(Of TException)(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.Match<TException>(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Match(Of TException)(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  nameWithType: Guard.Match<TException>(String, String, RegexOptions, String, String)
+  nameWithType.vb: Guard.Match(Of TException)(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.MaxLength(System.UInt32,System.String,System.String,System.String)
+  name: MaxLength(UInt32, String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.MaxLength(System.UInt32,System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.MaxLength(System.UInt32, System.String, System.String, System.String)
+  nameWithType: Guard.MaxLength(UInt32, String, String, String)
+- uid: Krafted.Guards.Guard.MaxLength*
+  name: MaxLength
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_
+  commentId: Overload:Krafted.Guards.Guard.MaxLength
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.MaxLength
+  nameWithType: Guard.MaxLength
+- uid: Krafted.Guards.Guard.MinLength(System.UInt32,System.String,System.String,System.String)
+  name: MinLength(UInt32, String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.MinLength(System.UInt32,System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.MinLength(System.UInt32, System.String, System.String, System.String)
+  nameWithType: Guard.MinLength(UInt32, String, String, String)
+- uid: Krafted.Guards.Guard.MinLength*
+  name: MinLength
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_
+  commentId: Overload:Krafted.Guards.Guard.MinLength
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.MinLength
+  nameWithType: Guard.MinLength
+- uid: Krafted.Guards.Guard.Negative*
+  name: Negative
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Negative_
+  commentId: Overload:Krafted.Guards.Guard.Negative
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Negative
+  nameWithType: Guard.Negative
+- uid: Krafted.Guards.Guard.Negative``1(System.Nullable{``0},System.String,System.String)
+  name: Negative<T>(Nullable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Negative__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Negative``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Negative(Of T)(Nullable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.Negative<T>(System.Nullable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Negative(Of T)(System.Nullable(Of T), System.String, System.String)
+  nameWithType: Guard.Negative<T>(Nullable<T>, String, String)
+  nameWithType.vb: Guard.Negative(Of T)(Nullable(Of T), String, String)
+- uid: Krafted.Guards.Guard.NotAny*
+  name: NotAny
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotAny_
+  commentId: Overload:Krafted.Guards.Guard.NotAny
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotAny
+  nameWithType: Guard.NotAny
+- uid: Krafted.Guards.Guard.NotAny``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name: NotAny<T>(IEnumerable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotAny__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotAny``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name.vb: NotAny(Of T)(IEnumerable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.NotAny<T>(System.Collections.Generic.IEnumerable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.NotAny(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String, System.String)
+  nameWithType: Guard.NotAny<T>(IEnumerable<T>, String, String)
+  nameWithType.vb: Guard.NotAny(Of T)(IEnumerable(Of T), String, String)
+- uid: Krafted.Guards.Guard.NotEmpty(System.Nullable{System.Guid},System.String,System.String)
+  name: NotEmpty(Nullable<Guid>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty_System_Nullable_System_Guid__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotEmpty(System.Nullable{System.Guid},System.String,System.String)
+  name.vb: NotEmpty(Nullable(Of Guid), String, String)
+  fullName: Krafted.Guards.Guard.NotEmpty(System.Nullable<System.Guid>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.NotEmpty(System.Nullable(Of System.Guid), System.String, System.String)
+  nameWithType: Guard.NotEmpty(Nullable<Guid>, String, String)
+  nameWithType.vb: Guard.NotEmpty(Nullable(Of Guid), String, String)
+- uid: Krafted.Guards.Guard.NotEmpty*
+  name: NotEmpty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty_
+  commentId: Overload:Krafted.Guards.Guard.NotEmpty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotEmpty
+  nameWithType: Guard.NotEmpty
+- uid: Krafted.Guards.Guard.NotExists*
+  name: NotExists
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists_
+  commentId: Overload:Krafted.Guards.Guard.NotExists
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotExists
+  nameWithType: Guard.NotExists
+- uid: Krafted.Guards.Guard.NotExists``1(System.Nullable{``0},System.String,System.String)
+  name: NotExists<TEnum>(Nullable<TEnum>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotExists``1(System.Nullable{``0},System.String,System.String)
+  name.vb: NotExists(Of TEnum)(Nullable(Of TEnum), String, String)
+  fullName: Krafted.Guards.Guard.NotExists<TEnum>(System.Nullable<TEnum>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.NotExists(Of TEnum)(System.Nullable(Of TEnum), System.String, System.String)
+  nameWithType: Guard.NotExists<TEnum>(Nullable<TEnum>, String, String)
+  nameWithType.vb: Guard.NotExists(Of TEnum)(Nullable(Of TEnum), String, String)
+- uid: Krafted.Guards.Guard.NotMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: NotMatch(String, String, RegexOptions, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  fullName: Krafted.Guards.Guard.NotMatch(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  nameWithType: Guard.NotMatch(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.NotMatch*
+  name: NotMatch
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_
+  commentId: Overload:Krafted.Guards.Guard.NotMatch
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotMatch
+  nameWithType: Guard.NotMatch
+- uid: Krafted.Guards.Guard.NotMatch``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: NotMatch<TException>(String, String, RegexOptions, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotMatch``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: NotMatch(Of TException)(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.NotMatch<TException>(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.NotMatch(Of TException)(System.String, System.String, System.Text.RegularExpressions.RegexOptions, System.String, System.String)
+  nameWithType: Guard.NotMatch<TException>(String, String, RegexOptions, String, String)
+  nameWithType.vb: Guard.NotMatch(Of TException)(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.Null*
+  name: "Null"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null_
+  commentId: Overload:Krafted.Guards.Guard.Null
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Null
+  nameWithType: Guard.Null
+- uid: Krafted.Guards.Guard.Null``1(``0,System.String,System.String)
+  name: Null<T>(T, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null__1___0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Null``1(``0,System.String,System.String)
+  name.vb: Null(Of T)(T, String, String)
+  fullName: Krafted.Guards.Guard.Null<T>(T, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Null(Of T)(T, System.String, System.String)
+  nameWithType: Guard.Null<T>(T, String, String)
+  nameWithType.vb: Guard.Null(Of T)(T, String, String)
+- uid: Krafted.Guards.Guard.NullOrEmpty(System.String,System.String,System.String)
+  name: NullOrEmpty(String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NullOrEmpty(System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.NullOrEmpty(System.String, System.String, System.String)
+  nameWithType: Guard.NullOrEmpty(String, String, String)
+- uid: Krafted.Guards.Guard.NullOrEmpty*
+  name: NullOrEmpty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_
+  commentId: Overload:Krafted.Guards.Guard.NullOrEmpty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NullOrEmpty
+  nameWithType: Guard.NullOrEmpty
+- uid: Krafted.Guards.Guard.NullOrWhiteSpace(System.String,System.String,System.String)
+  name: NullOrWhiteSpace(String, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NullOrWhiteSpace(System.String,System.String,System.String)
+  fullName: Krafted.Guards.Guard.NullOrWhiteSpace(System.String, System.String, System.String)
+  nameWithType: Guard.NullOrWhiteSpace(String, String, String)
+- uid: Krafted.Guards.Guard.NullOrWhiteSpace*
+  name: NullOrWhiteSpace
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_
+  commentId: Overload:Krafted.Guards.Guard.NullOrWhiteSpace
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NullOrWhiteSpace
+  nameWithType: Guard.NullOrWhiteSpace
+- uid: Krafted.Guards.Guard.Positive*
+  name: Positive
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Positive_
+  commentId: Overload:Krafted.Guards.Guard.Positive
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Positive
+  nameWithType: Guard.Positive
+- uid: Krafted.Guards.Guard.Positive``1(System.Nullable{``0},System.String,System.String)
+  name: Positive<T>(Nullable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Positive__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Positive``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Positive(Of T)(Nullable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.Positive<T>(System.Nullable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Positive(Of T)(System.Nullable(Of T), System.String, System.String)
+  nameWithType: Guard.Positive<T>(Nullable<T>, String, String)
+  nameWithType.vb: Guard.Positive(Of T)(Nullable(Of T), String, String)
+- uid: Krafted.Guards.Guard.True(System.Nullable{System.Boolean},System.String,System.String)
+  name: True(Nullable<Boolean>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Nullable_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.True(System.Nullable{System.Boolean},System.String,System.String)
+  name.vb: True(Nullable(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.True(System.Nullable<System.Boolean>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.True(System.Nullable(Of System.Boolean), System.String, System.String)
+  nameWithType: Guard.True(Nullable<Boolean>, String, String)
+  nameWithType.vb: Guard.True(Nullable(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.True(System.Predicate{System.Boolean},System.String,System.String)
+  name: True(Predicate<Boolean>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.True(System.Predicate{System.Boolean},System.String,System.String)
+  name.vb: True(Predicate(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.True(System.Predicate<System.Boolean>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.True(System.Predicate(Of System.Boolean), System.String, System.String)
+  nameWithType: Guard.True(Predicate<Boolean>, String, String)
+  nameWithType.vb: Guard.True(Predicate(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.True*
+  name: "True"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_
+  commentId: Overload:Krafted.Guards.Guard.True
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.True
+  nameWithType: Guard.True
+- uid: Krafted.Guards.Guard.Zero*
+  name: Zero
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Zero_
+  commentId: Overload:Krafted.Guards.Guard.Zero
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Zero
+  nameWithType: Guard.Zero
+- uid: Krafted.Guards.Guard.Zero``1(System.Nullable{``0},System.String,System.String)
+  name: Zero<T>(Nullable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Zero__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Zero``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Zero(Of T)(Nullable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.Zero<T>(System.Nullable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.Zero(Of T)(System.Nullable(Of T), System.String, System.String)
+  nameWithType: Guard.Zero<T>(Nullable<T>, String, String)
+  nameWithType.vb: Guard.Zero(Of T)(Nullable(Of T), String, String)
+- uid: Krafted.Guards.Guard.ZeroOrLess*
+  name: ZeroOrLess
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_ZeroOrLess_
+  commentId: Overload:Krafted.Guards.Guard.ZeroOrLess
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.ZeroOrLess
+  nameWithType: Guard.ZeroOrLess
+- uid: Krafted.Guards.Guard.ZeroOrLess``1(System.Nullable{``0},System.String,System.String)
+  name: ZeroOrLess<T>(Nullable<T>, String, String)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_ZeroOrLess__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.ZeroOrLess``1(System.Nullable{``0},System.String,System.String)
+  name.vb: ZeroOrLess(Of T)(Nullable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.ZeroOrLess<T>(System.Nullable<T>, System.String, System.String)
+  fullName.vb: Krafted.Guards.Guard.ZeroOrLess(Of T)(System.Nullable(Of T), System.String, System.String)
+  nameWithType: Guard.ZeroOrLess<T>(Nullable<T>, String, String)
+  nameWithType.vb: Guard.ZeroOrLess(Of T)(Nullable(Of T), String, String)
+- uid: Krafted.UnitTests.TestDouble
+  name: Krafted.UnitTests.TestDouble
+  href: api/Krafted.UnitTests.TestDouble.html
+  commentId: N:Krafted.UnitTests.TestDouble
+  fullName: Krafted.UnitTests.TestDouble
+  nameWithType: Krafted.UnitTests.TestDouble
+- uid: Krafted.UnitTests.TestDouble.HttpClientMockFactory
+  name: HttpClientMockFactory
+  href: api/Krafted.UnitTests.TestDouble.HttpClientMockFactory.html
+  commentId: T:Krafted.UnitTests.TestDouble.HttpClientMockFactory
+  fullName: Krafted.UnitTests.TestDouble.HttpClientMockFactory
+  nameWithType: HttpClientMockFactory
+- uid: Krafted.UnitTests.TestDouble.HttpClientMockFactory.New(System.String,System.Net.HttpStatusCode)
+  name: New(String, HttpStatusCode)
+  href: api/Krafted.UnitTests.TestDouble.HttpClientMockFactory.html#Krafted_UnitTests_TestDouble_HttpClientMockFactory_New_System_String_System_Net_HttpStatusCode_
+  commentId: M:Krafted.UnitTests.TestDouble.HttpClientMockFactory.New(System.String,System.Net.HttpStatusCode)
+  fullName: Krafted.UnitTests.TestDouble.HttpClientMockFactory.New(System.String, System.Net.HttpStatusCode)
+  nameWithType: HttpClientMockFactory.New(String, HttpStatusCode)
+- uid: Krafted.UnitTests.TestDouble.HttpClientMockFactory.New*
+  name: New
+  href: api/Krafted.UnitTests.TestDouble.HttpClientMockFactory.html#Krafted_UnitTests_TestDouble_HttpClientMockFactory_New_
+  commentId: Overload:Krafted.UnitTests.TestDouble.HttpClientMockFactory.New
+  isSpec: "True"
+  fullName: Krafted.UnitTests.TestDouble.HttpClientMockFactory.New
+  nameWithType: HttpClientMockFactory.New
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock
+  name: HttpMessageHandlerMock
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html
+  commentId: T:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock
+  nameWithType: HttpMessageHandlerMock
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.#ctor(System.String,System.Net.HttpStatusCode)
+  name: HttpMessageHandlerMock(String, HttpStatusCode)
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock__ctor_System_String_System_Net_HttpStatusCode_
+  commentId: M:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.#ctor(System.String,System.Net.HttpStatusCode)
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.HttpMessageHandlerMock(System.String, System.Net.HttpStatusCode)
+  nameWithType: HttpMessageHandlerMock.HttpMessageHandlerMock(String, HttpStatusCode)
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.#ctor*
+  name: HttpMessageHandlerMock
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock__ctor_
+  commentId: Overload:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.#ctor
+  isSpec: "True"
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.HttpMessageHandlerMock
+  nameWithType: HttpMessageHandlerMock.HttpMessageHandlerMock
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls
+  name: NumberOfCalls
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock_NumberOfCalls
+  commentId: P:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls
+  nameWithType: HttpMessageHandlerMock.NumberOfCalls
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls*
+  name: NumberOfCalls
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock_NumberOfCalls_
+  commentId: Overload:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls
+  isSpec: "True"
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.NumberOfCalls
+  nameWithType: HttpMessageHandlerMock.NumberOfCalls
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
+  name: SendAsync(HttpRequestMessage, CancellationToken)
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock_SendAsync_System_Net_Http_HttpRequestMessage_System_Threading_CancellationToken_
+  commentId: M:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync(System.Net.Http.HttpRequestMessage, System.Threading.CancellationToken)
+  nameWithType: HttpMessageHandlerMock.SendAsync(HttpRequestMessage, CancellationToken)
+- uid: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync*
+  name: SendAsync
+  href: api/Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.html#Krafted_UnitTests_TestDouble_HttpMessageHandlerMock_SendAsync_
+  commentId: Overload:Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync
+  isSpec: "True"
+  fullName: Krafted.UnitTests.TestDouble.HttpMessageHandlerMock.SendAsync
+  nameWithType: HttpMessageHandlerMock.SendAsync
+- uid: Krafted.UnitTests.Xunit
+  name: Krafted.UnitTests.Xunit
+  href: api/Krafted.UnitTests.Xunit.html
+  commentId: N:Krafted.UnitTests.Xunit
+  fullName: Krafted.UnitTests.Xunit
+  nameWithType: Krafted.UnitTests.Xunit
+- uid: Krafted.UnitTests.Xunit.AssertExtension
+  name: AssertExtension
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html
+  commentId: T:Krafted.UnitTests.Xunit.AssertExtension
+  fullName: Krafted.UnitTests.Xunit.AssertExtension
+  nameWithType: AssertExtension
+- uid: Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause*
+  name: ContainsNullGuardClause
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_ContainsNullGuardClause_
+  commentId: Overload:Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause
+  nameWithType: AssertExtension.ContainsNullGuardClause
+- uid: Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause``1(System.Object[])
+  name: ContainsNullGuardClause<T>(Object[])
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_ContainsNullGuardClause__1_System_Object___
+  commentId: M:Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause``1(System.Object[])
+  name.vb: ContainsNullGuardClause(Of T)(Object())
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause<T>(System.Object[])
+  fullName.vb: Krafted.UnitTests.Xunit.AssertExtension.ContainsNullGuardClause(Of T)(System.Object())
+  nameWithType: AssertExtension.ContainsNullGuardClause<T>(Object[])
+  nameWithType.vb: AssertExtension.ContainsNullGuardClause(Of T)(Object())
+- uid: Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause*
+  name: DoesNotContainNullGuardClause
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_DoesNotContainNullGuardClause_
+  commentId: Overload:Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause
+  nameWithType: AssertExtension.DoesNotContainNullGuardClause
+- uid: Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause``1(System.Object[])
+  name: DoesNotContainNullGuardClause<T>(Object[])
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_DoesNotContainNullGuardClause__1_System_Object___
+  commentId: M:Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause``1(System.Object[])
+  name.vb: DoesNotContainNullGuardClause(Of T)(Object())
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause<T>(System.Object[])
+  fullName.vb: Krafted.UnitTests.Xunit.AssertExtension.DoesNotContainNullGuardClause(Of T)(System.Object())
+  nameWithType: AssertExtension.DoesNotContainNullGuardClause<T>(Object[])
+  nameWithType.vb: AssertExtension.DoesNotContainNullGuardClause(Of T)(Object())
+- uid: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Action)
+  name: DoesNotThrows(Action)
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_DoesNotThrows_System_Action_
+  commentId: M:Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Action)
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Action)
+  nameWithType: AssertExtension.DoesNotThrows(Action)
+- uid: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Func{System.Object})
+  name: DoesNotThrows(Func<Object>)
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_DoesNotThrows_System_Func_System_Object__
+  commentId: M:Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Func{System.Object})
+  name.vb: DoesNotThrows(Func(Of Object))
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Func<System.Object>)
+  fullName.vb: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows(System.Func(Of System.Object))
+  nameWithType: AssertExtension.DoesNotThrows(Func<Object>)
+  nameWithType.vb: AssertExtension.DoesNotThrows(Func(Of Object))
+- uid: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows*
+  name: DoesNotThrows
+  href: api/Krafted.UnitTests.Xunit.AssertExtension.html#Krafted_UnitTests_Xunit_AssertExtension_DoesNotThrows_
+  commentId: Overload:Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.AssertExtension.DoesNotThrows
+  nameWithType: AssertExtension.DoesNotThrows
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute
+  name: UseCultureAttribute
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html
+  commentId: T:Krafted.UnitTests.Xunit.UseCultureAttribute
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute
+  nameWithType: UseCultureAttribute
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String)
+  name: UseCultureAttribute(String)
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute__ctor_System_String_
+  commentId: M:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String)
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.UseCultureAttribute(System.String)
+  nameWithType: UseCultureAttribute.UseCultureAttribute(String)
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String,System.String)
+  name: UseCultureAttribute(String, String)
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute__ctor_System_String_System_String_
+  commentId: M:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor(System.String,System.String)
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.UseCultureAttribute(System.String, System.String)
+  nameWithType: UseCultureAttribute.UseCultureAttribute(String, String)
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor*
+  name: UseCultureAttribute
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute__ctor_
+  commentId: Overload:Krafted.UnitTests.Xunit.UseCultureAttribute.#ctor
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.UseCultureAttribute
+  nameWithType: UseCultureAttribute.UseCultureAttribute
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.After(System.Reflection.MethodInfo)
+  name: After(MethodInfo)
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_After_System_Reflection_MethodInfo_
+  commentId: M:Krafted.UnitTests.Xunit.UseCultureAttribute.After(System.Reflection.MethodInfo)
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.After(System.Reflection.MethodInfo)
+  nameWithType: UseCultureAttribute.After(MethodInfo)
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.After*
+  name: After
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_After_
+  commentId: Overload:Krafted.UnitTests.Xunit.UseCultureAttribute.After
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.After
+  nameWithType: UseCultureAttribute.After
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.Before(System.Reflection.MethodInfo)
+  name: Before(MethodInfo)
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_Before_System_Reflection_MethodInfo_
+  commentId: M:Krafted.UnitTests.Xunit.UseCultureAttribute.Before(System.Reflection.MethodInfo)
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.Before(System.Reflection.MethodInfo)
+  nameWithType: UseCultureAttribute.Before(MethodInfo)
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.Before*
+  name: Before
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_Before_
+  commentId: Overload:Krafted.UnitTests.Xunit.UseCultureAttribute.Before
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.Before
+  nameWithType: UseCultureAttribute.Before
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.Culture
+  name: Culture
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_Culture
+  commentId: P:Krafted.UnitTests.Xunit.UseCultureAttribute.Culture
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.Culture
+  nameWithType: UseCultureAttribute.Culture
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.Culture*
+  name: Culture
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_Culture_
+  commentId: Overload:Krafted.UnitTests.Xunit.UseCultureAttribute.Culture
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.Culture
+  nameWithType: UseCultureAttribute.Culture
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture
+  name: UICulture
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_UICulture
+  commentId: P:Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture
+  nameWithType: UseCultureAttribute.UICulture
+- uid: Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture*
+  name: UICulture
+  href: api/Krafted.UnitTests.Xunit.UseCultureAttribute.html#Krafted_UnitTests_Xunit_UseCultureAttribute_UICulture_
+  commentId: Overload:Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture
+  isSpec: "True"
+  fullName: Krafted.UnitTests.Xunit.UseCultureAttribute.UICulture
+  nameWithType: UseCultureAttribute.UICulture
+- uid: Krafted.ValueObjects
+  name: Krafted.ValueObjects
+  href: api/Krafted.ValueObjects.html
+  commentId: N:Krafted.ValueObjects
+  fullName: Krafted.ValueObjects
+  nameWithType: Krafted.ValueObjects
+- uid: Krafted.ValueObjects.ActivatorHelper
+  name: ActivatorHelper
+  href: api/Krafted.ValueObjects.ActivatorHelper.html
+  commentId: T:Krafted.ValueObjects.ActivatorHelper
+  fullName: Krafted.ValueObjects.ActivatorHelper
+  nameWithType: ActivatorHelper
+- uid: Krafted.ValueObjects.ActivatorHelper.CreateInstance*
+  name: CreateInstance
+  href: api/Krafted.ValueObjects.ActivatorHelper.html#Krafted_ValueObjects_ActivatorHelper_CreateInstance_
+  commentId: Overload:Krafted.ValueObjects.ActivatorHelper.CreateInstance
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ActivatorHelper.CreateInstance
+  nameWithType: ActivatorHelper.CreateInstance
+- uid: Krafted.ValueObjects.ActivatorHelper.CreateInstance``1(System.DateTime)
+  name: CreateInstance<TValueObject>(DateTime)
+  href: api/Krafted.ValueObjects.ActivatorHelper.html#Krafted_ValueObjects_ActivatorHelper_CreateInstance__1_System_DateTime_
+  commentId: M:Krafted.ValueObjects.ActivatorHelper.CreateInstance``1(System.DateTime)
+  name.vb: CreateInstance(Of TValueObject)(DateTime)
+  fullName: Krafted.ValueObjects.ActivatorHelper.CreateInstance<TValueObject>(System.DateTime)
+  fullName.vb: Krafted.ValueObjects.ActivatorHelper.CreateInstance(Of TValueObject)(System.DateTime)
+  nameWithType: ActivatorHelper.CreateInstance<TValueObject>(DateTime)
+  nameWithType.vb: ActivatorHelper.CreateInstance(Of TValueObject)(DateTime)
+- uid: Krafted.ValueObjects.ActivatorHelper.CreateInstance``1(System.String)
+  name: CreateInstance<TValueObject>(String)
+  href: api/Krafted.ValueObjects.ActivatorHelper.html#Krafted_ValueObjects_ActivatorHelper_CreateInstance__1_System_String_
+  commentId: M:Krafted.ValueObjects.ActivatorHelper.CreateInstance``1(System.String)
+  name.vb: CreateInstance(Of TValueObject)(String)
+  fullName: Krafted.ValueObjects.ActivatorHelper.CreateInstance<TValueObject>(System.String)
+  fullName.vb: Krafted.ValueObjects.ActivatorHelper.CreateInstance(Of TValueObject)(System.String)
+  nameWithType: ActivatorHelper.CreateInstance<TValueObject>(String)
+  nameWithType.vb: ActivatorHelper.CreateInstance(Of TValueObject)(String)
+- uid: Krafted.ValueObjects.Br
+  name: Krafted.ValueObjects.Br
+  href: api/Krafted.ValueObjects.Br.html
+  commentId: N:Krafted.ValueObjects.Br
+  fullName: Krafted.ValueObjects.Br
+  nameWithType: Krafted.ValueObjects.Br
+- uid: Krafted.ValueObjects.Br.Cnpj
+  name: Cnpj
+  href: api/Krafted.ValueObjects.Br.Cnpj.html
+  commentId: T:Krafted.ValueObjects.Br.Cnpj
+  fullName: Krafted.ValueObjects.Br.Cnpj
+  nameWithType: Cnpj
+- uid: Krafted.ValueObjects.Br.Cnpj.#ctor(System.String)
+  name: Cnpj(String)
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj__ctor_System_String_
+  commentId: M:Krafted.ValueObjects.Br.Cnpj.#ctor(System.String)
+  fullName: Krafted.ValueObjects.Br.Cnpj.Cnpj(System.String)
+  nameWithType: Cnpj.Cnpj(String)
+- uid: Krafted.ValueObjects.Br.Cnpj.#ctor*
+  name: Cnpj
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj__ctor_
+  commentId: Overload:Krafted.ValueObjects.Br.Cnpj.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cnpj.Cnpj
+  nameWithType: Cnpj.Cnpj
+- uid: Krafted.ValueObjects.Br.Cnpj.NewCnpj(System.String)
+  name: NewCnpj(String)
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_NewCnpj_System_String_
+  commentId: M:Krafted.ValueObjects.Br.Cnpj.NewCnpj(System.String)
+  fullName: Krafted.ValueObjects.Br.Cnpj.NewCnpj(System.String)
+  nameWithType: Cnpj.NewCnpj(String)
+- uid: Krafted.ValueObjects.Br.Cnpj.NewCnpj*
+  name: NewCnpj
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_NewCnpj_
+  commentId: Overload:Krafted.ValueObjects.Br.Cnpj.NewCnpj
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cnpj.NewCnpj
+  nameWithType: Cnpj.NewCnpj
+- uid: Krafted.ValueObjects.Br.Cnpj.op_Explicit(System.String)~Krafted.ValueObjects.Br.Cnpj
+  name: Explicit(String to Cnpj)
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_op_Explicit_System_String__Krafted_ValueObjects_Br_Cnpj
+  commentId: M:Krafted.ValueObjects.Br.Cnpj.op_Explicit(System.String)~Krafted.ValueObjects.Br.Cnpj
+  name.vb: Narrowing(String to Cnpj)
+  fullName: Krafted.ValueObjects.Br.Cnpj.Explicit(System.String to Krafted.ValueObjects.Br.Cnpj)
+  fullName.vb: Krafted.ValueObjects.Br.Cnpj.Narrowing(System.String to Krafted.ValueObjects.Br.Cnpj)
+  nameWithType: Cnpj.Explicit(String to Cnpj)
+  nameWithType.vb: Cnpj.Narrowing(String to Cnpj)
+- uid: Krafted.ValueObjects.Br.Cnpj.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Br.Cnpj.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Br.Cnpj.Explicit
+  fullName.vb: Krafted.ValueObjects.Br.Cnpj.Narrowing
+  nameWithType: Cnpj.Explicit
+  nameWithType.vb: Cnpj.Narrowing
+- uid: Krafted.ValueObjects.Br.Cnpj.ToString(System.Boolean)
+  name: ToString(Boolean)
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_ToString_System_Boolean_
+  commentId: M:Krafted.ValueObjects.Br.Cnpj.ToString(System.Boolean)
+  fullName: Krafted.ValueObjects.Br.Cnpj.ToString(System.Boolean)
+  nameWithType: Cnpj.ToString(Boolean)
+- uid: Krafted.ValueObjects.Br.Cnpj.ToString*
+  name: ToString
+  href: api/Krafted.ValueObjects.Br.Cnpj.html#Krafted_ValueObjects_Br_Cnpj_ToString_
+  commentId: Overload:Krafted.ValueObjects.Br.Cnpj.ToString
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cnpj.ToString
+  nameWithType: Cnpj.ToString
+- uid: Krafted.ValueObjects.Br.Cpf
+  name: Cpf
+  href: api/Krafted.ValueObjects.Br.Cpf.html
+  commentId: T:Krafted.ValueObjects.Br.Cpf
+  fullName: Krafted.ValueObjects.Br.Cpf
+  nameWithType: Cpf
+- uid: Krafted.ValueObjects.Br.Cpf.#ctor(System.String)
+  name: Cpf(String)
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf__ctor_System_String_
+  commentId: M:Krafted.ValueObjects.Br.Cpf.#ctor(System.String)
+  fullName: Krafted.ValueObjects.Br.Cpf.Cpf(System.String)
+  nameWithType: Cpf.Cpf(String)
+- uid: Krafted.ValueObjects.Br.Cpf.#ctor*
+  name: Cpf
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf__ctor_
+  commentId: Overload:Krafted.ValueObjects.Br.Cpf.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cpf.Cpf
+  nameWithType: Cpf.Cpf
+- uid: Krafted.ValueObjects.Br.Cpf.NewCpf(System.String)
+  name: NewCpf(String)
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_NewCpf_System_String_
+  commentId: M:Krafted.ValueObjects.Br.Cpf.NewCpf(System.String)
+  fullName: Krafted.ValueObjects.Br.Cpf.NewCpf(System.String)
+  nameWithType: Cpf.NewCpf(String)
+- uid: Krafted.ValueObjects.Br.Cpf.NewCpf*
+  name: NewCpf
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_NewCpf_
+  commentId: Overload:Krafted.ValueObjects.Br.Cpf.NewCpf
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cpf.NewCpf
+  nameWithType: Cpf.NewCpf
+- uid: Krafted.ValueObjects.Br.Cpf.op_Explicit(System.String)~Krafted.ValueObjects.Br.Cpf
+  name: Explicit(String to Cpf)
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_op_Explicit_System_String__Krafted_ValueObjects_Br_Cpf
+  commentId: M:Krafted.ValueObjects.Br.Cpf.op_Explicit(System.String)~Krafted.ValueObjects.Br.Cpf
+  name.vb: Narrowing(String to Cpf)
+  fullName: Krafted.ValueObjects.Br.Cpf.Explicit(System.String to Krafted.ValueObjects.Br.Cpf)
+  fullName.vb: Krafted.ValueObjects.Br.Cpf.Narrowing(System.String to Krafted.ValueObjects.Br.Cpf)
+  nameWithType: Cpf.Explicit(String to Cpf)
+  nameWithType.vb: Cpf.Narrowing(String to Cpf)
+- uid: Krafted.ValueObjects.Br.Cpf.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Br.Cpf.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Br.Cpf.Explicit
+  fullName.vb: Krafted.ValueObjects.Br.Cpf.Narrowing
+  nameWithType: Cpf.Explicit
+  nameWithType.vb: Cpf.Narrowing
+- uid: Krafted.ValueObjects.Br.Cpf.ToString(System.Boolean)
+  name: ToString(Boolean)
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_ToString_System_Boolean_
+  commentId: M:Krafted.ValueObjects.Br.Cpf.ToString(System.Boolean)
+  fullName: Krafted.ValueObjects.Br.Cpf.ToString(System.Boolean)
+  nameWithType: Cpf.ToString(Boolean)
+- uid: Krafted.ValueObjects.Br.Cpf.ToString*
+  name: ToString
+  href: api/Krafted.ValueObjects.Br.Cpf.html#Krafted_ValueObjects_Br_Cpf_ToString_
+  commentId: Overload:Krafted.ValueObjects.Br.Cpf.ToString
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Br.Cpf.ToString
+  nameWithType: Cpf.ToString
+- uid: Krafted.ValueObjects.Email
+  name: Email
+  href: api/Krafted.ValueObjects.Email.html
+  commentId: T:Krafted.ValueObjects.Email
+  fullName: Krafted.ValueObjects.Email
+  nameWithType: Email
+- uid: Krafted.ValueObjects.Email.#ctor(System.String)
+  name: Email(String)
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email__ctor_System_String_
+  commentId: M:Krafted.ValueObjects.Email.#ctor(System.String)
+  fullName: Krafted.ValueObjects.Email.Email(System.String)
+  nameWithType: Email.Email(String)
+- uid: Krafted.ValueObjects.Email.#ctor*
+  name: Email
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email__ctor_
+  commentId: Overload:Krafted.ValueObjects.Email.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Email.Email
+  nameWithType: Email.Email
+- uid: Krafted.ValueObjects.Email.NewEmail(System.String)
+  name: NewEmail(String)
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email_NewEmail_System_String_
+  commentId: M:Krafted.ValueObjects.Email.NewEmail(System.String)
+  fullName: Krafted.ValueObjects.Email.NewEmail(System.String)
+  nameWithType: Email.NewEmail(String)
+- uid: Krafted.ValueObjects.Email.NewEmail*
+  name: NewEmail
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email_NewEmail_
+  commentId: Overload:Krafted.ValueObjects.Email.NewEmail
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Email.NewEmail
+  nameWithType: Email.NewEmail
+- uid: Krafted.ValueObjects.Email.op_Explicit(System.String)~Krafted.ValueObjects.Email
+  name: Explicit(String to Email)
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email_op_Explicit_System_String__Krafted_ValueObjects_Email
+  commentId: M:Krafted.ValueObjects.Email.op_Explicit(System.String)~Krafted.ValueObjects.Email
+  name.vb: Narrowing(String to Email)
+  fullName: Krafted.ValueObjects.Email.Explicit(System.String to Krafted.ValueObjects.Email)
+  fullName.vb: Krafted.ValueObjects.Email.Narrowing(System.String to Krafted.ValueObjects.Email)
+  nameWithType: Email.Explicit(String to Email)
+  nameWithType.vb: Email.Narrowing(String to Email)
+- uid: Krafted.ValueObjects.Email.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Email.html#Krafted_ValueObjects_Email_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Email.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Email.Explicit
+  fullName.vb: Krafted.ValueObjects.Email.Narrowing
+  nameWithType: Email.Explicit
+  nameWithType.vb: Email.Narrowing
+- uid: Krafted.ValueObjects.IValueObjectMasked
+  name: IValueObjectMasked
+  href: api/Krafted.ValueObjects.IValueObjectMasked.html
+  commentId: T:Krafted.ValueObjects.IValueObjectMasked
+  fullName: Krafted.ValueObjects.IValueObjectMasked
+  nameWithType: IValueObjectMasked
+- uid: Krafted.ValueObjects.IValueObjectMasked.ToString(System.Boolean)
+  name: ToString(Boolean)
+  href: api/Krafted.ValueObjects.IValueObjectMasked.html#Krafted_ValueObjects_IValueObjectMasked_ToString_System_Boolean_
+  commentId: M:Krafted.ValueObjects.IValueObjectMasked.ToString(System.Boolean)
+  fullName: Krafted.ValueObjects.IValueObjectMasked.ToString(System.Boolean)
+  nameWithType: IValueObjectMasked.ToString(Boolean)
+- uid: Krafted.ValueObjects.IValueObjectMasked.ToString*
+  name: ToString
+  href: api/Krafted.ValueObjects.IValueObjectMasked.html#Krafted_ValueObjects_IValueObjectMasked_ToString_
+  commentId: Overload:Krafted.ValueObjects.IValueObjectMasked.ToString
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.IValueObjectMasked.ToString
+  nameWithType: IValueObjectMasked.ToString
+- uid: Krafted.ValueObjects.Money
+  name: Money
+  href: api/Krafted.ValueObjects.Money.html
+  commentId: T:Krafted.ValueObjects.Money
+  fullName: Krafted.ValueObjects.Money
+  nameWithType: Money
+- uid: Krafted.ValueObjects.Money.#ctor(System.Decimal)
+  name: Money(Decimal)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money__ctor_System_Decimal_
+  commentId: M:Krafted.ValueObjects.Money.#ctor(System.Decimal)
+  fullName: Krafted.ValueObjects.Money.Money(System.Decimal)
+  nameWithType: Money.Money(Decimal)
+- uid: Krafted.ValueObjects.Money.#ctor*
+  name: Money
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money__ctor_
+  commentId: Overload:Krafted.ValueObjects.Money.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.Money
+  nameWithType: Money.Money
+- uid: Krafted.ValueObjects.Money.IntegralPart
+  name: IntegralPart
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_IntegralPart
+  commentId: P:Krafted.ValueObjects.Money.IntegralPart
+  fullName: Krafted.ValueObjects.Money.IntegralPart
+  nameWithType: Money.IntegralPart
+- uid: Krafted.ValueObjects.Money.IntegralPart*
+  name: IntegralPart
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_IntegralPart_
+  commentId: Overload:Krafted.ValueObjects.Money.IntegralPart
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.IntegralPart
+  nameWithType: Money.IntegralPart
+- uid: Krafted.ValueObjects.Money.NewMoney(System.Decimal)
+  name: NewMoney(Decimal)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_NewMoney_System_Decimal_
+  commentId: M:Krafted.ValueObjects.Money.NewMoney(System.Decimal)
+  fullName: Krafted.ValueObjects.Money.NewMoney(System.Decimal)
+  nameWithType: Money.NewMoney(Decimal)
+- uid: Krafted.ValueObjects.Money.NewMoney*
+  name: NewMoney
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_NewMoney_
+  commentId: Overload:Krafted.ValueObjects.Money.NewMoney
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.NewMoney
+  nameWithType: Money.NewMoney
+- uid: Krafted.ValueObjects.Money.op_Addition(Krafted.ValueObjects.Money,System.Decimal)
+  name: Addition(Money, Decimal)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Addition_Krafted_ValueObjects_Money_System_Decimal_
+  commentId: M:Krafted.ValueObjects.Money.op_Addition(Krafted.ValueObjects.Money,System.Decimal)
+  fullName: Krafted.ValueObjects.Money.Addition(Krafted.ValueObjects.Money, System.Decimal)
+  nameWithType: Money.Addition(Money, Decimal)
+- uid: Krafted.ValueObjects.Money.op_Addition*
+  name: Addition
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Addition_
+  commentId: Overload:Krafted.ValueObjects.Money.op_Addition
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.Addition
+  nameWithType: Money.Addition
+- uid: Krafted.ValueObjects.Money.op_Explicit(System.Decimal)~Krafted.ValueObjects.Money
+  name: Explicit(Decimal to Money)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Explicit_System_Decimal__Krafted_ValueObjects_Money
+  commentId: M:Krafted.ValueObjects.Money.op_Explicit(System.Decimal)~Krafted.ValueObjects.Money
+  name.vb: Narrowing(Decimal to Money)
+  fullName: Krafted.ValueObjects.Money.Explicit(System.Decimal to Krafted.ValueObjects.Money)
+  fullName.vb: Krafted.ValueObjects.Money.Narrowing(System.Decimal to Krafted.ValueObjects.Money)
+  nameWithType: Money.Explicit(Decimal to Money)
+  nameWithType.vb: Money.Narrowing(Decimal to Money)
+- uid: Krafted.ValueObjects.Money.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Money.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Money.Explicit
+  fullName.vb: Krafted.ValueObjects.Money.Narrowing
+  nameWithType: Money.Explicit
+  nameWithType.vb: Money.Narrowing
+- uid: Krafted.ValueObjects.Money.op_Implicit(Krafted.ValueObjects.Money)~System.Decimal
+  name: Implicit(Money to Decimal)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Implicit_Krafted_ValueObjects_Money__System_Decimal
+  commentId: M:Krafted.ValueObjects.Money.op_Implicit(Krafted.ValueObjects.Money)~System.Decimal
+  name.vb: Widening(Money to Decimal)
+  fullName: Krafted.ValueObjects.Money.Implicit(Krafted.ValueObjects.Money to System.Decimal)
+  fullName.vb: Krafted.ValueObjects.Money.Widening(Krafted.ValueObjects.Money to System.Decimal)
+  nameWithType: Money.Implicit(Money to Decimal)
+  nameWithType.vb: Money.Widening(Money to Decimal)
+- uid: Krafted.ValueObjects.Money.op_Implicit*
+  name: Implicit
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Implicit_
+  commentId: Overload:Krafted.ValueObjects.Money.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Krafted.ValueObjects.Money.Implicit
+  fullName.vb: Krafted.ValueObjects.Money.Widening
+  nameWithType: Money.Implicit
+  nameWithType.vb: Money.Widening
+- uid: Krafted.ValueObjects.Money.op_Subtraction(Krafted.ValueObjects.Money,System.Decimal)
+  name: Subtraction(Money, Decimal)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Subtraction_Krafted_ValueObjects_Money_System_Decimal_
+  commentId: M:Krafted.ValueObjects.Money.op_Subtraction(Krafted.ValueObjects.Money,System.Decimal)
+  fullName: Krafted.ValueObjects.Money.Subtraction(Krafted.ValueObjects.Money, System.Decimal)
+  nameWithType: Money.Subtraction(Money, Decimal)
+- uid: Krafted.ValueObjects.Money.op_Subtraction*
+  name: Subtraction
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_op_Subtraction_
+  commentId: Overload:Krafted.ValueObjects.Money.op_Subtraction
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.Subtraction
+  nameWithType: Money.Subtraction
+- uid: Krafted.ValueObjects.Money.ToString
+  name: ToString()
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_ToString
+  commentId: M:Krafted.ValueObjects.Money.ToString
+  fullName: Krafted.ValueObjects.Money.ToString()
+  nameWithType: Money.ToString()
+- uid: Krafted.ValueObjects.Money.ToString(System.IFormatProvider)
+  name: ToString(IFormatProvider)
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_ToString_System_IFormatProvider_
+  commentId: M:Krafted.ValueObjects.Money.ToString(System.IFormatProvider)
+  fullName: Krafted.ValueObjects.Money.ToString(System.IFormatProvider)
+  nameWithType: Money.ToString(IFormatProvider)
+- uid: Krafted.ValueObjects.Money.ToString*
+  name: ToString
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_ToString_
+  commentId: Overload:Krafted.ValueObjects.Money.ToString
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.ToString
+  nameWithType: Money.ToString
+- uid: Krafted.ValueObjects.Money.Value
+  name: Value
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_Value
+  commentId: P:Krafted.ValueObjects.Money.Value
+  fullName: Krafted.ValueObjects.Money.Value
+  nameWithType: Money.Value
+- uid: Krafted.ValueObjects.Money.Value*
+  name: Value
+  href: api/Krafted.ValueObjects.Money.html#Krafted_ValueObjects_Money_Value_
+  commentId: Overload:Krafted.ValueObjects.Money.Value
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Money.Value
+  nameWithType: Money.Value
+- uid: Krafted.ValueObjects.Pt
+  name: Krafted.ValueObjects.Pt
+  href: api/Krafted.ValueObjects.Pt.html
+  commentId: N:Krafted.ValueObjects.Pt
+  fullName: Krafted.ValueObjects.Pt
+  nameWithType: Krafted.ValueObjects.Pt
+- uid: Krafted.ValueObjects.Pt.Nif
+  name: Nif
+  href: api/Krafted.ValueObjects.Pt.Nif.html
+  commentId: T:Krafted.ValueObjects.Pt.Nif
+  fullName: Krafted.ValueObjects.Pt.Nif
+  nameWithType: Nif
+- uid: Krafted.ValueObjects.Pt.Nif.#ctor(System.String)
+  name: Nif(String)
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif__ctor_System_String_
+  commentId: M:Krafted.ValueObjects.Pt.Nif.#ctor(System.String)
+  fullName: Krafted.ValueObjects.Pt.Nif.Nif(System.String)
+  nameWithType: Nif.Nif(String)
+- uid: Krafted.ValueObjects.Pt.Nif.#ctor*
+  name: Nif
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif__ctor_
+  commentId: Overload:Krafted.ValueObjects.Pt.Nif.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Pt.Nif.Nif
+  nameWithType: Nif.Nif
+- uid: Krafted.ValueObjects.Pt.Nif.NewNif(System.String)
+  name: NewNif(String)
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif_NewNif_System_String_
+  commentId: M:Krafted.ValueObjects.Pt.Nif.NewNif(System.String)
+  fullName: Krafted.ValueObjects.Pt.Nif.NewNif(System.String)
+  nameWithType: Nif.NewNif(String)
+- uid: Krafted.ValueObjects.Pt.Nif.NewNif*
+  name: NewNif
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif_NewNif_
+  commentId: Overload:Krafted.ValueObjects.Pt.Nif.NewNif
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Pt.Nif.NewNif
+  nameWithType: Nif.NewNif
+- uid: Krafted.ValueObjects.Pt.Nif.op_Explicit(System.String)~Krafted.ValueObjects.Pt.Nif
+  name: Explicit(String to Nif)
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif_op_Explicit_System_String__Krafted_ValueObjects_Pt_Nif
+  commentId: M:Krafted.ValueObjects.Pt.Nif.op_Explicit(System.String)~Krafted.ValueObjects.Pt.Nif
+  name.vb: Narrowing(String to Nif)
+  fullName: Krafted.ValueObjects.Pt.Nif.Explicit(System.String to Krafted.ValueObjects.Pt.Nif)
+  fullName.vb: Krafted.ValueObjects.Pt.Nif.Narrowing(System.String to Krafted.ValueObjects.Pt.Nif)
+  nameWithType: Nif.Explicit(String to Nif)
+  nameWithType.vb: Nif.Narrowing(String to Nif)
+- uid: Krafted.ValueObjects.Pt.Nif.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Pt.Nif.html#Krafted_ValueObjects_Pt_Nif_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Pt.Nif.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Pt.Nif.Explicit
+  fullName.vb: Krafted.ValueObjects.Pt.Nif.Narrowing
+  nameWithType: Nif.Explicit
+  nameWithType.vb: Nif.Narrowing
+- uid: Krafted.ValueObjects.Url
+  name: Url
+  href: api/Krafted.ValueObjects.Url.html
+  commentId: T:Krafted.ValueObjects.Url
+  fullName: Krafted.ValueObjects.Url
+  nameWithType: Url
+- uid: Krafted.ValueObjects.Url.#ctor(System.String)
+  name: Url(String)
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url__ctor_System_String_
+  commentId: M:Krafted.ValueObjects.Url.#ctor(System.String)
+  fullName: Krafted.ValueObjects.Url.Url(System.String)
+  nameWithType: Url.Url(String)
+- uid: Krafted.ValueObjects.Url.#ctor*
+  name: Url
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url__ctor_
+  commentId: Overload:Krafted.ValueObjects.Url.#ctor
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Url.Url
+  nameWithType: Url.Url
+- uid: Krafted.ValueObjects.Url.NewUrl(System.String)
+  name: NewUrl(String)
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url_NewUrl_System_String_
+  commentId: M:Krafted.ValueObjects.Url.NewUrl(System.String)
+  fullName: Krafted.ValueObjects.Url.NewUrl(System.String)
+  nameWithType: Url.NewUrl(String)
+- uid: Krafted.ValueObjects.Url.NewUrl*
+  name: NewUrl
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url_NewUrl_
+  commentId: Overload:Krafted.ValueObjects.Url.NewUrl
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.Url.NewUrl
+  nameWithType: Url.NewUrl
+- uid: Krafted.ValueObjects.Url.op_Explicit(System.String)~Krafted.ValueObjects.Url
+  name: Explicit(String to Url)
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url_op_Explicit_System_String__Krafted_ValueObjects_Url
+  commentId: M:Krafted.ValueObjects.Url.op_Explicit(System.String)~Krafted.ValueObjects.Url
+  name.vb: Narrowing(String to Url)
+  fullName: Krafted.ValueObjects.Url.Explicit(System.String to Krafted.ValueObjects.Url)
+  fullName.vb: Krafted.ValueObjects.Url.Narrowing(System.String to Krafted.ValueObjects.Url)
+  nameWithType: Url.Explicit(String to Url)
+  nameWithType.vb: Url.Narrowing(String to Url)
+- uid: Krafted.ValueObjects.Url.op_Explicit*
+  name: Explicit
+  href: api/Krafted.ValueObjects.Url.html#Krafted_ValueObjects_Url_op_Explicit_
+  commentId: Overload:Krafted.ValueObjects.Url.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Krafted.ValueObjects.Url.Explicit
+  fullName.vb: Krafted.ValueObjects.Url.Narrowing
+  nameWithType: Url.Explicit
+  nameWithType.vb: Url.Narrowing
+- uid: Krafted.ValueObjects.ValueObject
+  name: ValueObject
+  href: api/Krafted.ValueObjects.ValueObject.html
+  commentId: T:Krafted.ValueObjects.ValueObject
+  fullName: Krafted.ValueObjects.ValueObject
+  nameWithType: ValueObject
+- uid: Krafted.ValueObjects.ValueObject.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_Equals_System_Object_
+  commentId: M:Krafted.ValueObjects.ValueObject.Equals(System.Object)
+  fullName: Krafted.ValueObjects.ValueObject.Equals(System.Object)
+  nameWithType: ValueObject.Equals(Object)
+- uid: Krafted.ValueObjects.ValueObject.Equals*
+  name: Equals
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_Equals_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.Equals
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.Equals
+  nameWithType: ValueObject.Equals
+- uid: Krafted.ValueObjects.ValueObject.GetCopy
+  name: GetCopy()
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetCopy
+  commentId: M:Krafted.ValueObjects.ValueObject.GetCopy
+  fullName: Krafted.ValueObjects.ValueObject.GetCopy()
+  nameWithType: ValueObject.GetCopy()
+- uid: Krafted.ValueObjects.ValueObject.GetCopy*
+  name: GetCopy
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetCopy_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.GetCopy
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.GetCopy
+  nameWithType: ValueObject.GetCopy
+- uid: Krafted.ValueObjects.ValueObject.GetEqualityComponents
+  name: GetEqualityComponents()
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetEqualityComponents
+  commentId: M:Krafted.ValueObjects.ValueObject.GetEqualityComponents
+  fullName: Krafted.ValueObjects.ValueObject.GetEqualityComponents()
+  nameWithType: ValueObject.GetEqualityComponents()
+- uid: Krafted.ValueObjects.ValueObject.GetEqualityComponents*
+  name: GetEqualityComponents
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetEqualityComponents_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.GetEqualityComponents
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.GetEqualityComponents
+  nameWithType: ValueObject.GetEqualityComponents
+- uid: Krafted.ValueObjects.ValueObject.GetHashCode
+  name: GetHashCode()
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetHashCode
+  commentId: M:Krafted.ValueObjects.ValueObject.GetHashCode
+  fullName: Krafted.ValueObjects.ValueObject.GetHashCode()
+  nameWithType: ValueObject.GetHashCode()
+- uid: Krafted.ValueObjects.ValueObject.GetHashCode*
+  name: GetHashCode
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_GetHashCode_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.GetHashCode
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.GetHashCode
+  nameWithType: ValueObject.GetHashCode
+- uid: Krafted.ValueObjects.ValueObject.op_Equality(Krafted.ValueObjects.ValueObject,Krafted.ValueObjects.ValueObject)
+  name: Equality(ValueObject, ValueObject)
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_op_Equality_Krafted_ValueObjects_ValueObject_Krafted_ValueObjects_ValueObject_
+  commentId: M:Krafted.ValueObjects.ValueObject.op_Equality(Krafted.ValueObjects.ValueObject,Krafted.ValueObjects.ValueObject)
+  fullName: Krafted.ValueObjects.ValueObject.Equality(Krafted.ValueObjects.ValueObject, Krafted.ValueObjects.ValueObject)
+  nameWithType: ValueObject.Equality(ValueObject, ValueObject)
+- uid: Krafted.ValueObjects.ValueObject.op_Equality*
+  name: Equality
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_op_Equality_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.op_Equality
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.Equality
+  nameWithType: ValueObject.Equality
+- uid: Krafted.ValueObjects.ValueObject.op_Inequality(Krafted.ValueObjects.ValueObject,Krafted.ValueObjects.ValueObject)
+  name: Inequality(ValueObject, ValueObject)
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_op_Inequality_Krafted_ValueObjects_ValueObject_Krafted_ValueObjects_ValueObject_
+  commentId: M:Krafted.ValueObjects.ValueObject.op_Inequality(Krafted.ValueObjects.ValueObject,Krafted.ValueObjects.ValueObject)
+  fullName: Krafted.ValueObjects.ValueObject.Inequality(Krafted.ValueObjects.ValueObject, Krafted.ValueObjects.ValueObject)
+  nameWithType: ValueObject.Inequality(ValueObject, ValueObject)
+- uid: Krafted.ValueObjects.ValueObject.op_Inequality*
+  name: Inequality
+  href: api/Krafted.ValueObjects.ValueObject.html#Krafted_ValueObjects_ValueObject_op_Inequality_
+  commentId: Overload:Krafted.ValueObjects.ValueObject.op_Inequality
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject.Inequality
+  nameWithType: ValueObject.Inequality
+- uid: Krafted.ValueObjects.ValueObject`1
+  name: ValueObject<T>
+  href: api/Krafted.ValueObjects.ValueObject-1.html
+  commentId: T:Krafted.ValueObjects.ValueObject`1
+  name.vb: ValueObject(Of T)
+  fullName: Krafted.ValueObjects.ValueObject<T>
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T)
+  nameWithType: ValueObject<T>
+  nameWithType.vb: ValueObject(Of T)
+- uid: Krafted.ValueObjects.ValueObject`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_Equals_System_Object_
+  commentId: M:Krafted.ValueObjects.ValueObject`1.Equals(System.Object)
+  fullName: Krafted.ValueObjects.ValueObject<T>.Equals(System.Object)
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Equals(System.Object)
+  nameWithType: ValueObject<T>.Equals(Object)
+  nameWithType.vb: ValueObject(Of T).Equals(Object)
+- uid: Krafted.ValueObjects.ValueObject`1.Equals*
+  name: Equals
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_Equals_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.Equals
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.Equals
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Equals
+  nameWithType: ValueObject<T>.Equals
+  nameWithType.vb: ValueObject(Of T).Equals
+- uid: Krafted.ValueObjects.ValueObject`1.GetCopy
+  name: GetCopy()
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetCopy
+  commentId: M:Krafted.ValueObjects.ValueObject`1.GetCopy
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetCopy()
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetCopy()
+  nameWithType: ValueObject<T>.GetCopy()
+  nameWithType.vb: ValueObject(Of T).GetCopy()
+- uid: Krafted.ValueObjects.ValueObject`1.GetCopy*
+  name: GetCopy
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetCopy_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.GetCopy
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetCopy
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetCopy
+  nameWithType: ValueObject<T>.GetCopy
+  nameWithType.vb: ValueObject(Of T).GetCopy
+- uid: Krafted.ValueObjects.ValueObject`1.GetEqualityComponents
+  name: GetEqualityComponents()
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetEqualityComponents
+  commentId: M:Krafted.ValueObjects.ValueObject`1.GetEqualityComponents
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetEqualityComponents()
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetEqualityComponents()
+  nameWithType: ValueObject<T>.GetEqualityComponents()
+  nameWithType.vb: ValueObject(Of T).GetEqualityComponents()
+- uid: Krafted.ValueObjects.ValueObject`1.GetEqualityComponents*
+  name: GetEqualityComponents
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetEqualityComponents_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.GetEqualityComponents
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetEqualityComponents
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetEqualityComponents
+  nameWithType: ValueObject<T>.GetEqualityComponents
+  nameWithType.vb: ValueObject(Of T).GetEqualityComponents
+- uid: Krafted.ValueObjects.ValueObject`1.GetHashCode
+  name: GetHashCode()
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetHashCode
+  commentId: M:Krafted.ValueObjects.ValueObject`1.GetHashCode
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetHashCode()
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetHashCode()
+  nameWithType: ValueObject<T>.GetHashCode()
+  nameWithType.vb: ValueObject(Of T).GetHashCode()
+- uid: Krafted.ValueObjects.ValueObject`1.GetHashCode*
+  name: GetHashCode
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_GetHashCode_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.GetHashCode
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.GetHashCode
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).GetHashCode
+  nameWithType: ValueObject<T>.GetHashCode
+  nameWithType.vb: ValueObject(Of T).GetHashCode
+- uid: Krafted.ValueObjects.ValueObject`1.op_Equality(Krafted.ValueObjects.ValueObject{`0},Krafted.ValueObjects.ValueObject{`0})
+  name: Equality(ValueObject<T>, ValueObject<T>)
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_op_Equality_Krafted_ValueObjects_ValueObject__0__Krafted_ValueObjects_ValueObject__0__
+  commentId: M:Krafted.ValueObjects.ValueObject`1.op_Equality(Krafted.ValueObjects.ValueObject{`0},Krafted.ValueObjects.ValueObject{`0})
+  name.vb: Equality(ValueObject(Of T), ValueObject(Of T))
+  fullName: Krafted.ValueObjects.ValueObject<T>.Equality(Krafted.ValueObjects.ValueObject<T>, Krafted.ValueObjects.ValueObject<T>)
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Equality(Krafted.ValueObjects.ValueObject(Of T), Krafted.ValueObjects.ValueObject(Of T))
+  nameWithType: ValueObject<T>.Equality(ValueObject<T>, ValueObject<T>)
+  nameWithType.vb: ValueObject(Of T).Equality(ValueObject(Of T), ValueObject(Of T))
+- uid: Krafted.ValueObjects.ValueObject`1.op_Equality*
+  name: Equality
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_op_Equality_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.op_Equality
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.Equality
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Equality
+  nameWithType: ValueObject<T>.Equality
+  nameWithType.vb: ValueObject(Of T).Equality
+- uid: Krafted.ValueObjects.ValueObject`1.op_Inequality(Krafted.ValueObjects.ValueObject{`0},Krafted.ValueObjects.ValueObject{`0})
+  name: Inequality(ValueObject<T>, ValueObject<T>)
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_op_Inequality_Krafted_ValueObjects_ValueObject__0__Krafted_ValueObjects_ValueObject__0__
+  commentId: M:Krafted.ValueObjects.ValueObject`1.op_Inequality(Krafted.ValueObjects.ValueObject{`0},Krafted.ValueObjects.ValueObject{`0})
+  name.vb: Inequality(ValueObject(Of T), ValueObject(Of T))
+  fullName: Krafted.ValueObjects.ValueObject<T>.Inequality(Krafted.ValueObjects.ValueObject<T>, Krafted.ValueObjects.ValueObject<T>)
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Inequality(Krafted.ValueObjects.ValueObject(Of T), Krafted.ValueObjects.ValueObject(Of T))
+  nameWithType: ValueObject<T>.Inequality(ValueObject<T>, ValueObject<T>)
+  nameWithType.vb: ValueObject(Of T).Inequality(ValueObject(Of T), ValueObject(Of T))
+- uid: Krafted.ValueObjects.ValueObject`1.op_Inequality*
+  name: Inequality
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_op_Inequality_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.op_Inequality
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.Inequality
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Inequality
+  nameWithType: ValueObject<T>.Inequality
+  nameWithType.vb: ValueObject(Of T).Inequality
+- uid: Krafted.ValueObjects.ValueObject`1.ToString
+  name: ToString()
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_ToString
+  commentId: M:Krafted.ValueObjects.ValueObject`1.ToString
+  fullName: Krafted.ValueObjects.ValueObject<T>.ToString()
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).ToString()
+  nameWithType: ValueObject<T>.ToString()
+  nameWithType.vb: ValueObject(Of T).ToString()
+- uid: Krafted.ValueObjects.ValueObject`1.ToString(System.IFormatProvider)
+  name: ToString(IFormatProvider)
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_ToString_System_IFormatProvider_
+  commentId: M:Krafted.ValueObjects.ValueObject`1.ToString(System.IFormatProvider)
+  fullName: Krafted.ValueObjects.ValueObject<T>.ToString(System.IFormatProvider)
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).ToString(System.IFormatProvider)
+  nameWithType: ValueObject<T>.ToString(IFormatProvider)
+  nameWithType.vb: ValueObject(Of T).ToString(IFormatProvider)
+- uid: Krafted.ValueObjects.ValueObject`1.ToString*
+  name: ToString
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_ToString_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.ToString
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.ToString
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).ToString
+  nameWithType: ValueObject<T>.ToString
+  nameWithType.vb: ValueObject(Of T).ToString
+- uid: Krafted.ValueObjects.ValueObject`1.Value
+  name: Value
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_Value
+  commentId: P:Krafted.ValueObjects.ValueObject`1.Value
+  fullName: Krafted.ValueObjects.ValueObject<T>.Value
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Value
+  nameWithType: ValueObject<T>.Value
+  nameWithType.vb: ValueObject(Of T).Value
+- uid: Krafted.ValueObjects.ValueObject`1.Value*
+  name: Value
+  href: api/Krafted.ValueObjects.ValueObject-1.html#Krafted_ValueObjects_ValueObject_1_Value_
+  commentId: Overload:Krafted.ValueObjects.ValueObject`1.Value
+  isSpec: "True"
+  fullName: Krafted.ValueObjects.ValueObject<T>.Value
+  fullName.vb: Krafted.ValueObjects.ValueObject(Of T).Value
+  nameWithType: ValueObject<T>.Value
+  nameWithType.vb: ValueObject(Of T).Value
+- uid: System
+  name: System
+  href: api/System.html
+  commentId: N:System
+  fullName: System
+  nameWithType: System
+- uid: System.Collections.Generic
+  name: System.Collections.Generic
+  href: api/System.Collections.Generic.html
+  commentId: N:System.Collections.Generic
+  fullName: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+- uid: System.Collections.Generic.EnumerableExtension
+  name: EnumerableExtension
+  href: api/System.Collections.Generic.EnumerableExtension.html
+  commentId: T:System.Collections.Generic.EnumerableExtension
+  fullName: System.Collections.Generic.EnumerableExtension
+  nameWithType: EnumerableExtension
+- uid: System.Collections.Generic.EnumerableExtension.ContainsAll*
+  name: ContainsAll
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_ContainsAll_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.ContainsAll
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.ContainsAll
+  nameWithType: EnumerableExtension.ContainsAll
+- uid: System.Collections.Generic.EnumerableExtension.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: ContainsAll<T>(IEnumerable<T>, IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_ContainsAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.ContainsAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: ContainsAll(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.ContainsAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.ContainsAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.ContainsAll<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.ContainsAll(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+- uid: System.Collections.Generic.EnumerableExtension.Empty*
+  name: Empty
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Empty_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.Empty
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.Empty
+  nameWithType: EnumerableExtension.Empty
+- uid: System.Collections.Generic.EnumerableExtension.Empty``1(System.Collections.Generic.IEnumerable{``0})
+  name: Empty<T>(IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Empty__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.Empty``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Empty(Of T)(IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.Empty<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.Empty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.Empty<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.Empty(Of T)(IEnumerable(Of T))
+- uid: System.Collections.Generic.EnumerableExtension.Fifth*
+  name: Fifth
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Fifth_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.Fifth
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.Fifth
+  nameWithType: EnumerableExtension.Fifth
+- uid: System.Collections.Generic.EnumerableExtension.Fifth``1(System.Collections.Generic.IEnumerable{``0})
+  name: Fifth<T>(IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Fifth__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.Fifth``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Fifth(Of T)(IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.Fifth<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.Fifth(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.Fifth<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.Fifth(Of T)(IEnumerable(Of T))
+- uid: System.Collections.Generic.EnumerableExtension.Fourth*
+  name: Fourth
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Fourth_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.Fourth
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.Fourth
+  nameWithType: EnumerableExtension.Fourth
+- uid: System.Collections.Generic.EnumerableExtension.Fourth``1(System.Collections.Generic.IEnumerable{``0})
+  name: Fourth<T>(IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Fourth__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.Fourth``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Fourth(Of T)(IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.Fourth<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.Fourth(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.Fourth<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.Fourth(Of T)(IEnumerable(Of T))
+- uid: System.Collections.Generic.EnumerableExtension.Second*
+  name: Second
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Second_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.Second
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.Second
+  nameWithType: EnumerableExtension.Second
+- uid: System.Collections.Generic.EnumerableExtension.Second``1(System.Collections.Generic.IEnumerable{``0})
+  name: Second<T>(IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Second__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.Second``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Second(Of T)(IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.Second<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.Second(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.Second<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.Second(Of T)(IEnumerable(Of T))
+- uid: System.Collections.Generic.EnumerableExtension.Third*
+  name: Third
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Third_
+  commentId: Overload:System.Collections.Generic.EnumerableExtension.Third
+  isSpec: "True"
+  fullName: System.Collections.Generic.EnumerableExtension.Third
+  nameWithType: EnumerableExtension.Third
+- uid: System.Collections.Generic.EnumerableExtension.Third``1(System.Collections.Generic.IEnumerable{``0})
+  name: Third<T>(IEnumerable<T>)
+  href: api/System.Collections.Generic.EnumerableExtension.html#System_Collections_Generic_EnumerableExtension_Third__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:System.Collections.Generic.EnumerableExtension.Third``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Third(Of T)(IEnumerable(Of T))
+  fullName: System.Collections.Generic.EnumerableExtension.Third<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: System.Collections.Generic.EnumerableExtension.Third(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtension.Third<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtension.Third(Of T)(IEnumerable(Of T))
+- uid: System.Collections.Generic.ListExtension
+  name: ListExtension
+  href: api/System.Collections.Generic.ListExtension.html
+  commentId: T:System.Collections.Generic.ListExtension
+  fullName: System.Collections.Generic.ListExtension
+  nameWithType: ListExtension
+- uid: System.Collections.Generic.ListExtension.Move*
+  name: Move
+  href: api/System.Collections.Generic.ListExtension.html#System_Collections_Generic_ListExtension_Move_
+  commentId: Overload:System.Collections.Generic.ListExtension.Move
+  isSpec: "True"
+  fullName: System.Collections.Generic.ListExtension.Move
+  nameWithType: ListExtension.Move
+- uid: System.Collections.Generic.ListExtension.Move``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  name: Move<T>(IList<T>, Int32, Int32)
+  href: api/System.Collections.Generic.ListExtension.html#System_Collections_Generic_ListExtension_Move__1_System_Collections_Generic_IList___0__System_Int32_System_Int32_
+  commentId: M:System.Collections.Generic.ListExtension.Move``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  name.vb: Move(Of T)(IList(Of T), Int32, Int32)
+  fullName: System.Collections.Generic.ListExtension.Move<T>(System.Collections.Generic.IList<T>, System.Int32, System.Int32)
+  fullName.vb: System.Collections.Generic.ListExtension.Move(Of T)(System.Collections.Generic.IList(Of T), System.Int32, System.Int32)
+  nameWithType: ListExtension.Move<T>(IList<T>, Int32, Int32)
+  nameWithType.vb: ListExtension.Move(Of T)(IList(Of T), Int32, Int32)
+- uid: System.EnumExtension
+  name: EnumExtension
+  href: api/System.EnumExtension.html
+  commentId: T:System.EnumExtension
+  fullName: System.EnumExtension
+  nameWithType: EnumExtension
+- uid: System.EnumExtension.GetDisplayName(System.Enum,System.Boolean)
+  name: GetDisplayName(Enum, Boolean)
+  href: api/System.EnumExtension.html#System_EnumExtension_GetDisplayName_System_Enum_System_Boolean_
+  commentId: M:System.EnumExtension.GetDisplayName(System.Enum,System.Boolean)
+  fullName: System.EnumExtension.GetDisplayName(System.Enum, System.Boolean)
+  nameWithType: EnumExtension.GetDisplayName(Enum, Boolean)
+- uid: System.EnumExtension.GetDisplayName*
+  name: GetDisplayName
+  href: api/System.EnumExtension.html#System_EnumExtension_GetDisplayName_
+  commentId: Overload:System.EnumExtension.GetDisplayName
+  isSpec: "True"
+  fullName: System.EnumExtension.GetDisplayName
+  nameWithType: EnumExtension.GetDisplayName
+- uid: System.GuidExtension
+  name: GuidExtension
+  href: api/System.GuidExtension.html
+  commentId: T:System.GuidExtension
+  fullName: System.GuidExtension
+  nameWithType: GuidExtension
+- uid: System.GuidExtension.IsEmpty(System.Guid)
+  name: IsEmpty(Guid)
+  href: api/System.GuidExtension.html#System_GuidExtension_IsEmpty_System_Guid_
+  commentId: M:System.GuidExtension.IsEmpty(System.Guid)
+  fullName: System.GuidExtension.IsEmpty(System.Guid)
+  nameWithType: GuidExtension.IsEmpty(Guid)
+- uid: System.GuidExtension.IsEmpty*
+  name: IsEmpty
+  href: api/System.GuidExtension.html#System_GuidExtension_IsEmpty_
+  commentId: Overload:System.GuidExtension.IsEmpty
+  isSpec: "True"
+  fullName: System.GuidExtension.IsEmpty
+  nameWithType: GuidExtension.IsEmpty
+- uid: System.Net.Http
+  name: System.Net.Http
+  href: api/System.Net.Http.html
+  commentId: N:System.Net.Http
+  fullName: System.Net.Http
+  nameWithType: System.Net.Http
+- uid: System.Net.Http.HttpResponseMessageExtension
+  name: HttpResponseMessageExtension
+  href: api/System.Net.Http.HttpResponseMessageExtension.html
+  commentId: T:System.Net.Http.HttpResponseMessageExtension
+  fullName: System.Net.Http.HttpResponseMessageExtension
+  nameWithType: HttpResponseMessageExtension
+- uid: System.Net.Http.HttpResponseMessageExtension.DeserializeAsync*
+  name: DeserializeAsync
+  href: api/System.Net.Http.HttpResponseMessageExtension.html#System_Net_Http_HttpResponseMessageExtension_DeserializeAsync_
+  commentId: Overload:System.Net.Http.HttpResponseMessageExtension.DeserializeAsync
+  isSpec: "True"
+  fullName: System.Net.Http.HttpResponseMessageExtension.DeserializeAsync
+  nameWithType: HttpResponseMessageExtension.DeserializeAsync
+- uid: System.Net.Http.HttpResponseMessageExtension.DeserializeAsync``1(System.Net.Http.HttpResponseMessage,System.Boolean)
+  name: DeserializeAsync<T>(HttpResponseMessage, Boolean)
+  href: api/System.Net.Http.HttpResponseMessageExtension.html#System_Net_Http_HttpResponseMessageExtension_DeserializeAsync__1_System_Net_Http_HttpResponseMessage_System_Boolean_
+  commentId: M:System.Net.Http.HttpResponseMessageExtension.DeserializeAsync``1(System.Net.Http.HttpResponseMessage,System.Boolean)
+  name.vb: DeserializeAsync(Of T)(HttpResponseMessage, Boolean)
+  fullName: System.Net.Http.HttpResponseMessageExtension.DeserializeAsync<T>(System.Net.Http.HttpResponseMessage, System.Boolean)
+  fullName.vb: System.Net.Http.HttpResponseMessageExtension.DeserializeAsync(Of T)(System.Net.Http.HttpResponseMessage, System.Boolean)
+  nameWithType: HttpResponseMessageExtension.DeserializeAsync<T>(HttpResponseMessage, Boolean)
+  nameWithType.vb: HttpResponseMessageExtension.DeserializeAsync(Of T)(HttpResponseMessage, Boolean)
+- uid: System.Net.Http.HttpResponseMessageExtension.EnsureContentType(System.Net.Http.HttpResponseMessage,System.String)
+  name: EnsureContentType(HttpResponseMessage, String)
+  href: api/System.Net.Http.HttpResponseMessageExtension.html#System_Net_Http_HttpResponseMessageExtension_EnsureContentType_System_Net_Http_HttpResponseMessage_System_String_
+  commentId: M:System.Net.Http.HttpResponseMessageExtension.EnsureContentType(System.Net.Http.HttpResponseMessage,System.String)
+  fullName: System.Net.Http.HttpResponseMessageExtension.EnsureContentType(System.Net.Http.HttpResponseMessage, System.String)
+  nameWithType: HttpResponseMessageExtension.EnsureContentType(HttpResponseMessage, String)
+- uid: System.Net.Http.HttpResponseMessageExtension.EnsureContentType*
+  name: EnsureContentType
+  href: api/System.Net.Http.HttpResponseMessageExtension.html#System_Net_Http_HttpResponseMessageExtension_EnsureContentType_
+  commentId: Overload:System.Net.Http.HttpResponseMessageExtension.EnsureContentType
+  isSpec: "True"
+  fullName: System.Net.Http.HttpResponseMessageExtension.EnsureContentType
+  nameWithType: HttpResponseMessageExtension.EnsureContentType
+- uid: System.StringExtension
+  name: StringExtension
+  href: api/System.StringExtension.html
+  commentId: T:System.StringExtension
+  fullName: System.StringExtension
+  nameWithType: StringExtension
+- uid: System.StringExtension.DecodeFromBase64String(System.String)
+  name: DecodeFromBase64String(String)
+  href: api/System.StringExtension.html#System_StringExtension_DecodeFromBase64String_System_String_
+  commentId: M:System.StringExtension.DecodeFromBase64String(System.String)
+  fullName: System.StringExtension.DecodeFromBase64String(System.String)
+  nameWithType: StringExtension.DecodeFromBase64String(String)
+- uid: System.StringExtension.DecodeFromBase64String*
+  name: DecodeFromBase64String
+  href: api/System.StringExtension.html#System_StringExtension_DecodeFromBase64String_
+  commentId: Overload:System.StringExtension.DecodeFromBase64String
+  isSpec: "True"
+  fullName: System.StringExtension.DecodeFromBase64String
+  nameWithType: StringExtension.DecodeFromBase64String
+- uid: System.StringExtension.EncodeToBase64String(System.String)
+  name: EncodeToBase64String(String)
+  href: api/System.StringExtension.html#System_StringExtension_EncodeToBase64String_System_String_
+  commentId: M:System.StringExtension.EncodeToBase64String(System.String)
+  fullName: System.StringExtension.EncodeToBase64String(System.String)
+  nameWithType: StringExtension.EncodeToBase64String(String)
+- uid: System.StringExtension.EncodeToBase64String*
+  name: EncodeToBase64String
+  href: api/System.StringExtension.html#System_StringExtension_EncodeToBase64String_
+  commentId: Overload:System.StringExtension.EncodeToBase64String
+  isSpec: "True"
+  fullName: System.StringExtension.EncodeToBase64String
+  nameWithType: StringExtension.EncodeToBase64String
+- uid: System.StringExtension.Format(System.String,System.Object[])
+  name: Format(String, Object[])
+  href: api/System.StringExtension.html#System_StringExtension_Format_System_String_System_Object___
+  commentId: M:System.StringExtension.Format(System.String,System.Object[])
+  name.vb: Format(String, Object())
+  fullName: System.StringExtension.Format(System.String, System.Object[])
+  fullName.vb: System.StringExtension.Format(System.String, System.Object())
+  nameWithType: StringExtension.Format(String, Object[])
+  nameWithType.vb: StringExtension.Format(String, Object())
+- uid: System.StringExtension.Format*
+  name: Format
+  href: api/System.StringExtension.html#System_StringExtension_Format_
+  commentId: Overload:System.StringExtension.Format
+  isSpec: "True"
+  fullName: System.StringExtension.Format
+  nameWithType: StringExtension.Format
+- uid: System.StringExtension.PascalCaseToSnakeCase(System.String)
+  name: PascalCaseToSnakeCase(String)
+  href: api/System.StringExtension.html#System_StringExtension_PascalCaseToSnakeCase_System_String_
+  commentId: M:System.StringExtension.PascalCaseToSnakeCase(System.String)
+  fullName: System.StringExtension.PascalCaseToSnakeCase(System.String)
+  nameWithType: StringExtension.PascalCaseToSnakeCase(String)
+- uid: System.StringExtension.PascalCaseToSnakeCase*
+  name: PascalCaseToSnakeCase
+  href: api/System.StringExtension.html#System_StringExtension_PascalCaseToSnakeCase_
+  commentId: Overload:System.StringExtension.PascalCaseToSnakeCase
+  isSpec: "True"
+  fullName: System.StringExtension.PascalCaseToSnakeCase
+  nameWithType: StringExtension.PascalCaseToSnakeCase
+- uid: System.StringExtension.Remove(System.String,System.String)
+  name: Remove(String, String)
+  href: api/System.StringExtension.html#System_StringExtension_Remove_System_String_System_String_
+  commentId: M:System.StringExtension.Remove(System.String,System.String)
+  fullName: System.StringExtension.Remove(System.String, System.String)
+  nameWithType: StringExtension.Remove(String, String)
+- uid: System.StringExtension.Remove*
+  name: Remove
+  href: api/System.StringExtension.html#System_StringExtension_Remove_
+  commentId: Overload:System.StringExtension.Remove
+  isSpec: "True"
+  fullName: System.StringExtension.Remove
+  nameWithType: StringExtension.Remove
+- uid: System.StringExtension.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  name: Replace(String, String, String, RegexOptions)
+  href: api/System.StringExtension.html#System_StringExtension_Replace_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_
+  commentId: M:System.StringExtension.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)
+  fullName: System.StringExtension.Replace(System.String, System.String, System.String, System.Text.RegularExpressions.RegexOptions)
+  nameWithType: StringExtension.Replace(String, String, String, RegexOptions)
+- uid: System.StringExtension.Replace*
+  name: Replace
+  href: api/System.StringExtension.html#System_StringExtension_Replace_
+  commentId: Overload:System.StringExtension.Replace
+  isSpec: "True"
+  fullName: System.StringExtension.Replace
+  nameWithType: StringExtension.Replace
+- uid: System.StringExtension.ToSlug(System.String,System.Int32)
+  name: ToSlug(String, Int32)
+  href: api/System.StringExtension.html#System_StringExtension_ToSlug_System_String_System_Int32_
+  commentId: M:System.StringExtension.ToSlug(System.String,System.Int32)
+  fullName: System.StringExtension.ToSlug(System.String, System.Int32)
+  nameWithType: StringExtension.ToSlug(String, Int32)
+- uid: System.StringExtension.ToSlug*
+  name: ToSlug
+  href: api/System.StringExtension.html#System_StringExtension_ToSlug_
+  commentId: Overload:System.StringExtension.ToSlug
+  isSpec: "True"
+  fullName: System.StringExtension.ToSlug
+  nameWithType: StringExtension.ToSlug

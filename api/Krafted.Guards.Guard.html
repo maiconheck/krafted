@@ -1,0 +1,3019 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Guard
+   | Krafted </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Guard
+   | Krafted ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <a class="github-fork-ribbon" href="https://github.com/maiconheck/krafted" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" style="position: fixed;">Fork me on GitHub</a>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header/icon.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Krafted.Guards.Guard">
+  
+  
+  <h1 id="Krafted_Guards_Guard" data-uid="Krafted.Guards.Guard" class="text-break">Class Guard
+  </h1>
+  <div class="markdown level0 summary"><p>Provides guard clauses to validate method arguments, in order to enforce defensive programming practice.
+<a href="https://en.wikipedia.org/wiki/Defensive_programming">See defensive programming</a>.
+<a href="http://wiki.c2.com/?GuardClause">See guard clauses</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Guard</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Krafted.Guards.html">Krafted.Guards</a></h6>
+  <h5 id="Krafted_Guards_Guard_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Guard</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Against.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Against%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.cs/#L19">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Against_" data-uid="Krafted.Guards.Guard.Against*"></a>
+  <h4 id="Krafted_Guards_Guard_Against" data-uid="Krafted.Guards.Guard.Against">Against</h4>
+  <div class="markdown level1 summary"><p>The entry point to build the guard clauses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Guard Against { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Any__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Any%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Collection.cs/#L44">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Any_" data-uid="Krafted.Guards.Guard.Any*"></a>
+  <h4 id="Krafted_Guards_Guard_Any__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.Any``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">Any&lt;T&gt;(IEnumerable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>collection</code> contains any elements,
+with this error message: Collection should be empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Any&lt;T&gt;(IEnumerable&lt;T&gt; collection, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">collection</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of enumerable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Any__1_System_Collections_Generic_IEnumerable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>collection</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Empty_System_Nullable_System_Guid__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Empty(System.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Guid.cs/#L25">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Empty_" data-uid="Krafted.Guards.Guard.Empty*"></a>
+  <h4 id="Krafted_Guards_Guard_Empty_System_Nullable_System_Guid__System_String_System_String_" data-uid="Krafted.Guards.Guard.Empty(System.Nullable{System.Guid},System.String,System.String)">Empty(Nullable&lt;Guid&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>parameter</code> is empty,
+with this error message: Guid cannot be empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Empty(Guid? parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Empty_System_Nullable_System_Guid__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_EmptyOrWhiteSpace_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Null.cs/#L86">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_EmptyOrWhiteSpace_" data-uid="Krafted.Guards.Guard.EmptyOrWhiteSpace*"></a>
+  <h4 id="Krafted_Guards_Guard_EmptyOrWhiteSpace_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String,System.String,System.String)">EmptyOrWhiteSpace(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>parameter</code> is an empty string or consists only of white-space,
+with this error message: Parameter cannot be empty or consists exclusively of white-space characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard EmptyOrWhiteSpace(string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_EmptyOrWhiteSpace_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">parameter</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_False_System_Nullable_System_Boolean__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.False(System.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Boolean.cs/#L56">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_False_" data-uid="Krafted.Guards.Guard.False*"></a>
+  <h4 id="Krafted_Guards_Guard_False_System_Nullable_System_Boolean__System_String_System_String_" data-uid="Krafted.Guards.Guard.False(System.Nullable{System.Boolean},System.String,System.String)">False(Nullable&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>parameter</code> is <code>false</code>,
+with this error message: Parameter cannot be <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard False(bool? parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_False_System_Nullable_System_Boolean__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.False(System.Predicate%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Boolean.cs/#L72">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_False_" data-uid="Krafted.Guards.Guard.False*"></a>
+  <h4 id="Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_System_String_" data-uid="Krafted.Guards.Guard.False(System.Predicate{System.Boolean},System.String,System.String)">False(Predicate&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>predicate</code> is <code>false</code>,
+with this error message: Predicate cannot be <code>false</code>.
+Or, if the optional parameter <code>message</code> was set, with their message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard False(Predicate&lt;bool&gt; predicate, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The predicate to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message passed to <span class="xref">System.ArgumentException</span> if the <code>predicate</code> is <code>false</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">predicate</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>predicate</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_GreaterThan__1_System_Nullable___0____0_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.GreaterThan%60%601(System.Nullable%7B%60%600%7D%2C%60%600%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L44">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_GreaterThan_" data-uid="Krafted.Guards.Guard.GreaterThan*"></a>
+  <h4 id="Krafted_Guards_Guard_GreaterThan__1_System_Nullable___0____0_System_String_System_String_" data-uid="Krafted.Guards.Guard.GreaterThan``1(System.Nullable{``0},``0,System.String,System.String)">GreaterThan&lt;T&gt;(Nullable&lt;T&gt;, T, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is greater than <code>valueToCompare</code>,
+with this error message: Number cannot be greater than {valueToCompare}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard GreaterThan&lt;T&gt;(T? number, T valueToCompare, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">valueToCompare</span></td>
+        <td><p>The value to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">valueToCompare</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_GreaterThan__1_System_Nullable___0____0_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_InvalidCnpj_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.InvalidCnpj(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Br/Guard.Br.cs/#L54">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_InvalidCnpj_" data-uid="Krafted.Guards.Guard.InvalidCnpj*"></a>
+  <h4 id="Krafted_Guards_Guard_InvalidCnpj_System_String_System_String_" data-uid="Krafted.Guards.Guard.InvalidCnpj(System.String,System.String)">InvalidCnpj(String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.FormatException</span> if the <code>cnpj</code> is invalid,
+with this error message: Invalid CNPJ: {cnpj}.</p>
+<p>
+CNPJ stands for &quot;Cadastro Nacional da Pessoa Jurídica&quot; in Brazil.
+It&apos;s used to identify a legal entity and other types of legal arrangement without legal personality (such as condominiums,
+public agencies, funds) in Brazil.
+<a href="https://pt.wikipedia.org/wiki/Cadastro_Nacional_da_Pessoa_Jur%C3%ADdica">See more</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard InvalidCnpj(string cnpj, string message = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cnpj</span></td>
+        <td><p>The cnpj to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_InvalidCnpj_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>cnpj</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.FormatException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_InvalidCpf_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.InvalidCpf(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Br/Guard.Br.cs/#L28">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_InvalidCpf_" data-uid="Krafted.Guards.Guard.InvalidCpf*"></a>
+  <h4 id="Krafted_Guards_Guard_InvalidCpf_System_String_System_String_" data-uid="Krafted.Guards.Guard.InvalidCpf(System.String,System.String)">InvalidCpf(String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.FormatException</span> if the <code>cpf</code> is invalid,
+with this error message: Invalid CPF: {cpf}.</p>
+<p>
+CPF stands for &quot;Cadastro de Pessoa Física&quot; in Brazil.
+It&apos;s used to identify an individual taxpayer in Brazil.
+<a href="https://pt.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas">See more</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard InvalidCpf(string cpf, string message = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cpf</span></td>
+        <td><p>The cpf to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_InvalidCpf_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>cpf</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.FormatException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_InvalidEmail_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.InvalidEmail(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Email.cs/#L30">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_InvalidEmail_" data-uid="Krafted.Guards.Guard.InvalidEmail*"></a>
+  <h4 id="Krafted_Guards_Guard_InvalidEmail_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.InvalidEmail(System.String,System.String,System.String)">InvalidEmail(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.FormatException</span> if the <code>emailAddress</code> is invalid,
+with this error message: E-mail address invalid: {emailAddress}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard InvalidEmail(string emailAddress, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">emailAddress</span></td>
+        <td><p>The e-mail address to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">emailAddress</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_InvalidEmail_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>emailAddress</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_InvalidNif_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.InvalidNif(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Pt/Guard.Pt.cs/#L28">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_InvalidNif_" data-uid="Krafted.Guards.Guard.InvalidNif*"></a>
+  <h4 id="Krafted_Guards_Guard_InvalidNif_System_String_System_String_" data-uid="Krafted.Guards.Guard.InvalidNif(System.String,System.String)">InvalidNif(String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.FormatException</span> if the <code>nif</code> is invalid,
+with this error message: Invalid NIF: {nif}.</p>
+<p>
+NIF stands for &quot;Número de Identificação Fiscal&quot; in Portugal.
+It&apos;s used to identify an individual or legal entity taxpayer in Portugal.
+<a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal">See more</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard InvalidNif(string nif, string message = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">nif</span></td>
+        <td><p>The nif to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_InvalidNif_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>nif</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.FormatException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.FormatException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Length(System.UInt32%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.String.cs/#L26">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Length_" data-uid="Krafted.Guards.Guard.Length*"></a>
+  <h4 id="Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.Length(System.UInt32,System.String,System.String,System.String)">Length(UInt32, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentOutOfRangeException</span> if the length of the <code>parameter</code> is different of the specified <code>exactLength</code>,
+with this error message: <code>parameterName</code> must be length <code>exactLength</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Length(uint exactLength, string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">exactLength</span></td>
+        <td><p>The exact length the parameter must be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentOutOfRangeException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Length(System.UInt32%2CSystem.UInt32%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.String.cs/#L46">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Length_" data-uid="Krafted.Guards.Guard.Length*"></a>
+  <h4 id="Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.Length(System.UInt32,System.UInt32,System.String,System.String,System.String)">Length(UInt32, UInt32, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentOutOfRangeException</span> if the length of the <code>parameter</code> is outside of the specified range,
+with this error message: <code>parameterName</code> must be at least <code>minLength</code> character, and at most <code>maxLength</code> characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Length(uint minLength, uint maxLength, string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">minLength</span></td>
+        <td><p>The minimum length the parameter must be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">maxLength</span></td>
+        <td><p>The maximum length the parameter must be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentOutOfRangeException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_LessThan__1_System_Nullable___0____0_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.LessThan%60%601(System.Nullable%7B%60%600%7D%2C%60%600%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L27">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_LessThan_" data-uid="Krafted.Guards.Guard.LessThan*"></a>
+  <h4 id="Krafted_Guards_Guard_LessThan__1_System_Nullable___0____0_System_String_System_String_" data-uid="Krafted.Guards.Guard.LessThan``1(System.Nullable{``0},``0,System.String,System.String)">LessThan&lt;T&gt;(Nullable&lt;T&gt;, T, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is less than <code>valueToCompare</code>,
+with this error message: Number cannot be less than {valueToCompare}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard LessThan&lt;T&gt;(T? number, T valueToCompare, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">valueToCompare</span></td>
+        <td><p>The value to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">valueToCompare</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_LessThan__1_System_Nullable___0____0_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Match_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Match(System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Regex.cs/#L29">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Match_" data-uid="Krafted.Guards.Guard.Match*"></a>
+  <h4 id="Krafted_Guards_Guard_Match_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_" data-uid="Krafted.Guards.Guard.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)">Match(String, String, RegexOptions, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the regular expression specified in <code>pattern</code>
+finds a match in <code>parameter</code>,
+with this error message: Parameter matches the specified regular expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Match(string parameter, string pattern, RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Compiled, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The regular expression pattern to match.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.RegularExpressions.RegexOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The regular expression options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Match_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Match__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Match%60%601(System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Regex.cs/#L48">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Match_" data-uid="Krafted.Guards.Guard.Match*"></a>
+  <h4 id="Krafted_Guards_Guard_Match__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_" data-uid="Krafted.Guards.Guard.Match``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)">Match&lt;TException&gt;(String, String, RegexOptions, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the regular expression specified in <code>pattern</code>
+finds a match in <code>parameter</code>,
+with this error message: Parameter matches the specified regular expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Match&lt;TException&gt;(string parameter, string pattern, RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Compiled, string message = &quot;&quot;, string parameterName = null)
+    where TException : Exception</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The regular expression pattern to match.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.RegularExpressions.RegexOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The regular expression options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TException</span></td>
+        <td><p>The type of the exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Match__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <code>TException</code>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.MaxLength(System.UInt32%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.String.cs/#L65">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_MaxLength_" data-uid="Krafted.Guards.Guard.MaxLength*"></a>
+  <h4 id="Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.MaxLength(System.UInt32,System.String,System.String,System.String)">MaxLength(UInt32, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the length of the <code>parameter</code> is greater than the specified <code>maxLength</code>,
+with this error message: <code>parameterName</code> must be at most <code>maxLength</code> characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard MaxLength(uint maxLength, string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">maxLength</span></td>
+        <td><p>The maximum length the parameter must be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.MinLength(System.UInt32%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.String.cs/#L84">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_MinLength_" data-uid="Krafted.Guards.Guard.MinLength*"></a>
+  <h4 id="Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.MinLength(System.UInt32,System.String,System.String,System.String)">MinLength(UInt32, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the length of the <code>parameter</code> is less than the specified <code>minLength</code>,
+with this error message: <code>parameterName</code> must be at least <code>minLength</code> characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard MinLength(uint minLength, string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">minLength</span></td>
+        <td><p>The minimum length the parameter must be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Negative__1_System_Nullable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Negative%60%601(System.Nullable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L60">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Negative_" data-uid="Krafted.Guards.Guard.Negative*"></a>
+  <h4 id="Krafted_Guards_Guard_Negative__1_System_Nullable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.Negative``1(System.Nullable{``0},System.String,System.String)">Negative&lt;T&gt;(Nullable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is negative,
+with this error message: Number cannot be negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Negative&lt;T&gt;(T? number, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">number</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Negative__1_System_Nullable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NotAny__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NotAny%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Collection.cs/#L28">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NotAny_" data-uid="Krafted.Guards.Guard.NotAny*"></a>
+  <h4 id="Krafted_Guards_Guard_NotAny__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.NotAny``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)">NotAny&lt;T&gt;(IEnumerable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>collection</code> not contains any elements,
+with this error message: Collection cannot be empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NotAny&lt;T&gt;(IEnumerable&lt;T&gt; collection, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">collection</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of enumerable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_NotAny__1_System_Collections_Generic_IEnumerable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>collection</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NotEmpty_System_Nullable_System_Guid__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NotEmpty(System.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Guid.cs/#L40">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NotEmpty_" data-uid="Krafted.Guards.Guard.NotEmpty*"></a>
+  <h4 id="Krafted_Guards_Guard_NotEmpty_System_Nullable_System_Guid__System_String_System_String_" data-uid="Krafted.Guards.Guard.NotEmpty(System.Nullable{System.Guid},System.String,System.String)">NotEmpty(Nullable&lt;Guid&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>parameter</code> is not empty,
+with this error message: Guid should be empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NotEmpty(Guid? parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_NotEmpty_System_Nullable_System_Guid__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NotExists__1_System_Nullable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NotExists%60%601(System.Nullable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Enum.cs/#L26">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NotExists_" data-uid="Krafted.Guards.Guard.NotExists*"></a>
+  <h4 id="Krafted_Guards_Guard_NotExists__1_System_Nullable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.NotExists``1(System.Nullable{``0},System.String,System.String)">NotExists&lt;TEnum&gt;(Nullable&lt;TEnum&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the specified <code>value</code> not exists in
+the specified <code>TEnum</code> enumeration, with this error message: The {value} not exists in the {TEnum}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NotExists&lt;TEnum&gt;(TEnum? value, string message = &quot;&quot;, string parameterName = null)
+    where TEnum : struct, Enum</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;TEnum&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">value</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEnum</span></td>
+        <td><p>The type of the enumeration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_NotExists__1_System_Nullable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>value</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NotMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NotMatch(System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Regex.cs/#L66">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NotMatch_" data-uid="Krafted.Guards.Guard.NotMatch*"></a>
+  <h4 id="Krafted_Guards_Guard_NotMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_" data-uid="Krafted.Guards.Guard.NotMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)">NotMatch(String, String, RegexOptions, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the regular expression specified in <code>pattern</code>
+not finds a match in <code>parameter</code>,
+with this error message: Parameter not matches the specified regular expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NotMatch(string parameter, string pattern, RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Compiled, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The regular expression pattern to match.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.RegularExpressions.RegexOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The regular expression options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_NotMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NotMatch__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NotMatch%60%601(System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Regex.cs/#L85">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NotMatch_" data-uid="Krafted.Guards.Guard.NotMatch*"></a>
+  <h4 id="Krafted_Guards_Guard_NotMatch__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_" data-uid="Krafted.Guards.Guard.NotMatch``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)">NotMatch&lt;TException&gt;(String, String, RegexOptions, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the regular expression specified in <code>pattern</code>
+not finds a match in <code>parameter</code>,
+with this error message: Parameter not matches the specified regular expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NotMatch&lt;TException&gt;(string parameter, string pattern, RegexOptions options = RegexOptions.IgnoreCase | RegexOptions.Compiled, string message = &quot;&quot;, string parameterName = null)
+    where TException : Exception</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>The regular expression pattern to match.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.RegularExpressions.RegexOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The regular expression options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TException</span></td>
+        <td><p>The type of the exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_NotMatch__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <code>TException</code>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Null__1___0_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Null%60%601(%60%600%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Null.cs/#L24">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Null_" data-uid="Krafted.Guards.Guard.Null*"></a>
+  <h4 id="Krafted_Guards_Guard_Null__1___0_System_String_System_String_" data-uid="Krafted.Guards.Guard.Null``1(``0,System.String,System.String)">Null&lt;T&gt;(T, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentNullException</span> if the <code>parameter</code> is null,
+with this error message: Parameter cannot be null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Null&lt;T&gt;(T parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">parameter</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NullOrEmpty(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Null.cs/#L43">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NullOrEmpty_" data-uid="Krafted.Guards.Guard.NullOrEmpty*"></a>
+  <h4 id="Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.NullOrEmpty(System.String,System.String,System.String)">NullOrEmpty(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentNullException</span> if the <code>parameter</code> is null or an empty string,
+with this error message: Parameter cannot be null or empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NullOrEmpty(string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">parameter</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.NullOrWhiteSpace(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Null.cs/#L63">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_NullOrWhiteSpace_" data-uid="Krafted.Guards.Guard.NullOrWhiteSpace*"></a>
+  <h4 id="Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_System_String_" data-uid="Krafted.Guards.Guard.NullOrWhiteSpace(System.String,System.String,System.String)">NullOrWhiteSpace(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentNullException</span> if the <code>parameter</code> is null, an empty string or consists only of white-space,
+with this error message: Parameter cannot be null, empty or consists exclusively of white-space characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard NullOrWhiteSpace(string parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">parameter</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">parameter</code> is empty, or consists only of white-space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Positive__1_System_Nullable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Positive%60%601(System.Nullable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L76">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Positive_" data-uid="Krafted.Guards.Guard.Positive*"></a>
+  <h4 id="Krafted_Guards_Guard_Positive__1_System_Nullable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.Positive``1(System.Nullable{``0},System.String,System.String)">Positive&lt;T&gt;(Nullable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is positive,
+with this error message: Number cannot be positive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Positive&lt;T&gt;(T? number, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">number</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Positive__1_System_Nullable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_True_System_Nullable_System_Boolean__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.True(System.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Boolean.cs/#L25">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_True_" data-uid="Krafted.Guards.Guard.True*"></a>
+  <h4 id="Krafted_Guards_Guard_True_System_Nullable_System_Boolean__System_String_System_String_" data-uid="Krafted.Guards.Guard.True(System.Nullable{System.Boolean},System.String,System.String)">True(Nullable&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>parameter</code> is <code>true</code>,
+with this error message: Parameter cannot be <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard True(bool? parameter, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The parameter to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">parameter</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_True_System_Nullable_System_Boolean__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>parameter</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.True(System.Predicate%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Boolean.cs/#L41">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_True_" data-uid="Krafted.Guards.Guard.True*"></a>
+  <h4 id="Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_System_String_" data-uid="Krafted.Guards.Guard.True(System.Predicate{System.Boolean},System.String,System.String)">True(Predicate&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>predicate</code> is <code>true</code>,
+with this error message: Predicate cannot be <code>true</code>.
+Or, if the optional parameter <code>message</code> was set, with their message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard True(Predicate&lt;bool&gt; predicate, string message = &quot;&quot;, string parameterName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The predicate to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message passed to <span class="xref">System.ArgumentException</span> if the <code>predicate</code> is <code>true</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">predicate</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>predicate</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_Zero__1_System_Nullable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.Zero%60%601(System.Nullable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L92">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_Zero_" data-uid="Krafted.Guards.Guard.Zero*"></a>
+  <h4 id="Krafted_Guards_Guard_Zero__1_System_Nullable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.Zero``1(System.Nullable{``0},System.String,System.String)">Zero&lt;T&gt;(Nullable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is zero,
+with this error message: Number cannot be zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard Zero&lt;T&gt;(T? number, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">number</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_Zero__1_System_Nullable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard_ZeroOrLess__1_System_Nullable___0__System_String_System_String_.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard.ZeroOrLess%60%601(System.Nullable%7B%60%600%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Guard.Number.cs/#L111">View Source</a>
+  </span>
+  <a id="Krafted_Guards_Guard_ZeroOrLess_" data-uid="Krafted.Guards.Guard.ZeroOrLess*"></a>
+  <h4 id="Krafted_Guards_Guard_ZeroOrLess__1_System_Nullable___0__System_String_System_String_" data-uid="Krafted.Guards.Guard.ZeroOrLess``1(System.Nullable{``0},System.String,System.String)">ZeroOrLess&lt;T&gt;(Nullable&lt;T&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Throws an <span class="xref">System.ArgumentException</span> if the <code>number</code> is zero or less than zero (i.e. negative),
+with this error message: 'The number cannot be zero.', if it is zero. Or 'The number cannot be negative.', if it is negative.</p>
+<p>
+This method is equivalent to chain the <code>Zero(number).Negative(number)</code> methods.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guard ZeroOrLess&lt;T&gt;(T? number, string message = &quot;&quot;, string parameterName = null)
+    where T : struct, IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;T&gt;</td>
+        <td><span class="parametername">number</span></td>
+        <td><p>The number to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The optional error message that explains the reason for the exception. If this parameter is provided, it will override the error message described in the summary section.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>The name of the parameter with which <code data-dev-comment-type="paramref" class="paramref">number</code> corresponds. If you omit this parameter, the name of parameter is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Krafted.Guards.Guard.html">Guard</a></td>
+        <td><p>The guard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Krafted_Guards_Guard_ZeroOrLess__1_System_Nullable___0__System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <code>number</code> is <code>null</code>, the validation is ignored (i.e. does not throws an <span class="xref">System.ArgumentException</span>). This is useful for optional parameters whose default value is <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted/new/master/apiSpec/new?filename=Krafted_Guards_Guard.md&amp;value=---%0Auid%3A%20Krafted.Guards.Guard%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Guards/GuardClauses/Pt/Guard.Pt.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
+

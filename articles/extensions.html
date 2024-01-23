@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Extension Methods | Krafted </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Extension Methods | Krafted ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <a class="github-fork-ribbon" href="https://github.com/maiconheck/krafted" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" style="position: fixed;">Fork me on GitHub</a>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header/icon.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="extension-methods">Extension Methods</h2>
+
+<h3 id="what-is--what-is-it-for">What is / what is it for?</h3>
+<p>A set of extension methods for String, Collections, Guid and other types.</p>
+<hr>
+<h3 id="samples">Samples</h3>
+<p>Below are some examples of each <code>extension method</code> contained in this package.</p>
+<h3 id="enumerable">Enumerable</h3>
+<p>Provides extension methods to <code>IEnumerable&lt;T&gt;.</code></p>
+<p><strong><code>ContainsAll</code></strong></p>
+<blockquote>
+<p>Verifies if the enumerable contains all the values:</p>
+</blockquote>
+<pre><code>[Fact]
+public void ContainsAll_Itens_True()
+{
+    var source = new int[] { 1, 2, 3 };
+    var values = new int[] { 1, 2, 3 };
+    Assert.True(source.ContainsAll(values));
+
+    source = new int[] { 1, 2, 3 };
+    values = new int[] { 1, 2 };
+    Assert.True(source.ContainsAll(values));
+}
+
+[Fact]
+public void ContainsAll_Itens_False()
+{
+    var source = new int[] { 1, 2, 3 };
+    var values = new int[] { 1, 2, 3, 4 };
+    Assert.False(source.ContainsAll(values));
+
+    source = new int[] { 1, 2, 3 };
+    values = new int[] { 4 };
+    Assert.False(source.ContainsAll(values));
+}
+</code></pre>
+<p><strong><code>Second</code>, <code>Third</code>, <code>Fourth</code>, <code>Fifth</code></strong></p>
+<blockquote>
+<p>Like the items.First(), returns the element of a sequence by their ordinal number.</p>
+</blockquote>
+<pre><code>[Fact]
+public void Ordinal_Itens_Ok()
+{
+    var itens1 = new int[] { 1, 2, 3, 4, 5 };
+    Assert.Equal(2, itens1.Second());
+    Assert.Equal(3, itens1.Third());
+    Assert.Equal(4, itens1.Fourth());
+    Assert.Equal(5, itens1.Fifth());
+
+    var itens2 = new string[] { &quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot; };
+    Assert.Equal(&quot;B&quot;, itens2.Second());
+    Assert.Equal(&quot;C&quot;, itens2.Third());
+    Assert.Equal(&quot;D&quot;, itens2.Fourth());
+    Assert.Equal(&quot;E&quot;, itens2.Fifth());
+}
+</code></pre>
+<p><strong><code>Empty</code></strong></p>
+<blockquote>
+<p>Determines whether a sequence not contains any elements (a cleaner alternative to <code>!items.Any()</code>).</p>
+</blockquote>
+<pre><code>[Fact]
+public void Empty_SourceContainsElements_False()
+{
+    var source = new int[] { 1, 2, 3, 4, 5 };
+    Assert.False(source.Empty());
+}
+
+[Fact]
+public void Empty_SourceNotContainsElements_True()
+{
+    var source = new int[] { };
+    Assert.True(source.Empty());
+}
+</code></pre>
+<h3 id="guid">Guid</h3>
+<p>Provides extension methods to <code>Guid</code>.</p>
+<p><strong><code>IsEmpty</code></strong></p>
+<blockquote>
+<p>Checks whether a <code>Guid</code> is a <code>Guid.Empty</code>.</p>
+</blockquote>
+<pre><code>[Fact]
+public void IsEmpty_EmptyGuid_True()
+{
+    var emptyGuid1 = Guid.Empty;
+    Assert.True(emptyGuid1.IsEmpty());
+
+    var emptyGuid2 = new Guid(&quot;00000000-0000-0000-0000-000000000000&quot;);
+    Assert.True(emptyGuid2.IsEmpty());
+}
+
+[Fact]
+public void IsEmpty_NotEmptyGuid_False()
+{
+    var notEmptyGuid = new Guid(&quot;5c246e85-c1af-4654-be86-81da9ab808bf&quot;);
+    Assert.False(notEmptyGuid.IsEmpty());
+}
+</code></pre>
+<h3 id="httpresponsemessage">HttpResponseMessage</h3>
+<p>Provides extension methods to <code>HttpResponseMessage</code>.</p>
+<p><strong><code>EnsureContentType</code></strong></p>
+<blockquote>
+<p>Throws an exception if the <code>System.Net.Http.HttpResponseMessage.Headers.ContentType</code> property for
+the HTTP response is different of <code>defaultContentType</code> argument,
+whose default value is <code>&quot;application/json; charset=utf-8&quot;</code>.</p>
+</blockquote>
+<pre><code>[Fact]
+public void EnsureContentType_DefaultContentType_DoesNotThrowsException()
+{
+    var response1 = new HttpResponseMessage(HttpStatusCode.OK)
+    {
+        Content = new StringContent(string.Empty, Encoding.UTF8, &quot;application/json&quot;)
+    };
+    Assert.DoesNotThrows(() =&gt; response1.EnsureContentType());
+
+    var response2 = new HttpResponseMessage(HttpStatusCode.OK)
+    {
+        Content = new StringContent(string.Empty, Encoding.ASCII, &quot;text/html&quot;)
+    };
+    Assert.DoesNotThrows(() =&gt; response2.EnsureContentType(&quot;text/html; charset=us-ascii&quot;));
+}
+
+[Theory]
+[InlineData(&quot;ASCII&quot;, &quot;application/json&quot;)]
+[InlineData(&quot;UTF-8&quot;, &quot;text/html&quot;)]
+public void EnsureContentType_NotUtf8ApplicationJson_ThrowsException(
+    string encoding,
+    string mediaType)
+{
+    var response = new HttpResponseMessage(HttpStatusCode.OK)
+    {
+        Content = new StringContent(string.Empty, Encoding.GetEncoding(encoding), mediaType)
+    };
+
+    Assert.Throws&lt;HttpRequestException&gt;(() =&gt; response.EnsureContentType());
+}
+</code></pre>
+<p><strong><code>DeserializeAsync</code></strong></p>
+<blockquote>
+<p>Deserializes the <code>HttpResponseMessage</code> into a <code>T</code>.</p>
+</blockquote>
+<pre><code>public class ViewModelDummy
+{
+    public int Age { get; set; }
+    public string Name { get; set; }
+    public bool Enabled { get; set; }
+}
+
+[Fact]
+public async Task DeserializeAsync_Poco_PocoDeserialized()
+{
+    // Arrange
+    const string json = @&quot;{
+                            &quot;&quot;age&quot;&quot;: 35,
+                            &quot;&quot;name&quot;&quot;: &quot;&quot;Peter&quot;&quot;,
+                            &quot;&quot;enabled&quot;&quot;: true
+                          }&quot;;
+
+    // Act
+    var response = new HttpResponseMessage
+    {
+        Content = new StringContent(json, Encoding.UTF8, &quot;application/json&quot;)
+    };
+
+    var result = await response.DeserializeAsync&lt;ViewModelDummy&gt;();
+
+    // Assert
+    Assert.Equal(35, result.Age);
+    Assert.Equal(&quot;Peter&quot;, result.Name);
+    Assert.True(result.Enabled);
+}
+</code></pre>
+<h3 id="list">List</h3>
+<p>Provides extension methods to <code>IList&lt;T&gt;</code>.</p>
+<p><strong><code>Move</code></strong></p>
+<blockquote>
+<p>Moves an item from a specified old index to a specified new index.</p>
+</blockquote>
+<pre><code>[Theory]
+[InlineData(2, 0, new int[] { 3, 1, 2 })]
+[InlineData(2, 1, new int[] { 1, 3, 2 })]
+[InlineData(0, 2, new int[] { 2, 3, 1 })]
+[InlineData(0, 1, new int[] { 2, 1, 3 })]
+[InlineData(1, 0, new int[] { 2, 1, 3 })]
+public void Move_NewOrder_Reordered(int oldIndex, int newIndex, int[] orderExpected)
+{
+    // Arrange
+    var source = new List&lt;int&gt; { 1, 2, 3 };
+
+    // Act
+    source.Move(oldIndex, newIndex);
+
+    // Assert
+    Assert.Equal(orderExpected[0], source[0]);
+    Assert.Equal(orderExpected[1], source[1]);
+    Assert.Equal(orderExpected[2], source[2]);
+}
+</code></pre>
+<h3 id="string">String</h3>
+<p>Provides extension methods to <code>string</code>.</p>
+<p><strong><code>Replace</code></strong></p>
+<blockquote>
+<p>In a specified input string, replaces all strings that match a specified regular
+expression with a specified replacement string.</p>
+</blockquote>
+<pre><code>public class StringExtensionTest
+{
+    private const string _linkInput =
+        @&quot;&lt;a href=\&quot;&quot;ViewAllTitlesQuickSearch.aspx?val=2&amp;amp;val1=2171&amp;amp;val65=2171\&quot;&quot;&gt;View all titles&lt;/a&gt;&quot;;
+
+    private const string _linkPattern =
+        @&quot;(&lt;script(\s|\S)*?&lt;\/script&gt;)|(&lt;style(\s|\S)*?&lt;\/style&gt;)|(&lt;!--(\s|\S)*?--&gt;)|(&lt;\/?(\s|\S)*?&gt;)&quot;;
+
+    private const string _emailInput = @&quot;the foo@demo.net e-mail&quot;;
+
+    private const string _emailPattern =
+        @&quot;[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?&quot;;
+
+    private const string _hourInput = @&quot;14:00 is the hour&quot;;
+
+    private const string _hourPattern = @&quot;([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?&quot;;
+
+    [Fact]
+    public void Replace_InputCorrectPattern_ReplacementReplaced()
+    {
+        Assert.Equal(
+            &quot;ReplacedView all titlesReplaced&quot;,
+            _linkInput.Replace(_linkPattern, &quot;Replaced&quot;,
+            RegexOptions.Compiled));
+
+        Assert.Equal(
+            &quot;the Replaced e-mail&quot;,
+             _emailInput.Replace(_emailPattern, &quot;Replaced&quot;,
+             RegexOptions.Compiled));
+
+        Assert.Equal(&quot;Replaced is the hour&quot;,
+             _hourInput.Replace(_hourPattern, &quot;Replaced&quot;,
+              RegexOptions.Compiled));
+    }
+
+    [Fact]
+    public void Replace_InputIncorrectPattern_ReplacementNotReplaced()
+    {
+        Assert.Equal(
+            @&quot;&lt;a href=\&quot;&quot;ViewAllTitlesQuickSearch.aspx?val=2&amp;amp;val1=2171&amp;amp;val65=2171\&quot;&quot;&gt;View all titles&lt;/a&gt;&quot;,
+            _linkInput.Replace(_hourPattern, &quot;Replaced&quot;, RegexOptions.Compiled));
+
+        Assert.Equal(
+            &quot;the foo@demo.net e-mail&quot;,
+             _emailInput.Replace(@&quot;\/\*[\s\S]*?\*\/|\/\/.*&quot;, &quot;Replaced&quot;, RegexOptions.Compiled));
+
+        Assert.Equal(
+            &quot;14:00 is the hour&quot;,
+            _hourInput.Replace(@&quot;\/\*[\s\S]*?\*\/|\/\/.*&quot;, &quot;Replaced&quot;, RegexOptions.Compiled));
+    }
+}
+</code></pre>
+<p><strong><code>Remove</code></strong></p>
+<blockquote>
+<p>In a specified input string, removes all strings that match a specified regular
+expression with a specified replacement string.</p>
+</blockquote>
+<pre><code>public class StringExtensionTest
+{
+    private const string _linkInput =
+        @&quot;&lt;a href=\&quot;&quot;ViewAllTitlesQuickSearch.aspx?val=2&amp;amp;val1=2171&amp;amp;val65=2171\&quot;&quot;&gt;View all titles&lt;/a&gt;&quot;;
+
+    private const string _linkPattern =
+        @&quot;(&lt;script(\s|\S)*?&lt;\/script&gt;)|(&lt;style(\s|\S)*?&lt;\/style&gt;)|(&lt;!--(\s|\S)*?--&gt;)|(&lt;\/?(\s|\S)*?&gt;)&quot;;
+
+    private const string _emailInput = @&quot;the foo@demo.net e-mail&quot;;
+
+    private const string _emailPattern =
+        @&quot;[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?&quot;;
+
+    private const string _hourInput = @&quot;14:00 is the hour&quot;;
+
+    private const string _hourPattern = @&quot;([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?&quot;;
+
+
+    [Fact]
+    public void Remove_InputCorrectPattern_Removed()
+    {
+        Assert.Equal(&quot;View all titles&quot;, _linkInput.Remove(_linkPattern));
+        Assert.Equal(&quot;the  e-mail&quot;, _emailInput.Remove(_emailPattern));
+        Assert.Equal(&quot; is the hour&quot;, _hourInput.Remove(_hourPattern));
+    }
+
+    [Fact]
+    public void Remove_InputIncorrectPattern_NotRemoved()
+    {
+        Assert.Equal(
+            @&quot;&lt;a href=\&quot;&quot;ViewAllTitlesQuickSearch.aspx?val=2&amp;amp;val1=2171&amp;amp;val65=2171\&quot;&quot;&gt;View all titles&lt;/a&gt;&quot;,
+            _linkInput.Remove(_hourPattern));
+
+        Assert.Equal(&quot;the foo@demo.net e-mail&quot;, _emailInput.Remove(@&quot;\/\*[\s\S]*?\*\/|\/\/.*&quot;));
+        Assert.Equal(&quot;14:00 is the hour&quot;, _hourInput.Remove(@&quot;\/\*[\s\S]*?\*\/|\/\/.*&quot;));
+    }
+}
+</code></pre>
+<p><strong><code>Format</code></strong></p>
+<blockquote>
+<p>Replaces the format items in a string with the string representations of corresponding
+objects in a specified array. A parameter supplies culture-specific formatting information.</p>
+</blockquote>
+<pre><code>[Fact]
+public void Format_Input_Formated()
+{
+    string input = &quot;Replace {0} {1} in this {2}&quot;.Format(&quot;some&quot;, &quot;words&quot;, &quot;phrase&quot;);
+    Assert.Equal(&quot;Replace some words in this phrase&quot;, input);
+}
+</code></pre>
+<p><strong><code>PascalCaseToSnakeCase</code></strong></p>
+<blockquote>
+<p>Converts a specified PascalCase string to its Snake_Case representation (that is. underscore separation).</p>
+</blockquote>
+<pre><code>[Theory]
+[InlineData(
+    &quot;EscolheUmTrabalhoDeQueGostes,ENãoTerásQueTrabalharNemUmDiaNaTuaVida.&quot;,
+    &quot;Escolhe_Um_Trabalho_De_Que_Gostes,_E_Não_Terás_Que_Trabalhar_Nem_Um_Dia_Na_Tua_Vida.&quot;)] // - Confúcio
+
+[InlineData(
+    &quot;EuNãoFalhei.SóDescobri10MilCaminhosQueNãoEramOCerto&quot;,
+    &quot;Eu_Não_Falhei._Só_Descobri10_Mil_Caminhos_Que_Não_Eram_O_Certo&quot;)] // - Thomas Edison
+
+[InlineData(
+    &quot;OSucessoNormalmenteVemParaQuemEstáOcupadoDemaisParaProcurarPorEle&quot;,
+    &quot;O_Sucesso_Normalmente_Vem_Para_Quem_Está_Ocupado_Demais_Para_Procurar_Por_Ele&quot;)] // – Henry David Thoreau
+public void PascalCaseToSnakeCase_InputPascalCase_OutputSnakeCase(
+    string input,
+    string expectedSnakeCase)
+{
+    Assert.Equal(expectedSnakeCase, input.PascalCaseToSnakeCase());
+}
+</code></pre>
+<p><strong><code>EncodeToBase64String</code></strong></p>
+<blockquote>
+<p>Converts an string to its equivalent encoded with base-64.</p>
+</blockquote>
+<pre><code>[Fact]
+public void EncodeToBase64String_Input_Base64StringEncoded()
+{
+    string plainString =
+        &quot;A clean, simple and extensible, carefully crafted set of libraries for general purpose.&quot;;
+
+    string base64String = plainString.EncodeToBase64String();
+
+    Assert.Equal(&quot;QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu&quot;, base64String);
+}
+</code></pre>
+<p><strong><code>DecodeFromBase64String</code></strong></p>
+<blockquote>
+<p>Converts a base-64 string to its equivalent decoded string.</p>
+</blockquote>
+<pre><code>[Fact]
+public void DecodeFromBase64String_Input_Base64StringDecoded()
+{
+    string base64String =
+        &quot;QSBjbGVhbiwgc2ltcGxlIGFuZCBleHRlbnNpYmxlLCBjYXJlZnVsbHkgY3JhZnRlZCBzZXQgb2YgbGlicmFyaWVzIGZvciBnZW5lcmFsIHB1cnBvc2Uu&quot;;
+
+    string plainString = base64String.DecodeFromBase64String();
+
+    Assert.Equal(&quot;A clean, simple and extensible, carefully crafted set of libraries for general purpose.&quot;, plainString);
+}
+</code></pre>
+<p><strong><code>ToSlug</code></strong></p>
+<blockquote>
+<p>Converts a phrase to its slug representation.</p>
+</blockquote>
+<pre><code>[Theory]
+[InlineData(
+    &quot;Escolhe um trabalho de que gostes, e não terás que trabalhar nem um dia na tua vida.&quot;,
+    &quot;escolhe-um-trabalho-de-que-gostes-e-nao-teras-que-trabalhar-nem-um-dia-na-tua-vida&quot;)] // - Confúcio
+[InlineData(
+    &quot;A vida vai ficando cada vez mais dura perto do topo&quot;,
+    &quot;a-vida-vai-ficando-cada-vez-mais-dura-perto-do-topo&quot;)] // - Nietzsche
+[InlineData(
+    &quot;O sucesso normalmente vem para quem está ocupado demais para procurar por ele&quot;,
+    &quot;o-sucesso-normalmente-vem-para-quem-esta-ocupado-demais-para-procurar-por-ele&quot;)] // – Henry David Thoreau
+public void ToSlug_InputMaxLength300_Slug(string input, string expectedSlug)
+{
+    Assert.Equal(expectedSlug, input.ToSlug(maxLength: 300));
+}
+
+[Theory]
+[InlineData(
+    &quot;Escolhe um trabalho de que gostes, e não terás que trabalhar nem um dia na tua vida.&quot;,
+    &quot;escolhe-um-trabalho-de-que-gostes-e-nao-teras-que-trabalhar&quot;)] // - Confúcio
+[InlineData(
+    &quot;Eu não falhei. Só descobri 10 mil caminhos que não eram o certo&quot;,
+    &quot;eu-nao-falhei-so-descobri-10-mil-caminhos-que-nao-eram-o-cer&quot;)] // - Thomas Edison
+[InlineData(
+    &quot;O sucesso normalmente vem para quem está ocupado demais para procurar por ele&quot;,
+    &quot;o-sucesso-normalmente-vem-para-quem-esta-ocupado-demais-para&quot;)] // – Henry David Thoreau
+public void ToSlug_InputLengthDefault60_Slug(string input, string expectedSlug)
+{
+    Assert.Equal(expectedSlug, input.ToSlug());
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted/blob/master/docfx_project/articles/extensions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Guard Clauses | Krafted </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Guard Clauses | Krafted ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <a class="github-fork-ribbon" href="https://github.com/maiconheck/krafted" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" style="position: fixed;">Fork me on GitHub</a>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header/icon.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="guard-clauses">Guard Clauses</h2>
+
+<h3 id="what-is--what-is-it-for">What is / what is it for?</h3>
+<p>Provides a fluent API to apply <a href="http://wiki.c2.com/?GuardClause">guard clauses</a> to validate method arguments, in order to enforce <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a> practice.</p>
+<h3 id="where-should-i-use-it">Where should I use it?</h3>
+<p>In the public interface of classes (i.e. <code>public methods</code>, including the constructor) and when get information from external files (e.g. <code>appsettings.json</code>).</p>
+<hr>
+<h3 id="samples">Samples</h3>
+<p>Below are some examples of the <code>guard clauses</code> to protect the public APIs of some classes.</p>
+<blockquote>
+<p><strong>P.S.:</strong> For simplicity, the examples only contain code snippets of the classes.
+You can see the full code by clicking on 'See full code'.</p>
+</blockquote>
+<pre><code>public static class ListExtension
+{
+    public static void Move&lt;T&gt;(this IList&lt;T&gt; list, int oldIndex, int newIndex)
+    {
+        Guard.Against
+            .Empty(list, nameof(list))
+            .Negative(oldIndex, nameof(oldIndex))
+            .Negative(newIndex, nameof(newIndex));
+
+        var item = list[oldIndex];
+        list.RemoveAt(oldIndex);
+        list.Insert(newIndex, item);
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.Extensions/ListExtension.cs">ListExtension.cs</a></p>
+<pre><code>public class Question : EntityBase, ISortable
+{
+    private readonly List&lt;Answer&gt; _answers = new List&lt;Answer&gt;();
+
+    public Question(string name, IList&lt;Answer&gt; answers)
+    {
+        Guard.Against
+            .Length(5, 500, name, nameof(name))
+            .NullOrWhiteSpace(name, nameof(name))
+            .Empty(answers, nameof(answers))
+            .False(_ =&gt; answers.Any(a =&gt; a.IsCorrect), &quot;At least one answer must be correct.&quot;);
+
+        Name = name;
+        _answers = answers.ToList();
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://gist.github.com/maiconheck/440449696a54157ca34cdc77608df388">Question.cs</a></p>
+<hr>
+<p>In the example below the <code>guard clauses</code> are being reused between the <code>constructor</code> and the <code>EditBasicInfo</code> method, each of which contains specific validations in addition to those present in the <code>Validate</code> method:</p>
+<pre><code>public class Product : EntityBase, IAggregateRoot
+{
+    public Product(
+        ProductType productType,
+        Name name,
+        string shortDescription,
+        Category category,
+        Money price,
+        ProductCardCover cardCover)
+    {
+        Validate(name, shortDescription, category, price)
+                .Null(cardCover, nameof(cardCover))
+                .NotExists&lt;ProductType&gt;(productType);
+
+        ProductType = productType;
+        Name = (Name)name.Value.ToLower(CultureInfo.InvariantCulture);
+        ShortDescription = shortDescription;
+        Category = category;
+        Price = price;
+        CardCover = cardCover;
+        Status = ProductStatus.Draft;
+        WarrantyType = WarrantyType.Warranty7Days;
+        CreatingDate = DateTime.Now;
+    }
+
+    public void SetRating(int rating)
+    {
+        Guard.Against
+            .ZeroOrLess(rating, nameof(rating))
+            .GreaterThan(5, rating, nameof(rating));
+
+        Rating = rating;
+    }
+
+    public void EditBasicInfo(
+            Name name,
+            string shortDescription,
+            Category category,
+            Money price,
+            ProductCardCover cardCover,
+            ProductStatus status,
+            WarrantyType warranty,
+            bool expires,
+            int? expireInDays)
+        {
+            Validate(name, shortDescription, category, price)
+              .NotExists&lt;ProductStatus&gt;(status)
+              .Null(cardCover, nameof(cardCover))
+              .NotExists&lt;WarrantyType&gt;(warranty);
+
+            Name = name;
+            ShortDescription = shortDescription;
+            Category = category;
+            Price = price;
+            CardCover = cardCover;
+            Status = status;
+            WarrantyType = warranty;
+            Expires = expires;
+            ExpireInDays = expireInDays;
+        }
+
+    private static Guard Validate(
+        Name name,
+        string shortDescription,
+        Category category,
+        Money price)
+    {
+        return Guard.Against
+            .Null(name, nameof(name))
+            .NullOrWhiteSpace(shortDescription, nameof(shortDescription))
+            .Length(5, 200, shortDescription, nameof(shortDescription))
+            .Null(category, nameof(category))
+            .Null(price, nameof(price));
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://gist.github.com/maiconheck/d9f09c6786018c6eb5c151e3bb964f9c">Product.cs</a></p>
+<hr>
+<p>In the example below, since we are getting values from <code>appsettings.json</code>, we are also validating them.
+Because like the arguments of a public method, <code>appsettings.json</code> settings are data that we receive through external input, so we need to ensure that the data is valid, so we can use it with reliability.</p>
+<pre><code>public class EmailService : IEmailService
+{
+    private readonly string _host;
+    private readonly int _port;
+    private readonly SecureSocketOptions _secureSocketOptions;
+    private readonly string _fromName;
+    private readonly string _fromEmail;
+    private readonly string _userName;
+    private readonly string _password;
+
+    public EmailService(IConfiguration config)
+    {
+        Guard.Against.Null(config, nameof(config));
+
+        _host = config[&quot;SendGrid:Host&quot;];
+        _port = int.Parse(config[&quot;SendGrid:Port&quot;]);
+        _secureSocketOptions = (SecureSocketOptions)int.Parse(config[&quot;SendGrid:SecureSocketOptions&quot;]);
+        _fromName = config[&quot;SendGrid:FromName&quot;];
+        _fromEmail = config[&quot;SendGrid:FromEmail&quot;];
+        _userName = config[&quot;SendGrid:UserName&quot;];
+        _password = config[&quot;SendGrid:Password&quot;];
+
+        Guard.Against
+            .NullOrWhiteSpace(_host, nameof(_host))
+            .ZeroOrLess(_port, nameof(_port))
+            .NotExists&lt;SecureSocketOptions&gt;(_secureSocketOptions)
+            .NullOrWhiteSpace(_fromName, nameof(_fromName))
+            .InvalidEmail(_fromEmail)
+            .NullOrWhiteSpace(_userName, nameof(_userName))
+            .NullOrWhiteSpace(_password, nameof(_password));
+    }
+
+    public async Task SendEmailAsync(MailAddress to, string subject, string htmlMessage)
+    {
+        Guard.Against
+            .Null(to, nameof(to))
+            .NullOrWhiteSpace(subject, nameof(subject))
+            .NullOrWhiteSpace(htmlMessage, nameof(htmlMessage));
+
+        ...
+    }
+
+    ...
+}
+</code></pre>
+<hr>
+<pre><code>public sealed class Email : ValueObject&lt;string&gt;
+{
+    public Email(string value)
+    {
+        Guard.Against.InvalidEmail(value);
+        Value = value;
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.ValueObjects/Email.cs">Email.cs</a></p>
+<pre><code>public sealed class Money : ValueObject&lt;decimal&gt;
+{
+    public Money(decimal value)
+    {
+        Guard.Against.Negative(value, nameof(value));
+        Value = value;
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://github.com/maiconheck/krafted/blob/master/src/Krafted/Krafted.ValueObjects/Money.cs">Money.cs</a></p>
+<hr>
+<h3 id="finally-you-can-create-your-own-guard-clauses-by-extending-the-guard-class">Finally, you can create your own <code>guard clauses</code> by extending the <code>Guard</code> class:</h3>
+<pre><code>namespace Krafted.Guards
+{
+    public static class GuardExtension
+    {
+        public static Guard Errors(this Guard guard, IReadOnlyList&lt;Error&gt; errors)
+        {
+            Guard.Against
+                .Null(guard, nameof(guard))
+                .Null(errors, nameof(errors));
+
+            if (errors.Any())
+            {
+                throw new InvalidOperationException(errors.ToMessage());
+            }
+
+            return guard;
+        }
+
+        public static Guard Errors(this Guard guard, ErrorContext context)
+        {
+            Guard.Against
+                .Null(guard, nameof(guard))
+                .Null(context, nameof(context));
+
+            if (context.HasErrors)
+            {
+                throw new InvalidOperationException(context.Errors.ToMessage());
+            }
+
+            return guard;
+        }
+    }
+}
+</code></pre>
+<p>See full code: <a href="https://gist.github.com/maiconheck/6248e870f60e1e4ad9ec64831334392a">GuardExtension.cs</a></p>
+<hr>
+<h3 id="and-even-combine-with-notification-pattern-and-canexecute-pattern-to-use-in-your-commands">And even combine with <code>notification pattern</code> and <code>CanExecute pattern</code> to use in your commands:</h3>
+<pre><code>public class Quiz
+{
+    ...
+
+    private readonly List&lt;Question&gt; _questions = new List&lt;Question&gt;();
+
+    public IReadOnlyList&lt;Question&gt; Questions =&gt; _questions.ToList();
+
+    public ErrorContext CanAddQuestion(Question question)
+    {
+        return ErrorContext.Default
+            .AddIf(_ =&gt; question.Answers.Count &gt; 6, new Error(&quot;Enter max of 6 answers.&quot;))
+            .AddIf(_ =&gt; !question.Answers.Any(a =&gt; a.IsCorrect), new Error(&quot;Enter almost one correct answer.&quot;));
+    }
+
+    public void AddQuestion(Question question)
+    {
+        Guard.Against.Null(question, nameof(question));
+        Questions.Load();
+
+        var context = CanAddQuestion(question);
+        Guard.Against.Errors(context);
+
+        _questions.Add(question);
+    }
+
+    ...
+}
+</code></pre>
+<p>See full code: <a href="https://gist.github.com/maiconheck/616b2174b948eb0c61b7dff75c1d253b">Quiz.cs</a></p>
+<pre><code>public sealed class RegisterQuestionHandler :
+    IRequestHandler&lt;RegisterQuestionCommand, ICommandResult&lt;RegisterQuestionViewModel&gt;&gt;
+{
+    ...
+
+    public async Task&lt;ICommandResult&lt;RegisterQuestionViewModel&gt;&gt; Handle(
+        RegisterQuestionCommand request,
+        CancellationToken cancellationToken)
+    {
+        ...
+
+        var question = new Question(request.Name, request.Answers);
+
+        var context = quiz.CanAddQuestion(question);
+        if (context.HasErrors)
+        {
+            return _commandResult.Errors(context.Errors);
+        }
+
+        quiz.AddQuestion(question);
+
+        await _quizRepository.Save(quiz);
+        await _quizRepository.UnitOfWork.CommitAsync();
+
+        return _commandResult.Content(_mapper.Map&lt;RegisterQuestionViewModel&gt;(quiz));
+    }
+}
+
+</code></pre>
+<hr>
+<h3 id="all-available-guard-clauses">All available <code>guard clauses</code>:</h3>
+<ul>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty__1_System_Collections_Generic_IEnumerable___0__System_String_">Empty</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Boolean_System_String_">False</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_">False with predicate</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Boolean_System_String_">True</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_">True with predicate</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_">Length exactLength</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_">Length between minLength and maxLength</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan__1___0___0_System_String_">LessThan</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan__1___0___0_System_String_">GreaterThan</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_">Match</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_System_String_System_String_System_String_System_Text_RegularExpressions_RegexOptions_">NotMatch</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_">MaxLength</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_">MinLength</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty__1_System_Collections_Generic_IEnumerable___0__System_String_">NotEmpty</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists__1___0_">NotExists</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null__1___0_System_String_">Null</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_">NullOrEmpty</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_">NullOrWhiteSpace</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_System_String_">NullOrWhiteSpace with message</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Positive__1___0_System_String_">Positive</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Zero__1___0_System_String_">Zero</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_ZeroOrLess__1___0_System_String_">ZeroOrLess</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Negative__1___0_System_String_">Negative</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidEmail_System_String_">InvalidEmail</a></li>
+<li><a href="https://maiconheck.github.io/krafted/api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidNif_System_String_">InvalidNif</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted/blob/master/docfx_project/articles/guards.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            © 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
+
