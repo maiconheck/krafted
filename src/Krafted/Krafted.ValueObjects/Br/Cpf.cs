@@ -16,7 +16,7 @@ namespace Krafted.ValueObjects.Br
         /// <summary>
         /// Initializes a new instance of the <see cref="Cpf"/> class.
         /// </summary>
-        /// <param name="value">The value.</param>
+        /// <param name="value">The string representation of a CPF.</param>
         public Cpf(string value)
         {
             Guard.Against.InvalidCpf(value);

@@ -1,8 +1,16 @@
 <Project>
   <PropertyGroup>
     <Authors>Maicon Heck</Authors>
+    <Copyright>Copyright (c) 2019 Maicon Heck</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Version>5.1.0</Version>
     <PackageVersion>5.1.0</PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Product>Krafted</Product>
     <ProductName>Krafted</ProductName>
     <PackageId>$(MSBuildProjectName)</PackageId>
@@ -13,8 +21,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>productivity simple extensible</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
   <ItemGroup>
     <None Include="../../../docfx_project/images/main/icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>

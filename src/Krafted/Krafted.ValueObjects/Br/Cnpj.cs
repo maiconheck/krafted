@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
 using Krafted.Guards;
 
@@ -17,11 +18,12 @@ namespace Krafted.ValueObjects.Br
         /// <summary>
         /// Initializes a new instance of the <see cref="Cnpj"/> class.
         /// </summary>
-        /// <param name="value">The value.</param>
-        public Cnpj(string value)
+        /// <param name="cnpj">The the string representation of a CNPJ.</param>
+        /// <exception cref="FormatException">Occurs if the <paramref name="cnpj"/> is invalid, with this error message: Invalid CNPJ: {cnpj}..</exception>
+        public Cnpj(string cnpj)
         {
-            Guard.Against.InvalidCnpj(value);
-            Value = value;
+            Guard.Against.InvalidCnpj(cnpj);
+            Value = cnpj;
         }
 
         // Required for the ORM.
