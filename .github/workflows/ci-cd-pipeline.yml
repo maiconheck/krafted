@@ -138,16 +138,20 @@ jobs:
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
 
 ################## DOC STEPS ##################
+    - name: Setup .NET 8 for DocFX
+      if: github.event_name == 'push'
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
     - name: Setup DocFX
       if: github.event_name == 'push'
-      uses: crazy-max/ghaction-chocolatey@v1
-      with:
-        args: install docfx
+      run: dotnet tool install docfx --tool-path .\.docfx --version 2.81.0 --framework net8.0 --source https://api.nuget.org/v3/index.json
 
     - name: DocFX Build
       if: github.event_name == 'push'
       working-directory: docfx_project
-      run: docfx docfx.json
+      run: ..\.docfx\docfx.exe docfx.json
       continue-on-error: false
 
     - name: DocFX Publish
