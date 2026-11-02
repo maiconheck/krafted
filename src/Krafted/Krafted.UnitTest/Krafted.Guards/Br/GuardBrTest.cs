@@ -1,7 +1,7 @@
 using System;
 using Krafted.Guards;
 using Xunit;
-using Assert = Krafted.UnitTests.Xunit.AssertExtension;
+using Assert = Krafted.UnitTest.TestSupport.AssertHelper;
 
 namespace Krafted.UnitTest.Krafted.Guards.Br
 {
@@ -44,7 +44,7 @@ namespace Krafted.UnitTest.Krafted.Guards.Br
         public void GuardAgainstInvalidCpf_InvalidCpf_ThrowsException(string invalidCpf)
         {
             var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidCpf(invalidCpf));
-            Assert.Equal("Invalid CPF: {0}.".Format(invalidCpf), ex.Message);
+            Assert.Equal($"Invalid CPF: {invalidCpf}.", ex.Message);
         }
 
         [Fact]
@@ -133,7 +133,7 @@ namespace Krafted.UnitTest.Krafted.Guards.Br
         public void GuardAgainstInvalidCnpj_InvalidCnpj_ThrowsException(string invalidCnpj)
         {
             var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidCnpj(invalidCnpj));
-            Assert.Equal("Invalid CNPJ: {0}.".Format(invalidCnpj), ex.Message);
+            Assert.Equal($"Invalid CNPJ: {invalidCnpj}.", ex.Message);
         }
 
         [Fact]
