@@ -45,18 +45,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
-    <ProjectReference Include="..\Krafted.DataAnnotations\Krafted.DataAnnotations.csproj" />
-    <ProjectReference Include="..\Krafted.DesignPatterns\Krafted.DesignPatterns.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Krafted.DataAnnotations\Br\" />
   </ItemGroup>
 
 </Project>
