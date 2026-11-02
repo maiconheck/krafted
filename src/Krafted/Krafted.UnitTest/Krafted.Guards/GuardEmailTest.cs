@@ -1,7 +1,7 @@
 using System;
 using Krafted.Guards;
 using Xunit;
-using Assert = Krafted.UnitTests.Xunit.AssertExtension;
+using Assert = Krafted.UnitTest.TestSupport.AssertHelper;
 
 namespace Krafted.UnitTest.Krafted.Guards
 {
@@ -17,7 +17,7 @@ namespace Krafted.UnitTest.Krafted.Guards
         public void GuardAgainstInvalidEmail_InvalidEmail_ThrowsException(string invalidEmail)
         {
             var ex1 = Assert.Throws<ArgumentException>(() => Guard.Against.InvalidEmail(invalidEmail));
-            Assert.Equal("Invalid e-mail address: {0}. (Parameter 'invalidEmail')".Format(invalidEmail), ex1.Message);
+            Assert.Equal($"Invalid e-mail address: {invalidEmail}. (Parameter 'invalidEmail')", ex1.Message);
 
             var ex2 = Assert.Throws<ArgumentException>(() => Guard.Against.InvalidEmail(invalidEmail, "My custom error message."));
             Assert.Equal("My custom error message. (Parameter 'invalidEmail')", ex2.Message);

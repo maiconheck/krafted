@@ -1,7 +1,7 @@
 using System;
 using Krafted.Guards;
 using Xunit;
-using Assert = Krafted.UnitTests.Xunit.AssertExtension;
+using Assert = Krafted.UnitTest.TestSupport.AssertHelper;
 
 namespace Krafted.UnitTest.Krafted.Guards.Pt
 {
@@ -44,7 +44,7 @@ namespace Krafted.UnitTest.Krafted.Guards.Pt
         public void GuardAgainstInvalidNif_InvalidNif_ThrowsException(string invalidNif)
         {
             var ex = Assert.Throws<FormatException>(() => Guard.Against.InvalidNif(invalidNif));
-            Assert.Equal("Invalid NIF: {0}.".Format(invalidNif), ex.Message);
+            Assert.Equal($"Invalid NIF: {invalidNif}.", ex.Message);
         }
 
         [Fact]
