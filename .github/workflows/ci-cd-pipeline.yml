@@ -23,24 +23,27 @@ on:
       - 'README.md'
   create:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-latest
+    # Secrets (e.g. SONAR_TOKEN) are not available to pull requests from forks.
+    env:
+      RUN_SONAR: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
 ################ SETUP .NET STEPS ################
     steps:
     - name: Checkout the repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1.8.0
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 7.0.400
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
       env:
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
@@ -77,46 +80,50 @@ jobs:
 
 ################ SETUP SONAR STEPS ################
     - name: Setup JDK 17
-      uses: actions/setup-java@v3
+      if: env.RUN_SONAR == 'true'
+      uses: actions/setup-java@v4
       with:
         java-version: 17
         distribution: 'zulu' # Alternative distribution options are available.
 
     - name: Cache SonarCloud packages
-      uses: actions/cache@v3
+      if: env.RUN_SONAR == 'true'
+      uses: actions/cache@v4
       with:
-        path: ~\sonar\cache
+        path: ~\.sonar\cache
         key: ${{ runner.os }}-sonar
         restore-keys: ${{ runner.os }}-sonar
 
     - name: Cache SonarCloud scanner
+      if: env.RUN_SONAR == 'true'
       id: cache-sonar-scanner
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: .\.sonar\scanner
         key: ${{ runner.os }}-sonar-scanner
         restore-keys: ${{ runner.os }}-sonar-scanner
 
     - name: Install SonarCloud scanner
-      if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+      if: env.RUN_SONAR == 'true' && steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       shell: powershell
       run: |
         New-Item -Path .\.sonar\scanner -ItemType Directory
         dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
 
     - name: SONAR CODE QUALITY - Build, Run unit and integration tests, and code quality analysis with Sonar
+      if: env.RUN_SONAR == 'true'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Read automatically by the scanner, on begin and end
         # DOTNET_ROLL_FORWARD: Major
       shell: powershell
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
         dotnet clean "./src/Krafted/Krafted.sln"
         dotnet restore "./src/Krafted/Krafted.sln"
         dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
         dotnet test "./src/Krafted/Krafted.sln" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=93 /p:ThresholdStat=average
-        .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+        .\.sonar\scanner\dotnet-sonarscanner end
 
 ################## CD STEPS ##################
     - name: PACKAGE - Generates the nuget packages
