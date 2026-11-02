@@ -35,5 +35,9 @@
   <ItemGroup>
       <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Xunit\" />
+  </ItemGroup>
     
 </Project>

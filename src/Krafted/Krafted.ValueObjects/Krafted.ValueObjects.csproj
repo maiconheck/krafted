@@ -30,4 +30,9 @@
     <ProjectReference Include="..\Krafted.Guards\Krafted.Guards.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Br\" />
+    <Folder Include="Pt\" />
+  </ItemGroup>
+
 </Project>

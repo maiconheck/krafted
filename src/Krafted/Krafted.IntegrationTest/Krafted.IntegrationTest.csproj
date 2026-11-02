@@ -44,7 +44,6 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Krafted.Net\Krafted.Net.csproj" />
-    <ProjectReference Include="..\Krafted.UnitTests\Krafted.UnitTests.csproj" />
   </ItemGroup>
 
   <ItemGroup>
