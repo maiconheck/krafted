@@ -121,7 +121,7 @@ jobs:
         # DOTNET_ROLL_FORWARD: Major
       shell: powershell
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.net8.0.opencover.xml,./src/coverage-results/coverage.net9.0.opencover.xml,./src/coverage-results/coverage.net10.0.opencover.xml"
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.net8.0.opencover.xml,./src/coverage-results/coverage.net9.0.opencover.xml,./src/coverage-results/coverage.net10.0.opencover.xml" /d:sonar.coverage.exclusions="setup/code-coverage-report.ps1"
         dotnet clean "./src/Krafted/Krafted.slnx"
         dotnet restore "./src/Krafted/Krafted.slnx"
         dotnet build "./src/Krafted/Krafted.slnx" --configuration Release --no-restore
