@@ -135,9 +135,9 @@ jobs:
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet nuget push "D:\a\krafted\krafted\artifacts\*.nupkg" --skip-duplicate -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push "D:\a\krafted\krafted\artifacts\*.nupkg" --skip-duplicate -s https://api.nuget.org/v3/index.json
 
 ################## DOC STEPS ##################
     - name: Setup .NET 8 for DocFX
@@ -158,7 +158,7 @@ jobs:
 
     - name: DocFX Publish
       if: github.event_name == 'push'
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docfx_project/_site
