@@ -5,10 +5,5 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "Required for this class", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.DataAnnotations.NotEmptyCollectionModelDummy")]
-[assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.EmailTest")]
-[assembly: SuppressMessage("Globalization", "CA1305:Specify IFormatProvider", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.MoneyTest")]
-[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "This is a common way to name files that correspond to a generic type. The number after ` correspond to the quantity of generic arguments.", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTTest")]
-[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:File name should match first type name", Justification = "Not applicable", Scope = "type", Target = "~T:Krafted.UnitTest.Krafted.UnitTests.Xunit.ModelDummy")]
-[assembly: SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTest.Equals_EqualValueObjects_True")]
-[assembly: SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", Justification = "Not applicable", Scope = "member", Target = "~M:Krafted.UnitTest.Krafted.ValueObjects.ValueObjectTTest.Equals_EqualValueObjects_True")]
+[assembly: SuppressMessage("Usage", "xUnit1012:Null should only be used for nullable parameters", Justification = "In this case the goal is to test the behavior with a null parameter", Scope = "member", Target = "~M:Krafted.UnitTest.Krafted.Guards.GuardNullTest.GuardAgainstNullOrEmpty_NullOrEmpty_ThrowsException(System.String)")]
+[assembly: SuppressMessage("Usage", "xUnit1012:Null should only be used for nullable parameters", Justification = "In this case the goal is to test the behavior with a null parameter", Scope = "member", Target = "~M:Krafted.UnitTest.Krafted.Guards.GuardNullTest.GuardAgainstNullOrWhiteSpace_NullOrWhiteSpace_ThrowsException(System.String)")]

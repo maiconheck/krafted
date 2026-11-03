@@ -5,7 +5,7 @@ using Assert = Krafted.UnitTest.TestSupport.AssertHelper;
 
 namespace Krafted.UnitTest.Krafted.Guards
 {
-    public enum OrderStatus
+    internal enum OrderStatus
     {
         InProgress = 1,
         Ordered = 2,
