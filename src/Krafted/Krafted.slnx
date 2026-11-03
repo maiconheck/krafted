@@ -10,7 +10,7 @@
     <File Path="../../.github/workflows/ci-cd-pipeline.yml" />
     <File Path="../../README.md" />
     <File Path="../../setup/code-coverage-report.ps1" />
-    <File Path="Directory.build.props" />
+    <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/Tests/">

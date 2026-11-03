@@ -2,7 +2,7 @@ $coverletOutputPath = '../../../coverage-results'
 
 dotnet tool restore
 
-dotnet test "../src/Krafted/Krafted.sln" `
+dotnet test "../src/Krafted/Krafted.slnx" `
 /p:CollectCoverage=true `
 /p:CoverletOutput="$coverletOutputPath/" `
 /p:MergeWith="$coverletOutputPath/coverage.json" `
