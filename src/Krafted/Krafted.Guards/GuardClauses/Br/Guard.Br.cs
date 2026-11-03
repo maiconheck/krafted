@@ -31,7 +31,7 @@ namespace Krafted.Guards
                 return this;
 
             Guard.Against.NotMatch<FormatException>(cpf, "^([0-9]{11})$", message: Texts.InvalidCpf.Format(cpf).OrFallback(message));
-            return Validate<string?, FormatException>(cpf, _ => !Br.Validator.ValidateCpf(cpf!), Texts.InvalidCpf.Format(cpf), message, nameof(cpf));
+            return Validate<string?, FormatException>(cpf, _ => !Br.Validator.ValidateCpf(cpf), Texts.InvalidCpf.Format(cpf), message, nameof(cpf));
         }
 
         /// <summary>

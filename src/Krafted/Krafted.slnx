@@ -1,0 +1,20 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="../../.config/dotnet-tools.json" />
+    <File Path="../../.editorconfig" />
+    <File Path="../../.github/workflows/ci-cd-pipeline.yml" />
+    <File Path="../../README.md" />
+    <File Path="../../setup/code-coverage-report.ps1" />
+    <File Path="Directory.build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Krafted.UnitTest/Krafted.UnitTest.csproj" />
+  </Folder>
+  <Project Path="Krafted.Guards/Krafted.Guards.csproj" />
+</Solution>

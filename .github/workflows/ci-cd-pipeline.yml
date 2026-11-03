@@ -38,10 +38,13 @@ jobs:
       with:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-    - name: Setup .NET Core
+    - name: Setup .NET 8, 9, and 10
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 7.0.400
+        dotnet-version: |
+          8.0.x
+          9.0.x
+          10.0.x
         source-url: https://nuget.pkg.github.com/maiconheck/index.json
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: 1
@@ -65,7 +68,7 @@ jobs:
     - name: ROSLYN CODE QUALITY - Run code quality analysis with other Roslyn Analyzers
       run: dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore -warnaserror
 
-    - name: TEST - Executes unit and integration tests
+    - name: TEST - Executes unit tests
       run: |
         dotnet test "./src/Krafted/Krafted.sln" --no-restore `
         /p:CollectCoverage=true `
@@ -118,7 +121,7 @@ jobs:
         # DOTNET_ROLL_FORWARD: Major
       shell: powershell
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.opencover.xml"
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.net8.0.opencover.xml,./src/coverage-results/coverage.net9.0.opencover.xml,./src/coverage-results/coverage.net10.0.opencover.xml"
         dotnet clean "./src/Krafted/Krafted.sln"
         dotnet restore "./src/Krafted/Krafted.sln"
         dotnet build "./src/Krafted/Krafted.sln" --configuration Release --no-restore
@@ -134,7 +137,6 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       run: dotnet nuget push "D:\a\krafted\krafted\artifacts\*.nupkg" --skip-duplicate -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
       env:
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
 
 ################## DOC STEPS ##################

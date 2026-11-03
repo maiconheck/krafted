@@ -46,7 +46,7 @@ namespace Krafted.Guards
         public Guard Length(uint minLength, uint maxLength, string? parameter, string message = "", [CallerArgumentExpression("parameter")] string? parameterName = null)
         {
             string resourceLocalized = Texts.ParameterMustBeInsideRangeLength.Format(parameterName!, minLength, maxLength);
-            return Validate<string?, ArgumentOutOfRangeException>(parameter, _ => parameter!.Length < minLength || parameter!.Length > maxLength, resourceLocalized, message, parameterName);
+            return Validate<string?, ArgumentOutOfRangeException>(parameter, _ => parameter!.Length < minLength || parameter.Length > maxLength, resourceLocalized, message, parameterName);
         }
 
         /// <summary>

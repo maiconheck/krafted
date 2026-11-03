@@ -9,7 +9,7 @@ namespace Krafted.UnitTest.TestSupport;
 /// <summary>
 /// Provides assertion methods to xUnit <see cref="Assert"/>.
 /// </summary>
-public class AssertHelper : Assert
+internal sealed class AssertHelper : Assert
 {
     /// <summary>
     /// Verifies that no exception was thrown.

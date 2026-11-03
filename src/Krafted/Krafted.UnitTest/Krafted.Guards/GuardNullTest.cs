@@ -20,8 +20,8 @@ namespace Krafted.UnitTest.Krafted.Guards
 
             var ex2 = Assert.Throws<ArgumentNullException>(() =>
             {
-                object param1 = new object();
-                object param2 = new object();
+                object param1 = new();
+                object param2 = new();
                 object? param3 = null;
                 object? param4 = null;
 
@@ -46,17 +46,17 @@ namespace Krafted.UnitTest.Krafted.Guards
         {
             Assert.DoesNotThrows(() =>
             {
-                object param = new object();
+                object param = new();
                 Guard.Against.Null(param);
                 Guard.Against.Null(param, "My custom error message.");
             });
 
             Assert.DoesNotThrows(() =>
             {
-                object param1 = new object();
-                object param2 = new object();
-                object param3 = new object();
-                object param4 = new object();
+                object param1 = new();
+                object param2 = new();
+                object param3 = new();
+                object param4 = new();
 
                 Guard.Against
                     .Null(param1)

@@ -36,7 +36,7 @@ namespace Krafted.UnitTest.Krafted.Guards
                 Guard.Against.NotAny(myCollection1);
 
                 var myCollection2 = new List<string> { "A" };
-                Guard.Against.NotAny(myCollection1);
+                Guard.Against.NotAny(myCollection2);
             });
         }
 
