@@ -60,7 +60,7 @@ jobs:
 #  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
 
     - name: CLEAN - Cleans the output
-      run: dotnet clean "./src/Krafted/Krafted.slnx --configuration Release"
+      run: dotnet clean "./src/Krafted/Krafted.slnx" --configuration Release
 
     - name: RESTORE - Install the dependencies
       run: dotnet restore "./src/Krafted/Krafted.slnx"
