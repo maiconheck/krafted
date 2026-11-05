@@ -45,14 +45,14 @@
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
     "globalMetadata": {
-      "_appTitle": "Krafted",
-      "_appFooter": "© 2021 <a href='https://github.com/maiconheck'>Maicon Heck</a>",
+      "_appTitle": "Krafted Guards",
+      "_appFooter": "© 2019–2026 Maicon Heck",
       "_appLogoPath": "images/header/icon.png",
       "_appFaviconPath": "images/favicon.ico",
       "_enableNewTab": true,
       "_enableSearch": true,
       "_disableContribution": false,
-      "_gitContribute": { "repo": "https://github.com/maiconheck/krafted.git" }
+      "_gitContribute": { "repo": "https://github.com/maiconheck/krafted-guards.git" }
     }
   }
 }

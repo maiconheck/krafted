@@ -60,7 +60,7 @@ jobs:
 #  Docs: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
 
     - name: CLEAN - Cleans the output
-      run: dotnet clean "./src/Krafted/Krafted.slnx"
+      run: dotnet clean "./src/Krafted/Krafted.slnx" --configuration Release
 
     - name: RESTORE - Install the dependencies
       run: dotnet restore "./src/Krafted/Krafted.slnx"
@@ -70,7 +70,7 @@ jobs:
 
     - name: TEST - Executes unit tests
       run: |
-        dotnet test "./src/Krafted/Krafted.slnx" --no-restore `
+        dotnet test "./src/Krafted/Krafted.slnx" --configuration Release --no-restore `
         /p:CollectCoverage=true `
         /p:CoverletOutput="../../coverage-results/" `
         /p:MergeWith="../../coverage-results/coverage.json" `
@@ -121,23 +121,29 @@ jobs:
         # DOTNET_ROLL_FORWARD: Major
       shell: powershell
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.net8.0.opencover.xml,./src/coverage-results/coverage.net9.0.opencover.xml,./src/coverage-results/coverage.net10.0.opencover.xml" /d:sonar.coverage.exclusions="setup/code-coverage-report.ps1"
-        dotnet clean "./src/Krafted/Krafted.slnx"
+        .\.sonar\scanner\dotnet-sonarscanner begin /k:"maiconheck_krafted-guards" /n:"Krafted Guards" /o:"maiconheck-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="./src/coverage-results/coverage.net8.0.opencover.xml,./src/coverage-results/coverage.net9.0.opencover.xml,./src/coverage-results/coverage.net10.0.opencover.xml" /d:sonar.coverage.exclusions="setup/code-coverage-report.ps1"
+        dotnet clean "./src/Krafted/Krafted.slnx --configuration Release"
         dotnet restore "./src/Krafted/Krafted.slnx"
         dotnet build "./src/Krafted/Krafted.slnx" --configuration Release --no-restore
-        dotnet test "./src/Krafted/Krafted.slnx" --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=93 /p:ThresholdStat=average
+        dotnet test "./src/Krafted/Krafted.slnx" --configuration Release --no-restore /p:CollectCoverage=true /p:CoverletOutput="../../coverage-results/" /p:MergeWith="../../coverage-results/coverage.json" /p:ExcludeByAttribute="GeneratedCodeAttribute%2cCompilerGeneratedAttribute" /p:CoverletOutputFormat="opencover%2cjson" -m:1 /p:Threshold=93 /p:ThresholdStat=average
         .\.sonar\scanner\dotnet-sonarscanner end
 
 ################## CD STEPS ##################
-    - name: PACKAGE - Generates the nuget packages
+    - name: PACKAGE - Generates the NuGet packages
       if: startsWith(github.ref, 'refs/tags/')
-      run: dotnet pack "./src/Krafted/Krafted.slnx" --property:PackageOutputPath="../../../artifacts" --include-symbols --include-source
+      run: |
+        dotnet pack "./src/Krafted/Krafted.slnx" `
+          --configuration Release `
+          --no-build `
+          --property:PackageOutputPath="../../../artifacts" `
+          --property:IncludeSymbols=true `
+          --property:SymbolPackageFormat=snupkg
 
     - name: PUBLISH - Pushes the packages to the server and publishes them
       if: startsWith(github.ref, 'refs/tags/')
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet nuget push "D:\a\krafted\krafted\artifacts\*.nupkg" --skip-duplicate -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ".\artifacts\*.nupkg" --skip-duplicate -s https://api.nuget.org/v3/index.json
 
 ################## DOC STEPS ##################
     - name: Setup .NET 8 for DocFX
