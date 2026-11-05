@@ -1,2 +1,2 @@
 # API reference
-Browse the menu to checkout the API of each package with the details of their public interface.
+Explore the `Krafted.Guards` API reference for detailed documentation of its public types and members.

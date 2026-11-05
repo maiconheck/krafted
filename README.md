@@ -347,7 +347,7 @@ Detailed policies stay cohesive and reusable while the caller remains clean and 
 
 ## Documentation
 
-- [API reference](https://maiconheck.github.io/krafted-guards/api/)
+- [API reference](https://maiconheck.github.io/krafted-guards/api/Krafted.Guards.Guard.html)
 - [NuGet package](https://www.nuget.org/packages/Krafted.Guards/)
 - [Release notes](https://github.com/maiconheck/krafted-guards/releases)
 
