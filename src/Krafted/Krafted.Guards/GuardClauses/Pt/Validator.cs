@@ -1,8 +1,5 @@
 using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Krafted.ValueObjects")]
 
 namespace Krafted.Guards.Pt
 {

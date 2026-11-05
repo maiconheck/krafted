@@ -17,13 +17,20 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">
+      true
+    </ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Product>Krafted Guards</Product>
     <ProductName>Krafted Guards</ProductName>
     <PackageId>$(MSBuildProjectName)</PackageId>
     <AssemblyTitle>$(MSBuildProjectName)</AssemblyTitle>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageProjectUrl>https://github.com/maiconheck/krafted</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/maiconheck/krafted.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/maiconheck/krafted-guards</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/maiconheck/krafted-guards.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>guard;guard-clause;guard-clauses;argument-validation;preconditions;defensive-programming;fail-fast;fluent-api</PackageTags>
     <PackageIcon>icon.png</PackageIcon>

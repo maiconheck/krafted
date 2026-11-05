@@ -1,7 +1,3 @@
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Krafted.DataAnnotations")]
-
 namespace Krafted.Guards
 {
     /// <summary>

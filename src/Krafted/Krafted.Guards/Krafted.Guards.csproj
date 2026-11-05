@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>Krafted.Guards: Fluent Guard Clauses for .NET</Title>
-    <Description>A focused guard clause library with a fluent API for validating method arguments, enforcing preconditions, and failing fast on invalid inputs in .NET applications.</Description>
+    <Title>Krafted.Guards: Fluent guard clauses for argument validation and precondition enforcement in .NET</Title>
+    <Description>A .NET guard clause library with a fluent API for argument validation and precondition enforcement, making it easier to apply defensive programming and the fail-fast principle.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
