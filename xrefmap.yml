@@ -1,0 +1,489 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Krafted.Guards
+  name: Krafted.Guards
+  href: api/Krafted.Guards.html
+  commentId: N:Krafted.Guards
+  fullName: Krafted.Guards
+  nameWithType: Krafted.Guards
+- uid: Krafted.Guards.Guard
+  name: Guard
+  href: api/Krafted.Guards.Guard.html
+  commentId: T:Krafted.Guards.Guard
+  fullName: Krafted.Guards.Guard
+  nameWithType: Guard
+- uid: Krafted.Guards.Guard.Against
+  name: Against
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Against
+  commentId: P:Krafted.Guards.Guard.Against
+  fullName: Krafted.Guards.Guard.Against
+  nameWithType: Guard.Against
+- uid: Krafted.Guards.Guard.Against*
+  name: Against
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Against_
+  commentId: Overload:Krafted.Guards.Guard.Against
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Against
+  nameWithType: Guard.Against
+- uid: Krafted.Guards.Guard.Any*
+  name: Any
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Any_
+  commentId: Overload:Krafted.Guards.Guard.Any
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Any
+  nameWithType: Guard.Any
+- uid: Krafted.Guards.Guard.Any``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name: Any<T>(IEnumerable<T>?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Any__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Any``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name.vb: Any(Of T)(IEnumerable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.Any<T>(System.Collections.Generic.IEnumerable<T>?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Any(Of T)(System.Collections.Generic.IEnumerable(Of T), String, String)
+  nameWithType: Guard.Any<T>(IEnumerable<T>?, string, string?)
+  nameWithType.vb: Guard.Any(Of T)(IEnumerable(Of T), String, String)
+- uid: Krafted.Guards.Guard.Empty(System.Nullable{System.Guid},System.String,System.String)
+  name: Empty(Guid?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty_System_Nullable_System_Guid__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Empty(System.Nullable{System.Guid},System.String,System.String)
+  name.vb: Empty(Guid?, String, String)
+  fullName: Krafted.Guards.Guard.Empty(System.Guid?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Empty(System.Guid?, String, String)
+  nameWithType: Guard.Empty(Guid?, string, string?)
+  nameWithType.vb: Guard.Empty(Guid?, String, String)
+- uid: Krafted.Guards.Guard.Empty*
+  name: Empty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Empty_
+  commentId: Overload:Krafted.Guards.Guard.Empty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Empty
+  nameWithType: Guard.Empty
+- uid: Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String,System.String,System.String)
+  name: EmptyOrWhiteSpace(string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_EmptyOrWhiteSpace_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.EmptyOrWhiteSpace(System.String,System.String,System.String)
+  name.vb: EmptyOrWhiteSpace(String, String, String)
+  fullName: Krafted.Guards.Guard.EmptyOrWhiteSpace(string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.EmptyOrWhiteSpace(String, String, String)
+  nameWithType: Guard.EmptyOrWhiteSpace(string?, string, string?)
+  nameWithType.vb: Guard.EmptyOrWhiteSpace(String, String, String)
+- uid: Krafted.Guards.Guard.EmptyOrWhiteSpace*
+  name: EmptyOrWhiteSpace
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_EmptyOrWhiteSpace_
+  commentId: Overload:Krafted.Guards.Guard.EmptyOrWhiteSpace
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.EmptyOrWhiteSpace
+  nameWithType: Guard.EmptyOrWhiteSpace
+- uid: Krafted.Guards.Guard.False(System.Nullable{System.Boolean},System.String,System.String)
+  name: False(bool?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Nullable_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.False(System.Nullable{System.Boolean},System.String,System.String)
+  name.vb: False(Boolean?, String, String)
+  fullName: Krafted.Guards.Guard.False(bool?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.False(Boolean?, String, String)
+  nameWithType: Guard.False(bool?, string, string?)
+  nameWithType.vb: Guard.False(Boolean?, String, String)
+- uid: Krafted.Guards.Guard.False(System.Predicate{System.Boolean},System.String,System.String)
+  name: False(Predicate<bool>?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_System_Predicate_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.False(System.Predicate{System.Boolean},System.String,System.String)
+  name.vb: False(Predicate(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.False(System.Predicate<bool>?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.False(System.Predicate(Of Boolean), String, String)
+  nameWithType: Guard.False(Predicate<bool>?, string, string?)
+  nameWithType.vb: Guard.False(Predicate(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.False*
+  name: "False"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_False_
+  commentId: Overload:Krafted.Guards.Guard.False
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.False
+  nameWithType: Guard.False
+- uid: Krafted.Guards.Guard.GreaterThan*
+  name: GreaterThan
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan_
+  commentId: Overload:Krafted.Guards.Guard.GreaterThan
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.GreaterThan
+  nameWithType: Guard.GreaterThan
+- uid: Krafted.Guards.Guard.GreaterThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name: GreaterThan<T>(T?, T, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_GreaterThan__1_System_Nullable___0____0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.GreaterThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name.vb: GreaterThan(Of T)(T?, T, String, String)
+  fullName: Krafted.Guards.Guard.GreaterThan<T>(T?, T, string, string?)
+  fullName.vb: Krafted.Guards.Guard.GreaterThan(Of T)(T?, T, String, String)
+  nameWithType: Guard.GreaterThan<T>(T?, T, string, string?)
+  nameWithType.vb: Guard.GreaterThan(Of T)(T?, T, String, String)
+- uid: Krafted.Guards.Guard.InvalidCnpj(System.String,System.String)
+  name: InvalidCnpj(string?, string)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCnpj_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidCnpj(System.String,System.String)
+  name.vb: InvalidCnpj(String, String)
+  fullName: Krafted.Guards.Guard.InvalidCnpj(string?, string)
+  fullName.vb: Krafted.Guards.Guard.InvalidCnpj(String, String)
+  nameWithType: Guard.InvalidCnpj(string?, string)
+  nameWithType.vb: Guard.InvalidCnpj(String, String)
+- uid: Krafted.Guards.Guard.InvalidCnpj*
+  name: InvalidCnpj
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCnpj_
+  commentId: Overload:Krafted.Guards.Guard.InvalidCnpj
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidCnpj
+  nameWithType: Guard.InvalidCnpj
+- uid: Krafted.Guards.Guard.InvalidCpf(System.String,System.String)
+  name: InvalidCpf(string?, string)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCpf_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidCpf(System.String,System.String)
+  name.vb: InvalidCpf(String, String)
+  fullName: Krafted.Guards.Guard.InvalidCpf(string?, string)
+  fullName.vb: Krafted.Guards.Guard.InvalidCpf(String, String)
+  nameWithType: Guard.InvalidCpf(string?, string)
+  nameWithType.vb: Guard.InvalidCpf(String, String)
+- uid: Krafted.Guards.Guard.InvalidCpf*
+  name: InvalidCpf
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidCpf_
+  commentId: Overload:Krafted.Guards.Guard.InvalidCpf
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidCpf
+  nameWithType: Guard.InvalidCpf
+- uid: Krafted.Guards.Guard.InvalidEmail(System.String,System.String,System.String)
+  name: InvalidEmail(string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidEmail_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidEmail(System.String,System.String,System.String)
+  name.vb: InvalidEmail(String, String, String)
+  fullName: Krafted.Guards.Guard.InvalidEmail(string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.InvalidEmail(String, String, String)
+  nameWithType: Guard.InvalidEmail(string?, string, string?)
+  nameWithType.vb: Guard.InvalidEmail(String, String, String)
+- uid: Krafted.Guards.Guard.InvalidEmail*
+  name: InvalidEmail
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidEmail_
+  commentId: Overload:Krafted.Guards.Guard.InvalidEmail
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidEmail
+  nameWithType: Guard.InvalidEmail
+- uid: Krafted.Guards.Guard.InvalidNif(System.String,System.String)
+  name: InvalidNif(string?, string)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidNif_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.InvalidNif(System.String,System.String)
+  name.vb: InvalidNif(String, String)
+  fullName: Krafted.Guards.Guard.InvalidNif(string?, string)
+  fullName.vb: Krafted.Guards.Guard.InvalidNif(String, String)
+  nameWithType: Guard.InvalidNif(string?, string)
+  nameWithType.vb: Guard.InvalidNif(String, String)
+- uid: Krafted.Guards.Guard.InvalidNif*
+  name: InvalidNif
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_InvalidNif_
+  commentId: Overload:Krafted.Guards.Guard.InvalidNif
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.InvalidNif
+  nameWithType: Guard.InvalidNif
+- uid: Krafted.Guards.Guard.Length(System.UInt32,System.String,System.String,System.String)
+  name: Length(uint, string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Length(System.UInt32,System.String,System.String,System.String)
+  name.vb: Length(UInteger, String, String, String)
+  fullName: Krafted.Guards.Guard.Length(uint, string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Length(UInteger, String, String, String)
+  nameWithType: Guard.Length(uint, string?, string, string?)
+  nameWithType.vb: Guard.Length(UInteger, String, String, String)
+- uid: Krafted.Guards.Guard.Length(System.UInt32,System.UInt32,System.String,System.String,System.String)
+  name: Length(uint, uint, string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_System_UInt32_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Length(System.UInt32,System.UInt32,System.String,System.String,System.String)
+  name.vb: Length(UInteger, UInteger, String, String, String)
+  fullName: Krafted.Guards.Guard.Length(uint, uint, string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Length(UInteger, UInteger, String, String, String)
+  nameWithType: Guard.Length(uint, uint, string?, string, string?)
+  nameWithType.vb: Guard.Length(UInteger, UInteger, String, String, String)
+- uid: Krafted.Guards.Guard.Length*
+  name: Length
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Length_
+  commentId: Overload:Krafted.Guards.Guard.Length
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Length
+  nameWithType: Guard.Length
+- uid: Krafted.Guards.Guard.LessThan*
+  name: LessThan
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan_
+  commentId: Overload:Krafted.Guards.Guard.LessThan
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.LessThan
+  nameWithType: Guard.LessThan
+- uid: Krafted.Guards.Guard.LessThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name: LessThan<T>(T?, T, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_LessThan__1_System_Nullable___0____0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.LessThan``1(System.Nullable{``0},``0,System.String,System.String)
+  name.vb: LessThan(Of T)(T?, T, String, String)
+  fullName: Krafted.Guards.Guard.LessThan<T>(T?, T, string, string?)
+  fullName.vb: Krafted.Guards.Guard.LessThan(Of T)(T?, T, String, String)
+  nameWithType: Guard.LessThan<T>(T?, T, string, string?)
+  nameWithType.vb: Guard.LessThan(Of T)(T?, T, String, String)
+- uid: Krafted.Guards.Guard.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: Match(string?, string, RegexOptions, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: Match(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.Match(string?, string, System.Text.RegularExpressions.RegexOptions, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Match(String, String, System.Text.RegularExpressions.RegexOptions, String, String)
+  nameWithType: Guard.Match(string?, string, RegexOptions, string, string?)
+  nameWithType.vb: Guard.Match(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.Match*
+  name: Match
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match_
+  commentId: Overload:Krafted.Guards.Guard.Match
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Match
+  nameWithType: Guard.Match
+- uid: Krafted.Guards.Guard.Match``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: Match<TException>(string?, string, RegexOptions, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Match__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Match``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: Match(Of TException)(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.Match<TException>(string?, string, System.Text.RegularExpressions.RegexOptions, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Match(Of TException)(String, String, System.Text.RegularExpressions.RegexOptions, String, String)
+  nameWithType: Guard.Match<TException>(string?, string, RegexOptions, string, string?)
+  nameWithType.vb: Guard.Match(Of TException)(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.MaxLength(System.UInt32,System.String,System.String,System.String)
+  name: MaxLength(uint, string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.MaxLength(System.UInt32,System.String,System.String,System.String)
+  name.vb: MaxLength(UInteger, String, String, String)
+  fullName: Krafted.Guards.Guard.MaxLength(uint, string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.MaxLength(UInteger, String, String, String)
+  nameWithType: Guard.MaxLength(uint, string?, string, string?)
+  nameWithType.vb: Guard.MaxLength(UInteger, String, String, String)
+- uid: Krafted.Guards.Guard.MaxLength*
+  name: MaxLength
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MaxLength_
+  commentId: Overload:Krafted.Guards.Guard.MaxLength
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.MaxLength
+  nameWithType: Guard.MaxLength
+- uid: Krafted.Guards.Guard.MinLength(System.UInt32,System.String,System.String,System.String)
+  name: MinLength(uint, string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_System_UInt32_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.MinLength(System.UInt32,System.String,System.String,System.String)
+  name.vb: MinLength(UInteger, String, String, String)
+  fullName: Krafted.Guards.Guard.MinLength(uint, string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.MinLength(UInteger, String, String, String)
+  nameWithType: Guard.MinLength(uint, string?, string, string?)
+  nameWithType.vb: Guard.MinLength(UInteger, String, String, String)
+- uid: Krafted.Guards.Guard.MinLength*
+  name: MinLength
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_MinLength_
+  commentId: Overload:Krafted.Guards.Guard.MinLength
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.MinLength
+  nameWithType: Guard.MinLength
+- uid: Krafted.Guards.Guard.Negative*
+  name: Negative
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Negative_
+  commentId: Overload:Krafted.Guards.Guard.Negative
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Negative
+  nameWithType: Guard.Negative
+- uid: Krafted.Guards.Guard.Negative``1(System.Nullable{``0},System.String,System.String)
+  name: Negative<T>(T?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Negative__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Negative``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Negative(Of T)(T?, String, String)
+  fullName: Krafted.Guards.Guard.Negative<T>(T?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Negative(Of T)(T?, String, String)
+  nameWithType: Guard.Negative<T>(T?, string, string?)
+  nameWithType.vb: Guard.Negative(Of T)(T?, String, String)
+- uid: Krafted.Guards.Guard.NotAny*
+  name: NotAny
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotAny_
+  commentId: Overload:Krafted.Guards.Guard.NotAny
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotAny
+  nameWithType: Guard.NotAny
+- uid: Krafted.Guards.Guard.NotAny``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name: NotAny<T>(IEnumerable<T>?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotAny__1_System_Collections_Generic_IEnumerable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotAny``1(System.Collections.Generic.IEnumerable{``0},System.String,System.String)
+  name.vb: NotAny(Of T)(IEnumerable(Of T), String, String)
+  fullName: Krafted.Guards.Guard.NotAny<T>(System.Collections.Generic.IEnumerable<T>?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NotAny(Of T)(System.Collections.Generic.IEnumerable(Of T), String, String)
+  nameWithType: Guard.NotAny<T>(IEnumerable<T>?, string, string?)
+  nameWithType.vb: Guard.NotAny(Of T)(IEnumerable(Of T), String, String)
+- uid: Krafted.Guards.Guard.NotEmpty(System.Nullable{System.Guid},System.String,System.String)
+  name: NotEmpty(Guid?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty_System_Nullable_System_Guid__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotEmpty(System.Nullable{System.Guid},System.String,System.String)
+  name.vb: NotEmpty(Guid?, String, String)
+  fullName: Krafted.Guards.Guard.NotEmpty(System.Guid?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NotEmpty(System.Guid?, String, String)
+  nameWithType: Guard.NotEmpty(Guid?, string, string?)
+  nameWithType.vb: Guard.NotEmpty(Guid?, String, String)
+- uid: Krafted.Guards.Guard.NotEmpty*
+  name: NotEmpty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotEmpty_
+  commentId: Overload:Krafted.Guards.Guard.NotEmpty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotEmpty
+  nameWithType: Guard.NotEmpty
+- uid: Krafted.Guards.Guard.NotExists*
+  name: NotExists
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists_
+  commentId: Overload:Krafted.Guards.Guard.NotExists
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotExists
+  nameWithType: Guard.NotExists
+- uid: Krafted.Guards.Guard.NotExists``1(System.Nullable{``0},System.String,System.String)
+  name: NotExists<TEnum>(TEnum?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotExists__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotExists``1(System.Nullable{``0},System.String,System.String)
+  name.vb: NotExists(Of TEnum)(TEnum?, String, String)
+  fullName: Krafted.Guards.Guard.NotExists<TEnum>(TEnum?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NotExists(Of TEnum)(TEnum?, String, String)
+  nameWithType: Guard.NotExists<TEnum>(TEnum?, string, string?)
+  nameWithType.vb: Guard.NotExists(Of TEnum)(TEnum?, String, String)
+- uid: Krafted.Guards.Guard.NotMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: NotMatch(string?, string, RegexOptions, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: NotMatch(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.NotMatch(string?, string, System.Text.RegularExpressions.RegexOptions, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NotMatch(String, String, System.Text.RegularExpressions.RegexOptions, String, String)
+  nameWithType: Guard.NotMatch(string?, string, RegexOptions, string, string?)
+  nameWithType.vb: Guard.NotMatch(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.NotMatch*
+  name: NotMatch
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch_
+  commentId: Overload:Krafted.Guards.Guard.NotMatch
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NotMatch
+  nameWithType: Guard.NotMatch
+- uid: Krafted.Guards.Guard.NotMatch``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name: NotMatch<TException>(string?, string, RegexOptions, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NotMatch__1_System_String_System_String_System_Text_RegularExpressions_RegexOptions_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NotMatch``1(System.String,System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String)
+  name.vb: NotMatch(Of TException)(String, String, RegexOptions, String, String)
+  fullName: Krafted.Guards.Guard.NotMatch<TException>(string?, string, System.Text.RegularExpressions.RegexOptions, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NotMatch(Of TException)(String, String, System.Text.RegularExpressions.RegexOptions, String, String)
+  nameWithType: Guard.NotMatch<TException>(string?, string, RegexOptions, string, string?)
+  nameWithType.vb: Guard.NotMatch(Of TException)(String, String, RegexOptions, String, String)
+- uid: Krafted.Guards.Guard.Null*
+  name: "Null"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null_
+  commentId: Overload:Krafted.Guards.Guard.Null
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Null
+  nameWithType: Guard.Null
+- uid: Krafted.Guards.Guard.NullOrEmpty(System.String,System.String,System.String)
+  name: NullOrEmpty(string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NullOrEmpty(System.String,System.String,System.String)
+  name.vb: NullOrEmpty(String, String, String)
+  fullName: Krafted.Guards.Guard.NullOrEmpty(string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NullOrEmpty(String, String, String)
+  nameWithType: Guard.NullOrEmpty(string?, string, string?)
+  nameWithType.vb: Guard.NullOrEmpty(String, String, String)
+- uid: Krafted.Guards.Guard.NullOrEmpty*
+  name: NullOrEmpty
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrEmpty_
+  commentId: Overload:Krafted.Guards.Guard.NullOrEmpty
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NullOrEmpty
+  nameWithType: Guard.NullOrEmpty
+- uid: Krafted.Guards.Guard.NullOrWhiteSpace(System.String,System.String,System.String)
+  name: NullOrWhiteSpace(string?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_System_String_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.NullOrWhiteSpace(System.String,System.String,System.String)
+  name.vb: NullOrWhiteSpace(String, String, String)
+  fullName: Krafted.Guards.Guard.NullOrWhiteSpace(string?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.NullOrWhiteSpace(String, String, String)
+  nameWithType: Guard.NullOrWhiteSpace(string?, string, string?)
+  nameWithType.vb: Guard.NullOrWhiteSpace(String, String, String)
+- uid: Krafted.Guards.Guard.NullOrWhiteSpace*
+  name: NullOrWhiteSpace
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_NullOrWhiteSpace_
+  commentId: Overload:Krafted.Guards.Guard.NullOrWhiteSpace
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.NullOrWhiteSpace
+  nameWithType: Guard.NullOrWhiteSpace
+- uid: Krafted.Guards.Guard.Null``1(``0,System.String,System.String)
+  name: Null<T>(T?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Null__1___0_System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Null``1(``0,System.String,System.String)
+  name.vb: Null(Of T)(T, String, String)
+  fullName: Krafted.Guards.Guard.Null<T>(T?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Null(Of T)(T, String, String)
+  nameWithType: Guard.Null<T>(T?, string, string?)
+  nameWithType.vb: Guard.Null(Of T)(T, String, String)
+- uid: Krafted.Guards.Guard.Positive*
+  name: Positive
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Positive_
+  commentId: Overload:Krafted.Guards.Guard.Positive
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Positive
+  nameWithType: Guard.Positive
+- uid: Krafted.Guards.Guard.Positive``1(System.Nullable{``0},System.String,System.String)
+  name: Positive<T>(T?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Positive__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Positive``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Positive(Of T)(T?, String, String)
+  fullName: Krafted.Guards.Guard.Positive<T>(T?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Positive(Of T)(T?, String, String)
+  nameWithType: Guard.Positive<T>(T?, string, string?)
+  nameWithType.vb: Guard.Positive(Of T)(T?, String, String)
+- uid: Krafted.Guards.Guard.True(System.Nullable{System.Boolean},System.String,System.String)
+  name: True(bool?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Nullable_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.True(System.Nullable{System.Boolean},System.String,System.String)
+  name.vb: True(Boolean?, String, String)
+  fullName: Krafted.Guards.Guard.True(bool?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.True(Boolean?, String, String)
+  nameWithType: Guard.True(bool?, string, string?)
+  nameWithType.vb: Guard.True(Boolean?, String, String)
+- uid: Krafted.Guards.Guard.True(System.Predicate{System.Boolean},System.String,System.String)
+  name: True(Predicate<bool>?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_System_Predicate_System_Boolean__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.True(System.Predicate{System.Boolean},System.String,System.String)
+  name.vb: True(Predicate(Of Boolean), String, String)
+  fullName: Krafted.Guards.Guard.True(System.Predicate<bool>?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.True(System.Predicate(Of Boolean), String, String)
+  nameWithType: Guard.True(Predicate<bool>?, string, string?)
+  nameWithType.vb: Guard.True(Predicate(Of Boolean), String, String)
+- uid: Krafted.Guards.Guard.True*
+  name: "True"
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_True_
+  commentId: Overload:Krafted.Guards.Guard.True
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.True
+  nameWithType: Guard.True
+- uid: Krafted.Guards.Guard.Zero*
+  name: Zero
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Zero_
+  commentId: Overload:Krafted.Guards.Guard.Zero
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.Zero
+  nameWithType: Guard.Zero
+- uid: Krafted.Guards.Guard.ZeroOrLess*
+  name: ZeroOrLess
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_ZeroOrLess_
+  commentId: Overload:Krafted.Guards.Guard.ZeroOrLess
+  isSpec: "True"
+  fullName: Krafted.Guards.Guard.ZeroOrLess
+  nameWithType: Guard.ZeroOrLess
+- uid: Krafted.Guards.Guard.ZeroOrLess``1(System.Nullable{``0},System.String,System.String)
+  name: ZeroOrLess<T>(T?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_ZeroOrLess__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.ZeroOrLess``1(System.Nullable{``0},System.String,System.String)
+  name.vb: ZeroOrLess(Of T)(T?, String, String)
+  fullName: Krafted.Guards.Guard.ZeroOrLess<T>(T?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.ZeroOrLess(Of T)(T?, String, String)
+  nameWithType: Guard.ZeroOrLess<T>(T?, string, string?)
+  nameWithType.vb: Guard.ZeroOrLess(Of T)(T?, String, String)
+- uid: Krafted.Guards.Guard.Zero``1(System.Nullable{``0},System.String,System.String)
+  name: Zero<T>(T?, string, string?)
+  href: api/Krafted.Guards.Guard.html#Krafted_Guards_Guard_Zero__1_System_Nullable___0__System_String_System_String_
+  commentId: M:Krafted.Guards.Guard.Zero``1(System.Nullable{``0},System.String,System.String)
+  name.vb: Zero(Of T)(T?, String, String)
+  fullName: Krafted.Guards.Guard.Zero<T>(T?, string, string?)
+  fullName.vb: Krafted.Guards.Guard.Zero(Of T)(T?, String, String)
+  nameWithType: Guard.Zero<T>(T?, string, string?)
+  nameWithType.vb: Guard.Zero(Of T)(T?, String, String)

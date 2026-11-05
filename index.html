@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Krafted Guards | Krafted Guards </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Krafted Guards | Krafted Guards ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="">
+  <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <a class="github-fork-ribbon" href="https://github.com/maiconheck/krafted-guards" data-ribbon="Fork me on GitHub" title="Fork me on GitHub" style="position: fixed;">Fork me on GitHub</a>
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/header/icon.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><img src="https://raw.githubusercontent.com/maiconheck/krafted-guards/master/docfx_project/images/main/logo.png" alt="Krafted Guards"></p>
+<h1 id="krafted-guards">Krafted Guards</h1>
+<p><a href="https://github.com/maiconheck/krafted-guards/actions/workflows/ci-cd-pipeline.yml"><img src="https://github.com/maiconheck/krafted-guards/actions/workflows/ci-cd-pipeline.yml/badge.svg" alt="CI / CD pipeline"></a>
+<a href="https://www.nuget.org/packages/Krafted.Guards/"><img src="https://img.shields.io/nuget/v/Krafted.Guards.svg" alt="NuGet"></a>
+<a href="https://www.nuget.org/packages/Krafted.Guards/"><img src="https://img.shields.io/nuget/dt/Krafted.Guards.svg" alt="NuGet downloads"></a>
+<a href="https://github.com/maiconheck/krafted-guards/blob/master/LICENSE"><img src="https://img.shields.io/github/license/maiconheck/krafted-guards" alt="License: MIT"></a></p>
+<p><a href="https://sonarcloud.io/dashboard?id=maiconheck_krafted-guards"><img src="https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted-guards&amp;metric=alert_status" alt="Quality Gate Status"></a>
+<a href="https://sonarcloud.io/dashboard?id=maiconheck_krafted-guards"><img src="https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted-guards&amp;metric=coverage" alt="Coverage"></a>
+<a href="https://sonarcloud.io/dashboard?id=maiconheck_krafted-guards"><img src="https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted-guards&amp;metric=code_smells" alt="Code Smells"></a>
+<a href="https://sonarcloud.io/dashboard?id=maiconheck_krafted-guards"><img src="https://sonarcloud.io/api/project_badges/measure?project=maiconheck_krafted-guards&amp;metric=vulnerabilities" alt="Vulnerabilities"></a></p>
+<h3 id="fluent-guard-clauses-for-argument-validation-and-precondition-enforcement-in-net">Fluent guard clauses for argument validation and precondition enforcement in .NET</h3>
+<p>Krafted Guards is a .NET guard clause library with a fluent API for argument validation and precondition enforcement, making it easier to apply defensive programming and the fail-fast principle.</p>
+<p>Enforce preconditions where they apply, fail fast when a method contract is violated, and replace repetitive <code>if</code>/<code>throw</code> blocks with declarations that read like intent.</p>
+<h2 id="why-krafted-guards">Why Krafted Guards?</h2>
+<p>Consider an invoice operation that requires a non-empty customer ID, an 8–30-character invoice number, at least one line, and a defined status.</p>
+<p>The examples below enforce the same preconditions and use the same exception types for corresponding failures:</p>
+<h3 id="manual-guard-clauses">Manual guard clauses</h3>
+<pre><code class="lang-csharp">if (customerId == Guid.Empty)
+    throw new ArgumentException(&quot;Customer ID cannot be empty.&quot;, nameof(customerId));
+
+if (number is null)
+    throw new ArgumentNullException(nameof(number));
+
+if (string.IsNullOrWhiteSpace(number))
+    throw new ArgumentException(&quot;Invoice number cannot be empty or contain only whitespace.&quot;, nameof(number));
+
+if (number.Length is &lt; 8 or &gt; 30)
+    throw new ArgumentOutOfRangeException(nameof(number), &quot;Invoice number must contain between 8 and 30 characters.&quot;);
+
+if (lines is null)
+    throw new ArgumentNullException(nameof(lines));
+
+if (lines.Count == 0)
+    throw new ArgumentException(&quot;Invoice must contain at least one line.&quot;, nameof(lines));
+
+if (!Enum.IsDefined(status))
+    throw new ArgumentException(&quot;Invoice status is not defined.&quot;, nameof(status));
+</code></pre>
+<h3 id="built-in-net-throw-helpers">Built-in .NET throw helpers</h3>
+<pre><code class="lang-csharp">if (customerId == Guid.Empty)
+    throw new ArgumentException(&quot;Customer ID cannot be empty.&quot;, nameof(customerId));
+
+ArgumentException.ThrowIfNullOrWhiteSpace(number);
+ArgumentOutOfRangeException.ThrowIfLessThan(number.Length, 8, nameof(number));
+ArgumentOutOfRangeException.ThrowIfGreaterThan(number.Length, 30, nameof(number));
+ArgumentNullException.ThrowIfNull(lines);
+
+if (lines.Count == 0)
+    throw new ArgumentException(&quot;Invoice must contain at least one line.&quot;, nameof(lines));
+
+if (!Enum.IsDefined(status))
+    throw new ArgumentException(&quot;Invoice status is not defined.&quot;, nameof(status));
+</code></pre>
+<h3 id="fluent-guard-clauses-with-krafted-guards">Fluent guard clauses with Krafted Guards</h3>
+<pre><code class="lang-csharp">Guard.Against
+    .Empty(customerId)
+    .Null(number)
+    .EmptyOrWhiteSpace(number)
+    .Length(8, 30, number)
+    .Null(lines)
+    .NotAny(lines)
+    .NotExists&lt;InvoiceStatus&gt;(status);
+</code></pre>
+<p><strong>Krafted Guards</strong> dramatically reduces the boilerplate required for argument validation, while reusable extensions encapsulate shared validation contracts—keeping preconditions consistent, readable, and maintainable as the codebase grows. Its core benefits include:</p>
+<ul>
+<li><strong>Fluent by design</strong> — compose multiple preconditions in a single readable chain.</li>
+<li><strong>Comprehensive validation API</strong> — validate nulls, text, collections, numbers, GUIDs, enums, predicates, regular expressions, email addresses, tax identification numbers, and other common validation scenarios.</li>
+<li><strong>Customizable failures</strong> — override the default exception message when domain context matters.</li>
+<li><strong>Extensible at the right scope</strong> — reuse class-specific guards locally or add reusable guard clauses through extension methods.</li>
+<li><strong>Small binary footprint</strong> — a 28 KB assembly with no external NuGet package dependencies.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Install the package from <a href="https://www.nuget.org/packages/Krafted.Guards/">NuGet</a>:</p>
+<pre><code class="lang-shell">dotnet add package Krafted.Guards
+</code></pre>
+<blockquote>
+<p><em>This package is compatible with .NET 8, .NET 9, and .NET 10.</em></p>
+</blockquote>
+<p>Then import the namespace:</p>
+<pre><code class="lang-csharp">using Krafted.Guards;
+</code></pre>
+<h2 id="quick-start">Quick start</h2>
+<p>Start a chain with <code>Guard.Against</code> and describe the conditions that make a call invalid:</p>
+<pre><code class="lang-csharp">public class Invoice
+{
+    public Invoice(Guid customerId, string billingEmail, string number, IReadOnlyCollection&lt;InvoiceLine&gt; lines)
+    {
+        Guard.Against
+            .Empty(customerId)
+            .Null(billingEmail)
+            .InvalidEmail(billingEmail)
+            .NullOrWhiteSpace(number)
+            .Length(8, 30, number)
+            .Null(lines)
+            .NotAny(lines);
+
+        CustomerId = customerId;
+        BillingEmail = billingEmail;
+        Number = number;
+        Lines = lines;
+        Status = InvoiceStatus.PendingApproval;
+    }
+
+    public Guid CustomerId { get; }
+    public string BillingEmail { get; }
+    public string Number { get; }
+    public IReadOnlyCollection&lt;InvoiceLine&gt; Lines { get; }
+    public InvoiceStatus Status { get; private set; }
+    public decimal? ApprovedAmount { get; private set; }
+    public string? ApprovalCode { get; private set; }
+    public PaymentPriority? Priority { get; private set; }
+
+    public void ApproveForPayment(decimal approvedAmount, string approvalCode, PaymentPriority priority)
+    {
+        Guard.Against
+            .ZeroOrLess(approvedAmount)
+            .NullOrWhiteSpace(approvalCode)
+            .NotMatch(approvalCode, @&quot;^APR-\d{8}$&quot;)
+            .NotExists&lt;PaymentPriority&gt;(priority);
+
+        ApprovedAmount = approvedAmount;
+        ApprovalCode = approvalCode;
+        Priority = priority;
+        Status = InvoiceStatus.ApprovedForPayment;
+    }
+
+    // Other members omitted for brevity.
+}
+</code></pre>
+<p>If a guard fails, it stops the chain immediately and throws a clear exception that explains the problem and identifies the invalid argument.</p>
+<p>For example, an empty <code>customerId</code> produces <code>Guid cannot be empty. (Parameter 'customerId')</code>.</p>
+<p>Each guard method validates an argument against a specific invalid condition. In this example:</p>
+<ul>
+<li><code>Empty(customerId)</code> rejects an empty GUID.</li>
+<li><code>Null(billingEmail)</code> and <code>InvalidEmail(billingEmail)</code> require a non-null email address and reject empty, whitespace-only, or incorrectly formatted values.</li>
+<li><code>NullOrWhiteSpace(number)</code> and <code>Length(8, 30, number)</code> require an invoice number between 8 and 30 characters.</li>
+<li><code>Null(lines)</code> and <code>NotAny(lines)</code> require a non-null collection containing at least one invoice line.</li>
+<li><code>ZeroOrLess(approvedAmount)</code> rejects a zero or negative approved amount.</li>
+<li><code>NullOrWhiteSpace(approvalCode)</code> and <code>NotMatch(approvalCode, @&quot;^APR-\d{8}$&quot;)</code> require an approval code such as <code>APR-12345678</code>.</li>
+<li><code>NotExists&lt;PaymentPriority&gt;(priority)</code> rejects an undefined <code>PaymentPriority</code> value.</li>
+</ul>
+<h3 id="custom-error-messages">Custom error messages</h3>
+<p>Every built-in guard accepts an optional custom message that overrides its default exception message:</p>
+<pre><code class="lang-csharp">public void ChangePostalCode(string postalCode)
+{
+    var message = $&quot;Invalid postal code: {postalCode}.&quot;;
+
+    Guard.Against
+        .NullOrWhiteSpace(postalCode, message)
+        .NotMatch(postalCode, @&quot;^\d{8}$&quot;, message: message);
+
+    PostalCode = postalCode;
+}
+</code></pre>
+<p>If either guard fails, the custom message replaces its default exception message while preserving the original argument name. For example, a <code>postalCode</code> value of <code>&quot;123&quot;</code> produces <code>Invalid postal code: 123. (Parameter 'postalCode')</code>.</p>
+<h3 id="validating-optional-parameters">Validating optional parameters</h3>
+<p>Except for <code>Null</code>, <code>NullOrEmpty</code>, and <code>NullOrWhiteSpace</code>, every other built-in guard method skips validation when the value being validated is <code>null</code>. This allows optional parameters to be validated without explicit null checks: <strong>only non-null values are evaluated</strong>.</p>
+<pre><code class="lang-csharp">public class Appointment
+{
+    // Other members omitted for brevity.
+
+    public void Reschedule(AppointmentPeriod period, string? reason = null, string? referenceCode = null)
+    {
+        Guard.Against
+            .Null(period)
+            .EmptyOrWhiteSpace(reason)
+            .MaxLength(500, reason)
+            .EmptyOrWhiteSpace(referenceCode)
+            .MaxLength(50, referenceCode);
+
+        Period = period;
+        RescheduleReason = reason;
+        ReferenceCode = referenceCode;
+    }
+}
+</code></pre>
+<p>In the <code>Reschedule</code> operation, <code>period</code> is required, while <code>reason</code> and <code>referenceCode</code> are optional. If an optional argument is omitted—or explicitly passed as <code>null</code>—the corresponding validations are skipped.</p>
+<p>When provided, <code>reason</code> and <code>referenceCode</code> cannot be empty or whitespace-only; <code>reason</code> cannot exceed 500 characters, and <code>referenceCode</code> cannot exceed 50 characters.</p>
+<h2 id="built-in-guard-clauses">Built-in guard clauses</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Guard clauses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Null values</td>
+<td><code>Null</code></td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>NullOrEmpty</code>, <code>NullOrWhiteSpace</code>, <code>EmptyOrWhiteSpace</code>, <code>Length</code>, <code>MinLength</code>, <code>MaxLength</code></td>
+</tr>
+<tr>
+<td>Collections</td>
+<td><code>NotAny</code>, <code>Any</code></td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td><code>Negative</code>, <code>Positive</code>, <code>Zero</code>, <code>ZeroOrLess</code>, <code>LessThan</code>, <code>GreaterThan</code></td>
+</tr>
+<tr>
+<td>GUIDs</td>
+<td><code>Empty</code>, <code>NotEmpty</code></td>
+</tr>
+<tr>
+<td>Enums</td>
+<td><code>NotExists&lt;TEnum&gt;</code></td>
+</tr>
+<tr>
+<td>Boolean values and predicates</td>
+<td><code>True</code>, <code>False</code></td>
+</tr>
+<tr>
+<td>Regular expressions</td>
+<td><code>Match</code>, <code>NotMatch</code></td>
+</tr>
+<tr>
+<td>Email addresses</td>
+<td><code>InvalidEmail</code></td>
+</tr>
+<tr>
+<td>Tax identification numbers</td>
+<td><code>InvalidCpf</code>, <code>InvalidCnpj</code>, <code>InvalidNif</code></td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="https://maiconheck.github.io/krafted-guards/api/">API reference</a> for complete signatures, overloads, and default messages.</p>
+<h2 id="extensibility">Extensibility</h2>
+<p>Krafted Guards supports two ways to reuse validation logic:</p>
+<h3 id="1-reuse-class-specific-guards-locally">1. Reuse class-specific guards locally</h3>
+<p>When a set of preconditions belongs to a single class, extract it into a local method that returns <code>Guard</code>. The caller can reuse the shared checks and continue the chain with operation-specific guards:</p>
+<pre><code class="lang-csharp">public sealed class Employee
+{
+    // Other members omitted for brevity.
+
+    public Employee(string name, string phoneNumber, string email, EmployeeRole role, string? notes)
+    {
+        ThrowIfProfileInvalid(name, phoneNumber, notes)
+            .NullOrWhiteSpace(email)
+            .InvalidEmail(email)
+            .NotExists&lt;EmployeeRole&gt;(role);
+
+        // Initialize the employee...
+    }
+
+    public void UpdateProfile(string name, string phoneNumber, string? notes)
+    {
+        ThrowIfProfileInvalid(name, phoneNumber, notes);
+
+        // Update the profile...
+    }
+
+    private static Guard ThrowIfProfileInvalid(string name, string phoneNumber, string? notes)
+    {
+        return Guard.Against
+            .NullOrWhiteSpace(name)
+            .NullOrWhiteSpace(phoneNumber)
+            .NotMatch(phoneNumber, @&quot;^\+?[1-9]\d{7,14}$&quot;)
+            .EmptyOrWhiteSpace(notes);
+    }
+}
+</code></pre>
+<p>Here, the constructor adds <code>email</code> and <code>role</code> validations to the shared <code>ThrowIfProfileInvalid</code> validation method, while <code>UpdateProfile</code> reuses only the validations relevant to that operation.</p>
+<h3 id="2-create-reusable-guard-clause-extensions">2. Create reusable guard clause extensions</h3>
+<p>When multiple guard clauses define a cohesive contract, encapsulate them in a well-named extension method on <code>Guard</code>. This lets callers express intent while centralizing the policy and preserving fluent chaining.</p>
+<p>Each extension should return the same <code>Guard</code> instance, allowing custom and built-in guard clauses to remain in the same fluent chain.</p>
+<p>The extensions below centralize an application's image-upload and resizing policies:</p>
+<pre><code class="lang-csharp">using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+using Krafted.Guards;
+using Microsoft.AspNetCore.Http;
+
+public static class GuardExtensions
+{
+    private const long MaximumImageFileSize = 10 * 1024 * 1024;
+    private const int MaximumImageDimension = 4096;
+
+    public static Guard InvalidImageUploadRequest(this Guard guard, [NotNull] IFormFile? file, [CallerArgumentExpression(&quot;file&quot;)] string? parameterName = null)
+    {
+        return guard
+            .Null(file, parameterName: parameterName)
+            .ZeroOrLess(file.Length)
+            .GreaterThan(MaximumImageFileSize, file.Length, message: &quot;Image file size cannot exceed 10 MB.&quot;)
+            .NullOrWhiteSpace(file.FileName)
+            .MaxLength(255, file.FileName)
+            .Match(file.FileName, @&quot;[\\/:*?&quot;&quot;&lt;&gt;|\x00-\x1F]&quot;, message: &quot;File name contains unsupported characters.&quot;)
+            .Match(file.FileName, @&quot;[. ]$&quot;, message: &quot;File name cannot end with a dot or space.&quot;)
+            .NotMatch(file.FileName, @&quot;\.(jpe?g|png|webp)$&quot;, message: &quot;File name must use a supported image extension.&quot;)
+            .NullOrWhiteSpace(file.ContentType)
+            .NotMatch(file.ContentType, @&quot;^image/(jpeg|png|webp)$&quot;, message: &quot;Only JPEG, PNG, and WebP images are supported.&quot;);
+    }
+
+    public static Guard InvalidResizeOptions(this Guard guard, [NotNull] ResizeOptions? options, [CallerArgumentExpression(&quot;options&quot;)] string? parameterName = null)
+    {
+        return guard
+            .Null(options, parameterName: parameterName)
+            .ZeroOrLess(options.Width, message: &quot;Resize width must be greater than zero.&quot;)
+            .GreaterThan(MaximumImageDimension, options.Width, message: $&quot;Resize width cannot exceed {MaximumImageDimension} pixels.&quot;)
+            .ZeroOrLess(options.Height, message: &quot;Resize height must be greater than zero.&quot;)
+            .GreaterThan(MaximumImageDimension, options.Height, message: $&quot;Resize height cannot exceed {MaximumImageDimension} pixels.&quot;)
+            .LessThan(1, options.Quality, message: &quot;Image quality must be between 1 and 100.&quot;)
+            .GreaterThan(100, options.Quality, message: &quot;Image quality must be between 1 and 100.&quot;)
+            .NotExists&lt;ResizeMode&gt;(options.Mode, message: &quot;Resize mode is not supported.&quot;);
+    }
+}
+</code></pre>
+<p><code>InvalidImageUploadRequest</code> and <code>InvalidResizeOptions</code> are reusable and express complete contracts instead of exposing their individual validation rules.</p>
+<p>Custom guards remain chainable with built-in guards:</p>
+<pre><code class="lang-csharp">public async Task UploadImageAsync(IFormFile file, ResizeOptions resizeOptions, ImageCategory category)
+{
+    Guard.Against
+        .InvalidImageUploadRequest(file)
+        .InvalidResizeOptions(resizeOptions)
+        .NotExists&lt;ImageCategory&gt;(category);
+
+    await _imageStorage.UploadAsync(file.OpenReadStream(), file.FileName, resizeOptions, category);
+}
+</code></pre>
+<p>Detailed policies stay cohesive and reusable while the caller remains clean and focused on the operation.</p>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://maiconheck.github.io/krafted-guards/api/">API reference</a></li>
+<li><a href="https://www.nuget.org/packages/Krafted.Guards/">NuGet package</a></li>
+<li><a href="https://github.com/maiconheck/krafted-guards/releases">Release notes</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions that strengthen argument validation, precondition enforcement, documentation, or the quality of the existing guards are welcome.</p>
+<p>For questions, bug reports, or feature requests, open an <a href="https://github.com/maiconheck/krafted-guards/issues/new">issue</a>. Discuss new guard clauses and public API changes before implementation. For fixes and agreed improvements, submit a <a href="https://github.com/maiconheck/krafted-guards/pulls">pull request</a>.</p>
+<h2 id="license">License</h2>
+<p>Krafted Guards is available under the <a href="https://github.com/maiconheck/krafted-guards/blob/master/LICENSE">MIT License</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/maiconheck/krafted-guards/blob/master/docfx_project/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      © 2019–2026 Maicon Heck
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
+
